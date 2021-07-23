@@ -1,5 +1,5 @@
 import React from 'react';
-import Garage from '../components/Garage/Garage';
+import Garage from '../components/Garage';
 
 const GaragePage = () => <Garage />;
 

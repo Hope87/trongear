@@ -1,0 +1,21 @@
+@font-face {
+  font-family: 'Russo One';
+  src: url('RussoOne-Regular.ttf');
+  /* src: local('GT Eesti Pro Display Regular'), local('GTEestiProDisplay-Regular'),
+    url('GTEestiProDisplay-Regular.eot?#iefix') format('embedded-opentype'),
+    url('GTEestiProDisplay-Regular.woff2') format('woff2'), url('GTEestiProDisplay-Regular.woff') format('woff'),
+    url('GTEestiProDisplay-Regular.ttf') format('truetype'); */
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Chakra Petch - Semi Bold Italic';
+  src: url('ChakraPetch-SemiBoldItalic.ttf');
+  /* src: local('GT Eesti Pro Display Regular'), local('GTEestiProDisplay-Regular'),
+    url('GTEestiProDisplay-Regular.eot?#iefix') format('embedded-opentype'),
+    url('GTEestiProDisplay-Regular.woff2') format('woff2'), url('GTEestiProDisplay-Regular.woff') format('woff'),
+    url('GTEestiProDisplay-Regular.ttf') format('truetype'); */
+  font-weight: normal;
+  font-style: normal;
+}
