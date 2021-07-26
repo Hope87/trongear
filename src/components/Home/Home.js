@@ -1,38 +1,66 @@
 import React from 'react';
-import Grid from '@material-ui/core/Grid';
 import styles from './Home.module.scss';
-import Btn from '../Buttons/BtnGarage';
-import Timer from '../Timer/Timer';
-
-import btnYellow from '../../images/buttons/buttons-06.svg';
+import header from '../../images/icons/header.svg';
+import burger from '../../images/icons/burger.svg';
+import logo from '../../images/logo.png';
+import letsRide from '../../images/lets_ride.png';
+import frame from '../../images/icons/frame.svg';
+import warning from '../../images/icons/warning.svg';
+import linksImg from '../../images/icons/element_3_1-14.svg';
+import menuImg from '../../images/icons/menu_bulb.svg';
 
 const Home = () => {
   return (
-    <Grid container>
-      <Grid item xs={12}>
-        <h1 className={styles.h1}>Hello First Page</h1>
-      </Grid>
+    <div className={styles.main}>
+      <div className={styles.mainHeader}>
+        <img src={header} alt="header" />
+        <img src={burger} alt="burger" />
+        <h5>eng</h5>
+      </div>
 
-      <Grid item xl={12} md={4}>
-        <h2 className={styles.one}>One</h2>
-      </Grid>
+      <div className={styles.mainModal}>
+        <img src={menuImg} alt="Menu" />
+        <div className={styles.mainModalMenu}>
+          <p>settings</p>
+          <p>start chat</p>
+          <p>Notification</p>
+        </div>
+      </div>
 
-      <Grid item xl={12} md={4}>
-        <h2 className={styles.two}>Two</h2>
-      </Grid>
+      <div className={styles.mainText}>
+        <h1 className={styles.mainTextLogo}>
+          <img src={logo} alt="logo" />
+        </h1>
+        <div className={styles.mainLetsRide}>
+          <img src={letsRide} alt="letsRide" />
+          <h2>let`s ride</h2>
+        </div>
+        <p>HOW IT WORKS</p>
+      </div>
 
-      <Grid item xl={12} md={4}>
-        <h2 className={styles.three}>Three</h2>
-      </Grid>
+      <div className={styles.mainInfo}>
+        <img src={frame} alt="frame" />
+        <div className={styles.mainInfoBox}>
+          <p>
+            <span>Important information</span>
+            <br />
+            The game requires a browser plugin
+            <br />
+            <span>TronLink</span> or <span>TronWallet</span>
+          </p>
+        </div>
 
-      <Btn title="garage" image={btnYellow} />
-      <Btn title="top" image={btnYellow} />
-      <Btn title="ga" image={btnYellow} />
-      <Btn title="ttttttg" image={btnYellow} />
+        <div className={styles.mainInfoWarning}>
+          <img src={warning} alt="Warning" />
+        </div>
+      </div>
 
-      <Timer />
-    </Grid>
+      <div className={styles.mainLinks}>
+        <div className={styles.mainLinksImg}>
+          <img src={linksImg} alt="" />
+        </div>
+      </div>
+    </div>
   );
 };
-
 export default Home;
