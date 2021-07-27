@@ -1,31 +1,22 @@
-import React from 'react';
+import React, { useState } from 'react';
 import styles from './Home.module.scss';
-import header from '../../images/icons/header.svg';
-import burger from '../../images/icons/burger.svg';
 import logo from '../../images/logo.png';
 import letsRide from '../../images/lets_ride.png';
 import frame from '../../images/icons/frame.svg';
 import warning from '../../images/icons/warning.svg';
 import linksImg from '../../images/icons/element_3_1-14.svg';
-import menuImg from '../../images/icons/menu_bulb.svg';
+import Header from '../Header/Header';
+import Links from '../Links/Links';
+import Modal from '../Modal/Modal';
 
 const Home = () => {
+  const [modal, setModal] = useState();
+
   return (
     <div className={styles.main}>
-      <div className={styles.mainHeader}>
-        <img src={header} alt="header" />
-        <img src={burger} alt="burger" />
-        <h5>eng</h5>
-      </div>
+      <Header mainModal={modal} onModal={setModal} />
 
-      <div className={styles.mainModal}>
-        <img src={menuImg} alt="Menu" />
-        <div className={styles.mainModalMenu}>
-          <p>settings</p>
-          <p>start chat</p>
-          <p>Notification</p>
-        </div>
-      </div>
+      {modal && <Modal />}
 
       <div className={styles.mainText}>
         <h1 className={styles.mainTextLogo}>
@@ -55,11 +46,7 @@ const Home = () => {
         </div>
       </div>
 
-      <div className={styles.mainLinks}>
-        <div className={styles.mainLinksImg}>
-          <img src={linksImg} alt="" />
-        </div>
-      </div>
+      <Links images={linksImg} />
     </div>
   );
 };
