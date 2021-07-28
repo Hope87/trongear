@@ -3,8 +3,8 @@ import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
 import './App.scss';
 import './fonts/stylesheet.css';
 
-const HomePage = lazy(() => import('./pages/HomePage'));
-const GaragePage = lazy(() => import('./pages/GaragePage'));
+const HomePage = lazy(() => import('./components/pages/Home'));
+const GaragePage = lazy(() => import('./components/pages/Garage'));
 
 function App() {
   return (

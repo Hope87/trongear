@@ -8,6 +8,13 @@
 @font-face {
   font-family: 'Chakra Petch - Semi Bold Italic';
   src: url('ChakraPetch-SemiBoldItalic.ttf');
+  font-weight: 600;
+  font-style: italic;
+}
+
+@font-face {
+  font-family: 'Chakra Petch';
+  src: url('ChakraPetch-Regular.ttf');
   font-weight: 400;
   font-style: normal;
 }
