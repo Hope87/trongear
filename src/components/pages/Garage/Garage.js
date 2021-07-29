@@ -1,14 +1,13 @@
 import React from 'react';
 import Grid from '@material-ui/core/Grid';
 import styles from './Garage.module.scss';
-import Header from '../../UI/organisms/Header';
+import Header from '../../UI/molecules/Header';
 import logo from '../../../images/logo.png';
-import Button from '../../UI/atoms/Button';
-import Timer from '../../UI/atoms/Timer';
-import buttonsImg from '../../../images/buttons/buttons-06.svg';
-import garageElements from '../../../images/garages/off/elements-04.svg';
-import GarageMain from '../../UI/organisms/GarageMain';
 import GarageCards from '../../UI/organisms/GarageCards';
+import Links from '../../UI/atoms/Links';
+import linksImg from '../../../images/icons/panel-17.svg';
+import GarageButtons from '../../UI/organisms/GarageButtons';
+import GarageLeft from '../../UI/organisms/GarageLeft';
 
 const Garage = () => {
   return (
@@ -19,47 +18,20 @@ const Garage = () => {
         </Grid>
 
         <Grid item xs={12}>
-          <div className={styles.buttonsBox}>
-            <div className={styles.buttonsBoxBtn}>
-              <Button title="about" image={buttonsImg} />
-              <div>
-                <Button title="garage" image={buttonsImg} />
-              </div>
-            </div>
-            <div className={styles.buttonsBoxTimer}>
-              <p>race of the day</p>
-              <Timer />
-            </div>
-            <div className={styles.buttonsBoxBtn}>
-              <Button title="racing" image={buttonsImg} />
-              <div>
-                <Button title="top" image={buttonsImg} />
-              </div>
-            </div>
-          </div>
+          <GarageButtons />
         </Grid>
 
         <Grid item xs={12} container>
           <Grid item xs={7}>
-            <div className={styles.garageLeft}>
-              <div className={styles.garageLeftHeader}>
-                <h2>garage 1</h2>
-                <div className={styles.garageLeftHeaderItems}>
-                  <img src={garageElements} alt="" />
-                  <p>
-                    <span>0</span> TRX
-                  </p>
-                </div>
-              </div>
-
-              <GarageMain />
-            </div>
+            <GarageLeft />
           </Grid>
 
           <Grid item xs={5}>
             <GarageCards />
           </Grid>
         </Grid>
+
+        <Links images={linksImg} />
       </Grid>
     </div>
   );

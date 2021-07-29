@@ -5,7 +5,7 @@ import letsRide from '../../../images/lets_ride.png';
 import frame from '../../../images/icons/frame.svg';
 import warning from '../../../images/icons/warning.svg';
 import linksImg from '../../../images/icons/element_3_1-14.svg';
-import Header from '../../UI/organisms/Header';
+import Header from '../../UI/molecules/Header';
 import Links from '../../UI/atoms/Links';
 import Modal from '../../UI/molecules/Modal';
 

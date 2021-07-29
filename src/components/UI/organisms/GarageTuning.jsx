@@ -34,7 +34,6 @@ const GarageTuning = () => {
              <div style={{marginTop: '20px'}}>
              <GarageTuningScale scaleImage={tuningRunk} scaleText="level"/>
              </div>
-             
              </div>
              
         </div>
