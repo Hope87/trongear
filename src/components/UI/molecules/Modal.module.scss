@@ -1,0 +1,68 @@
+.mainModal {
+  width: 280px;
+  height: 260px;
+  box-shadow: 0 0 35px rgba(17, 17, 17, 0.25);
+  position: absolute;
+  left: 44%;
+  animation-duration: 2s;
+  animation-name: modal;
+  animation-fill-mode: forwards;
+
+  @keyframes modal {
+    0% {
+      opacity: 0.1;
+    }
+    100% {
+      opacity: 1;
+    }
+  }
+
+  img {
+    opacity: 0.7;
+  }
+
+  .mainModalMenu {
+    position: absolute;
+    z-index: 345;
+    top: 80px;
+    left: 40px;
+
+    p {
+      color: var(--white);
+      font-family: 'Calibri - Light Italic';
+      font-size: 20px;
+      font-weight: 400;
+      font-style: normal;
+      letter-spacing: normal;
+      text-align: left;
+      text-transform: uppercase;
+      margin-bottom: 30px;
+      cursor: pointer;
+
+      &:nth-child(1) {
+        margin-left: 10px;
+      }
+
+      &:nth-child(2),
+      &:nth-child(3) {
+        margin-left: 50px;
+      }
+
+      &:nth-child(2)::before {
+        content: url('../../../images/icons/chat_icon_on.svg');
+        width: 24px;
+        height: 20px;
+        position: absolute;
+        left: 10px;
+      }
+
+      &:nth-child(3)::before {
+        content: url('../../../images/icons/notification_icon_on.svg');
+        width: 24px;
+        height: 20px;
+        position: absolute;
+        left: 10px;
+      }
+    }
+  }
+}

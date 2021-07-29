@@ -7,7 +7,7 @@ import warning from '../../../images/icons/warning.svg';
 import linksImg from '../../../images/icons/element_3_1-14.svg';
 import Header from '../../UI/organisms/Header';
 import Links from '../../UI/atoms/Links';
-import Modal from '../../UI/organisms/Modal';
+import Modal from '../../UI/molecules/Modal';
 
 const Home = () => {
   const [modal, setModal] = useState();
