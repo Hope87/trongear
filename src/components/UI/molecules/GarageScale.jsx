@@ -1,6 +1,5 @@
 import React from 'react';
 import styles from './GarageScale.module.scss';
-import pointsRunk from '../../../images/svg/points_runk_lvl_garage.svg';
 import scale_1 from '../../../images/svg/scale_garage/1.svg';
 import scale_2 from '../../../images/svg/scale_garage/2.svg';
 import scale_3 from '../../../images/svg/scale_garage/3.svg';
@@ -14,13 +13,13 @@ import scale_10 from '../../../images/svg/scale_garage/10.svg';
 import scale_11 from '../../../images/svg/scale_garage/11.svg';
 import scale_12 from '../../../images/svg/scale_garage/12.svg';
 
-const GarageScale = () => {
+const GarageScale = ({ scaleImage }) => {
   const scaleRender = (img) => <img src={img} alt="pointsRunk" />;
 
   return (
     <div className={styles.scale}>
       <div>
-        <img className={styles.scaleImg} src={pointsRunk} alt="pointsRunk" />
+        <img className={styles.scaleImg} src={scaleImage} alt="pointsRunk" />
       </div>
 
       <div className={styles.scaleImages}>

@@ -1,0 +1,56 @@
+.GarageTuning {
+  position: relative;
+  height: 430px;
+  width: 75%;
+
+  background-color: var(--dark);
+  opacity: 0.8;
+  border: 1px solid black;
+  margin-top: 30px;
+
+  .GarageTuningPanel {
+    width: 80%;
+  }
+
+  .GarageTuningPanelText {
+    display: flex;
+    width: 67%;
+    justify-content: space-between;
+    align-items: center;
+    position: absolute;
+    top: 0;
+    left: 4%;
+    p {
+      color: var(--black);
+      font-weight: 400;
+      font-style: italic;
+      letter-spacing: normal;
+      line-height: normal;
+      text-align: left;
+      text-transform: uppercase;
+
+      &:nth-child(1) {
+        font-family: 'Russo One';
+        font-size: 18px;
+      }
+
+      &:nth-child(2) {
+        text-shadow: 0 0 2px rgba(18, 18, 18, 0.26);
+        font-family: 'Chakra Petch';
+        font-size: 24px;
+      }
+    }
+  }
+
+  .GarageTuningCards {
+    display: flex;
+    justify-content: space-around;
+    margin-top: 40px;
+  }
+
+  .GarageTuningScale {
+    margin-top: 40px;
+    margin-left: 20px;
+    max-width: 660px;
+  }
+}

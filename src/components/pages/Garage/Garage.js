@@ -3,8 +3,8 @@ import Grid from '@material-ui/core/Grid';
 import styles from './Garage.module.scss';
 import Header from '../../UI/organisms/Header';
 import logo from '../../../images/logo.png';
-import BtnGarage from '../../UI/atoms/BtnGarage';
-import Timer from '../../UI/molecules/Timer';
+import Button from '../../UI/atoms/Button';
+import Timer from '../../UI/atoms/Timer';
 import buttonsImg from '../../../images/buttons/buttons-06.svg';
 import garageElements from '../../../images/garages/off/elements-04.svg';
 import GarageMain from '../../UI/organisms/GarageMain';
@@ -21,9 +21,9 @@ const Garage = () => {
         <Grid item xs={12}>
           <div className={styles.buttonsBox}>
             <div className={styles.buttonsBoxBtn}>
-              <BtnGarage title="about" image={buttonsImg} />
+              <Button title="about" image={buttonsImg} />
               <div>
-                <BtnGarage title="garage" image={buttonsImg} />
+                <Button title="garage" image={buttonsImg} />
               </div>
             </div>
             <div className={styles.buttonsBoxTimer}>
@@ -31,9 +31,9 @@ const Garage = () => {
               <Timer />
             </div>
             <div className={styles.buttonsBoxBtn}>
-              <BtnGarage title="racing" image={buttonsImg} />
+              <Button title="racing" image={buttonsImg} />
               <div>
-                <BtnGarage title="top" image={buttonsImg} />
+                <Button title="top" image={buttonsImg} />
               </div>
             </div>
           </div>
