@@ -1,5 +1,5 @@
 import React from 'react';
-import styles from './Cards.module.scss';
+import styles from './CardMiddle.module.scss';
 import frame from '../../../images/svg/frame_1_on.svg';
 import tuningPanel from '../../../images/svg/tuning_panel_1.svg';
 import lockIcon from '../../../images/svg/lock_icon_copy.png';

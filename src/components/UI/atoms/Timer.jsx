@@ -6,6 +6,8 @@ import cn from 'classnames';
 const Timer = () => {
   return (
     <div className={styles.timer}>
+      <p>race of the day</p>
+      <div>
       <div className={styles.flip}>
         <div className={styles.flipBox}>
           <img src={timer} alt="" />
@@ -35,6 +37,7 @@ const Timer = () => {
           <img src={timer} alt="" />
           <span>0</span>
         </div>
+      </div>
       </div>
     </div>
   );

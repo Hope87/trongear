@@ -1,0 +1,62 @@
+.garageMenu {
+  background: url('../../../images/bacground_1920x1080.png') no-repeat;
+  width: 100%;
+  height: 100vh;
+  background-size: cover;
+
+  .garageMenuLeftPanel {
+    position: absolute;
+    left: 0;
+    bottom: 0;
+
+    img {
+      width: 100%;
+      height: 100%;
+    }
+  }
+
+  .garageMenuText {
+    max-width: 560px;
+    margin: 40px auto 0;
+    h2 {
+      color: #eaff00;
+      font-family: 'Russo One';
+      font-size: 37px;
+      font-weight: 400;
+      font-style: italic;
+      letter-spacing: normal;
+      line-height: normal;
+      text-align: center;
+    }
+
+    p {
+      text-shadow: 1px 1px 3px rgba(18, 18, 18, 0.08);
+      color: #ffffff;
+      font-family: 'Calibri';
+      font-size: 16px;
+      font-style: italic;
+      letter-spacing: normal;
+      line-height: normal;
+      text-align: center;
+      text-transform: uppercase;
+    }
+  }
+
+  .buttonsBox {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    margin-left: 100px;
+    margin-right: 100px;
+
+    div {
+      display: flex;
+    }
+
+    .buttonsBoxBtn {
+      div {
+        margin-left: 20px;
+      }
+    }
+  }
+}

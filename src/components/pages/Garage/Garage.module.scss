@@ -1,6 +1,35 @@
 .garage {
-  background: url('../../../images/bacground.png') no-repeat;
+  background: url('../../../images/bacground_1920x1080.png') no-repeat;
   width: 100%;
   height: 100vh;
   background-size: cover;
+
+  .garageLeftPanel {
+    position: absolute;
+    left: 0;
+    bottom: 0;
+
+    img {
+      width: 100%;
+      height: 100%;
+    }
+  }
+
+  .buttonsBox {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    margin-left: 100px;
+    margin-right: 100px;
+
+    div {
+      display: flex;
+    }
+
+    .buttonsBoxBtn {
+      div {
+        margin-left: 20px;
+      }
+    }
+  }
 }

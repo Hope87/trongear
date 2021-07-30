@@ -18,12 +18,12 @@
     height: 30px;
 
     img {
-      width: 80px;
-      height: 36px;
+      width: 70px;
+      height: 32px;
       object-fit: cover;
 
       &:not(:first-child) {
-        margin-left: -34px;
+        margin-left: -28px;
       }
 
       &:nth-child(1) {

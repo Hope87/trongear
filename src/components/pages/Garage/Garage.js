@@ -6,8 +6,11 @@ import logo from '../../../images/logo.png';
 import GarageCards from '../../UI/organisms/GarageCards';
 import Links from '../../UI/atoms/Links';
 import linksImg from '../../../images/icons/panel-17.svg';
-import GarageButtons from '../../UI/organisms/GarageButtons';
+import leftPanel from '../../../images/icons/panel-16.svg';
 import GarageLeft from '../../UI/organisms/GarageLeft';
+import Timer from '../../UI/atoms/Timer';
+import Button from '../../UI/atoms/Button';
+import buttonsImg from '../../../images/buttons/buttons-06.svg';
 
 const Garage = () => {
   return (
@@ -18,7 +21,23 @@ const Garage = () => {
         </Grid>
 
         <Grid item xs={12}>
-          <GarageButtons />
+          <div style={{ marginTop: '40px' }}>
+            <Timer />
+          </div>
+          <div className={styles.buttonsBox} style={{ marginTop: '-60px' }}>
+            <div className={styles.buttonsBoxBtn}>
+              <Button title="about" image={buttonsImg} />
+              <div>
+                <Button title="garage" image={buttonsImg} />
+              </div>
+            </div>
+            <div className={styles.buttonsBoxBtn}>
+              <Button title="racing" image={buttonsImg} />
+              <div>
+                <Button title="top" image={buttonsImg} />
+              </div>
+            </div>
+          </div>
         </Grid>
 
         <Grid item xs={12} container>
@@ -30,7 +49,9 @@ const Garage = () => {
             <GarageCards />
           </Grid>
         </Grid>
-
+        <div className={styles.garageLeftPanel}>
+          <img src={leftPanel} alt="" />
+        </div>
         <Links images={linksImg} />
       </Grid>
     </div>
