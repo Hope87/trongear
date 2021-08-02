@@ -1,0 +1,142 @@
+.racing {
+  background: url('../../../images/bacground_1920x1080.png') no-repeat;
+  width: 100%;
+  height: 100vh;
+  background-size: cover;
+
+  .buttonsBox {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    margin-left: 100px;
+    margin-right: 100px;
+
+    div {
+      display: flex;
+    }
+
+    .buttonsBoxBtn {
+      div {
+        margin-left: 20px;
+      }
+    }
+  }
+
+  .statisticElement {
+    width: 380px;
+    margin-top: 60px;
+    position: relative;
+
+    &:nth-child(1) {
+      margin-left: 80px;
+    }
+
+    img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+
+    .statisticElementBox {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 90%;
+      background-color: #212121;
+      clip-path: polygon(0% 28%, 9% 0%, 100% 0%, 100% 90%, 100% 100%, 0% 100%);
+
+      .statisticElementFlag {
+        width: 50%;
+        height: 25%;
+        position: absolute;
+        top: 0;
+        right: 0;
+
+        img {
+          width: 100%;
+          height: 100%;
+          object-fit: cover;
+        }
+
+        span {
+          color: #292929;
+          font-family: 'Calibri';
+          font-size: 8px;
+          font-weight: 700;
+          font-style: italic;
+          letter-spacing: normal;
+          line-height: normal;
+          text-align: right;
+          text-transform: uppercase;
+          position: absolute;
+          top: 50%;
+          left: 50%;
+          transform: translate(-50%, -50%);
+        }
+      }
+    }
+
+    .statisticElementText {
+      margin-top: 20px;
+      margin-left: 30px;
+      position: relative;
+      span {
+        opacity: 0.45;
+        text-shadow: 4px 5px 13px rgba(18, 18, 18, 0.08);
+        color: #eaff00;
+        font-family: 'Calibri';
+        font-size: 12px;
+        font-style: italic;
+        letter-spacing: normal;
+        line-height: normal;
+        text-align: left;
+        text-transform: uppercase;
+      }
+
+      p {
+        text-shadow: 4px 5px 13px rgba(18, 18, 18, 0.08);
+        color: #ffffff;
+        font-family: 'Chakra Petch';
+        font-size: 38px;
+        font-style: italic;
+        letter-spacing: normal;
+        line-height: normal;
+        text-align: left;
+        text-transform: uppercase;
+      }
+
+      img {
+        width: 24px;
+        height: 22px;
+        position: absolute;
+        top: 50%;
+        right: 5%;
+      }
+    }
+
+    .statisticElementFooter {
+      height: 16px;
+      width: 104%;
+      position: absolute;
+      left: -3px;
+      bottom: -5px;
+
+      p {
+        text-shadow: 4px 5px 13px rgba(18, 18, 18, 0.08);
+        color: #555555;
+        font-family: 'Chakra Petch';
+        font-size: 12px;
+        font-style: italic;
+        letter-spacing: normal;
+        line-height: normal;
+        text-align: left;
+        text-transform: uppercase;
+        position: absolute;
+        top: 50%;
+        left: 22%;
+        transform: translate(-50%, -50%);
+      }
+    }
+  }
+}

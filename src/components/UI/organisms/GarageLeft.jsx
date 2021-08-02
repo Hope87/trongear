@@ -1,5 +1,5 @@
 import React from 'react';
-import styles from './GarageLeft.module.scss'
+import styles from '../../pages/Garage/Garage.module.scss'
 import garageElements from '../../../images/garages/off/elements-04.svg';
 import GarageMain from '../../UI/organisms/GarageMain';
 

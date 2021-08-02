@@ -1,16 +1,49 @@
 import React from 'react';
-import styles from './Links.module.scss';
+import { makeStyles } from '@material-ui/core/styles';
 import facebook from '../../../images/icons/facebook.svg';
 import twitter from '../../../images/icons/twitter.svg';
 import youtube from '../../../images/icons/youtube.svg';
 
+const useStyles = makeStyles({
+  mainLinks: {
+    position: 'absolute',
+    right: '0',
+    bottom: '0'
+  },
+  mainLinksImg: {
+    maxWidth: '412px',
+    height: '90px',
+
+    '& img': {
+      width: '100%',
+      height: '100%',
+      objectFit: 'contain'
+    }
+  },
+  mainLinksBox: {
+    position: 'absolute',
+    left: '50%',
+    top: '50%',
+    transform: 'translate(-50%, -50%)',
+    
+    '& img': {
+      width: '30px',
+      height: '30px',
+      marginLeft: '10px',
+      cursor: 'pointer'
+    }
+  }
+})
+
 const Links = ({ images }) => {
+  const classes = useStyles()
+  
   return (
-    <div className={styles.mainLinks}>
-      <div className={styles.mainLinksImg}>
+    <div className={classes.mainLinks}>
+      <div className={classes.mainLinksImg}>
         <img src={images} alt="images" />
       </div>
-      <div className={styles.mainLinksBox}>
+      <div className={classes.mainLinksBox}>
         <a href="https://www.facebook.com/">
           <img src={facebook} alt="" />
         </a>

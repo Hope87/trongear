@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React from 'react';
 import styles from './Main.module.scss';
 import linksImg from '../../../images/icons/element_3_1-14.svg';
 import Header from '../../UI/molecules/Header';
@@ -9,12 +9,10 @@ import letsRide from '../../../images/lets_ride.png';
 import frame from '../../../images/icons/frame.svg';
 import warning from '../../../images/icons/warning.svg';
 
-const Home = () => {
-  const [modal, setModal] = useState();
-
+const Main = ({ modal, setModal }) => {
   return (
     <div className={styles.main}>
-      <Header mainModal={modal} onModal={setModal} />
+      <Header headerModal={modal} setHeaderModal={setModal} />
 
       {modal && <Modal />}
 
@@ -50,4 +48,4 @@ const Home = () => {
     </div>
   );
 };
-export default Home;
+export default Main;

@@ -1,5 +1,5 @@
 import React from 'react';
-import styles from './GarageTuningScale.module.scss'
+import { makeStyles } from '@material-ui/core/styles';
 import scale_1 from '../../../images/svg/scale_garage/1.svg';
 import scale_2 from '../../../images/svg/scale_garage/2.svg';
 import scale_3 from '../../../images/svg/scale_garage/3.svg';
@@ -13,17 +13,75 @@ import scale_10 from '../../../images/svg/scale_garage/10.svg';
 import scale_11 from '../../../images/svg/scale_garage/11.svg';
 import scale_12 from '../../../images/svg/scale_garage/12.svg';
 
+
+const useStyles = makeStyles({
+  tuningScale: {
+    maxWidth: '600px',
+    height: '46px',
+    position: 'relative',
+  
+    '& div': {
+      maxWidth: '180px',
+      height: '14px'
+    }
+  },
+
+  tuningScaleImg: {
+    width: '100%',
+    height: '100%'
+  },
+
+  tuningScaleImages: {
+    maxWidth: '480px !important',
+    height: '30px !important',
+
+    '& img': {
+      width: '70px',
+      height: '32px',
+      objectFit: 'cover',
+
+      '&:not(:first-child)': {
+        marginLeft: '-28px'
+      },
+
+      '&:nth-child(1)': {
+        width: '20px',
+        marginRight: '-4px'
+      }
+    }
+  },
+
+  tuningScaleText: {
+    textShadow: '0 0 2px rgba(18, 18, 18, 0.26)',
+    color: 'var(--black)',
+    fontFamily: 'Russo One',
+    fontSize: '10px',
+    fontWeight: '400',
+    fontStyle: 'italic',
+    letterSpacing: 'normal',
+    lineHeight: 'normal',
+    textAlign: 'left',
+    textTransform: 'uppercase',
+    position: 'absolute',
+    top: '5%',
+    left: '2%'
+  }
+})
+
+
 const GarageTuningScale = ({scaleImage, scaleText}) => {
+    const classes = useStyles()
+    
     const scaleRender = (img) => <img  src={img} alt="tuningRunk" />;
 
     return (
-      <div className={styles.scale}>
+      <div className={classes.tuningScale}>
         <div>
-          <img className={styles.scaleImg} src={scaleImage} alt="tuningRunk" />
-          <p className={styles.scaleText}>{scaleText}</p>
+          <img className={classes.tuningScaleImg} src={scaleImage} alt="tuningRunk" />
+          <p className={classes.tuningScaleText}>{scaleText}</p>
         </div>
   
-        <div className={styles.scaleImages}>
+        <div className={classes.tuningScaleImages}>
           {scaleRender(scale_1)}
           {scaleRender(scale_2)}
           {scaleRender(scale_3)}

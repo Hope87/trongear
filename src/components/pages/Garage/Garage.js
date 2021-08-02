@@ -11,13 +11,16 @@ import GarageLeft from '../../UI/organisms/GarageLeft';
 import Timer from '../../UI/atoms/Timer';
 import Button from '../../UI/atoms/Button';
 import buttonsImg from '../../../images/buttons/buttons-06.svg';
+import Modal from '../../UI/molecules/Modal';
 
-const Garage = () => {
+const Garage = ({ modal, setModal }) => {
   return (
     <div className={styles.garage}>
       <Grid container>
         <Grid item xs={12}>
-          <Header headerLogo={logo} />
+          <Header headerLogo={logo} headerModal={modal} setHeaderModal={setModal} />
+
+          {modal && <Modal />}
         </Grid>
 
         <Grid item xs={12}>

@@ -1,5 +1,5 @@
 import React from 'react';
-import styles from './GarageTuning.module.scss'
+import styles from '../../pages/Garage/Garage.module.scss'
 import CardSmall from '../molecules/CardSmall' 
 import nameOfTuning from '../../../images/svg/name_of_tuning.svg'
 import tuningsImg_1 from '../../../images/garages/tuning_img_1.png'

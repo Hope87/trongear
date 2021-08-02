@@ -20,19 +20,24 @@ import panelRight from '../../../images/icons/panel-17.svg';
 import panelLeft from '../../../images/icons/panel-16.svg';
 import Button from '../../UI/atoms/Button';
 import buttonsImg from '../../../images/buttons/buttons-06.svg';
+import Modal from '../../UI/molecules/Modal';
 
-const GarageMenu = () => {
+const GarageMenu = ({ modal, setModal }) => {
   return (
     <div className={styles.garageMenu}>
       <Grid container>
         <Grid item xs={12}>
-          <Header headerLogo={logo} />
+          <Header headerLogo={logo} headerModal={modal} setHeaderModal={setModal} />
+
+          {modal && <Modal />}
         </Grid>
 
         <Grid item xs={12}>
           <div style={{ marginTop: '40px' }}>
             <Timer />
           </div>
+        </Grid>
+        <Grid item xs={12}>
           <div className={styles.buttonsBox} style={{ marginTop: '10px' }}>
             <div className={styles.buttonsBoxBtn}>
               <Button title="about" image={buttonsImg} />

@@ -1,5 +1,5 @@
 import React from 'react';
-import styles from './GarageScale.module.scss';
+import { makeStyles } from '@material-ui/core/styles';
 import scale_1 from '../../../images/svg/scale_garage/1.svg';
 import scale_2 from '../../../images/svg/scale_garage/2.svg';
 import scale_3 from '../../../images/svg/scale_garage/3.svg';
@@ -13,16 +13,59 @@ import scale_10 from '../../../images/svg/scale_garage/10.svg';
 import scale_11 from '../../../images/svg/scale_garage/11.svg';
 import scale_12 from '../../../images/svg/scale_garage/12.svg';
 
+
+
+const useStyles = makeStyles({
+  scale: {
+    maxWidth: '600px',
+    height: '30px',
+    position: 'relative',
+  
+    '& div': {
+      maxWidth: '240px',
+      height: '14px',
+    },
+  },
+  
+  scaleImg : {
+    width: '100%',
+    height: '100%'
+  },
+
+  scaleImages: {
+    maxWidth: '480px !important',
+    height: '30px !important',
+
+    '& img': {
+      width: '52px',
+      height: '18px',
+      objectFit: 'cover',
+
+      '&:not(:first-child)': {
+        marginLeft: '-20px'
+      },
+
+      '&:nth-child(1)': {
+        width: '20px',
+        marginRight: '-4px'
+      }
+    }
+  }
+})
+
+
 const GarageScale = ({ scaleImage }) => {
+  const classes = useStyles()
+  
   const scaleRender = (img) => <img src={img} alt="pointsRunk" />;
 
   return (
-    <div className={styles.scale}>
+    <div className={classes.scale}>
       <div>
-        <img className={styles.scaleImg} src={scaleImage} alt="pointsRunk" />
+        <img className={classes.scaleImg} src={scaleImage} alt="pointsRunk" />
       </div>
 
-      <div className={styles.scaleImages}>
+      <div className={classes.scaleImages}>
         {scaleRender(scale_1)}
         {scaleRender(scale_2)}
         {scaleRender(scale_3)}

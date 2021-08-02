@@ -1,5 +1,5 @@
 import React from 'react';
-import styles from './GarageMain.module.scss'
+import styles from '../../pages/Garage/Garage.module.scss'
 import amg from '../../../images/G_5_cars/on/4_amg.png';
 import mclaren from '../../../images/G_5_cars/on/5_mclaren.png';
 import flag from '../../../images/svg/elements-45.svg';
@@ -9,8 +9,6 @@ import pointsRunk from '../../../images/svg/points_runk_lvl_garage.svg';
 import buy_button from '../../../images/buttons/buy_button.png';
 import unlock_icon from '../../../images/icons/unlock_icon.png';
 import panel from '../../../images/svg/total_cars_panel.svg';
-
-
 import Button from '../atoms/Button'
 
 const btnFs = {
