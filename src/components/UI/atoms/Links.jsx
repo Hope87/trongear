@@ -1,8 +1,8 @@
 import React from 'react';
 import { makeStyles } from '@material-ui/core/styles';
-import facebook from '../../../images/icons/facebook.svg';
-import twitter from '../../../images/icons/twitter.svg';
-import youtube from '../../../images/icons/youtube.svg';
+import facebook from '../../../images/facebook.svg';
+import twitter from '../../../images/twitter.svg';
+import youtube from '../../../images/youtube.svg';
 
 const useStyles = makeStyles({
   mainLinks: {

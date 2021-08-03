@@ -6,11 +6,11 @@ import logo from '../../../images/logo.png';
 import Modal from '../../UI/molecules/Modal';
 import Timer from '../../UI/atoms/Timer';
 import Button from '../../UI/atoms/Button';
-import buttonsImg from '../../../images/buttons/buttons-06.svg';
-import elements_01 from '../../../images/svg/elements-01.svg';
-import elements_07 from '../../../images/svg/elements-07.svg';
-import scale_tuning_panel from '../../../images/svg/scale_tuning_panel.svg';
-import elements_13 from '../../../images/svg/elements-13.svg';
+import buttonsImg from '../../../images/buttons-06.svg';
+import elements_01 from '../../../images/elements-01.svg';
+import elements_07 from '../../../images/elements-07.svg';
+import scale_tuning_panel from '../../../images/scale_tuning_panel.svg';
+import elements_13 from '../../../images/elements-13.svg';
 
 const Racing = ({ modal, setModal }) => {
   return (
@@ -31,7 +31,7 @@ const Racing = ({ modal, setModal }) => {
         </Grid>
 
         <Grid item xs={12}>
-          <div className={styles.buttonsBox} style={{ marginTop: '40px' }}>
+          <div className={styles.buttonsBox} style={{ marginTop: '50px' }}>
             <div className={styles.buttonsBoxBtn}>
               <Button title="about" image={buttonsImg} />
               <div>

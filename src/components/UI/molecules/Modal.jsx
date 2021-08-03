@@ -1,8 +1,8 @@
 import React from 'react'
 import { makeStyles } from '@material-ui/core/styles'
-import menuImg from '../../../images/icons/menu_bulb.svg'
-import chatIcon from '../../../images/icons/chat_icon_on.svg'
-import notificationIcon from '../../../images/icons/notification_icon_on.svg'
+import menuImg from '../../../images/menu_bulb.svg'
+import chatIcon from '../../../images/chat_icon_on.svg'
+import notificationIcon from '../../../images/notification_icon_on.svg'
 
 
 

@@ -1,10 +1,10 @@
 import React from 'react';
 import styles from '../../pages/Garage/Garage.module.scss'
 import CardMiddle from '../molecules/CardMiddle';
-import tuningElements_1 from '../../../images/svg/tuning_elements_1_off.svg'
-import tuningElements_2 from '../../../images/svg/tuning_elements_2_off.svg'
-import tuningElements_3 from '../../../images/svg/tuning_elements_3_off.svg'
-import tuningElements_4 from '../../../images/svg/tuning_elements_4_off.svg'
+import tuningElements_1 from '../../../images/tuning_elements_1_off.svg'
+import tuningElements_2 from '../../../images/tuning_elements_2_off.svg'
+import tuningElements_3 from '../../../images/tuning_elements_3_off.svg'
+import tuningElements_4 from '../../../images/tuning_elements_4_off.svg'
 import GarageTuning from './GarageTuning';
 
 

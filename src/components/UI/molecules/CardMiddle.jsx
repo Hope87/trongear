@@ -1,8 +1,8 @@
 import React from 'react';
 import { makeStyles } from '@material-ui/core/styles';
-import frame from '../../../images/svg/frame_1_on.svg';
-import tuningPanel from '../../../images/svg/tuning_panel_1.svg';
-import lockIcon from '../../../images/svg/lock_icon_copy.png';
+import frame from '../../../images/frame_1_on.svg';
+import tuningPanel from '../../../images/tuning_panel_1.svg';
+import lockIcon from '../../../images/lock_icon_copy.png';
 
 
 const useStyles = makeStyles({

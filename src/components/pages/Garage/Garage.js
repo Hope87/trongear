@@ -5,29 +5,36 @@ import Header from '../../UI/molecules/Header';
 import logo from '../../../images/logo.png';
 import GarageCards from '../../UI/organisms/GarageCards';
 import Links from '../../UI/atoms/Links';
-import linksImg from '../../../images/icons/panel-17.svg';
-import leftPanel from '../../../images/icons/panel-16.svg';
+import linksImg from '../../../images/panel-17.svg';
+import leftPanel from '../../../images/panel-16.svg';
 import GarageLeft from '../../UI/organisms/GarageLeft';
 import Timer from '../../UI/atoms/Timer';
 import Button from '../../UI/atoms/Button';
-import buttonsImg from '../../../images/buttons/buttons-06.svg';
+import buttonsImg from '../../../images/buttons-06.svg';
 import Modal from '../../UI/molecules/Modal';
+
+const headerPosition = {
+  right: '3.5%',
+};
 
 const Garage = ({ modal, setModal }) => {
   return (
     <div className={styles.garage}>
       <Grid container>
         <Grid item xs={12}>
-          <Header headerLogo={logo} headerModal={modal} setHeaderModal={setModal} />
+          <Header headerLogo={logo} headerModal={modal} setHeaderModal={setModal} languagePosition={headerPosition} />
 
           {modal && <Modal />}
         </Grid>
 
         <Grid item xs={12}>
-          <div style={{ marginTop: '40px' }}>
+          <div style={{ marginTop: '50px' }}>
             <Timer />
           </div>
-          <div className={styles.buttonsBox} style={{ marginTop: '-60px' }}>
+        </Grid>
+
+        <Grid item xs={12}>
+          <div className={styles.buttonsBox}>
             <div className={styles.buttonsBoxBtn}>
               <Button title="about" image={buttonsImg} />
               <div>

@@ -1,8 +1,8 @@
 import React from 'react'
 import { makeStyles } from '@material-ui/core/styles'
-import garageElements from '../../../images/garages/on/garage_elements_on-01.svg'
-import flag from '../../../images/garages/off/elements-05.svg'
-import beforeIcon from '../../../images/garages/on/garage_elements_on-05.svg'
+import garageElements from '../../../images/garage_elements_on-01.svg'
+import flag from '../../../images/garage_elements_on-04.svg'
+import beforeIcon from '../../../images/garage_elements_on-05.svg'
 
 
 

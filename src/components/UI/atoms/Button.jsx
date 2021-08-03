@@ -4,8 +4,8 @@ import { makeStyles } from '@material-ui/core/styles';
 
 const useStyles = makeStyles({
   button: {
-  maxWidth: '190px',
-  maxHeight: '60px',
+  width: '190px',
+  height: '60px',
   position: 'relative',
   cursor: 'pointer',
   backgroundColor: 'transparent',

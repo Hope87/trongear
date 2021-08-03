@@ -1,6 +1,6 @@
 import React from 'react';
 import { makeStyles } from '@material-ui/core/styles';
-import timer from '../../../images/icons/timer-18.svg';
+import timer from '../../../images/timer-18.svg';
 import cn from 'classnames';
 
 

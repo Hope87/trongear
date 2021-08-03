@@ -1,13 +1,13 @@
 import React from 'react';
 import styles from './Main.module.scss';
-import linksImg from '../../../images/icons/element_3_1-14.svg';
+import linksImg from '../../../images/element_3_1-14.svg';
 import Header from '../../UI/molecules/Header';
 import Links from '../../UI/atoms/Links';
 import Modal from '../../UI/molecules/Modal';
 import logo from '../../../images/logo.png';
 import letsRide from '../../../images/lets_ride.png';
-import frame from '../../../images/icons/frame.svg';
-import warning from '../../../images/icons/warning.svg';
+import frame from '../../../images/frame.svg';
+import warning from '../../../images/warning.svg';
 
 const Main = ({ modal, setModal }) => {
   return (

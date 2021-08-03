@@ -1,7 +1,7 @@
 import React from 'react'
 import { makeStyles } from '@material-ui/core/styles'
-import header from '../../../images/icons/header.svg'
-import burger from '../../../images/icons/burger.svg'
+import header from '../../../images/header.svg'
+import burger from '../../../images/burger.svg'
 
 
 
@@ -56,17 +56,17 @@ const useStyles = makeStyles({
   }
 })
 
-const Header = ({ headerModal, setHeaderModal, headerLogo }) => {
+const Header = ({ headerModal, setHeaderModal, headerLogo, languagePosition = '' }) => {
   const classes = useStyles()
   
   return (
     <div className={classes.mainHeader}>
       <img src={header} alt="header" />
       <img onClick={() => setHeaderModal(!headerModal)} src={burger} alt="burger" />
-      <h5>eng</h5>
+      <h5 style={{...languagePosition}}>eng</h5>
       {headerLogo && (
         <div className={classes.headerLogo}>
-          <img src={headerLogo} alt="logo" />
+          <img  src={headerLogo} alt="logo" />
         </div>
       )}
     </div>
