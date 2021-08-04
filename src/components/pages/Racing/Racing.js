@@ -7,10 +7,17 @@ import Modal from '../../UI/molecules/Modal';
 import Timer from '../../UI/atoms/Timer';
 import Button from '../../UI/atoms/Button';
 import buttonsImg from '../../../images/buttons-06.svg';
-import elements_01 from '../../../images/elements-01.svg';
-import elements_07 from '../../../images/elements-07.svg';
-import scale_tuning_panel from '../../../images/scale_tuning_panel.svg';
+import elements_12 from '../../../images/elements-12.svg';
 import elements_13 from '../../../images/elements-13.svg';
+import elements_14 from '../../../images/elements-14.svg';
+import yellowFlag from '../../../images/elements-07.svg';
+import redFlag from '../../../images/elements-08.svg';
+import StatisticElement from '../../UI/molecules/StatisticElement';
+
+const elementImgInlineStyle = {
+  width: '53px !important',
+  height: '16px !important',
+};
 
 const Racing = ({ modal, setModal }) => {
   return (
@@ -47,51 +54,81 @@ const Racing = ({ modal, setModal }) => {
           </div>
         </Grid>
 
-        <Grid item container direction="row" justifyContent="space-around" xs={6}>
-          <div className={styles.statisticElement}>
-            <img src={elements_01} alt="" />
-            <div className={styles.statisticElementBox}>
-              <div className={styles.statisticElementFlag}>
-                <img src={elements_07} alt="" />
-                <span>total invested </span>
-              </div>
-
-              <div className={styles.statisticElementText}>
-                <span>Affiliate Payout</span>
-                <p>000,000,000</p>
-                <img className={styles.statisticElementTextImg} src={elements_13} alt="" />
-              </div>
-            </div>
-
-            <div className={styles.statisticElementFooter}>
-              <img src={scale_tuning_panel} alt="" />
-              <p>
-                00,000,000.00 <span>($)</span>
-              </p>
-            </div>
+        <Grid item xs={6}>
+          <div className={styles.statisticElementTitle}>
+            <h3>owerall Statistics</h3>
+            <h3>personal Statistics</h3>
           </div>
-
-          <div className={styles.statisticElement}>
-            <img src={elements_01} alt="" />
-            <div className={styles.statisticElementBox}>
-              <div className={styles.statisticElementFlag}>
-                <img src={elements_07} alt="" />
-                <span>total invested </span>
-              </div>
-
-              <div className={styles.statisticElementText}>
-                <span>Affiliate Payout</span>
-                <p>000,000,000</p>
-                <img className={styles.statisticElementTextImg} src={elements_13} alt="" />
-              </div>
-            </div>
-
-            <div className={styles.statisticElementFooter}>
-              <img src={scale_tuning_panel} alt="" />
-              <p>
-                00,000,000.00 <span>($)</span>
-              </p>
-            </div>
+          <div className={styles.statisticElementContainer}>
+            <StatisticElement
+              flagText="total invested"
+              elementText="ROYALTIES"
+              payout="000,000,000"
+              elementImg={elements_13}
+              textColorWhite
+              flagImg={redFlag}
+              appearance="red"
+            />
+            <StatisticElement
+              flagText="income p/hour"
+              elementText="Affiliate Payout"
+              payout="000,000,000"
+              elementImg={elements_13}
+              flagImg={yellowFlag}
+              appearance="yellow"
+            />
+            <StatisticElement
+              flagText="total payed"
+              elementText="ROYALTIES"
+              payout="000,000,000"
+              elementImg={elements_13}
+              textColorWhite
+              flagImg={redFlag}
+              appearance="red"
+            />
+            <StatisticElement
+              flagText="cars in the race"
+              elementText="view top rasers"
+              payout="000,000,000"
+              hiddenImg
+              flagImg={yellowFlag}
+              appearance="yellow"
+            />
+            <StatisticElement
+              flagText="total riders"
+              elementText="viev all riders"
+              payout="000,000,000"
+              elementImg={elements_14}
+              textColorWhite
+              flagImg={redFlag}
+              appearance="silver"
+            />
+            <StatisticElement
+              flagText="current assets"
+              elementText="view top rasers"
+              hiddenText
+              payout="000,000,000"
+              elementImg={elements_13}
+              flagImg={yellowFlag}
+            />
+            <StatisticElement
+              flagText="total cars"
+              elementText="view all cars"
+              payout="000,000,000"
+              elementImg={elements_12}
+              textColorWhite
+              elementImgStyle={elementImgInlineStyle}
+              flagImg={redFlag}
+              appearance="silver"
+            />
+            <StatisticElement
+              flagText="outputs"
+              elementText="view top rasers"
+              hiddenText
+              payout="000,000,000"
+              hiddenImg
+              flagImg={yellowFlag}
+            />
           </div>
         </Grid>
       </Grid>

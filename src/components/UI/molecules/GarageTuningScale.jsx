@@ -36,7 +36,7 @@ const useStyles = makeStyles({
     height: '30px !important',
 
     '& img': {
-      width: '70px',
+      maxWidth: '70px',
       height: '32px',
       objectFit: 'cover',
 

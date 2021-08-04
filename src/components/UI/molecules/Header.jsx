@@ -7,12 +7,12 @@ import burger from '../../../images/burger.svg'
 
 const useStyles = makeStyles({
    mainHeader: {
-    maxWidth: '1920px',
-    height: '60px',
+    width: '100%',
+    minHeight: '60px',
     
     '& img': {
       width: '100%',
-      height: '60px',
+      height: '100%',
   
       '&:nth-child(2)': {
         width: '40px',
