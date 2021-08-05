@@ -45,11 +45,13 @@
     }
   }
 
-  .statisticElementContainer {
+  .transferElementContainer {
     display: flex;
     justify-content: space-around;
     flex-wrap: wrap;
     margin-left: 50px;
+    margin-right: 50px;
+    margin-top: 130px;
   }
 
   .transfer {
@@ -74,6 +76,30 @@
       flex-wrap: wrap;
       margin-right: 80px;
       margin-left: 80px;
+    }
+  }
+
+  .racingFooterTitle {
+    color: var(--white);
+    font-family: 'Russo One';
+    font-size: 18px;
+    font-weight: 400;
+    font-style: italic;
+    letter-spacing: normal;
+    line-height: 25.5px;
+    text-align: center;
+    text-transform: uppercase;
+    margin-top: 80px;
+  }
+
+  .racingFooterLeftPanel {
+    position: absolute;
+    left: 0;
+    bottom: 0;
+
+    img {
+      width: 100%;
+      height: 100%;
     }
   }
 }
