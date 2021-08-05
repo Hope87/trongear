@@ -13,6 +13,8 @@ import elements_14 from '../../../images/elements-14.svg';
 import yellowFlag from '../../../images/elements-07.svg';
 import redFlag from '../../../images/elements-08.svg';
 import StatisticElement from '../../UI/molecules/StatisticElement';
+import TransactionsCard from '../../UI/molecules/TransactionsCard';
+import TimeCard from '../../UI/molecules/TimeCard';
 
 const elementImgInlineStyle = {
   width: '53px !important',
@@ -129,6 +131,41 @@ const Racing = ({ modal, setModal }) => {
               hiddenImg
               flagImg={yellowFlag}
             />
+          </div>
+        </Grid>
+
+        <Grid item xs={6}>
+          <div className={styles.transfer}>
+            <h3 className={styles.transferTitle}>transfer</h3>
+
+            <div className={styles.transferCards}>
+              <TransactionsCard />
+              <TimeCard headerTitle="TIME" footerNone />
+              <TimeCard headerTitle="amount" opacity hidden />
+            </div>
+
+            <div className={styles.transferElements}>
+              <div className={styles.statisticElementContainer}>
+                <StatisticElement
+                  flagText="all updated"
+                  elementText="view top rasers"
+                  hiddenText
+                  payout="0"
+                  elementImg={elements_13}
+                  hiddenImg
+                  flagImg={yellowFlag}
+                />
+                <StatisticElement
+                  flagText="all taken"
+                  elementText="view top rasers"
+                  hiddenText
+                  payout="0"
+                  elementImg={elements_13}
+                  hiddenImg
+                  flagImg={yellowFlag}
+                />
+              </div>
+            </div>
           </div>
         </Grid>
       </Grid>

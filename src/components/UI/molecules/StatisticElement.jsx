@@ -21,9 +21,7 @@ const useStyles = makeStyles({
       position: 'absolute',
       top: '0',
       left: '0',
-      // width: 100%;
       width: '346px',
-      // height: 90%;
       height: '90px',
       backgroundColor: 'var(--dark)',
       clipPath: 'polygon(0% 28%, 9% 0%, 100% 0%, 100% 90%, 100% 100%, 0% 100%)'
@@ -31,12 +29,8 @@ const useStyles = makeStyles({
 
     statisticElementFooter: {
       height: '26px',
-      // width: 104%;
       width: '358px',
       marginLeft: '-3px',
-      // position: absolute;
-      // left: -3px;
-      // bottom: -5px;
 
       '& p': {
         textShadow: '4px 5px 13px rgba(18, 18, 18, 0.08)',
@@ -49,7 +43,6 @@ const useStyles = makeStyles({
         textAlign: 'left',
         textTransform: 'uppercase',
         position: 'absolute',
-        // top: 50%;
         bottom: '12%',
         left: '20%',
         transform: 'translate(-50%, -50%)'
