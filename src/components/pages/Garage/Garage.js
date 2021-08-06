@@ -10,7 +10,6 @@ import panelLeft from '../../../images/panel-16.svg';
 import GarageLeft from '../../UI/organisms/GarageLeft';
 import Timer from '../../UI/atoms/Timer';
 import Button from '../../UI/atoms/Button';
-import buttonsImg from '../../../images/buttons-06.svg';
 import Modal from '../../UI/molecules/Modal';
 
 const headerPosition = {
@@ -36,15 +35,15 @@ const Garage = ({ modal, setModal }) => {
         <Grid item xs={12}>
           <div className={styles.buttonsBox}>
             <div className={styles.buttonsBoxBtn}>
-              <Button title="about" image={buttonsImg} />
+              <Button title="about" />
               <div>
-                <Button title="garage" image={buttonsImg} />
+                <Button title="garage" />
               </div>
             </div>
             <div className={styles.buttonsBoxBtn}>
-              <Button title="racing" image={buttonsImg} />
+              <Button title="racing" />
               <div>
-                <Button title="top" image={buttonsImg} />
+                <Button title="top" />
               </div>
             </div>
           </div>

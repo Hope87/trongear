@@ -7,6 +7,7 @@ const MainPage = lazy(() => import('./components/pages/Main'));
 const GaragePage = lazy(() => import('./components/pages/Garage'));
 const GarageMenuPage = lazy(() => import('./components/pages/GarageMenu'));
 const RacingPage = lazy(() => import('./components/pages/Racing'));
+const TopPage = lazy(() => import('./components/pages/Top'));
 
 function App() {
   const [modal, setModal] = useState();
@@ -26,6 +27,9 @@ function App() {
           </Route>
           <Route path="/racing">
             <RacingPage modal={modal} setModal={setModal} />
+          </Route>
+          <Route path="/top">
+            <TopPage modal={modal} setModal={setModal} />
           </Route>
         </Switch>
       </Suspense>
