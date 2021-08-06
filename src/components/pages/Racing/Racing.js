@@ -101,11 +101,17 @@ const Racing = ({ modal, setModal }) => {
         </Grid>
 
         <Grid item xs={12}>
-          <div className={styles.racingFooterLeftPanel}>
-            <img src={panelLeft} alt="" />
+          <div className={styles.racingFooter}>
+            <div className={styles.racingFooterLeftPanel}>
+              <img src={panelLeft} alt="" />
+            </div>
+            <div>
+              <h4 className={styles.racingFooterTitle}>EARN BY PROMOTING</h4>
+            </div>
+            <div>
+              <Links images={panelRight} />
+            </div>
           </div>
-          <h4 className={styles.racingFooterTitle}>EARN BY PROMOTING</h4>
-          <Links images={panelRight} />
         </Grid>
       </Grid>
     </div>

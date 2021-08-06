@@ -43,8 +43,11 @@ const Main = ({ modal, setModal }) => {
           <img src={warning} alt="Warning" />
         </div>
       </div>
-
-      <Links images={linksImg} />
+      <div className={styles.mainFooter}>
+        <div>
+          <Links images={linksImg} />
+        </div>
+      </div>
     </div>
   );
 };

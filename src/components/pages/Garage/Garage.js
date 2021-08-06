@@ -5,8 +5,8 @@ import Header from '../../UI/molecules/Header';
 import logo from '../../../images/logo.png';
 import GarageCards from '../../UI/organisms/GarageCards';
 import Links from '../../UI/atoms/Links';
-import linksImg from '../../../images/panel-17.svg';
-import leftPanel from '../../../images/panel-16.svg';
+import panelRight from '../../../images/panel-17.svg';
+import panelLeft from '../../../images/panel-16.svg';
 import GarageLeft from '../../UI/organisms/GarageLeft';
 import Timer from '../../UI/atoms/Timer';
 import Button from '../../UI/atoms/Button';
@@ -59,10 +59,17 @@ const Garage = ({ modal, setModal }) => {
             <GarageCards />
           </Grid>
         </Grid>
-        <div className={styles.garageLeftPanel}>
-          <img src={leftPanel} alt="" />
-        </div>
-        <Links images={linksImg} />
+
+        <Grid item xs={12}>
+          <div className={styles.garageFooter}>
+            <div className={styles.garageFooterLeftPanel}>
+              <img src={panelLeft} alt="" />
+            </div>
+            <div>
+              <Links images={panelRight} />
+            </div>
+          </div>
+        </Grid>
       </Grid>
     </div>
   );

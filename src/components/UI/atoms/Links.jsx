@@ -6,38 +6,35 @@ import youtube from '../../../images/youtube.svg';
 
 const useStyles = makeStyles({
   mainLinks: {
-    position: 'absolute',
-    right: '0',
-    bottom: '0'
+    position: 'relative',
   },
   mainLinksImg: {
-    maxWidth: '412px',
     height: '90px',
 
     '& img': {
       width: '100%',
       height: '100%',
-      objectFit: 'contain'
-    }
+      objectFit: 'contain',
+    },
   },
   mainLinksBox: {
     position: 'absolute',
     left: '50%',
     top: '50%',
     transform: 'translate(-50%, -50%)',
-    
+
     '& img': {
       width: '30px',
       height: '30px',
       marginLeft: '10px',
-      cursor: 'pointer'
-    }
-  }
-})
+      cursor: 'pointer',
+    },
+  },
+});
 
 const Links = ({ images }) => {
-  const classes = useStyles()
-  
+  const classes = useStyles();
+
   return (
     <div className={classes.mainLinks}>
       <div className={classes.mainLinksImg}>

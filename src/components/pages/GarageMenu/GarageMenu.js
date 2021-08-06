@@ -66,20 +66,21 @@ const GarageMenu = ({ modal, setModal }) => {
         </Grid>
 
         <Grid item xs={12}>
-          <div className={styles.garageMenuText}>
-            <h2>enter the race</h2>
-            <p>
-              You are presented with 5 garages, with different levels of cars The first profit you will receive in an
-              hour after participation in the race!
-            </p>
+          <div className={styles.garageMenuFooter}>
+            <div className={styles.garageMenuFooterLeftPanel}>
+              <img src={panelLeft} alt="" />
+            </div>
+            <div className={styles.garageMenuText}>
+              <h2>enter the race</h2>
+              <p>
+                You are presented with 5 garages, with different levels of cars The first profit you will receive in an
+                hour after participation in the race!
+              </p>
+            </div>
+            <div>
+              <Links images={panelRight} />
+            </div>
           </div>
-        </Grid>
-
-        <Grid item xs={12}>
-          <div className={styles.garageMenuLeftPanel}>
-            <img src={panelLeft} alt="" />
-          </div>
-          <Links images={panelRight} />
         </Grid>
       </Grid>
     </div>

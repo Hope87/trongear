@@ -1,22 +1,19 @@
-import React from 'react'
-import { makeStyles } from '@material-ui/core/styles'
-import garageElements from '../../../images/garage_elements_on-01.svg'
-import flag from '../../../images/garage_elements_on-04.svg'
-import beforeIcon from '../../../images/garage_elements_on-05.svg'
-
-
-
+import React from 'react';
+import { makeStyles } from '@material-ui/core/styles';
+import garageElements from '../../../images/garage_elements_on-01.svg';
+import flag from '../../../images/garage_elements_on-04.svg';
+import beforeIcon from '../../../images/garage_elements_on-05.svg';
 
 const useStyles = makeStyles({
   garageMenuCard: {
-    width: '18%',
+    width: '340px',
     position: 'relative',
     marginTop: '40px',
-  
+
     '& img': {
       width: '100%',
       height: '100%',
-      objectFit: 'contain'
+      objectFit: 'contain',
     },
   },
 
@@ -38,9 +35,9 @@ const useStyles = makeStyles({
         top: '0',
         left: '0',
         position: 'absolute',
-        zIndex: '4'
-      }
-    }
+        zIndex: '4',
+      },
+    },
   },
 
   garageMenuBox: {
@@ -61,7 +58,7 @@ const useStyles = makeStyles({
     '& img': {
       width: '100%',
       height: '100%',
-      objectFit: 'cover'
+      objectFit: 'cover',
     },
 
     '& h3': {
@@ -77,14 +74,14 @@ const useStyles = makeStyles({
       textTransform: 'uppercase',
       position: 'absolute',
       top: '20%',
-      left: '5%'
-    }
+      left: '5%',
+    },
   },
 
   garageMenuText: {
     paddingLeft: '50px',
     paddingTop: '20px',
-    
+
     '& h4': {
       color: '#ffffff',
       fontSize: '16px',
@@ -103,7 +100,7 @@ const useStyles = makeStyles({
         top: '45px',
         width: '20px',
         height: '20px',
-      }
+      },
     },
 
     '& p': {
@@ -115,35 +112,33 @@ const useStyles = makeStyles({
       textAlign: 'left',
       textTransform: 'uppercase',
       marginTop: '10px',
-    }
-  }
-})
+    },
+  },
+});
 
+const GaragMenuCard = ({ title, car, background }) => {
+  const classes = useStyles();
 
-const GaragMenuCard = ({title, car, background}) => {
-
-  const classes = useStyles()
-    
   return (
-      <div className={classes.garageMenuCard}>
-        <img src={garageElements} alt="" />
-        <div className={classes.garageMenuImages}>
-          <img src={background} alt="" />
-          <img src={car} alt="" />
+    <div className={classes.garageMenuCard}>
+      <img src={garageElements} alt="" />
+      <div className={classes.garageMenuImages}>
+        <img src={background} alt="" />
+        <img src={car} alt="" />
+      </div>
+      <div className={classes.garageMenuBox}>
+        <div className={classes.garageMenuFlag}>
+          <img src={flag} alt="flag" />
+          <h3>{title}</h3>
         </div>
-        <div className={classes.garageMenuBox}>
-          <div className={classes.garageMenuFlag}>
-            <img src={flag} alt="flag" />
-            <h3>{title}</h3>
-          </div>
-          <div className={classes.garageMenuText}>
-            <h4>price:</h4>
-            <p>The game requires a browser plugin </p>
-            <p>TronLink or TronWallet</p>
-          </div>
+        <div className={classes.garageMenuText}>
+          <h4>price:</h4>
+          <p>The game requires a browser plugin </p>
+          <p>TronLink or TronWallet</p>
         </div>
       </div>
-    )
+    </div>
+  );
 };
 
-export default GaragMenuCard
+export default GaragMenuCard;
