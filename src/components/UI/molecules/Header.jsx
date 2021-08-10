@@ -28,11 +28,12 @@ const useStyles = makeStyles({
     },
   },
   mainHeaderBurger: {
-    width: '40px',
-    height: '22px',
+    width: '40px !important',
+    height: '22px !important',
     position: 'absolute',
-    top: '25%',
+    top: '50%',
     left: '50%',
+    transform: 'translate(-50%, -50%)',
     cursor: 'pointer',
   },
   headerLogo: {

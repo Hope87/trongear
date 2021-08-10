@@ -8,7 +8,6 @@ import Timer from '../../UI/atoms/Timer';
 import Button from '../../UI/atoms/Button';
 import buttonsImg from '../../../images/buttons-06.svg';
 import elements_13 from '../../../images/elements-13.svg';
-import yellowFlag from '../../../images/elements-07.svg';
 import StatisticElement from '../../UI/molecules/StatisticElement';
 import TransactionsCard from '../../UI/molecules/TransactionsCard';
 import TimeCard from '../../UI/molecules/TimeCard';
