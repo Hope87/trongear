@@ -2,14 +2,10 @@ import React from 'react';
 import { makeStyles } from '@material-ui/core/styles';
 import garageElements from '../../../images/garage_elements-white-05.svg';
 import GarageMain from '../../UI/organisms/GarageMain';
-// import garages_background from '../../../images/G_5.png';
 
 const useStyles = makeStyles({
   garageLeft: {
     marginLeft: '110px',
-    // background: `url('${garages_background}') no-repeat`,
-    // backgroundSize: '100% 84%',
-    // backgroundPositionY: '40px',
     position: 'relative',
   },
   garageLeftHeader: {
