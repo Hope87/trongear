@@ -12,16 +12,12 @@ import Timer from '../../UI/atoms/Timer';
 import Button from '../../UI/atoms/Button';
 import Modal from '../../UI/molecules/Modal';
 
-const headerPosition = {
-  right: '3.5%',
-};
-
 const Garage = ({ modal, setModal }) => {
   return (
     <div className={styles.garage}>
       <Grid container>
         <Grid item xs={12}>
-          <Header headerLogo={logo} headerModal={modal} setHeaderModal={setModal} languagePosition={headerPosition} />
+          <Header headerLogo={logo} headerModal={modal} setHeaderModal={setModal} />
 
           {modal && <Modal />}
         </Grid>

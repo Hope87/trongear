@@ -1,7 +1,6 @@
 import React from 'react';
 import { makeStyles } from '@material-ui/core/styles';
 import garageElements from '../../../images/garage_elements_on-01.svg';
-import flag from '../../../images/garage_elements_on-04.svg';
 import beforeIcon from '../../../images/garage_elements_on-05.svg';
 
 const useStyles = makeStyles({
@@ -43,7 +42,7 @@ const useStyles = makeStyles({
   garageMenuBox: {
     width: '97%',
     height: '48%',
-    backgroundColor: 'black',
+    backgroundColor: 'var(--dark)',
     position: 'absolute',
     bottom: '6px',
     left: '6px',
@@ -53,13 +52,8 @@ const useStyles = makeStyles({
   garageMenuFlag: {
     maxWidth: '240px',
     height: '32px',
-    position: 'relative',
-
-    '& img': {
-      width: '100%',
-      height: '100%',
-      objectFit: 'cover',
-    },
+    backgroundColor: 'var(--red)',
+    clipPath: 'polygon(0% 0%, 0% 0%, 100% 0%, 85% 100%, 100% 100%, 0% 100%)',
 
     '& h3': {
       textShadow: '4px 5px 13px rgba(18, 18, 18, 0.08)',
@@ -72,18 +66,18 @@ const useStyles = makeStyles({
       lineHeight: '21.67px',
       textAlign: 'left',
       textTransform: 'uppercase',
-      position: 'absolute',
-      top: '20%',
-      left: '5%',
+      marginLeft: '20px',
+      paddingTop: '5px',
     },
   },
 
   garageMenuText: {
     paddingLeft: '50px',
     paddingTop: '20px',
+    paddingRight: '10px',
 
     '& h4': {
-      color: '#ffffff',
+      color: 'var(--white)',
       fontSize: '16px',
       fontStyle: 'italic',
       letterSpacing: 'normal',
@@ -104,9 +98,9 @@ const useStyles = makeStyles({
     },
 
     '& p': {
-      color: '#ffffff',
+      color: 'var(--white)',
       fontFamily: 'Calibri',
-      fontSize: '16px',
+      fontSize: '14px',
       fontStyle: 'italic',
       letterSpacing: 'normal',
       textAlign: 'left',
@@ -128,7 +122,6 @@ const GaragMenuCard = ({ title, car, background }) => {
       </div>
       <div className={classes.garageMenuBox}>
         <div className={classes.garageMenuFlag}>
-          <img src={flag} alt="flag" />
           <h3>{title}</h3>
         </div>
         <div className={classes.garageMenuText}>

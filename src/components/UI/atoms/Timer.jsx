@@ -3,7 +3,6 @@ import { makeStyles } from '@material-ui/core/styles';
 import timer from '../../../images/timer-18.svg';
 import cn from 'classnames';
 
-
 const useStyles = makeStyles({
   timer: {
     display: 'flex',
@@ -16,10 +15,11 @@ const useStyles = makeStyles({
       fontFamily: 'Russo One',
       fontSize: '18px',
       fontWeight: '400',
+      fontStyle: 'italic',
       letterSpacing: 'normal',
       lineHeight: '37.97px',
       textAlign: 'center',
-      textTransform: 'uppercase'
+      textTransform: 'uppercase',
     },
 
     '& div': {
@@ -33,7 +33,7 @@ const useStyles = makeStyles({
     fontWeight: '500',
     position: 'relative',
   },
-  
+
   flipBox: {
     maxWidth: '40px',
     height: '60px',
@@ -60,55 +60,54 @@ const useStyles = makeStyles({
       zIndex: '2',
       top: '50%',
       left: '50%',
-      transform: 'translate(-50%, -50%)'
-    }
+      transform: 'translate(-50%, -50%)',
+    },
   },
   center: {
     marginLeft: '10px',
-    marginRight: '10px'
-  }
-})
+    marginRight: '10px',
+  },
+});
 
-
-const Timer = ({color = ''}) => {
-  const classes = useStyles()
+const Timer = ({ color = '' }) => {
+  const classes = useStyles();
 
   const numberColor = color;
-  
+
   return (
     <div className={classes.timer}>
       <p>race of the day</p>
       <div>
-      <div className={classes.flip}>
-        <div className={classes.flipBox}>
-          <img src={timer} alt="" />
-          <span style={{color: numberColor}}>0</span>
+        <div className={classes.flip}>
+          <div className={classes.flipBox}>
+            <img src={timer} alt="" />
+            <span style={{ color: numberColor }}>0</span>
+          </div>
+          <div className={classes.flipBox}>
+            <img src={timer} alt="" />
+            <span style={{ color: numberColor }}>0</span>
+          </div>
         </div>
-        <div className={classes.flipBox}>
-          <img src={timer} alt="" />
-          <span style={{color: numberColor}}>0</span>
+        <div className={cn(classes.flip, classes.center)}>
+          <div className={classes.flipBox}>
+            <img src={timer} alt="" />
+            <span style={{ color: numberColor }}>0</span>
+          </div>
+          <div className={classes.flipBox}>
+            <img src={timer} alt="" />
+            <span style={{ color: numberColor }}>0</span>
+          </div>
         </div>
-      </div>
-      <div className={cn(classes.flip, classes.center)}>
-        <div className={classes.flipBox}>
-          <img src={timer} alt="" />
-          <span style={{color: numberColor}}>0</span>
+        <div className={classes.flip}>
+          <div className={classes.flipBox}>
+            <img src={timer} alt="" />
+            <span style={{ color: numberColor }}>0</span>
+          </div>
+          <div className={classes.flipBox}>
+            <img src={timer} alt="" />
+            <span style={{ color: numberColor }}>0</span>
+          </div>
         </div>
-        <div className={classes.flipBox}>
-          <img src={timer} alt="" />
-          <span style={{color: numberColor}}>0</span>
-        </div>
-      </div>
-      <div className={classes.flip}>
-        <div className={classes.flipBox}>
-          <img src={timer} alt="" />
-          <span style={{color: numberColor}}>0</span>
-        </div>
-        <div className={classes.flipBox}>
-          <img src={timer} alt="" />
-          <span style={{color: numberColor}}>0</span>
-        </div>
-      </div>
       </div>
     </div>
   );

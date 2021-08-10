@@ -4,8 +4,6 @@ import StatisticElement from '../molecules/StatisticElement';
 import elements_12 from '../../../images/elements-12.svg';
 import elements_13 from '../../../images/elements-13.svg';
 import elements_14 from '../../../images/elements-14.svg';
-import yellowFlag from '../../../images/elements-07.svg';
-import redFlag from '../../../images/elements-08.svg';
 
 const useStyles = makeStyles({
   statisticElementContainer: {
@@ -32,7 +30,7 @@ const StatisticElementContainer = () => {
         payout="000,000,000"
         elementImg={elements_13}
         textColorWhite
-        flagImg={redFlag}
+        color="var(--red)"
         appearance="red"
       />
       <StatisticElement
@@ -40,7 +38,7 @@ const StatisticElementContainer = () => {
         elementText="Affiliate Payout"
         payout="000,000,000"
         elementImg={elements_13}
-        flagImg={yellowFlag}
+        color="var(--yellow)"
         appearance="yellow"
       />
       <StatisticElement
@@ -49,7 +47,7 @@ const StatisticElementContainer = () => {
         payout="000,000,000"
         elementImg={elements_13}
         textColorWhite
-        flagImg={redFlag}
+        color="var(--red)"
         appearance="red"
       />
       <StatisticElement
@@ -57,7 +55,7 @@ const StatisticElementContainer = () => {
         elementText="view top rasers"
         payout="000,000,000"
         hiddenImg
-        flagImg={yellowFlag}
+        color="var(--yellow)"
         appearance="yellow"
       />
       <StatisticElement
@@ -66,7 +64,7 @@ const StatisticElementContainer = () => {
         payout="000,000,000"
         elementImg={elements_14}
         textColorWhite
-        flagImg={redFlag}
+        color="var(--red)"
         appearance="silver"
       />
       <StatisticElement
@@ -75,7 +73,7 @@ const StatisticElementContainer = () => {
         hiddenText
         payout="000,000,000"
         elementImg={elements_13}
-        flagImg={yellowFlag}
+        color="var(--yellow)"
       />
       <StatisticElement
         flagText="total cars"
@@ -84,7 +82,7 @@ const StatisticElementContainer = () => {
         elementImg={elements_12}
         textColorWhite
         elementImgStyle={elementImgInlineStyle}
-        flagImg={redFlag}
+        color="var(--red)"
         appearance="silver"
       />
       <StatisticElement
@@ -93,7 +91,7 @@ const StatisticElementContainer = () => {
         hiddenText
         payout="000,000,000"
         hiddenImg
-        flagImg={yellowFlag}
+        color="var(--yellow)"
       />
     </div>
   );

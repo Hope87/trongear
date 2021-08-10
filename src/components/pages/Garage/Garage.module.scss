@@ -175,6 +175,26 @@
           object-fit: contain;
         }
       }
+
+      button {
+        width: 155px;
+        height: 36px;
+        background-color: var(--yellow);
+        border: none;
+        clip-path: polygon(0% 50%, 10% 0%, 100% 0%, 100% 50%, 90% 100%, 0% 100%);
+
+        text-shadow: 0 0 4px rgba(18, 18, 18, 0.26);
+        color: var(--dark);
+        font-family: 'Russo One';
+        font-size: 18px;
+        font-weight: 400;
+        font-style: italic;
+        letter-spacing: normal;
+        line-height: normal;
+        text-align: center;
+        text-transform: uppercase;
+        cursor: pointer;
+      }
     }
 
     .garageLeftMainPanel {

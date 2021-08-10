@@ -22,16 +22,12 @@ import Button from '../../UI/atoms/Button';
 import buttonsImg from '../../../images/buttons-06.svg';
 import Modal from '../../UI/molecules/Modal';
 
-const headerPosition = {
-  right: '3.5%',
-};
-
 const GarageMenu = ({ modal, setModal }) => {
   return (
     <div className={styles.garageMenu}>
       <Grid container>
         <Grid item xs={12}>
-          <Header headerLogo={logo} headerModal={modal} setHeaderModal={setModal} languagePosition={headerPosition} />
+          <Header headerLogo={logo} headerModal={modal} setHeaderModal={setModal} />
 
           {modal && <Modal />}
         </Grid>

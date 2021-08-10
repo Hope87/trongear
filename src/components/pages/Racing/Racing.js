@@ -17,16 +17,12 @@ import panelRight from '../../../images/panel-17.svg';
 import panelLeft from '../../../images/panel-16.svg';
 import Links from '../../UI/atoms/Links';
 
-const headerPosition = {
-  right: '3.5%',
-};
-
 const Racing = ({ modal, setModal }) => {
   return (
     <div className={styles.racing}>
       <Grid container>
         <Grid item xs={12}>
-          <Header headerLogo={logo} headerModal={modal} setHeaderModal={setModal} languagePosition={headerPosition} />
+          <Header headerLogo={logo} headerModal={modal} setHeaderModal={setModal} />
 
           {modal && <Modal />}
         </Grid>
@@ -84,7 +80,7 @@ const Racing = ({ modal, setModal }) => {
                   payout="0"
                   elementImg={elements_13}
                   hiddenImg
-                  flagImg={yellowFlag}
+                  color="var(--yellow)"
                 />
                 <StatisticElement
                   flagText="all taken"
@@ -93,7 +89,7 @@ const Racing = ({ modal, setModal }) => {
                   payout="0"
                   elementImg={elements_13}
                   hiddenImg
-                  flagImg={yellowFlag}
+                  color="var(--yellow)"
                 />
               </div>
             </div>

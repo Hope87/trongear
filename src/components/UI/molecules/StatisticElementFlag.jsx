@@ -1,20 +1,14 @@
 import React from 'react';
 import { makeStyles } from '@material-ui/core/styles';
 
-
 const useStyles = makeStyles({
   statisticElementFlag: {
-    width: '40%',
+    width: '55%',
     height: '25%',
     position: 'absolute',
     top: '0',
     right: '0',
-
-    '& img': {
-      width: '100%',
-      height: '100%',
-      objectFit: 'cover'
-    },
+    clipPath: 'polygon(28% 0%, 0% 0%, 100% 0%, 100% 100%, 100% 100%, 40% 100%)',
 
     '& span': {
       fontFamily: 'Calibri',
@@ -25,27 +19,22 @@ const useStyles = makeStyles({
       lineHeight: 'normal',
       textAlign: 'right',
       textTransform: 'uppercase',
-      position: 'absolute',
-      top: '40%',
-      left: '50%',
-      transform: 'translate(-50%, -50%)'
+      marginLeft: '120px',
     },
   },
   textColorWhite: {
-    color: 'var(--white)'
-  }
-})
+    color: 'var(--white)',
+  },
+});
 
+const StatisticElementFlag = ({ flagText, textColorWhite, color }) => {
+  const classes = useStyles();
 
-const StatisticElementFlag = ({flagText, flagImg, textColorWhite}) => {
-  const classes = useStyles()
-    
   return (
-      <div className={classes.statisticElementFlag}>
-      <img src={flagImg} alt="" />
-       {textColorWhite ? <span style={{color: 'white'}}>{flagText}</span> : <span>{flagText}</span>}
+    <div style={{ backgroundColor: color }} className={classes.statisticElementFlag}>
+      {textColorWhite ? <span style={{ color: 'white' }}>{flagText}</span> : <span>{flagText}</span>}
     </div>
-    );
+  );
 };
 
 export default StatisticElementFlag;

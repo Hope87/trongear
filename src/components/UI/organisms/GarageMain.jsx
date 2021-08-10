@@ -6,13 +6,7 @@ import flag from '../../../images/elements-45.svg';
 import GarageScale from '../../UI/molecules/GarageScale';
 import garageElements from '../../../images/garage_elements-white-05.svg';
 import pointsRunk from '../../../images/points_runk_lvl_garage.svg';
-import buy_button from '../../../images/buy_button.png';
 import unlock_icon from '../../../images/unlock_icon.png';
-import Button from '../atoms/Button';
-
-const btnFs = {
-  fontSize: '18px',
-};
 
 const GarageMain = () => {
   return (
@@ -41,7 +35,7 @@ const GarageMain = () => {
         <div className={styles.garageLeftMainBtnImg}>
           <img src={unlock_icon} alt="unlock_icon" />
         </div>
-        <Button title="BUY" image={buy_button} inlineStyle={btnFs} />
+        <button>buy</button>
       </div>
 
       <div className={styles.garageLeftMainScale}>

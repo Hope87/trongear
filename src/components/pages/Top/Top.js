@@ -14,16 +14,12 @@ import panelRight from '../../../images/panel-17.svg';
 import panelLeft from '../../../images/panel-16.svg';
 import Links from '../../UI/atoms/Links';
 
-const headerPosition = {
-  right: '3.5%',
-};
-
 const Top = ({ modal, setModal }) => {
   return (
     <div className={styles.top}>
       <Grid container>
         <Grid item xs={12}>
-          <Header headerLogo={logo} headerModal={modal} setHeaderModal={setModal} languagePosition={headerPosition} />
+          <Header headerLogo={logo} headerModal={modal} setHeaderModal={setModal} />
 
           {modal && <Modal />}
         </Grid>
