@@ -2,15 +2,14 @@ import React from 'react';
 import { makeStyles } from '@material-ui/core/styles';
 import garageElements from '../../../images/garage_elements-white-05.svg';
 import GarageMain from '../../UI/organisms/GarageMain';
-import garages_background from '../../../images/G_5.png'
-
+// import garages_background from '../../../images/G_5.png';
 
 const useStyles = makeStyles({
   garageLeft: {
     marginLeft: '110px',
-    background: `url('${garages_background}') no-repeat`,
-    backgroundSize: '100% 84%',
-    backgroundPositionY: '40px',
+    // background: `url('${garages_background}') no-repeat`,
+    // backgroundSize: '100% 84%',
+    // backgroundPositionY: '40px',
     position: 'relative',
   },
   garageLeftHeader: {
@@ -33,7 +32,7 @@ const useStyles = makeStyles({
       letterSpacing: 'normal',
       lineHeight: 'normal',
       textAlign: 'left',
-      textTransform: 'uppercase'
+      textTransform: 'uppercase',
     },
   },
   garageLeftHeaderItems: {
@@ -55,29 +54,28 @@ const useStyles = makeStyles({
       letterSpacing: 'normal',
       lineHeight: 'normal',
       textAlign: 'left',
-      textTransform: 'uppercase'
-    }
-  }
-})
-
+      textTransform: 'uppercase',
+    },
+  },
+});
 
 const GarageLeft = () => {
-  const classes = useStyles()
-    return (
-        <div className={classes.garageLeft}>
-        <div className={classes.garageLeftHeader}>
-          <h2>garage 1</h2>
-          <div className={classes.garageLeftHeaderItems}>
-            <img src={garageElements} alt="" />
-            <p>
-              <span>0</span> TRX
-            </p>
-          </div>
+  const classes = useStyles();
+  return (
+    <div className={classes.garageLeft}>
+      <div className={classes.garageLeftHeader}>
+        <h2>garage 1</h2>
+        <div className={classes.garageLeftHeaderItems}>
+          <img src={garageElements} alt="" />
+          <p>
+            <span>0</span> TRX
+          </p>
         </div>
-
-        <GarageMain />
       </div>
-    );
+
+      <GarageMain />
+    </div>
+  );
 };
 
 export default GarageLeft;

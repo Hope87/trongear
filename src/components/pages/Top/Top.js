@@ -8,6 +8,11 @@ import Timer from '../../UI/atoms/Timer';
 import Button from '../../UI/atoms/Button';
 import buttonsImg from '../../../images/buttons-06.svg';
 import TopPanel from '../../UI/molecules/TopPanel';
+import TopMainLeft from '../../UI/organisms/TopMainLeft';
+import TopMainRight from '../../UI/organisms/TopMainRight';
+import panelRight from '../../../images/panel-17.svg';
+import panelLeft from '../../../images/panel-16.svg';
+import Links from '../../UI/atoms/Links';
 
 const headerPosition = {
   right: '3.5%',
@@ -48,6 +53,28 @@ const Top = ({ modal, setModal }) => {
 
         <Grid item xs={12}>
           <TopPanel />
+        </Grid>
+
+        <Grid item xs={6}>
+          <TopMainLeft />
+        </Grid>
+
+        <Grid item xs={6}>
+          <TopMainRight />
+        </Grid>
+
+        <Grid item xs={12}>
+          <div className={styles.topFooter}>
+            <div className={styles.topFooterLeftPanel}>
+              <img src={panelLeft} alt="" />
+            </div>
+            <div>
+              <h4 className={styles.topFooterTitle}>EARN BY PROMOTING</h4>
+            </div>
+            <div>
+              <Links images={panelRight} />
+            </div>
+          </div>
         </Grid>
       </Grid>
     </div>

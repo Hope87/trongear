@@ -16,11 +16,12 @@ const useStyles = makeStyles({
       width: '100%',
       height: '100%',
       objectFit: 'contain',
+      color: 'var(--dark)',
     },
 
     '& h4': {
       textShadow: '1px 1px 3px rgba(18, 18, 18, 0.08)',
-      color: 'var(--dark)',
+      color: 'var(--red)',
       fontFamily: 'Russo One',
       fontSize: '24px',
       fontWeight: '400',
@@ -44,8 +45,10 @@ const Button = ({ title, inlineStyle }) => {
 
   return (
     <button className={classes.button}>
-      <img src={image} alt={title} onMouseEnter={() => setImage(buttonOn)} onMouseOut={() => setImage(buttonOff)} />
-      <h4 style={{ ...inlineStyle }}>{title}</h4>
+      <div>
+        <img src={image} alt={title} onMouseEnter={() => setImage(buttonOn)} onMouseOut={() => setImage(buttonOff)} />
+        <h4 style={{ ...inlineStyle }}>{title}</h4>
+      </div>
     </button>
   );
 };
