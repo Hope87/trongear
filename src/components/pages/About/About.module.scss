@@ -6,6 +6,12 @@
   overflow: auto;
   background-size: cover;
 
+  .aboutCards {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+  }
+
   .aboutLeftPanel {
     position: absolute;
     left: 0;

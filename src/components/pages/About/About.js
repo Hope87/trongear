@@ -39,12 +39,14 @@ const About = ({ modal, setModal }) => {
         <Grid item xs={12}>
           <ButtonsBox />
         </Grid>
-        <Grid container direction="row" justifyContent="center">
-          <AboutCard title="garage 1" car={bmw} background={g_1} />
-          <AboutCard title="garage 2" car={acura} background={g_2} />
-          <AboutCard title="garage 3" car={astonMartin} background={g_3} />
-          <AboutCard title="garage 4" car={buick} background={g_4} />
-          <AboutCard title="garage 5" car={audi} background={g_5} />
+        <Grid item xs={12}>
+          <div className={styles.aboutCards}>
+            <AboutCard title="garage 1" car={bmw} background={g_1} />
+            <AboutCard title="garage 2" car={acura} background={g_2} />
+            <AboutCard title="garage 3" car={astonMartin} background={g_3} />
+            <AboutCard title="garage 4" car={buick} background={g_4} />
+            <AboutCard title="garage 5" car={audi} background={g_5} />
+          </div>
         </Grid>
 
         <Grid item xs={12}>
