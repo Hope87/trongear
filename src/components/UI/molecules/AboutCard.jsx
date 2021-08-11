@@ -4,7 +4,7 @@ import garageElements from '../../../images/garage_elements_on-01.svg';
 import beforeIcon from '../../../images/garage_elements_on-05.svg';
 
 const useStyles = makeStyles({
-  garageMenuCard: {
+  aboutCard: {
     width: '340px',
     position: 'relative',
     marginTop: '40px',
@@ -16,7 +16,7 @@ const useStyles = makeStyles({
     },
   },
 
-  garageMenuImages: {
+  aboutImages: {
     width: '97%',
     height: '50%',
     position: 'absolute',
@@ -39,7 +39,7 @@ const useStyles = makeStyles({
     },
   },
 
-  garageMenuBox: {
+  aboutBox: {
     width: '97%',
     height: '48%',
     backgroundColor: 'var(--dark)',
@@ -49,7 +49,7 @@ const useStyles = makeStyles({
     clipPath: 'polygon(0% 0%, 0% 0%, 100% 0%, 100% 79%, 85% 100%, 0% 100%)',
   },
 
-  garageMenuFlag: {
+  aboutFlag: {
     maxWidth: '240px',
     height: '32px',
     backgroundColor: 'var(--red)',
@@ -71,7 +71,7 @@ const useStyles = makeStyles({
     },
   },
 
-  garageMenuText: {
+  aboutText: {
     paddingLeft: '50px',
     paddingTop: '20px',
     paddingRight: '10px',
@@ -110,21 +110,21 @@ const useStyles = makeStyles({
   },
 });
 
-const GaragMenuCard = ({ title, car, background }) => {
+const AboutCard = ({ title, car, background }) => {
   const classes = useStyles();
 
   return (
-    <div className={classes.garageMenuCard}>
+    <div className={classes.aboutCard}>
       <img src={garageElements} alt="" />
-      <div className={classes.garageMenuImages}>
+      <div className={classes.aboutImages}>
         <img src={background} alt="" />
         <img src={car} alt="" />
       </div>
-      <div className={classes.garageMenuBox}>
-        <div className={classes.garageMenuFlag}>
+      <div className={classes.aboutBox}>
+        <div className={classes.aboutFlag}>
           <h3>{title}</h3>
         </div>
-        <div className={classes.garageMenuText}>
+        <div className={classes.aboutText}>
           <h4>price:</h4>
           <p>The game requires a browser plugin </p>
           <p>TronLink or TronWallet</p>
@@ -134,4 +134,4 @@ const GaragMenuCard = ({ title, car, background }) => {
   );
 };
 
-export default GaragMenuCard;
+export default AboutCard;

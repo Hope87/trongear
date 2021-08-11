@@ -1,21 +1,19 @@
-import React from 'react'
-import { makeStyles } from '@material-ui/core/styles'
-import menuImg from '../../../images/menu_bulb.svg'
-import chatIcon from '../../../images/chat_icon_on.svg'
-import notificationIcon from '../../../images/notification_icon_on.svg'
-
-
+import React from 'react';
+import { makeStyles } from '@material-ui/core/styles';
+import menuImg from '../../../images/menu_bulb.svg';
+import chatIcon from '../../../images/chat_icon_on.svg';
+import notificationIcon from '../../../images/notification_icon_on.svg';
 
 const useStyles = makeStyles({
-  "@keyframes modal": {
-    "0%": {
+  '@keyframes modal': {
+    '0%': {
       opacity: '0.1',
     },
-    "100%": {
+    '100%': {
       opacity: '1',
-    }
+    },
   },
-   mainModal: {
+  mainModal: {
     width: '280px',
     height: '260px',
     boxShadow: '0 0 35px rgba(17, 17, 17, 0.25)',
@@ -25,11 +23,11 @@ const useStyles = makeStyles({
     animationName: '$modal',
     animationFillMode: 'forwards',
     zIndex: '12',
-  
+
     '& img': {
       opacity: '0.7',
       width: '100%',
-      height: '100%'
+      height: '100%',
     },
   },
   mainModalMenu: {
@@ -51,7 +49,7 @@ const useStyles = makeStyles({
       cursor: 'pointer',
 
       '&:nth-child(1)': {
-        marginLeft: '10px',
+        marginLeft: '50px',
       },
       '&:nth-child(2)': {
         marginLeft: '50px',
@@ -74,15 +72,14 @@ const useStyles = makeStyles({
         height: '20px',
         position: 'absolute',
         left: '10px',
-      }
-    }
-  }
-})
-
+      },
+    },
+  },
+});
 
 const Modal = () => {
-  const classes = useStyles()
-  
+  const classes = useStyles();
+
   return (
     <div className={classes.mainModal}>
       <img src={menuImg} alt="Menu" />
@@ -92,7 +89,7 @@ const Modal = () => {
         <p>Notification</p>
       </div>
     </div>
-  )
+  );
 };
 
-export default Modal
+export default Modal;

@@ -1,53 +1,46 @@
 import React from 'react';
 import styles from './Main.module.scss';
+import { Grid } from '@material-ui/core';
 import linksImg from '../../../images/element_3_1-14.svg';
 import Header from '../../UI/molecules/Header';
 import Links from '../../UI/atoms/Links';
 import Modal from '../../UI/molecules/Modal';
-import logo from '../../../images/logo.png';
-import letsRide from '../../../images/lets_ride.png';
-import frame from '../../../images/frame.svg';
-import warning from '../../../images/warning.svg';
+import Timer from '../../UI/atoms/Timer';
+import ButtonsBox from '../../UI/molecules/ButtonsBox';
+import MainDescription from '../../UI/organisms/MainDescription';
 
 const Main = ({ modal, setModal }) => {
   return (
     <div className={styles.main}>
-      <Header headerModal={modal} setHeaderModal={setModal} />
+      <Grid container>
+        <Grid item xs={12}>
+          <Header headerModal={modal} setHeaderModal={setModal} />
 
-      {modal && <Modal />}
+          {modal && <Modal />}
+        </Grid>
 
-      <div className={styles.mainText}>
-        <h1 className={styles.mainTextLogo}>
-          <img src={logo} alt="logo" />
-        </h1>
-        <div className={styles.mainLetsRide}>
-          <img src={letsRide} alt="letsRide" />
-          <h2>let`s ride</h2>
-        </div>
-        <p>HOW IT WORKS</p>
-      </div>
+        <Grid item xs={12}>
+          <div className={styles.mainTimer}>
+            <Timer />
+          </div>
+        </Grid>
 
-      <div className={styles.mainInfo}>
-        <img src={frame} alt="frame" />
-        <div className={styles.mainInfoBox}>
-          <p>
-            <span>Important information</span>
-            <br />
-            The game requires a browser plugin
-            <br />
-            <span>TronLink</span> or <span>TronWallet</span>
-          </p>
-        </div>
+        <Grid item xs={12}>
+          <div className={styles.mainBtn} style={{ marginTop: '-60px' }}>
+            <ButtonsBox />
+          </div>
+        </Grid>
 
-        <div className={styles.mainInfoWarning}>
-          <img src={warning} alt="Warning" />
-        </div>
-      </div>
-      <div className={styles.mainFooter}>
-        <div>
-          <Links images={linksImg} />
-        </div>
-      </div>
+        <Grid item xs={12}>
+          <MainDescription />
+        </Grid>
+
+        <Grid item xs={12}>
+          <div className={styles.mainFooter}>
+            <Links images={linksImg} />
+          </div>
+        </Grid>
+      </Grid>
     </div>
   );
 };

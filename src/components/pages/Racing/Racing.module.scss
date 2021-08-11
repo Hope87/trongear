@@ -6,24 +6,6 @@
   position: fixed;
   overflow: auto;
 
-  .buttonsBox {
-    display: flex;
-    justify-content: space-between;
-    align-items: flex-end;
-    margin-left: 100px;
-    margin-right: 100px;
-
-    div {
-      display: flex;
-    }
-
-    .buttonsBoxBtn {
-      div {
-        margin-left: 20px;
-      }
-    }
-  }
-
   .statisticElementTitle {
     display: flex;
     justify-content: space-around;
@@ -97,13 +79,21 @@
     }
 
     .racingFooterLeftPanel {
-      position: relative;
       height: 90px;
+      position: absolute;
+      bottom: 0;
+      left: 0;
 
       img {
         width: 100%;
         height: 100%;
       }
+    }
+
+    .racingFooterRightPanel {
+      position: absolute;
+      bottom: 0;
+      right: 0;
     }
   }
 }

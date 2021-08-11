@@ -6,24 +6,6 @@
   overflow: auto;
   background-size: cover;
 
-  .buttonsBox {
-    display: flex;
-    justify-content: space-between;
-    align-items: flex-end;
-    margin-left: 100px;
-    margin-right: 100px;
-
-    div {
-      display: flex;
-    }
-
-    .buttonsBoxBtn {
-      div {
-        margin-left: 20px;
-      }
-    }
-  }
-
   .topFooter {
     display: flex;
     justify-content: space-between;
@@ -42,13 +24,21 @@
     }
 
     .topFooterLeftPanel {
-      position: relative;
       height: 90px;
+      position: absolute;
+      bottom: 0;
+      left: 0;
 
       img {
         width: 100%;
         height: 100%;
       }
+    }
+
+    .topFooterRightPanel {
+      position: absolute;
+      bottom: 0;
+      right: 0;
     }
   }
 }

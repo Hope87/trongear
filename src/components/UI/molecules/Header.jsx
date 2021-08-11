@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 import { makeStyles } from '@material-ui/core/styles';
 import burger from '../../../images/burger.svg';
 
@@ -66,7 +67,9 @@ const Header = ({ headerModal, setHeaderModal, headerLogo }) => {
       <h5>eng</h5>
       {headerLogo && (
         <div className={classes.headerLogo}>
-          <img src={headerLogo} alt="logo" />
+          <Link to="/">
+            <img src={headerLogo} alt="logo" />
+          </Link>
         </div>
       )}
     </div>

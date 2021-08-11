@@ -38,16 +38,29 @@ const useStyles = makeStyles({
   },
 });
 
-const Button = ({ title, inlineStyle }) => {
+const Button = ({ title }) => {
   const classes = useStyles();
 
-  const [image, setImage] = useState(buttonOff);
+  const [options, setOptions] = useState({ image: buttonOff, color: 'var(--red)' });
+
+  const { image, color } = options;
 
   return (
     <button className={classes.button}>
       <div>
-        <img src={image} alt={title} onMouseEnter={() => setImage(buttonOn)} onMouseOut={() => setImage(buttonOff)} />
-        <h4 style={{ ...inlineStyle }}>{title}</h4>
+        <img
+          src={image}
+          alt={title}
+          onMouseEnter={() => setOptions({ image: buttonOn, color: 'var(--dark)' })}
+          onMouseOut={() => setOptions({ image: buttonOff, color: 'var(--red)' })}
+        />
+        <h4
+          style={{ color: color }}
+          onMouseEnter={() => setOptions({ image: buttonOn, color: 'var(--dark)' })}
+          onMouseOut={() => setOptions({ image: buttonOff, color: 'var(--red)' })}
+        >
+          {title}
+        </h4>
       </div>
     </button>
   );

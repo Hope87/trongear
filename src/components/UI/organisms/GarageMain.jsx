@@ -1,7 +1,7 @@
 import React from 'react';
 import { makeStyles } from '@material-ui/core/styles';
-import amg from '../../../images/4_amg.png';
-import mclaren from '../../../images/5_mclaren.png';
+import amg from '../../../images/cars/G_5_cars/on/4_amg.png';
+import mclaren from '../../../images/cars/G_5_cars/on/5_mclaren.png';
 import GarageScale from '../../UI/molecules/GarageScale';
 import garageElements from '../../../images/garage_elements-white-05.svg';
 import pointsRunk from '../../../images/points_runk_lvl_garage.svg';
