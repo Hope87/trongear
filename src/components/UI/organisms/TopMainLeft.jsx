@@ -39,7 +39,7 @@ const useStyles = makeStyles({
     '& img': {
       width: '30px',
       height: '28px',
-      marginLeft: '320px',
+      marginLeft: '260px',
     },
   },
 });

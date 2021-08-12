@@ -3,7 +3,7 @@ import { makeStyles } from '@material-ui/core/styles';
 
 const useStyles = makeStyles({
   topMainRightInfo: {
-    width: '75%',
+    width: '78%',
     height: '350px',
     backgroundColor: 'var(--secondary)',
     marginLeft: '60px',

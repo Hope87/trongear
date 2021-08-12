@@ -10,7 +10,7 @@ const RacingPage = lazy(() => import('./components/pages/Racing'));
 const TopPage = lazy(() => import('./components/pages/Top'));
 
 function App() {
-  const [modal, setModal] = useState();
+  const [modal, setModal] = useState(false);
 
   return (
     <Router>

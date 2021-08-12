@@ -7,7 +7,6 @@ const useStyles = makeStyles({
   timer: {
     display: 'flex',
     flexDirection: 'column',
-    marginLeft: '50px',
 
     '& p': {
       textShadow: '1px 1px 3px rgba(18, 18, 18, 0.08)',

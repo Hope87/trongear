@@ -29,7 +29,8 @@ const useStyles = makeStyles({
   },
 
   topRatingPanelInfo: {
-    width: '720px',
+    // width: '720px',
+    width: '78%',
     height: '50px',
     background: 'linear-gradient(to right, var(--secondary) 60%,  rgba(0,0,0,0.2) 95%)',
     clipPath: 'polygon(5.4% 0%, 0% 0%, 100% 0%, 100% 100%, 100% 100%, 0% 100%)',

@@ -2,6 +2,7 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import { makeStyles } from '@material-ui/core/styles';
 import burger from '../../../images/burger.svg';
+import Links from '../../UI/atoms/Links';
 
 const useStyles = makeStyles({
   mainHeader: {
@@ -10,6 +11,7 @@ const useStyles = makeStyles({
     backgroundColor: 'var(--dark)',
     position: 'relative',
     clipPath: 'polygon(0% 0%, 0% 0%, 100% 0%, 97% 100%, 100% 100%, 3% 100%)',
+    marginBottom: '10px',
 
     '& h5': {
       textShadow: '0 6px 13px rgba(18, 18, 18, 0.08)',
@@ -36,6 +38,11 @@ const useStyles = makeStyles({
     left: '50%',
     transform: 'translate(-50%, -50%)',
     cursor: 'pointer',
+  },
+  mainLinks: {
+    position: 'absolute',
+    top: '0',
+    right: '15%',
   },
   headerLogo: {
     position: 'absolute',
@@ -64,6 +71,9 @@ const Header = ({ headerModal, setHeaderModal, headerLogo }) => {
         src={burger}
         alt="burger"
       />
+      <div className={classes.mainLinks}>
+        <Links />
+      </div>
       <h5>eng</h5>
       {headerLogo && (
         <div className={classes.headerLogo}>

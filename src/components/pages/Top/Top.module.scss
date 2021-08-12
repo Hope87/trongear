@@ -9,7 +9,7 @@
   .topFooter {
     display: flex;
     justify-content: space-between;
-    margin-top: 225px;
+    margin-top: 230px;
 
     .topFooterTitle {
       color: var(--white);
@@ -25,20 +25,11 @@
 
     .topFooterLeftPanel {
       height: 90px;
-      position: absolute;
-      bottom: 0;
-      left: 0;
 
       img {
         width: 100%;
         height: 100%;
       }
-    }
-
-    .topFooterRightPanel {
-      position: absolute;
-      bottom: 0;
-      right: 0;
     }
   }
 }

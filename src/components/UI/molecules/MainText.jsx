@@ -5,6 +5,8 @@ import letsRide from '../../../images/lets_ride.png';
 
 const useStyles = makeStyles({
   mainText: {
+    marginTop: '100px',
+
     '& p': {
       color: 'var(--red)',
       fontFamily: 'Calibri',
@@ -21,7 +23,6 @@ const useStyles = makeStyles({
   mainTextLogo: {
     maxWidth: '825px',
     boxShadow: '0 2px 79px rgba(18, 18, 18, 0.09)',
-    marginTop: '180px',
   },
 
   mainLetsRide: {

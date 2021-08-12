@@ -1,9 +1,7 @@
 import React from 'react';
 import styles from './Main.module.scss';
 import { Grid } from '@material-ui/core';
-import linksImg from '../../../images/element_3_1-14.svg';
 import Header from '../../UI/molecules/Header';
-import Links from '../../UI/atoms/Links';
 import Modal from '../../UI/molecules/Modal';
 import Timer from '../../UI/atoms/Timer';
 import ButtonsBox from '../../UI/molecules/ButtonsBox';
@@ -20,9 +18,15 @@ const Main = ({ modal, setModal }) => {
         </Grid>
 
         <Grid item xs={12}>
-          <div className={styles.mainTimer}>
-            <Timer />
-          </div>
+          {!modal ? (
+            <div className={styles.mainTimer}>
+              <Timer />
+            </div>
+          ) : (
+            <div style={{ opacity: 0 }} className={styles.mainTimer}>
+              <Timer />
+            </div>
+          )}
         </Grid>
 
         <Grid item xs={12}>
@@ -33,12 +37,6 @@ const Main = ({ modal, setModal }) => {
 
         <Grid item xs={12}>
           <MainDescription />
-        </Grid>
-
-        <Grid item xs={12}>
-          <div className={styles.mainFooter}>
-            <Links images={linksImg} />
-          </div>
         </Grid>
       </Grid>
     </div>

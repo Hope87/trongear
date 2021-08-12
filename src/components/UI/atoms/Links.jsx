@@ -5,42 +5,34 @@ import twitter from '../../../images/twitter.svg';
 import youtube from '../../../images/youtube.svg';
 
 const useStyles = makeStyles({
-  mainLinks: {
+  links: {
     position: 'relative',
+    width: '280px',
+    paddingLeft: '80px',
+    paddingTop: '15px',
   },
-  mainLinksImg: {
-    height: '90px',
+
+  linksBox: {
+    // position: 'absolute',
+    // left: '50%',
+    // top: '50%',
+    // transform: 'translate(-50%, -50%)',
 
     '& img': {
-      width: '100%',
-      height: '100%',
-      objectFit: 'contain',
-    },
-  },
-  mainLinksBox: {
-    position: 'absolute',
-    left: '50%',
-    top: '50%',
-    transform: 'translate(-50%, -50%)',
-
-    '& img': {
-      width: '30px',
-      height: '30px',
+      width: '30px !important',
+      height: '30px !important',
       marginLeft: '10px',
       cursor: 'pointer',
     },
   },
 });
 
-const Links = ({ images }) => {
+const Links = () => {
   const classes = useStyles();
 
   return (
-    <div className={classes.mainLinks}>
-      <div className={classes.mainLinksImg}>
-        <img src={images} alt="images" />
-      </div>
-      <div className={classes.mainLinksBox}>
+    <div className={classes.links}>
+      <div className={classes.linksBox}>
         <a href="https://www.facebook.com/">
           <img src={facebook} alt="" />
         </a>
