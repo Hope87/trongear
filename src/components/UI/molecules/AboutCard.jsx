@@ -7,7 +7,6 @@ const useStyles = makeStyles({
   aboutCard: {
     width: '340px',
     position: 'relative',
-    marginTop: '40px',
 
     '& img': {
       width: '100%',

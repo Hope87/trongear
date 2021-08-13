@@ -11,6 +11,7 @@ const useStyles = makeStyles({
     cursor: 'pointer',
     backgroundColor: 'transparent',
     border: 'none',
+    outline: 'none',
 
     '& img': {
       width: '100%',

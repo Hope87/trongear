@@ -8,9 +8,6 @@ import Timer from '../../UI/atoms/Timer';
 import TopPanel from '../../UI/molecules/TopPanel';
 import TopMainLeft from '../../UI/organisms/TopMainLeft';
 import TopMainRight from '../../UI/organisms/TopMainRight';
-import panelRight from '../../../images/panel-17.svg';
-import panelLeft from '../../../images/panel-16.svg';
-import Links from '../../UI/atoms/Links';
 import ButtonsBox from '../../UI/molecules/ButtonsBox';
 
 const Top = ({ modal, setModal }) => {
@@ -24,9 +21,15 @@ const Top = ({ modal, setModal }) => {
         </Grid>
 
         <Grid item xs={12}>
-          <div>
-            <Timer />
-          </div>
+          {!modal ? (
+            <div className={styles.topTimer}>
+              <Timer />
+            </div>
+          ) : (
+            <div style={{ opacity: 0 }} className={styles.topTimer}>
+              <Timer />
+            </div>
+          )}
         </Grid>
 
         <Grid item xs={12}>
@@ -49,14 +52,8 @@ const Top = ({ modal, setModal }) => {
 
         <Grid item xs={12}>
           <div className={styles.topFooter}>
-            <div className={styles.topFooterLeftPanel}>
-              <img src={panelLeft} alt="" />
-            </div>
             <div>
               <h4 className={styles.topFooterTitle}>EARN BY PROMOTING</h4>
-            </div>
-            <div className={styles.topFooterRightPanel}>
-              <Links images={panelRight} />
             </div>
           </div>
         </Grid>

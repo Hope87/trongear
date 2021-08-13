@@ -12,7 +12,7 @@ const useStyles = makeStyles({
     display: 'flex',
     flexDirection: 'column',
     alignItems: 'center',
-    marginTop: '20px',
+    marginTop: '30px',
   },
   garageCards: {
     display: 'flex',

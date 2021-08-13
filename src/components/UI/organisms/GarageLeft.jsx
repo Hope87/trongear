@@ -11,7 +11,7 @@ const useStyles = makeStyles({
   garageLeftHeader: {
     maxWidth: '1020px',
     height: '70px',
-    marginTop: '20px',
+    marginTop: '30px',
     position: 'relative',
     backgroundColor: 'var(--red)',
     display: 'flex',

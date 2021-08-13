@@ -4,9 +4,6 @@ import styles from './Garage.module.scss';
 import Header from '../../UI/molecules/Header';
 import logo from '../../../images/logo.png';
 import GarageCards from '../../UI/organisms/GarageCards';
-import Links from '../../UI/atoms/Links';
-import panelRight from '../../../images/panel-17.svg';
-import panelLeft from '../../../images/panel-16.svg';
 import GarageLeft from '../../UI/organisms/GarageLeft';
 import Timer from '../../UI/atoms/Timer';
 import Modal from '../../UI/molecules/Modal';
@@ -23,13 +20,21 @@ const Garage = ({ modal, setModal }) => {
         </Grid>
 
         <Grid item xs={12}>
-          <div style={{ marginTop: '50px' }}>
-            <Timer />
-          </div>
+          {!modal ? (
+            <div className={styles.garageTimer}>
+              <Timer />
+            </div>
+          ) : (
+            <div style={{ opacity: 0 }} className={styles.garageTimer}>
+              <Timer />
+            </div>
+          )}
         </Grid>
 
         <Grid item xs={12}>
-          <ButtonsBox />
+          <div className={styles.garageBtn} style={{ marginTop: '-60px' }}>
+            <ButtonsBox />
+          </div>
         </Grid>
 
         <Grid item xs={12} container>
@@ -40,17 +45,6 @@ const Garage = ({ modal, setModal }) => {
           <Grid item xs={5}>
             <GarageCards />
           </Grid>
-        </Grid>
-
-        <Grid item xs={12}>
-          <div className={styles.garageFooter}>
-            <div className={styles.garageFooterLeftPanel}>
-              <img src={panelLeft} alt="" />
-            </div>
-            <div className={styles.garageFooterRightPanel}>
-              <Links images={panelRight} />
-            </div>
-          </div>
         </Grid>
       </Grid>
     </div>

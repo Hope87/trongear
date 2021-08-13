@@ -15,9 +15,6 @@ import g_2 from '../../../images/G_2.png';
 import g_3 from '../../../images/G_3.png';
 import g_4 from '../../../images/G_4.png';
 import g_5 from '../../../images/G_5.png';
-import Links from '../../UI/atoms/Links';
-import panelRight from '../../../images/panel-17.svg';
-import panelLeft from '../../../images/panel-16.svg';
 import Modal from '../../UI/molecules/Modal';
 import ButtonsBox from '../../UI/molecules/ButtonsBox';
 
@@ -32,13 +29,23 @@ const About = ({ modal, setModal }) => {
         </Grid>
 
         <Grid item xs={12}>
-          <div style={{ marginTop: '40px' }}>
-            <Timer />
+          {!modal ? (
+            <div className={styles.aboutTimer}>
+              <Timer />
+            </div>
+          ) : (
+            <div style={{ opacity: 0 }} className={styles.aboutTimer}>
+              <Timer />
+            </div>
+          )}
+        </Grid>
+
+        <Grid item xs={12}>
+          <div className={styles.aboutBtn} style={{ marginTop: '120px' }}>
+            <ButtonsBox />
           </div>
         </Grid>
-        <Grid item xs={12}>
-          <ButtonsBox />
-        </Grid>
+
         <Grid item xs={12}>
           <div className={styles.aboutCards}>
             <AboutCard title="garage 1" car={bmw} background={g_1} />
@@ -51,18 +58,12 @@ const About = ({ modal, setModal }) => {
 
         <Grid item xs={12}>
           <div className={styles.aboutFooter}>
-            <div className={styles.aboutFooterLeftPanel}>
-              <img src={panelLeft} alt="" />
-            </div>
             <div className={styles.aboutText}>
               <h2>enter the race</h2>
               <p>
                 You are presented with 5 garages, with different levels of cars The first profit you will receive in an
                 hour after participation in the race!
               </p>
-            </div>
-            <div className={styles.aboutFooterRightPanel}>
-              <Links images={panelRight} />
             </div>
           </div>
         </Grid>

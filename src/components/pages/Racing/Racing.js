@@ -10,9 +10,6 @@ import StatisticElement from '../../UI/molecules/StatisticElement';
 import TransactionsCard from '../../UI/molecules/TransactionsCard';
 import TimeCard from '../../UI/molecules/TimeCard';
 import StatisticElementContainer from '../../UI/organisms/StatisticElementContainer';
-import panelRight from '../../../images/panel-17.svg';
-import panelLeft from '../../../images/panel-16.svg';
-import Links from '../../UI/atoms/Links';
 import ButtonsBox from '../../UI/molecules/ButtonsBox';
 
 const Racing = ({ modal, setModal }) => {
@@ -26,11 +23,27 @@ const Racing = ({ modal, setModal }) => {
         </Grid>
 
         <Grid container item xs={6} justifyContent="flex-end">
-          <Timer />
+          {!modal ? (
+            <div className={styles.racingTimer} style={{ marginRight: '20px' }}>
+              <Timer />
+            </div>
+          ) : (
+            <div style={{ opacity: 0 }} className={styles.racingTimer}>
+              <Timer />
+            </div>
+          )}
         </Grid>
 
-        <Grid container item xs={6} justifyContent="flex-start">
-          <Timer color="#ff1437" />
+        <Grid container item xs={6}>
+          {!modal ? (
+            <div className={styles.racingTimer} style={{ marginLeft: '20px' }}>
+              <Timer color="#ff1437" />
+            </div>
+          ) : (
+            <div style={{ opacity: 0 }} className={styles.racingTimer}>
+              <Timer />
+            </div>
+          )}
         </Grid>
 
         <Grid item xs={12}>
@@ -83,15 +96,7 @@ const Racing = ({ modal, setModal }) => {
 
         <Grid item xs={12}>
           <div className={styles.racingFooter}>
-            <div className={styles.racingFooterLeftPanel}>
-              <img src={panelLeft} alt="" />
-            </div>
-            <div>
-              <h4 className={styles.racingFooterTitle}>EARN BY PROMOTING</h4>
-            </div>
-            <div className={styles.racingFooterRightPanel}>
-              <Links images={panelRight} />
-            </div>
+            <h4 className={styles.racingFooterTitle}>EARN BY PROMOTING</h4>
           </div>
         </Grid>
       </Grid>
