@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import Grid from '@material-ui/core/Grid';
 import styles from './About.module.scss';
 import AboutCard from '../../UI/molecules/AboutCard';
@@ -17,8 +17,58 @@ import g_4 from '../../../images/G_4.png';
 import g_5 from '../../../images/G_5.png';
 import Modal from '../../UI/molecules/Modal';
 import ButtonsBox from '../../UI/molecules/ButtonsBox';
+import AboutCardOff from '../../UI/molecules/AboutCardOff';
+import garage_1 from '../../../images/garage_1.png';
+import garage_2 from '../../../images/garage_2.png';
+import garage_3 from '../../../images/garage_3.png';
+import garage_4 from '../../../images/garage_4.png';
+import garage_5 from '../../../images/garage_5.png';
+
+const cardItems = [
+  {
+    id: 1,
+    image: garage_1,
+    components: [<AboutCardOff image={garage_1} />, <AboutCard title="garage 1" car={bmw} background={g_1} />],
+  },
+  {
+    id: 2,
+    image: garage_2,
+    components: [<AboutCardOff image={garage_2} />, <AboutCard title="garage 1" car={acura} background={g_2} />],
+  },
+  {
+    id: 3,
+    image: garage_3,
+    components: [<AboutCardOff image={garage_3} />, <AboutCard title="garage 1" car={astonMartin} background={g_3} />],
+  },
+  {
+    id: 4,
+    image: garage_4,
+    components: [<AboutCardOff image={garage_4} />, <AboutCard title="garage 1" car={buick} background={g_4} />],
+  },
+  {
+    id: 5,
+    image: garage_5,
+    components: [<AboutCardOff image={garage_5} />, <AboutCard title="garage 1" car={audi} background={g_5} />],
+  },
+];
 
 const About = ({ modal, setModal }) => {
+  const [activeGarage, setActiveGarage] = useState({
+    1: true,
+    2: true,
+    3: true,
+    4: true,
+    5: true,
+  });
+
+  const onHover = (id) => {
+    setActiveGarage((prev) => ({ ...prev, [id]: false }));
+  };
+
+  const onLeaveContainer = (id) => {
+    setActiveGarage((prev) => ({ ...prev, [id]: true }));
+  };
+
   return (
     <div className={styles.about}>
       <Grid container>
@@ -41,18 +91,18 @@ const About = ({ modal, setModal }) => {
         </Grid>
 
         <Grid item xs={12}>
-          <div className={styles.aboutBtn} style={{ marginTop: '120px' }}>
+          <div className={styles.aboutBtn}>
             <ButtonsBox />
           </div>
         </Grid>
 
         <Grid item xs={12}>
-          <div className={styles.aboutCards}>
-            <AboutCard title="garage 1" car={bmw} background={g_1} />
-            <AboutCard title="garage 2" car={acura} background={g_2} />
-            <AboutCard title="garage 3" car={astonMartin} background={g_3} />
-            <AboutCard title="garage 4" car={buick} background={g_4} />
-            <AboutCard title="garage 5" car={audi} background={g_5} />
+          <div className={styles.aboutCardsOff}>
+            {cardItems.map((el) => (
+              <div onMouseEnter={() => onHover(el.id)} key={el.id} onMouseLeave={() => onLeaveContainer(el.id)}>
+                {activeGarage[el.id] ? el.components[0] : el.components[1]}
+              </div>
+            ))}
           </div>
         </Grid>
 

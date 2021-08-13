@@ -6,10 +6,16 @@
   overflow: auto;
   background-size: cover;
 
-  .aboutCards {
+  .aboutBtn {
+    margin-top: 120px;
+  }
+
+  .aboutCardsOff {
     display: flex;
-    justify-content: center;
+    justify-content: space-between;
     flex-wrap: wrap;
+    margin-left: 110px;
+    margin-right: 110px;
   }
 
   .aboutLeftPanel {
@@ -27,12 +33,13 @@
     display: flex;
     justify-content: space-between;
     margin-top: 160px;
+    padding-bottom: 40px;
 
     .aboutText {
       max-width: 560px;
       margin: -60px auto 0;
       h2 {
-        color: #eaff00;
+        color: var(--yellow);
         font-family: 'Russo One';
         font-size: 37px;
         font-weight: 400;
@@ -45,7 +52,7 @@
 
       p {
         text-shadow: 1px 1px 3px rgba(18, 18, 18, 0.08);
-        color: #ffffff;
+        color: var(--white);
         font-family: 'Calibri';
         font-size: 16px;
         font-style: italic;

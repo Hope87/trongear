@@ -10,6 +10,10 @@ const useStyles = makeStyles({
     marginTop: '60px',
     marginLeft: '100px',
     position: 'relative',
+
+    '& img': {
+      paddingBottom: '40px',
+    },
   },
   mainInfoBox: {
     position: 'absolute',

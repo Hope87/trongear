@@ -30,7 +30,7 @@ const Main = ({ modal, setModal }) => {
         </Grid>
 
         <Grid item xs={12}>
-          <div className={styles.mainBtn} style={{ marginTop: '-60px' }}>
+          <div className={styles.mainBtn}>
             <ButtonsBox />
           </div>
         </Grid>
