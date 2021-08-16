@@ -1,4 +1,4 @@
-.top {
+.garage {
   background: url('../../../images/bacground_1920x1080.png') no-repeat;
   width: 100%;
   height: 100vh;
@@ -6,13 +6,23 @@
   overflow: auto;
   background-size: cover;
 
-  .topFooter {
-    display: flex;
-    justify-content: center;
-    margin-top: 180px;
-    padding-bottom: 40px;
+  .garageLeftPanel {
+    position: absolute;
+    left: 0;
+    bottom: 0;
 
-    .topFooterTitle {
+    img {
+      width: 100%;
+      height: 100%;
+    }
+  }
+
+  .garageFooter {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 22px;
+
+    .racingFooterTitle {
       color: var(--white);
       font-family: 'Russo One';
       font-size: 18px;

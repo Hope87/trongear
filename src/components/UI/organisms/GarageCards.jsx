@@ -5,7 +5,7 @@ import tuningElements_1 from '../../../images/tuning_elements_1_off.svg';
 import tuningElements_2 from '../../../images/tuning_elements_2_off.svg';
 import tuningElements_3 from '../../../images/tuning_elements_3_off.svg';
 import tuningElements_4 from '../../../images/tuning_elements_4_off.svg';
-import GarageTuning from './GarageTuning';
+import GarageTuning from './GarageMenuTuning';
 
 const useStyles = makeStyles({
   garageRight: {
@@ -20,15 +20,33 @@ const useStyles = makeStyles({
   },
 });
 
+const cardMiddleArr = [
+  {
+    id: 1,
+    image: tuningElements_1,
+  },
+  {
+    id: 2,
+    image: tuningElements_2,
+  },
+  {
+    id: 3,
+    image: tuningElements_3,
+  },
+  {
+    id: 4,
+    image: tuningElements_4,
+  },
+];
+
 const GarageCards = () => {
   const classes = useStyles();
   return (
     <div className={classes.garageRight}>
       <div className={classes.garageCards}>
-        <CardMiddle image={tuningElements_1} />
-        <CardMiddle image={tuningElements_2} />
-        <CardMiddle image={tuningElements_3} />
-        <CardMiddle image={tuningElements_4} />
+        {cardMiddleArr.map((el) => (
+          <CardMiddle key={el.id} image={el.image} />
+        ))}
       </div>
 
       <GarageTuning />

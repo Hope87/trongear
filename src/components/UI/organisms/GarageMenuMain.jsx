@@ -2,7 +2,7 @@ import React from 'react';
 import { makeStyles } from '@material-ui/core/styles';
 import amg from '../../../images/cars/G_5_cars/on/4_amg.png';
 import mclaren from '../../../images/cars/G_5_cars/on/5_mclaren.png';
-import GarageScale from '../../UI/molecules/GarageScale';
+import GarageMenuScale from '../molecules/GarageMenuScale';
 import garageElements from '../../../images/garage_elements-white-05.svg';
 import pointsRunk from '../../../images/points_runk_lvl_garage.svg';
 import unlock_icon from '../../../images/unlock_icon.png';
@@ -187,7 +187,7 @@ const useStyles = makeStyles({
   },
 });
 
-const GarageMain = () => {
+const GarageMenuMain = () => {
   const classes = useStyles();
   return (
     <div className={classes.garageLeftMain}>
@@ -218,9 +218,9 @@ const GarageMain = () => {
       </div>
 
       <div className={classes.garageLeftMainScale}>
-        <GarageScale scaleImage={pointsRunk} />
-        <GarageScale scaleImage={pointsRunk} />
-        <GarageScale scaleImage={pointsRunk} />
+        <GarageMenuScale scaleImage={pointsRunk} />
+        <GarageMenuScale scaleImage={pointsRunk} />
+        <GarageMenuScale scaleImage={pointsRunk} />
       </div>
       <div className={classes.garageLeftMainPanel}>
         <p>total cars in the garage </p>
@@ -230,4 +230,4 @@ const GarageMain = () => {
   );
 };
 
-export default GarageMain;
+export default GarageMenuMain;

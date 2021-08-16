@@ -6,7 +6,7 @@ import tuningsImg_2 from '../../../images/tuning_img_2.png';
 import tuningsImg_3 from '../../../images/tuning_img_3.png';
 import tuningsImg_4 from '../../../images/tuning_img_4.png';
 import tuningsImg_5 from '../../../images/tuning_img_5.png';
-import GarageTuningScale from '../molecules/GarageTuningScale';
+import GarageMenuTuningScale from '../molecules/GarageMenuTuningScale';
 import tuningRunk from '../../../images/runk_lvl_tuning.svg';
 
 const useStyles = makeStyles({
@@ -65,7 +65,35 @@ const useStyles = makeStyles({
   },
 });
 
-const GarageTuning = () => {
+const cardSmallArr = [
+  {
+    id: 1,
+    text: '0,00trx',
+    image: tuningsImg_1,
+  },
+  {
+    id: 2,
+    text: '0,00trx',
+    image: tuningsImg_2,
+  },
+  {
+    id: 3,
+    text: '0,00trx',
+    image: tuningsImg_3,
+  },
+  {
+    id: 4,
+    text: '0,00trx',
+    image: tuningsImg_4,
+  },
+  {
+    id: 5,
+    text: '0,00trx',
+    image: tuningsImg_5,
+  },
+];
+
+const GarageMenuTuning = () => {
   const classes = useStyles();
 
   return (
@@ -76,20 +104,18 @@ const GarageTuning = () => {
       </div>
 
       <div className={classes.garageTuningCards}>
-        <CardSmall image={tuningsImg_1} text="0,00trx" />
-        <CardSmall image={tuningsImg_2} text="0,00trx" />
-        <CardSmall image={tuningsImg_3} text="0,00trx" />
-        <CardSmall image={tuningsImg_4} text="0,00trx" />
-        <CardSmall image={tuningsImg_5} text="0,00trx" />
+        {cardSmallArr.map((el) => (
+          <CardSmall key={el.id} image={el.image} text={el.text} />
+        ))}
       </div>
       <div className={classes.garageTuningScale}>
-        <GarageTuningScale scaleImage={tuningRunk} scaleText="runk" />
+        <GarageMenuTuningScale scaleImage={tuningRunk} scaleText="runk" />
         <div style={{ marginTop: '20px' }}>
-          <GarageTuningScale scaleImage={tuningRunk} scaleText="level" />
+          <GarageMenuTuningScale scaleImage={tuningRunk} scaleText="level" />
         </div>
       </div>
     </div>
   );
 };
 
-export default GarageTuning;
+export default GarageMenuTuning;

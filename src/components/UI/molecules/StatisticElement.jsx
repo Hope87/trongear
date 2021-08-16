@@ -52,7 +52,6 @@ const StatisticElement = ({
   elementText,
   payout,
   elementImg,
-  elementImgStyle = '',
   hiddenImg,
   hiddenText,
   textColorWhite,
@@ -70,7 +69,6 @@ const StatisticElement = ({
           elementText={elementText}
           payout={payout}
           elementImg={elementImg}
-          elementImgStyle={elementImgStyle}
           hiddenImg={hiddenImg}
           hiddenText={hiddenText}
           appearance={appearance}

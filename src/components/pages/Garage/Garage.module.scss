@@ -6,6 +6,18 @@
   overflow: auto;
   background-size: cover;
 
+  .garageBtn {
+    margin-top: 120px;
+  }
+
+  .garageCardsOff {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    margin-left: 110px;
+    margin-right: 110px;
+  }
+
   .garageLeftPanel {
     position: absolute;
     left: 0;
@@ -20,18 +32,35 @@
   .garageFooter {
     display: flex;
     justify-content: space-between;
-    margin-top: 22px;
+    margin-top: 160px;
+    padding-bottom: 40px;
 
-    .racingFooterTitle {
-      color: var(--white);
-      font-family: 'Russo One';
-      font-size: 18px;
-      font-weight: 400;
-      font-style: italic;
-      letter-spacing: normal;
-      line-height: 25.5px;
-      text-align: center;
-      text-transform: uppercase;
+    .garageText {
+      max-width: 560px;
+      margin: -60px auto 0;
+      h2 {
+        color: var(--yellow);
+        font-family: 'Russo One';
+        font-size: 37px;
+        font-weight: 400;
+        font-style: italic;
+        letter-spacing: normal;
+        line-height: normal;
+        text-align: center;
+        text-transform: uppercase;
+      }
+
+      p {
+        text-shadow: 1px 1px 3px rgba(18, 18, 18, 0.08);
+        color: var(--white);
+        font-family: 'Calibri';
+        font-size: 16px;
+        font-style: italic;
+        letter-spacing: normal;
+        line-height: normal;
+        text-align: center;
+        text-transform: uppercase;
+      }
     }
   }
 }

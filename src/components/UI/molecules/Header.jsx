@@ -42,7 +42,7 @@ const useStyles = makeStyles({
   mainLinks: {
     position: 'absolute',
     top: '0',
-    right: '15%',
+    right: '1%',
   },
   headerLogo: {
     position: 'absolute',

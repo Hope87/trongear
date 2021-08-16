@@ -1,7 +1,7 @@
 import React from 'react';
 import { makeStyles } from '@material-ui/core/styles';
 import garageElements from '../../../images/garage_elements-white-05.svg';
-import GarageMain from '../../UI/organisms/GarageMain';
+import GarageMenuMain from './GarageMenuMain';
 
 const useStyles = makeStyles({
   garageLeft: {
@@ -55,7 +55,7 @@ const useStyles = makeStyles({
   },
 });
 
-const GarageLeft = () => {
+const GarageMenuLeft = () => {
   const classes = useStyles();
   return (
     <div className={classes.garageLeft}>
@@ -69,9 +69,9 @@ const GarageLeft = () => {
         </div>
       </div>
 
-      <GarageMain />
+      <GarageMenuMain />
     </div>
   );
 };
 
-export default GarageLeft;
+export default GarageMenuLeft;

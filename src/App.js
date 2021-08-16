@@ -5,7 +5,7 @@ import './fonts/stylesheet.css';
 
 const MainPage = lazy(() => import('./components/pages/Main'));
 const GaragePage = lazy(() => import('./components/pages/Garage'));
-const AboutPage = lazy(() => import('./components/pages/About'));
+const GarageMenuPage = lazy(() => import('./components/pages/GarageMenu'));
 const RacingPage = lazy(() => import('./components/pages/Racing'));
 const TopPage = lazy(() => import('./components/pages/Top'));
 
@@ -22,8 +22,8 @@ function App() {
           <Route path="/garage">
             <GaragePage modal={modal} setModal={setModal} />
           </Route>
-          <Route path="/about">
-            <AboutPage modal={modal} setModal={setModal} />
+          <Route path="/garageMenu/:id">
+            <GarageMenuPage modal={modal} setModal={setModal} />
           </Route>
           <Route path="/racing">
             <RacingPage modal={modal} setModal={setModal} />
