@@ -78,22 +78,7 @@ const inlineStyles = {
   transition: 'all 0.4s ease-out',
 };
 
-// const GarageCardOff = ({ image, cardTitle, garageStyles }) => {
-//   const classes = useStyles();
-
-//   return (
-//     <div className={classes.garageCardOff}>
-//       <img src={image} alt="" style={garageStyles} />
-//       <h4>{cardTitle}</h4>
-//       <div>
-//         <h5>Price:</h5>
-//         <p>The game requires a browser plugin TronLink or TronWallet</p>
-//       </div>
-//     </div>
-//   );
-// };
-
-const GarageCardOff = ({ imageOff, cardTitleOff, imageOn, cardTitleOn }) => {
+const GarageCardOff = ({ imageOff, cardTitleOff, imageOn, cardTitleOn, onGarageMenuInformation }) => {
   const classes = useStyles();
 
   const [activeGarage, setActiveGarage] = useState({
@@ -113,38 +98,40 @@ const GarageCardOff = ({ imageOff, cardTitleOff, imageOn, cardTitleOn }) => {
   };
 
   return (
-    <>
+    <div className={classes.garageCardOff}>
       {activeGarage[cardTitleOn] ? (
-        <div className={classes.garageCardOff}>
+        <>
           <img
-            onMouseEnter={() => onHover(cardTitleOn)}
+            onMouseEnter={() => {
+              onHover(cardTitleOn);
+              onGarageMenuInformation(cardTitleOn);
+            }}
             onMouseLeave={() => onLeaveContainer(cardTitleOn)}
             src={imageOff}
             alt={cardTitleOn}
           />
           <h4>{cardTitleOff}</h4>
-          <div>
-            <h5>Price:</h5>
-            <p>The game requires a browser plugin TronLink or TronWallet</p>
-          </div>
-        </div>
+        </>
       ) : (
-        <div className={classes.garageCardOff}>
+        <>
           <img
             style={inlineStyles}
-            onMouseEnter={() => onHover(cardTitleOn)}
+            onMouseEnter={() => {
+              onHover(cardTitleOn);
+              onGarageMenuInformation(cardTitleOn);
+            }}
             onMouseLeave={() => onLeaveContainer(cardTitleOn)}
             src={imageOn}
             alt={cardTitleOn}
           />
           <h4>{cardTitleOn}</h4>
-          <div>
-            <h5>Price:</h5>
-            <p>The game requires a browser plugin TronLink or TronWallet</p>
-          </div>
-        </div>
+        </>
       )}
-    </>
+      <div>
+        <h5>Price:</h5>
+        <p>The game requires a browser plugin TronLink or TronWallet</p>
+      </div>
+    </div>
   );
 };
 

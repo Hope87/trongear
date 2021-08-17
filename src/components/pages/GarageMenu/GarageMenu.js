@@ -4,12 +4,12 @@ import styles from './GarageMenu.module.scss';
 import Header from '../../UI/molecules/Header';
 import logo from '../../../images/logo.png';
 import GarageCards from '../../UI/organisms/GarageCards';
-import GarageLeft from '../../UI/organisms/GarageMenuLeft';
+import GarageMenuLeft from '../../UI/organisms/GarageMenuLeft';
 import Timer from '../../UI/atoms/Timer';
 import Modal from '../../UI/molecules/Modal';
 import ButtonsBox from '../../UI/molecules/ButtonsBox';
 
-const Garage = ({ modal, setModal }) => {
+const Garage = ({ modal, setModal, info }) => {
   return (
     <div className={styles.garage}>
       <Grid container>
@@ -39,7 +39,7 @@ const Garage = ({ modal, setModal }) => {
 
         <Grid item xs={12} container>
           <Grid item xs={7}>
-            <GarageLeft />
+            <GarageMenuLeft info={info}/>
           </Grid>
 
           <Grid item xs={5}>

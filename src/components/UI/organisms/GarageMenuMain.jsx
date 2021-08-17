@@ -1,12 +1,11 @@
 import React from 'react';
 import { makeStyles } from '@material-ui/core/styles';
-import amg from '../../../images/cars/G_5_cars/on/4_amg.png';
-import mclaren from '../../../images/cars/G_5_cars/on/5_mclaren.png';
 import GarageMenuScale from '../molecules/GarageMenuScale';
 import garageElements from '../../../images/garage_elements-white-05.svg';
 import pointsRunk from '../../../images/points_runk_lvl_garage.svg';
 import unlock_icon from '../../../images/unlock_icon.png';
 import wrapper from '../../../images/G_5.png';
+import Slider from '../molecules/Slider';
 
 const useStyles = makeStyles({
   garageLeftMain: {
@@ -23,11 +22,7 @@ const useStyles = makeStyles({
     '& img': {
       width: '100%',
       height: '100%',
-      objectFit: 'contain',
-      position: 'absolute',
-      top: '50%',
-      left: '50%',
-      transform: 'translate(-50%, -50%)',
+      objectFit: 'cover',
     },
   },
   garageLeftMainText: {
@@ -115,6 +110,7 @@ const useStyles = makeStyles({
     flexDirection: 'column',
     alignItems: 'center',
     justifyContent: 'center',
+    zIndex: '4',
 
     '& button': {
       width: '155px',
@@ -189,11 +185,14 @@ const useStyles = makeStyles({
 
 const GarageMenuMain = () => {
   const classes = useStyles();
+
   return (
     <div className={classes.garageLeftMain}>
       <div className={classes.garageLeftMainCars}>
-        <img src={amg} alt="" />
-        <img src={mclaren} alt="" />
+        <Slider />
+        {/* <div>
+          <img src={amg} alt="" />
+        </div> */}
       </div>
 
       <div className={classes.garageLeftMainText}>

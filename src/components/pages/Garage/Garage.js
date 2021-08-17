@@ -19,68 +19,70 @@ import garage_3_on from '../../../images/G_3_on.png';
 import garage_4_on from '../../../images/G_4_on.png';
 import garage_5_on from '../../../images/G_5_on.png';
 
-// const cardItems = [
-//   {
-//     id: 1,
-//     components: [
-//       <AboutCardOff image={garage_1} cardTitle="buy" />,
-//       <AboutCardOff image={garage_1_on} cardTitle="garage 1" garageStyles={inlineStyles} />,
-//     ],
-//   },
-//   {
-//     id: 2,
-//     components: [
-//       <AboutCardOff image={garage_2} cardTitle="buy" />,
-//       <AboutCardOff image={garage_2_on} cardTitle="garage 2" garageStyles={inlineStyles} />,
-//     ],
-//   },
-//   {
-//     id: 3,
-//     components: [
-//       <AboutCardOff image={garage_3} cardTitle="buy" />,
-//       <AboutCardOff image={garage_3_on} cardTitle="garage 3" garageStyles={inlineStyles} />,
-//     ],
-//   },
-//   {
-//     id: 4,
-//     components: [
-//       <AboutCardOff image={garage_4} cardTitle="buy" />,
-//       <AboutCardOff image={garage_4_on} cardTitle="garage 4" garageStyles={inlineStyles} />,
-//     ],
-//   },
-//   {
-//     id: 5,
-//     components: [
-//       <AboutCardOff image={garage_5} cardTitle="buy" />,
-//       <AboutCardOff image={garage_5_on} cardTitle="garage 5" garageStyles={inlineStyles} />,
-//     ],
-//   },
-// ];
+const Garage = ({ modal, setModal, onGarageMenuInformation }) => {
+  const cardItems = [
+    {
+      id: 1,
+      components: (
+        <GarageCardOff
+          imageOff={garage_1}
+          cardTitleOff="buy"
+          imageOn={garage_1_on}
+          cardTitleOn="garage 1"
+          onGarageMenuInformation={onGarageMenuInformation}
+        />
+      ),
+    },
+    {
+      id: 2,
+      components: (
+        <GarageCardOff
+          imageOff={garage_2}
+          cardTitleOff="buy"
+          imageOn={garage_2_on}
+          cardTitleOn="garage 2"
+          onGarageMenuInformation={onGarageMenuInformation}
+        />
+      ),
+    },
+    {
+      id: 3,
+      components: (
+        <GarageCardOff
+          imageOff={garage_3}
+          cardTitleOff="buy"
+          imageOn={garage_3_on}
+          cardTitleOn="garage 3"
+          onGarageMenuInformation={onGarageMenuInformation}
+        />
+      ),
+    },
+    {
+      id: 4,
+      components: (
+        <GarageCardOff
+          imageOff={garage_4}
+          cardTitleOff="buy"
+          imageOn={garage_4_on}
+          cardTitleOn="garage 4"
+          onGarageMenuInformation={onGarageMenuInformation}
+        />
+      ),
+    },
+    {
+      id: 5,
+      components: (
+        <GarageCardOff
+          imageOff={garage_5}
+          cardTitleOff="buy"
+          imageOn={garage_5_on}
+          cardTitleOn="garage 5"
+          onGarageMenuInformation={onGarageMenuInformation}
+        />
+      ),
+    },
+  ];
 
-const cardItems = [
-  {
-    id: 1,
-    components: <GarageCardOff imageOff={garage_1} cardTitleOff="buy" imageOn={garage_1_on} cardTitleOn="garage 1" />,
-  },
-  {
-    id: 2,
-    components: <GarageCardOff imageOff={garage_2} cardTitleOff="buy" imageOn={garage_2_on} cardTitleOn="garage 2" />,
-  },
-  {
-    id: 3,
-    components: <GarageCardOff imageOff={garage_3} cardTitleOff="buy" imageOn={garage_3_on} cardTitleOn="garage 3" />,
-  },
-  {
-    id: 4,
-    components: <GarageCardOff imageOff={garage_4} cardTitleOff="buy" imageOn={garage_4_on} cardTitleOn="garage 4" />,
-  },
-  {
-    id: 5,
-    components: <GarageCardOff imageOff={garage_5} cardTitleOff="buy" imageOn={garage_5_on} cardTitleOn="garage 5" />,
-  },
-];
-
-const Garage = ({ modal, setModal }) => {
   return (
     <div className={styles.garage}>
       <Grid container>
@@ -107,16 +109,6 @@ const Garage = ({ modal, setModal }) => {
             <ButtonsBox />
           </div>
         </Grid>
-        {/* 
-        <Grid item xs={12}>
-          <div className={styles.aboutCardsOff}>
-            {cardItems.map((el) => (
-              <div onMouseEnter={() => onHover(el.id)} onMouseLeave={() => onLeaveContainer(el.id)} key={el.id}>
-                {activeGarage[el.id] ? el.components[0] : el.components[1]}
-              </div>
-            ))}
-          </div>
-        </Grid> */}
 
         <Grid item xs={12}>
           <div className={styles.garageCardsOff}>
