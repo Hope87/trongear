@@ -24,12 +24,12 @@ const useStyles = makeStyles({
       lineHeight: 'normal',
       textAlign: 'left',
       textTransform: 'uppercase',
-      marginLeft: '360px',
+      marginLeft: '150px',
     },
     '& img': {
       width: '30px',
       height: '28px',
-      marginLeft: '140px',
+      marginLeft: '350px',
     },
   },
 

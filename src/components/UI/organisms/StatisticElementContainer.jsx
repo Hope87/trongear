@@ -9,7 +9,7 @@ const useStyles = makeStyles({
     display: 'flex',
     justifyContent: 'space-around',
     flexWrap: 'wrap',
-    marginLeft: '50px',
+    marginLeft: '60px',
   },
 });
 

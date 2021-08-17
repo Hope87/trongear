@@ -7,7 +7,7 @@ const useStyles = makeStyles({
   buttonsBox: {
     display: 'flex',
     justifyContent: 'space-between',
-    marginLeft: '100px',
+    marginLeft: '90px',
     marginRight: '100px',
 
     '& div': {

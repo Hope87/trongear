@@ -28,18 +28,18 @@ const useStyles = makeStyles({
       textTransform: 'uppercase',
 
       '&:nth-child(1)': {
-        marginLeft: '140px',
+        marginLeft: '120px',
       },
 
       '&:nth-child(2)': {
-        marginLeft: '80px',
+        marginLeft: '30px',
       },
     },
 
     '& img': {
       width: '30px',
       height: '28px',
-      marginLeft: '260px',
+      marginLeft: '330px',
     },
   },
 });

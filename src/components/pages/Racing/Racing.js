@@ -47,7 +47,9 @@ const Racing = ({ modal, setModal }) => {
         </Grid>
 
         <Grid item xs={12}>
-          <ButtonsBox />
+          <div className={styles.racingBtn}>
+            <ButtonsBox />
+          </div>
         </Grid>
 
         <Grid item xs={6}>
