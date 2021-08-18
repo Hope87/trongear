@@ -11,14 +11,14 @@ import Slider from '../atoms/Slider';
 import garageCars from '../../helpers/helpers';
 
 const useStyles = makeStyles({
-  garageLeftMain: {
+  garageMenuMain: {
     maxWidth: '1060px',
     minHeight: '582px',
     background: `url('${wrapper}') no-repeat`,
     backgroundSize: 'cover',
     backgroundPositionY: '-50px',
   },
-  garageLeftMainCars: {
+  garageMenuMainCars: {
     height: '440px',
 
     '& img': {
@@ -27,7 +27,7 @@ const useStyles = makeStyles({
       objectFit: 'cover',
     },
   },
-  garageLeftMainText: {
+  garageMenuMainText: {
     position: 'absolute',
     top: '20%',
     left: '5%',
@@ -60,7 +60,7 @@ const useStyles = makeStyles({
     },
   },
 
-  garageLeftMainFlag: {
+  garageMenuMainFlag: {
     position: 'absolute',
     top: '25%',
     right: '0',
@@ -69,7 +69,7 @@ const useStyles = makeStyles({
     backgroundColor: 'var(--red)',
     clipPath: 'polygon(0% 0%, 0% 0%, 100% 0%, 100% 100%, 100% 100%, 20% 100%)',
   },
-  garageLeftMainFlagItems: {
+  garageMenuMainFlagItems: {
     position: 'absolute',
     top: '50%',
     left: '50%',
@@ -97,13 +97,13 @@ const useStyles = makeStyles({
       zIndex: '3',
     },
   },
-  garageLeftMainScale: {
+  garageMenuMainScale: {
     position: 'relative',
     marginLeft: '40px',
     marginTop: '-80px',
     zIndex: '4',
   },
-  garageLeftMainBtn: {
+  garageMenuMainBtn: {
     position: 'absolute',
     top: '45%',
     left: '50%',
@@ -146,7 +146,7 @@ const useStyles = makeStyles({
     },
   },
 
-  garageLeftMainPanel: {
+  garageMenuMainPanel: {
     width: '100%',
     maxWidth: '860px',
     height: '44px',
@@ -196,9 +196,9 @@ const GarageMenuMain = ({ garageNumber }) => {
   });
 
   return (
-    <div className={classes.garageLeftMain}>
-      <div className={classes.garageLeftMainCars}>
-        <div className={classes.garageLeftMainSlider}>
+    <div className={classes.garageMenuMain}>
+      <div className={classes.garageMenuMainCars}>
+        <div className={classes.garageMenuMainSlider}>
           <Slider
             filteredCars={garageCars.find((el) => el.name === garageNumber.title)}
             onActive={buttonOperation.activeSlider}
@@ -206,13 +206,13 @@ const GarageMenuMain = ({ garageNumber }) => {
         </div>
       </div>
 
-      <div className={classes.garageLeftMainText}>
+      <div className={classes.garageMenuMainText}>
         <h3>car model</h3>
         <p>modification</p>
       </div>
 
-      <div className={classes.garageLeftMainFlag}>
-        <div className={classes.garageLeftMainFlagItems}>
+      <div className={classes.garageMenuMainFlag}>
+        <div className={classes.garageMenuMainFlagItems}>
           <img src={garageElements} alt="" />
           <p>
             <span>0</span> TRX
@@ -220,8 +220,8 @@ const GarageMenuMain = ({ garageNumber }) => {
         </div>
       </div>
 
-      <div className={classes.garageLeftMainBtn}>
-        <div className={classes.garageLeftMainBtnImg}>
+      <div className={classes.garageMenuMainBtn}>
+        <div className={classes.garageMenuMainBtnImg}>
           <img src={buttonOperation.img} alt="lock_icon" />
         </div>
         <button
@@ -234,12 +234,12 @@ const GarageMenuMain = ({ garageNumber }) => {
         </button>
       </div>
 
-      <div className={classes.garageLeftMainScale}>
+      <div className={classes.garageMenuMainScale}>
         <GarageMenuScale scaleImage={pointsRunk} />
         <GarageMenuScale scaleImage={pointsRunk} />
         <GarageMenuScale scaleImage={pointsRunk} />
       </div>
-      <div className={classes.garageLeftMainPanel}>
+      <div className={classes.garageMenuMainPanel}>
         <p>total cars in the garage </p>
         <span>5/5</span>
       </div>

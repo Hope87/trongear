@@ -11,7 +11,6 @@ const useStyles = makeStyles({
     backgroundColor: 'var(--dark)',
     position: 'relative',
     clipPath: 'polygon(0% 0%, 0% 0%, 100% 0%, 97% 100%, 100% 100%, 3% 100%)',
-    marginBottom: '10px',
 
     '& h5': {
       textShadow: '0 6px 13px rgba(18, 18, 18, 0.08)',

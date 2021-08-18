@@ -9,9 +9,9 @@ import Timer from '../../UI/atoms/Timer';
 import Modal from '../../UI/atoms/Modal';
 import ButtonsBox from '../../UI/molecules/ButtonsBox';
 
-const Garage = ({ modal, setModal, garageNumber }) => {
+const GarageMenu = ({ modal, setModal, garageNumber }) => {
   return (
-    <div className={styles.garage}>
+    <div className={styles.garageMenu}>
       <Grid container>
         <Grid item xs={12}>
           <Header headerLogo={logo} headerModal={modal} setHeaderModal={setModal} />
@@ -21,18 +21,18 @@ const Garage = ({ modal, setModal, garageNumber }) => {
 
         <Grid item xs={12}>
           {!modal ? (
-            <div className={styles.garageTimer}>
+            <div className={styles.garageMenuTimer}>
               <Timer />
             </div>
           ) : (
-            <div style={{ opacity: 0 }} className={styles.garageTimer}>
+            <div style={{ opacity: 0 }} className={styles.garageMenuTimer}>
               <Timer />
             </div>
           )}
         </Grid>
 
         <Grid item xs={12}>
-          <div className={styles.garageBtn} style={{ marginTop: '-60px' }}>
+          <div className={styles.garageMenuBtn} style={{ marginTop: '-60px' }}>
             <ButtonsBox />
           </div>
         </Grid>
@@ -51,4 +51,4 @@ const Garage = ({ modal, setModal, garageNumber }) => {
   );
 };
 
-export default Garage;
+export default GarageMenu;
