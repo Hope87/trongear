@@ -1,10 +1,9 @@
 import React from 'react';
-import Slider from '../../UI/molecules/Slider';
 
 const About = () => {
   return (
     <div>
-      <Slider />
+      <h1>About Page</h1>
     </div>
   );
 };

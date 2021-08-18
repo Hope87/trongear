@@ -1,11 +1,14 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { makeStyles } from '@material-ui/core/styles';
 import GarageMenuScale from '../molecules/GarageMenuScale';
 import garageElements from '../../../images/garage_elements-white-05.svg';
 import pointsRunk from '../../../images/points_runk_lvl_garage.svg';
 import unlock_icon from '../../../images/unlock_icon.png';
+import lock_icon from '../../../images/lock_icon.png';
+
 import wrapper from '../../../images/G_5.png';
-import Slider from '../molecules/Slider';
+import Slider from '../atoms/Slider';
+import garageCars from '../../helpers/helpers';
 
 const useStyles = makeStyles({
   garageLeftMain: {
@@ -16,7 +19,6 @@ const useStyles = makeStyles({
     backgroundPositionY: '-50px',
   },
   garageLeftMainCars: {
-    maxWidth: '840px',
     height: '440px',
 
     '& img': {
@@ -115,7 +117,7 @@ const useStyles = makeStyles({
     '& button': {
       width: '155px',
       height: '36px',
-      backgroundColor: 'var(--yellow)',
+      // backgroundColor: 'var(--red)',
       border: 'none',
       clipPath: 'polygon(0% 50%, 10% 0%, 100% 0%, 100% 50%, 90% 100%, 0% 100%)',
 
@@ -183,16 +185,25 @@ const useStyles = makeStyles({
   },
 });
 
-const GarageMenuMain = () => {
+const GarageMenuMain = ({ garageNumber }) => {
   const classes = useStyles();
+
+  const [buttonOperation, setButtonOperation] = useState({
+    title: 'unlock',
+    img: lock_icon,
+    color: 'var(--red)',
+    activeSlider: false,
+  });
 
   return (
     <div className={classes.garageLeftMain}>
       <div className={classes.garageLeftMainCars}>
-        <Slider />
-        {/* <div>
-          <img src={amg} alt="" />
-        </div> */}
+        <div className={classes.garageLeftMainSlider}>
+          <Slider
+            filteredCars={garageCars.find((el) => el.name === garageNumber.title)}
+            onActive={buttonOperation.activeSlider}
+          />
+        </div>
       </div>
 
       <div className={classes.garageLeftMainText}>
@@ -211,9 +222,16 @@ const GarageMenuMain = () => {
 
       <div className={classes.garageLeftMainBtn}>
         <div className={classes.garageLeftMainBtnImg}>
-          <img src={unlock_icon} alt="unlock_icon" />
+          <img src={buttonOperation.img} alt="lock_icon" />
         </div>
-        <button>buy</button>
+        <button
+          style={{ backgroundColor: buttonOperation.color }}
+          onClick={() =>
+            setButtonOperation({ title: 'buy', img: unlock_icon, color: 'var(--yellow)', activeSlider: true })
+          }
+        >
+          {buttonOperation.title}
+        </button>
       </div>
 
       <div className={classes.garageLeftMainScale}>
@@ -223,7 +241,7 @@ const GarageMenuMain = () => {
       </div>
       <div className={classes.garageLeftMainPanel}>
         <p>total cars in the garage </p>
-        <span>0/5</span>
+        <span>5/5</span>
       </div>
     </div>
   );

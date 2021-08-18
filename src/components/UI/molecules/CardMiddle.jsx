@@ -3,7 +3,7 @@ import { makeStyles } from '@material-ui/core/styles';
 import frameOn from '../../../images/frame_1_on.svg';
 import frameOff from '../../../images/frame_1_off.svg';
 import tuningPanel from '../../../images/tuning_panel_1.svg';
-import lockIcon from '../../../images/lock_icon_copy.png';
+import lockIcon from '../../../images/lock_icon.png';
 
 const useStyles = makeStyles({
   cardMiddle: {

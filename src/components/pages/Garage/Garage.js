@@ -5,7 +5,7 @@ import styles from './Garage.module.scss';
 import Header from '../../UI/molecules/Header';
 import Timer from '../../UI/atoms/Timer';
 import logo from '../../../images/logo.png';
-import Modal from '../../UI/molecules/Modal';
+import Modal from '../../UI/atoms/Modal';
 import ButtonsBox from '../../UI/molecules/ButtonsBox';
 import GarageCardOff from '../../UI/molecules/GarageCardOff';
 import garage_1 from '../../../images/g_off_1.png';

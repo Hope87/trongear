@@ -31,7 +31,7 @@ function App() {
             <GaragePage modal={modal} setModal={setModal} onGarageMenuInformation={garageMenuInformation} />
           </Route>
           <Route path="/garageMenu/:id">
-            <GarageMenuPage modal={modal} setModal={setModal} info={garageMenuInfo} />
+            <GarageMenuPage modal={modal} setModal={setModal} garageNumber={garageMenuInfo} />
           </Route>
           <Route path="/racing">
             <RacingPage modal={modal} setModal={setModal} />

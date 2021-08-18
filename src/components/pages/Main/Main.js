@@ -2,7 +2,7 @@ import React from 'react';
 import styles from './Main.module.scss';
 import { Grid } from '@material-ui/core';
 import Header from '../../UI/molecules/Header';
-import Modal from '../../UI/molecules/Modal';
+import Modal from '../../UI/atoms/Modal';
 import Timer from '../../UI/atoms/Timer';
 import ButtonsBox from '../../UI/molecules/ButtonsBox';
 import MainDescription from '../../UI/organisms/MainDescription';

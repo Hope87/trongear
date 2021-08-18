@@ -3,7 +3,7 @@ import { Grid } from '@material-ui/core';
 import styles from './Racing.module.scss';
 import Header from '../../UI/molecules/Header';
 import logo from '../../../images/logo.png';
-import Modal from '../../UI/molecules/Modal';
+import Modal from '../../UI/atoms/Modal';
 import Timer from '../../UI/atoms/Timer';
 import elements_13 from '../../../images/elements-13.svg';
 import StatisticElement from '../../UI/molecules/StatisticElement';
