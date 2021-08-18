@@ -12,7 +12,7 @@ import garageCars from '../../helpers/helpers';
 
 const useStyles = makeStyles({
   garageMenuMain: {
-    maxWidth: '1060px',
+    maxWidth: '1020px',
     minHeight: '582px',
     background: `url('${wrapper}') no-repeat`,
     backgroundSize: 'cover',
@@ -20,6 +20,7 @@ const useStyles = makeStyles({
   },
   garageMenuMainCars: {
     height: '440px',
+    position: 'relative',
 
     '& img': {
       width: '100%',
@@ -117,7 +118,6 @@ const useStyles = makeStyles({
     '& button': {
       width: '155px',
       height: '36px',
-      // backgroundColor: 'var(--red)',
       border: 'none',
       clipPath: 'polygon(0% 50%, 10% 0%, 100% 0%, 100% 50%, 90% 100%, 0% 100%)',
 
@@ -204,6 +204,29 @@ const GarageMenuMain = ({ garageNumber }) => {
             onActive={buttonOperation.activeSlider}
           />
         </div>
+
+        <div className={classes.garageMenuMainFlag}>
+          <div className={classes.garageMenuMainFlagItems}>
+            <img src={garageElements} alt="" />
+            <p>
+              <span>0</span> TRX
+            </p>
+          </div>
+        </div>
+
+        <div className={classes.garageMenuMainBtn}>
+          <div className={classes.garageMenuMainBtnImg}>
+            <img src={buttonOperation.img} alt="lock_icon" />
+          </div>
+          <button
+            style={{ backgroundColor: buttonOperation.color }}
+            onClick={() =>
+              setButtonOperation({ title: 'buy', img: unlock_icon, color: 'var(--yellow)', activeSlider: true })
+            }
+          >
+            {buttonOperation.title}
+          </button>
+        </div>
       </div>
 
       <div className={classes.garageMenuMainText}>
@@ -211,16 +234,7 @@ const GarageMenuMain = ({ garageNumber }) => {
         <p>modification</p>
       </div>
 
-      <div className={classes.garageMenuMainFlag}>
-        <div className={classes.garageMenuMainFlagItems}>
-          <img src={garageElements} alt="" />
-          <p>
-            <span>0</span> TRX
-          </p>
-        </div>
-      </div>
-
-      <div className={classes.garageMenuMainBtn}>
+      {/* <div className={classes.garageMenuMainBtn}>
         <div className={classes.garageMenuMainBtnImg}>
           <img src={buttonOperation.img} alt="lock_icon" />
         </div>
@@ -232,7 +246,7 @@ const GarageMenuMain = ({ garageNumber }) => {
         >
           {buttonOperation.title}
         </button>
-      </div>
+      </div> */}
 
       <div className={classes.garageMenuMainScale}>
         <GarageMenuScale scaleImage={pointsRunk} />

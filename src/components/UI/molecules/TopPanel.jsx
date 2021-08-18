@@ -4,7 +4,7 @@ import { makeStyles } from '@material-ui/core/styles';
 const useStyles = makeStyles({
   topPanel: {
     width: '60%',
-    margin: '34px auto 0',
+    margin: '40px auto 0',
     display: 'flex',
 
     '& div': {
