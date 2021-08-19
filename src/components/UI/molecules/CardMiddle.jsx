@@ -4,6 +4,7 @@ import frameOn from '../../../images/frame_1_on.svg';
 import frameOff from '../../../images/frame_1_off.svg';
 import tuningPanel from '../../../images/tuning_panel_1.svg';
 import lockIcon from '../../../images/lock_icon.png';
+import { LazyLoadImage } from 'react-lazy-load-image-component';
 
 const useStyles = makeStyles({
   cardMiddle: {
@@ -66,10 +67,15 @@ const CardMiddle = ({ image }) => {
 
   return (
     <div className={classes.cardMiddle}>
-      <img onMouseEnter={() => setFrame(frameOn)} onMouseOut={() => setFrame(frameOff)} src={frame} alt="frame" />
-      <img src={tuningPanel} alt="tuningPanel" />
-      <img src={image} alt={image} />
-      <img src={lockIcon} alt="lockIcon" />
+      <LazyLoadImage
+        onMouseEnter={() => setFrame(frameOn)}
+        onMouseOut={() => setFrame(frameOff)}
+        src={frame}
+        alt="frame"
+      />
+      <LazyLoadImage src={tuningPanel} alt="tuningPanel" />
+      <LazyLoadImage src={image} alt={image} />
+      <LazyLoadImage src={lockIcon} alt="lockIcon" />
     </div>
   );
 };

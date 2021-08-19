@@ -9,9 +9,11 @@ const useStyles = makeStyles({
     justifyContent: 'space-between',
     marginLeft: '90px',
     marginRight: '100px',
+    flexWrap: 'wrap',
 
     '& div': {
       display: 'flex',
+      flexWrap: 'wrap',
     },
   },
   buttonsBoxBtn: {

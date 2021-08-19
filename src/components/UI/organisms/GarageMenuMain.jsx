@@ -188,12 +188,16 @@ const useStyles = makeStyles({
 const GarageMenuMain = ({ garageNumber }) => {
   const classes = useStyles();
 
+  const totalCars = garageCars.length;
+
   const [buttonOperation, setButtonOperation] = useState({
     title: 'unlock',
     img: lock_icon,
     color: 'var(--red)',
     activeSlider: false,
   });
+
+  const [carsCount, setCarsCount] = useState('1');
 
   return (
     <div className={classes.garageMenuMain}>
@@ -234,20 +238,6 @@ const GarageMenuMain = ({ garageNumber }) => {
         <p>modification</p>
       </div>
 
-      {/* <div className={classes.garageMenuMainBtn}>
-        <div className={classes.garageMenuMainBtnImg}>
-          <img src={buttonOperation.img} alt="lock_icon" />
-        </div>
-        <button
-          style={{ backgroundColor: buttonOperation.color }}
-          onClick={() =>
-            setButtonOperation({ title: 'buy', img: unlock_icon, color: 'var(--yellow)', activeSlider: true })
-          }
-        >
-          {buttonOperation.title}
-        </button>
-      </div> */}
-
       <div className={classes.garageMenuMainScale}>
         <GarageMenuScale scaleImage={pointsRunk} />
         <GarageMenuScale scaleImage={pointsRunk} />
@@ -255,7 +245,9 @@ const GarageMenuMain = ({ garageNumber }) => {
       </div>
       <div className={classes.garageMenuMainPanel}>
         <p>total cars in the garage </p>
-        <span>5/5</span>
+        <span>
+          {carsCount}/{totalCars}
+        </span>
       </div>
     </div>
   );

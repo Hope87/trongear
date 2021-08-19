@@ -42,11 +42,11 @@ const Top = ({ modal, setModal }) => {
           <TopPanel />
         </Grid>
 
-        <Grid item xs={6}>
+        <Grid item xs={12} lg={6}>
           <TopMainLeft />
         </Grid>
 
-        <Grid item xs={6}>
+        <Grid item xs={12} lg={6}>
           <TopMainRight />
         </Grid>
 

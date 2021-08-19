@@ -1,83 +1,69 @@
 import React from 'react';
 import { makeStyles } from '@material-ui/core/styles';
-import scale_1 from '../../../images/1.svg';
-import scale_2 from '../../../images/2.svg';
-import scale_3 from '../../../images/3.svg';
-import scale_4 from '../../../images/4.svg';
-import scale_5 from '../../../images/5.svg';
-import scale_6 from '../../../images/6.svg';
-import scale_7 from '../../../images/7.svg';
-import scale_8 from '../../../images/8.svg';
-import scale_9 from '../../../images/9.svg';
-import scale_10 from '../../../images/10.svg';
-import scale_11 from '../../../images/11.svg';
-import scale_12 from '../../../images/12.svg';
-
-
 
 const useStyles = makeStyles({
   scale: {
     maxWidth: '600px',
     height: '30px',
     position: 'relative',
-  
+
     '& div': {
-      maxWidth: '240px',
-      height: '14px',
+      maxWidth: '220px',
+      height: '16px',
     },
   },
-  
-  scaleImg : {
-    width: '100%',
-    height: '100%'
+
+  scaleFlag: {
+    maxWidth: '180px',
+    height: '14px',
+    backgroundColor: 'var(--silver-light)',
+    clipPath: 'polygon(0% 0%, 0% 0%, 90% 0%, 100% 100%, 100% 100%, 0% 100%)',
   },
 
-  scaleImages: {
+  scaleContainer: {
+    display: 'flex',
     maxWidth: '480px !important',
     height: '30px !important',
+  },
 
-    '& img': {
-      width: '52px',
-      height: '18px',
-      objectFit: 'cover',
+  scaleItem: {
+    width: '50px',
+    height: '32px',
+    marginLeft: '-17px',
+    backgroundColor: 'var(--silver)',
+    clipPath: 'polygon(40% 0%, 100% 0%, 60% 100%, 0% 100%)',
 
-      '&:not(:first-child)': {
-        marginLeft: '-20px'
-      },
+    '&:nth-child(1)': {
+      clipPath: 'polygon(100% 0%, 0% 0%, 10% 100%)',
+      width: '20px',
+      height: '16px',
+      marginLeft: '0px',
+    },
+  },
+});
 
-      '&:nth-child(1)': {
-        width: '20px',
-        marginRight: '-4px'
-      }
-    }
-  }
-})
+const GarageScale = () => {
+  const classes = useStyles();
 
-
-const GarageScale = ({ scaleImage }) => {
-  const classes = useStyles()
-  
-  const scaleRender = (img) => <img src={img} alt="pointsRunk" />;
+  const scaleRender = (color) => <div style={{ backgroundColor: color }} className={classes.scaleItem}></div>;
 
   return (
     <div className={classes.scale}>
-      <div>
-        <img className={classes.scaleImg} src={scaleImage} alt="pointsRunk" />
-      </div>
+      <div className={classes.scaleFlag}></div>
 
-      <div className={classes.scaleImages}>
-        {scaleRender(scale_1)}
-        {scaleRender(scale_2)}
-        {scaleRender(scale_3)}
-        {scaleRender(scale_4)}
-        {scaleRender(scale_5)}
-        {scaleRender(scale_6)}
-        {scaleRender(scale_7)}
-        {scaleRender(scale_8)}
-        {scaleRender(scale_9)}
-        {scaleRender(scale_10)}
-        {scaleRender(scale_11)}
-        {scaleRender(scale_12)}
+      <div className={classes.scaleContainer}>
+        {scaleRender('#191919')}
+        {scaleRender('#292929')}
+        {scaleRender('#474747')}
+        {scaleRender('#555555')}
+        {scaleRender('#626262')}
+        {scaleRender('#6f6f6f')}
+        {scaleRender('#7c7c7c')}
+        {scaleRender('#898989')}
+        {scaleRender('#a2a2a2')}
+        {scaleRender('#aeaeae')}
+        {scaleRender('#bababa')}
+        {scaleRender('#d0d2d3')}
       </div>
     </div>
   );

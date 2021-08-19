@@ -1,12 +1,14 @@
 import React, { useState } from 'react';
 import { makeStyles } from '@material-ui/core/styles';
 import beforeIcon from '../../../images/garage_elements_on-05.svg';
+import { LazyLoadImage } from 'react-lazy-load-image-component';
 
 const useStyles = makeStyles({
   garageCardOff: {
     maxWidth: '310px',
     height: '420px',
     position: 'relative',
+    marginTop: '10px',
 
     '& img': {
       width: '100%',
@@ -101,7 +103,7 @@ const GarageCardOff = ({ imageOff, cardTitleOff, imageOn, cardTitleOn, onGarageM
     <div className={classes.garageCardOff}>
       {activeGarage[cardTitleOn] ? (
         <>
-          <img
+          <LazyLoadImage
             onMouseEnter={() => {
               onHover(cardTitleOn);
               onGarageMenuInformation(cardTitleOn);
@@ -114,7 +116,7 @@ const GarageCardOff = ({ imageOff, cardTitleOff, imageOn, cardTitleOn, onGarageM
         </>
       ) : (
         <>
-          <img
+          <LazyLoadImage
             style={inlineStyles}
             onMouseEnter={() => {
               onHover(cardTitleOn);

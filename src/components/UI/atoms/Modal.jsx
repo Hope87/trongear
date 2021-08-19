@@ -1,17 +1,17 @@
-import React, { useState } from 'react';
+import React from 'react';
 import { makeStyles } from '@material-ui/core/styles';
 import menuImg from '../../../images/menu_bulb.svg';
-import chatOff from '../../../images/chat_icon_off.svg';
-import settingsOff from '../../../images/settings_off.svg';
-import notificationOff from '../../../images/notification_icon_off.svg';
+// import chatOff from '../../../images/chat_icon_off.svg';
+// import settingsOff from '../../../images/settings_off.svg';
+// import notificationOff from '../../../images/notification_icon_off.svg';
 import chatOn from '../../../images/chat_icon_on.svg';
 import settingsOn from '../../../images/settings_on.svg';
 import notificationOn from '../../../images/notification_icon_on.svg';
 
 const Modal = () => {
-  const [settingIcon, setSettingIcon] = useState(settingsOff);
-  const [chatIcon, setChatIcon] = useState(chatOff);
-  const [notificationIcon, setNotificationOnIcon] = useState(notificationOff);
+  // const [settingIcon, setSettingIcon] = useState(settingsOff);
+  // const [chatIcon, setChatIcon] = useState(chatOff);
+  // const [notificationIcon, setNotificationOnIcon] = useState(notificationOff);
 
   const useStyles = makeStyles({
     '@keyframes modal': {
@@ -70,7 +70,7 @@ const Modal = () => {
         },
 
         '&:nth-child(1)::before': {
-          content: `url('${settingIcon}')`,
+          content: `url('${settingsOn}')`,
           width: '24px',
           height: '20px',
           position: 'absolute',
@@ -78,7 +78,7 @@ const Modal = () => {
         },
 
         '&:nth-child(2)::before': {
-          content: `url('${chatIcon}')`,
+          content: `url('${chatOn}')`,
           width: '24px',
           height: '20px',
           position: 'absolute',
@@ -86,7 +86,7 @@ const Modal = () => {
         },
 
         '&:nth-child(3)::before': {
-          content: `url('${notificationIcon}')`,
+          content: `url('${notificationOn}')`,
           width: '24px',
           height: '20px',
           position: 'absolute',
@@ -101,18 +101,9 @@ const Modal = () => {
     <div className={classes.mainModal}>
       <img src={menuImg} alt="Menu" />
       <div className={classes.mainModalMenu}>
-        <p onMouseEnter={() => setSettingIcon(settingsOn)} onMouseOut={() => setSettingIcon(settingsOff)}>
-          settings
-        </p>
-        <p onMouseEnter={() => setChatIcon(chatOn)} onMouseOut={() => setChatIcon(chatOff)}>
-          start chat
-        </p>
-        <p
-          onMouseEnter={() => setNotificationOnIcon(notificationOn)}
-          onMouseOut={() => setNotificationOnIcon(notificationOff)}
-        >
-          Notification
-        </p>
+        <p>settings</p>
+        <p>start chat</p>
+        <p>Notification</p>
       </div>
     </div>
   );

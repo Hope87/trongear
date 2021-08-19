@@ -3,7 +3,8 @@ import { makeStyles } from '@material-ui/core/styles';
 
 const useStyles = makeStyles({
   topPanel: {
-    width: '60%',
+    // width: '60%',
+    maxWidth: '1260px',
     margin: '40px auto 0',
     display: 'flex',
 
