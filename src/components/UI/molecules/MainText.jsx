@@ -18,6 +18,16 @@ const useStyles = makeStyles({
       textTransform: 'uppercase',
       marginTop: '60px',
       marginLeft: '220px',
+
+      '@media screen and (max-width: 579.98px)': {
+        marginLeft: '170px',
+      },
+      '@media screen and (max-width: 429.98px)': {
+        marginLeft: '120px',
+      },
+      '@media screen and (max-width: 360px)': {
+        marginLeft: '80px',
+      },
     },
   },
   mainTextLogo: {
@@ -44,6 +54,17 @@ const useStyles = makeStyles({
       top: '50%',
       left: '50%',
       transform: 'translate(-50%, -50%)',
+
+      '@media screen and (max-width: 679.98px)': {
+        fontSize: '50px',
+      },
+
+      '@media screen and (max-width: 579.98px)': {
+        fontSize: '40px',
+      },
+      '@media screen and (max-width: 479.98px)': {
+        fontSize: '26px',
+      },
     },
   },
 });

@@ -197,7 +197,7 @@ const GarageMenuMain = ({ garageNumber }) => {
     activeSlider: false,
   });
 
-  const [carsCount, setCarsCount] = useState('1');
+  const [carsCount, setCarsCount] = useState('');
 
   return (
     <div className={classes.garageMenuMain}>
@@ -206,6 +206,7 @@ const GarageMenuMain = ({ garageNumber }) => {
           <Slider
             filteredCars={garageCars.find((el) => el.name === garageNumber.title)}
             onActive={buttonOperation.activeSlider}
+            onSetCarsCount={setCarsCount}
           />
         </div>
 

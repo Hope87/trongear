@@ -37,11 +37,17 @@ const useStyles = makeStyles({
     left: '50%',
     transform: 'translate(-50%, -50%)',
     cursor: 'pointer',
+    zIndex: '2',
   },
   mainLinks: {
     position: 'absolute',
     top: '0',
-    right: '1%',
+    right: '15%',
+    zIndex: '1',
+
+    '@media screen and (max-width: 679.98px)': {
+      left: '0',
+    },
   },
   headerLogo: {
     position: 'absolute',

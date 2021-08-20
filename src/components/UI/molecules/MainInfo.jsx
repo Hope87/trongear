@@ -11,6 +11,14 @@ const useStyles = makeStyles({
     marginLeft: '100px',
     position: 'relative',
 
+    '@media screen and (max-width: 498.98px)': {
+      marginLeft: '0px',
+    },
+
+    '@media screen and (max-width: 359.98px)': {
+      marginLeft: '0px',
+    },
+
     '& img': {
       paddingBottom: '40px',
     },
@@ -34,6 +42,10 @@ const useStyles = makeStyles({
         color: 'var(--red)',
         fontWeight: '600',
       },
+
+      '@media screen and (max-width: 439.98px)': {
+        fontSize: '10px',
+      },
     },
   },
   mainInfoWarning: {
@@ -43,6 +55,10 @@ const useStyles = makeStyles({
     zIndex: '2',
     right: '27px',
     top: '34px',
+
+    '@media screen and (max-width: 579.98px)': {
+      display: 'none',
+    },
   },
 });
 

@@ -9,14 +9,14 @@ import 'react-lazy-load-image-component/src/effects/blur.css';
 
 SwiperCore.use([Navigation, A11y]);
 
-const Slider = ({ filteredCars, onActive }) => {
+const Slider = ({ filteredCars, onActive, onSetCarsCount }) => {
   return (
     <Swiper
       slidesPerView={1}
       navigation
-      onSlideChange={() => console.log('slide change')}
-      onSlideNextTransitionEnd={(swiper) => console.log('CurrentActive:', swiper.activeIndex)}
-      onSlidePrevTransitionEnd={(swiper) => console.log('CurrentActive:', swiper.activeIndex)}
+      onSlideNextTransitionEnd={() => onSetCarsCount((prevCount) => prevCount + 1)}
+      onSlidePrevTransitionEnd={() => onSetCarsCount((prevCount) => prevCount - 1)}
+      onSwiper={(swiper) => onSetCarsCount(swiper.activeIndex + 1)}
     >
       {filteredCars ? (
         <>

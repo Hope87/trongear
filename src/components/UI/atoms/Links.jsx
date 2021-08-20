@@ -7,17 +7,16 @@ import youtube from '../../../images/youtube.svg';
 const useStyles = makeStyles({
   links: {
     position: 'relative',
-    width: '280px',
+    maxWidth: '130px',
     paddingLeft: '80px',
     paddingTop: '15px',
+
+    '@media screen and (max-width: 479.98px)': {
+      paddingLeft: '5px',
+    },
   },
 
   linksBox: {
-    // position: 'absolute',
-    // left: '50%',
-    // top: '50%',
-    // transform: 'translate(-50%, -50%)',
-
     '& img': {
       width: '30px !important',
       height: '30px !important',

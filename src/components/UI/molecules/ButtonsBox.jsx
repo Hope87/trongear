@@ -11,14 +11,31 @@ const useStyles = makeStyles({
     marginRight: '100px',
     flexWrap: 'wrap',
 
+    '@media screen and (max-width: 991.98px)': {
+      marginLeft: '0px',
+      marginRight: '0px',
+    },
+    '@media screen and (max-width: 799.98px)': {
+      justifyContent: 'center',
+    },
+
     '& div': {
       display: 'flex',
       flexWrap: 'wrap',
+
+      '@media screen and (max-width: 589.98px)': {
+        justifyContent: 'center',
+        marginTop: '5px',
+      },
     },
   },
   buttonsBoxBtn: {
     '& div': {
       marginLeft: '20px',
+
+      '@media screen and (max-width: 589.98px)': {
+        marginLeft: '0',
+      },
     },
   },
 });
