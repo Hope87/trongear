@@ -62,6 +62,10 @@ const useStyles = makeStyles({
       height: '100%',
       objectFit: 'contain',
     },
+
+    '@media screen and (max-width: 679.98px)': {
+      display: 'none',
+    },
   },
 });
 

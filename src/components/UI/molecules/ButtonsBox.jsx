@@ -15,7 +15,7 @@ const useStyles = makeStyles({
       marginLeft: '0px',
       marginRight: '0px',
     },
-    '@media screen and (max-width: 799.98px)': {
+    '@media screen and (max-width: 819.98px)': {
       justifyContent: 'center',
     },
 
