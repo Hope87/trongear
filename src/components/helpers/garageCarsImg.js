@@ -53,7 +53,7 @@ import amg_on from '../../images/cars/G_5_cars/on/4_amg.png';
 import mclaren_off from '../../images/cars/G_5_cars/off/5_mclaren.png';
 import mclaren_on from '../../images/cars/G_5_cars/on/5_mclaren.png';
 
-const garageCars = [
+const garageCarsImg = [
   {
     name: 'garage 1',
     car_1: [acura_off, acura_on],
@@ -96,4 +96,4 @@ const garageCars = [
   },
 ];
 
-export default garageCars;
+export default garageCarsImg;

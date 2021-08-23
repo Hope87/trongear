@@ -8,7 +8,7 @@ import lock_icon from '../../../images/lock_icon.png';
 
 import wrapper from '../../../images/G_5.png';
 import Slider from '../atoms/Slider';
-import garageCars from '../../helpers/helpers';
+import garageCarsImg from '../../helpers/garageCarsImg';
 
 const useStyles = makeStyles({
   garageMenuMain: {
@@ -188,7 +188,7 @@ const useStyles = makeStyles({
 const GarageMenuMain = ({ garageNumber }) => {
   const classes = useStyles();
 
-  const totalCars = garageCars.length;
+  const totalCars = garageCarsImg.length;
 
   const [buttonOperation, setButtonOperation] = useState({
     title: 'unlock',
@@ -204,7 +204,7 @@ const GarageMenuMain = ({ garageNumber }) => {
       <div className={classes.garageMenuMainCars}>
         <div className={classes.garageMenuMainSlider}>
           <Slider
-            filteredCars={garageCars.find((el) => el.name === garageNumber.title)}
+            filteredCars={garageCarsImg.find((el) => el.name === garageNumber.title)}
             onActive={buttonOperation.activeSlider}
             onSetCarsCount={setCarsCount}
           />

@@ -1,8 +1,9 @@
-import React from 'react';
+import React, { useRef } from 'react';
 import { Link } from 'react-router-dom';
 import { makeStyles } from '@material-ui/core/styles';
 import burger from '../../../images/burger.svg';
 import Links from '../../UI/atoms/Links';
+import useOutsideModal from '../../helpers/useOutsideModal';
 
 const useStyles = makeStyles({
   mainHeader: {
@@ -72,8 +73,12 @@ const useStyles = makeStyles({
 const Header = ({ headerModal, setHeaderModal, headerLogo }) => {
   const classes = useStyles();
 
+  const modalRef = useRef(null);
+
+  useOutsideModal(modalRef, setHeaderModal);
+
   return (
-    <div className={classes.mainHeader}>
+    <div className={classes.mainHeader} ref={modalRef}>
       <img
         className={classes.mainHeaderBurger}
         onClick={() => setHeaderModal(!headerModal)}
