@@ -12,6 +12,15 @@ const useStyles = makeStyles({
     backgroundColor: 'var(--dark)',
     position: 'relative',
     clipPath: 'polygon(0% 0%, 0% 0%, 100% 0%, 97% 100%, 100% 100%, 3% 100%)',
+    '@media screen and (max-width: 480px)': {
+      boxShadow: '0px 9px 32px 0px rgba(5,5,5,0.57)',
+      backgroundColor: '#000000',
+      clipPath: 'none',
+      minHeight: '82px',
+      display: 'flex',
+      alignItems: 'center',
+      justifyContent: 'space-around',
+    },
 
     '& h5': {
       textShadow: '0 6px 13px rgba(18, 18, 18, 0.08)',
@@ -28,6 +37,9 @@ const useStyles = makeStyles({
       top: '30%',
       right: '5%',
       cursor: 'pointer',
+      '@media screen and (max-width: 480px)': {
+        position: 'static',
+      },
     },
   },
   mainHeaderBurger: {
@@ -39,6 +51,10 @@ const useStyles = makeStyles({
     transform: 'translate(-50%, -50%)',
     cursor: 'pointer',
     zIndex: '2',
+    '@media screen and (max-width: 480px)': {
+      position: 'static',
+      transform: 'translate(0, 0)',
+    },
   },
   mainLinks: {
     position: 'absolute',
@@ -48,6 +64,9 @@ const useStyles = makeStyles({
 
     '@media screen and (max-width: 679.98px)': {
       left: '0',
+    },
+    '@media screen and (max-width: 480px)': {
+      display: 'none',
     },
   },
   headerLogo: {

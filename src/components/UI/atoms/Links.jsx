@@ -14,6 +14,10 @@ const useStyles = makeStyles({
     '@media screen and (max-width: 479.98px)': {
       paddingLeft: '5px',
     },
+
+    '@media screen and (max-width: 576px)': {
+      maxWidth: '160px',
+    },
   },
 
   linksBox: {
@@ -22,6 +26,9 @@ const useStyles = makeStyles({
       height: '30px !important',
       marginLeft: '10px',
       cursor: 'pointer',
+      '@media screen and (max-width: 576px)': {
+        marginLeft: '20px',
+      },
     },
   },
 });

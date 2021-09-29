@@ -18,6 +18,7 @@ const useStyles = makeStyles({
     '@media screen and (max-width: 819.98px)': {
       justifyContent: 'center',
     },
+   
 
     '& div': {
       display: 'flex',
@@ -25,7 +26,7 @@ const useStyles = makeStyles({
 
       '@media screen and (max-width: 589.98px)': {
         justifyContent: 'center',
-        marginTop: '5px',
+        //marginTop: '5px',
       },
     },
   },
@@ -36,6 +37,7 @@ const useStyles = makeStyles({
       '@media screen and (max-width: 589.98px)': {
         marginLeft: '0',
       },
+      
     },
   },
 });

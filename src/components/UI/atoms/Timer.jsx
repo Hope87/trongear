@@ -38,6 +38,11 @@ const useStyles = makeStyles({
     height: '60px',
     position: 'relative',
     marginLeft: '2px',
+    '@media screen and (max-width: 480px)': {
+      width: '46px',
+      marginLeft: '3px',
+      height: '62px',
+    },
 
     '& img': {
       width: '100%',
@@ -65,6 +70,9 @@ const useStyles = makeStyles({
   center: {
     marginLeft: '10px',
     marginRight: '10px',
+    '@media screen and (max-width: 480px)': {
+      margin: '0 24px 0 24px',
+    },
   },
 });
 

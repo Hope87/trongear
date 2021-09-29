@@ -12,6 +12,11 @@ const useStyles = makeStyles({
     backgroundColor: 'transparent',
     border: 'none',
     outline: 'none',
+    '@media screen and (max-width: 480px)': {
+      width: '155px',
+      height: '49px',
+      opacity: '0.9',
+    },
 
     '& img': {
       width: '100%',
@@ -35,6 +40,11 @@ const useStyles = makeStyles({
       top: '50%',
       left: '50%',
       transform: 'translate(-50%, -50%)',
+      '@media screen and (max-width: 480px)': {
+        fontSize: '20px',
+        lineHeight: '20px',
+        textShadow: '0px 1px 3px rgba(18,18,18,0.07)',
+      },
     },
   },
 });

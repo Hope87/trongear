@@ -6,6 +6,9 @@ import Modal from '../../UI/atoms/Modal';
 import Timer from '../../UI/atoms/Timer';
 import ButtonsBox from '../../UI/molecules/ButtonsBox';
 import MainDescription from '../../UI/organisms/MainDescription';
+import Links from '../../UI/atoms/Links';
+import footerLogoForMobile from '../../../images/footerLogoForMobile.png';
+import footerLogoForMobileSmall from '../../../images/footerLogoForMobileSmall.png';
 
 const Main = ({ modal, setModal }) => {
   return (
@@ -37,6 +40,20 @@ const Main = ({ modal, setModal }) => {
 
         <Grid item xs={12}>
           <MainDescription />
+        </Grid>
+
+        <Grid item xs={12}>
+          <div className={styles.mainFooter}>
+            <div className={styles.bigImage}>
+              <img src={footerLogoForMobile} alt="footer"></img>
+            </div>
+            <div className={styles.smallImage}>
+              <img src={footerLogoForMobileSmall} alt="footer"></img>
+            </div>
+            <div className={styles.footerLinks}>
+              <Links/>
+            </div>
+          </div>
         </Grid>
       </Grid>
     </div>
