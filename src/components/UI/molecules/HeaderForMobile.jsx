@@ -37,6 +37,7 @@ const useStyles = makeStyles({
   mainHeaderBurger: {
     width: '42px',
     height: '22px',
+    cursor: 'pointer',
   },
 
   headerLinks: {
