@@ -5,6 +5,19 @@
   position: fixed;
   overflow: auto;
   background-size: cover;
+  min-width: 320px;
+
+  .mobileVersion {
+    display: none;
+    @media screen and (max-width: 576px) {
+      display: block;
+    }
+  }
+  .desktopVersion {
+    @media screen and (max-width: 576px) {
+      display: none;
+    }
+  }
 
   .topFooter {
     display: flex;

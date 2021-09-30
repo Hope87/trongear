@@ -12,7 +12,7 @@ const useStyles = makeStyles({
     backgroundColor: 'var(--dark)',
     position: 'relative',
     clipPath: 'polygon(0% 0%, 0% 0%, 100% 0%, 97% 100%, 100% 100%, 3% 100%)',
-    '@media screen and (max-width: 480px)': {
+    '@media screen and (max-width: 576px)': {
       boxShadow: '0px 9px 32px 0px rgba(5,5,5,0.57)',
       backgroundColor: '#000000',
       clipPath: 'none',

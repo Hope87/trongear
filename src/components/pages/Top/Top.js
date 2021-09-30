@@ -9,13 +9,20 @@ import TopPanel from '../../UI/molecules/TopPanel';
 import TopMainLeft from '../../UI/organisms/TopMainLeft';
 import TopMainRight from '../../UI/organisms/TopMainRight';
 import ButtonsBox from '../../UI/molecules/ButtonsBox';
+import HeaderForMobile from '../../UI/molecules/HeaderForMobile';
 
 const Top = ({ modal, setModal }) => {
   return (
     <div className={styles.top}>
       <Grid container>
         <Grid item xs={12}>
-          <Header headerLogo={logo} headerModal={modal} setHeaderModal={setModal} />
+          <div className={styles.desktopVersion}>
+            <Header headerLogo={logo} headerModal={modal} setHeaderModal={setModal}/>
+          </div>
+          <div className={styles.mobileVersion}>
+            <HeaderForMobile headerModal={modal} setHeaderModal={setModal}/>
+          </div>
+         
 
           {modal && <Modal />}
         </Grid>
