@@ -6,6 +6,7 @@ import logo from '../../../images/logo.png';
 import Modal from '../../UI/atoms/Modal';
 import Timer from '../../UI/atoms/Timer';
 import TopPanel from '../../UI/molecules/TopPanel';
+import TopPanelMob from '../../UI/molecules/TopPanelMob';
 import TopMainLeft from '../../UI/organisms/TopMainLeft';
 import TopMainRight from '../../UI/organisms/TopMainRight';
 import ButtonsBox from '../../UI/molecules/ButtonsBox';
@@ -40,13 +41,19 @@ const Top = ({ modal, setModal }) => {
         </Grid>
 
         <Grid item xs={12}>
-          <div className={styles.topBtn} style={{ marginTop: '-60px' }}>
+          <div className={styles.topBtn}>
             <ButtonsBox />
           </div>
         </Grid>
 
         <Grid item xs={12}>
-          <TopPanel />
+          <div className={styles.desktopVersion}>
+            <TopPanel />
+          </div>
+          <div className={styles.mobileVersion}>
+            <TopPanelMob/>
+          </div>
+          
         </Grid>
 
         <Grid item xs={12} lg={6}>

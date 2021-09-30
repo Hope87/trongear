@@ -19,6 +19,9 @@ const useStyles = makeStyles({
       lineHeight: '37.97px',
       textAlign: 'center',
       textTransform: 'uppercase',
+      '@media screen and (max-width: 576px)': {
+        marginBottom: '11px',
+      },
     },
 
     '& div': {
