@@ -38,7 +38,7 @@ const useStyles = makeStyles({
     height: '60px',
     position: 'relative',
     marginLeft: '2px',
-    '@media screen and (max-width: 480px)': {
+    '@media screen and (max-width: 576px)': {
       width: '46px',
       marginLeft: '3px',
       height: '62px',
@@ -70,7 +70,7 @@ const useStyles = makeStyles({
   center: {
     marginLeft: '10px',
     marginRight: '10px',
-    '@media screen and (max-width: 480px)': {
+    '@media screen and (max-width: 576px)': {
       margin: '0 24px 0 24px',
     },
   },

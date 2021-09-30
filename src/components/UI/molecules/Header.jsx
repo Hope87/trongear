@@ -37,7 +37,7 @@ const useStyles = makeStyles({
       top: '30%',
       right: '5%',
       cursor: 'pointer',
-      '@media screen and (max-width: 480px)': {
+      '@media screen and (max-width: 576px)': {
         position: 'static',
       },
     },
@@ -51,7 +51,7 @@ const useStyles = makeStyles({
     transform: 'translate(-50%, -50%)',
     cursor: 'pointer',
     zIndex: '2',
-    '@media screen and (max-width: 480px)': {
+    '@media screen and (max-width: 576px)': {
       position: 'static',
       transform: 'translate(0, 0)',
     },
@@ -65,7 +65,7 @@ const useStyles = makeStyles({
     '@media screen and (max-width: 679.98px)': {
       left: '0',
     },
-    '@media screen and (max-width: 480px)': {
+    '@media screen and (max-width: 576px)': {
       display: 'none',
     },
   },
