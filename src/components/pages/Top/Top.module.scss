@@ -10,18 +10,6 @@
     background: url('../../../images/backgroundTopPageMob.png');
   }
 
-  .mobileVersion {
-    display: none;
-    @media screen and (max-width: 576px) {
-      display: block;
-    }
-  }
-  .desktopVersion {
-    @media screen and (max-width: 576px) {
-      display: none;
-    }
-  }
-
   .topTimer {
     @media screen and (max-width: 576px) {
       margin: 39px 0;
@@ -31,19 +19,6 @@
     margin-top: -60px;
     @media screen and (max-width: 576px) {
       margin-top: 0;
-    }
-  }
-
-  .mobileVersion {
-    display: none;
-    @media screen and (max-width: 576px) {
-      display: block;
-    }
-  }
-
-  .desktopVersion {
-    @media screen and (max-width: 576px) {
-      display: none;
     }
   }
 

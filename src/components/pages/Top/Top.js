@@ -13,18 +13,16 @@ import ButtonsBox from '../../UI/molecules/ButtonsBox';
 import HeaderForMobile from '../../UI/molecules/HeaderForMobile';
 
 const Top = ({ modal, setModal }) => {
+  const width = window.innerWidth;
   return (
     <div className={styles.top}>
       <Grid container>
         <Grid item xs={12}>
-          <div className={styles.desktopVersion}>
-            <Header headerLogo={logo} headerModal={modal} setHeaderModal={setModal}/>
-          </div>
-          <div className={styles.mobileVersion}>
-            <HeaderForMobile headerModal={modal} setHeaderModal={setModal}/>
-          </div>
+         {(width > 576) ?
+            (<Header headerLogo={logo} headerModal={modal} setHeaderModal={setModal}/>)
+            :(<HeaderForMobile headerModal={modal} setHeaderModal={setModal}/>)
+          }
          
-
           {modal && <Modal />}
         </Grid>
 
@@ -47,13 +45,10 @@ const Top = ({ modal, setModal }) => {
         </Grid>
 
         <Grid item xs={12}>
-          <div className={styles.desktopVersion}>
-            <TopPanel />
-          </div>
-          <div className={styles.mobileVersion}>
-            <TopPanelMob/>
-          </div>
-          
+          {(width > 576) ?
+            (<TopPanel />)
+            :(<TopPanelMob/>)
+          }
         </Grid>
 
         <Grid item xs={12} lg={6}>
