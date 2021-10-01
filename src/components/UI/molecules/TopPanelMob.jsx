@@ -15,12 +15,14 @@ const useStyles = makeStyles({
   fontWeight: '400',
   fontStyle: 'italic',
   textTransform: 'uppercase',
-  '& div : hover': {
-    color: 'red',
-  },
+
   '& a': {
     textDecoration: 'none',
     color: '#53565a',
+
+    '&:hover': {
+      color: '#ecff16;',
+   },
   },
  },
 });

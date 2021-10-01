@@ -29,10 +29,16 @@ const useStyles = makeStyles({
 
       '&:nth-child(1)': {
         marginLeft: '120px',
+        '@media screen and (max-width: 576px)': {
+          marginLeft: '20px',
+        },
       },
 
       '&:nth-child(2)': {
         marginLeft: '30px',
+        '@media screen and (max-width: 576px)': {
+          marginLeft: '33px',
+        },
       },
     },
 
@@ -40,6 +46,13 @@ const useStyles = makeStyles({
       width: '30px',
       height: '28px',
       marginLeft: '330px',
+      '@media screen and (max-width: 576px)': {
+        marginLeft: '33px',
+      },
+    },
+    '@media screen and (max-width: 576px)': {
+      marginBottom: '14px',
+      justifyContent: 'flex-start',
     },
   },
 });
