@@ -49,7 +49,6 @@ const useStyles = makeStyles({
       height: '62px',
       marginLeft: '-30px',
       clipPath: 'polygon(35px 0, 100% 0, 100% 100%, 0 100%)',
-      //justifyContent: 'space-around',
     },
     '& span': {
       marginLeft: '40px',

@@ -11,6 +11,8 @@ import TopMainLeft from '../../UI/organisms/TopMainLeft';
 import TopMainRight from '../../UI/organisms/TopMainRight';
 import ButtonsBox from '../../UI/molecules/ButtonsBox';
 import HeaderForMobile from '../../UI/molecules/HeaderForMobile';
+import leftImage from '../../../images/topFooterLeftImage.png';
+import rightImage from '../../../images/topFooterRightImage.png';
 
 const Top = ({ modal, setModal }) => {
   const width = window.innerWidth;
@@ -64,6 +66,16 @@ const Top = ({ modal, setModal }) => {
             <div>
               <h4 className={styles.topFooterTitle}>EARN BY PROMOTING</h4>
             </div>
+            {width < 576 && 
+            (<div className={styles.imageContainer}>
+              <div className={styles.image}>
+                <img src={leftImage} alt="leftImage"/>
+              </div>
+              <div className={styles.image}>
+                <img src={rightImage} alt="rightImage"/>
+              </div>
+            </div>)
+            }
           </div>
         </Grid>
       </Grid>
