@@ -8,6 +8,10 @@ const useStyles = makeStyles({
     height: '260px',
     background: 'var(--gray-dark)',
     clipPath: 'polygon(0% 14%, 14% 0%, 100% 0%, 100% 85%, 85% 100%, 0% 100%)',
+    '@media screen and (max-width: 576px)': {
+      minWidth: '333px',
+      marginBottom: '15px',
+    }
   },
 
   transactionsHeader: {

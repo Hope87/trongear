@@ -16,6 +16,7 @@ import rightImage from '../../../images/topFooterRightImage.png';
 
 const Top = ({ modal, setModal }) => {
   const width = window.innerWidth;
+  
   return (
     <div className={styles.top}>
       <Grid container>

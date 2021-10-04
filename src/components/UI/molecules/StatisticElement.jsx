@@ -8,6 +8,10 @@ const useStyles = makeStyles({
   statisticElement: {
     maxWidth: '346px',
     position: 'relative',
+    '@media screen and (max-width: 576px)': {
+      maxWidth: '333px',
+      margin: '0 13px',
+    },
 
     '& img': {
       width: '100%',
@@ -23,6 +27,9 @@ const useStyles = makeStyles({
     height: '90px',
     backgroundColor: 'var(--dark)',
     clipPath: 'polygon(0% 28%, 9% 0%, 100% 0%, 100% 90%, 100% 100%, 0% 100%)',
+    '@media screen and (max-width: 576px)': {
+      width: '333px',
+    },
   },
 
   statisticElementFooter: {
@@ -30,6 +37,9 @@ const useStyles = makeStyles({
     width: '346px',
     backgroundColor: 'var(--dark)',
     clipPath: 'polygon(0% 0%, 0% 0%, 100% 0%, 90% 100%, 100% 100%, 0% 100%)',
+    '@media screen and (max-width: 576px)': {
+      width: '333px',
+    },
 
     '& p': {
       textShadow: '4px 5px 13px rgba(18, 18, 18, 0.08)',
@@ -43,6 +53,9 @@ const useStyles = makeStyles({
       textTransform: 'uppercase',
       marginLeft: '30px',
       paddingTop: '5px',
+      '@media screen and (max-width: 576px)': {
+        fontSize: '16px',
+      },
     },
   },
 });

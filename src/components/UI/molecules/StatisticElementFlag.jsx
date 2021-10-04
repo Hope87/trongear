@@ -9,6 +9,9 @@ const useStyles = makeStyles({
     top: '0',
     right: '0',
     clipPath: 'polygon(28% 0%, 0% 0%, 100% 0%, 100% 100%, 100% 100%, 40% 100%)',
+    '@media screen and (max-width: 576px)': {
+      width: '70%',
+    },
 
     '& span': {
       fontFamily: 'Calibri',
@@ -20,6 +23,10 @@ const useStyles = makeStyles({
       textAlign: 'right',
       textTransform: 'uppercase',
       marginLeft: '120px',
+      '@media screen and (max-width: 576px)': {
+        fontSize: '16px',
+         marginLeft: '100px',
+      },
     },
   },
   textColorWhite: {
