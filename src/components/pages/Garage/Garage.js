@@ -18,6 +18,12 @@ import garage_2_on from '../../../images/G_2_on.png';
 import garage_3_on from '../../../images/G_3_on.png';
 import garage_4_on from '../../../images/G_4_on.png';
 import garage_5_on from '../../../images/G_5_on.png';
+import HeaderForMobile from '../../UI/molecules/HeaderForMobile';
+import TopPanelMob from '../../UI/molecules/TopPanelMob';
+import leftImage from '../../../images/topFooterLeftImage.png';
+import rightImage from '../../../images/topFooterRightImage.png';
+
+
 
 const Garage = ({ modal, setModal, onGarageMenuInformation }) => {
   const cardItems = [
@@ -82,13 +88,21 @@ const Garage = ({ modal, setModal, onGarageMenuInformation }) => {
       ),
     },
   ];
-
+ 
+  const width = window.innerWidth;
   return (
     <div className={styles.garage}>
       <Grid container>
         <Grid item xs={12}>
-          <Header headerLogo={logo} headerModal={modal} setHeaderModal={setModal} />
-
+          {width > 576 ? (
+            <Header
+              headerLogo={logo}
+              headerModal={modal}
+              setHeaderModal={setModal}
+            />
+          ) : (
+            <HeaderForMobile headerModal={modal} setHeaderModal={setModal} />
+          )}
           {modal && <Modal />}
         </Grid>
 
@@ -110,6 +124,14 @@ const Garage = ({ modal, setModal, onGarageMenuInformation }) => {
           </div>
         </Grid>
 
+        {width < 576 && (
+          <Grid item xs={12}>
+            <div className={styles.racingPanel}>
+              <TopPanelMob />
+            </div>
+          </Grid>
+        )}
+
         <Grid item xs={12}>
           <div className={styles.garageCardsOff}>
             {cardItems.map((el) => (
@@ -125,9 +147,20 @@ const Garage = ({ modal, setModal, onGarageMenuInformation }) => {
             <div className={styles.garageText}>
               <h2>enter the race</h2>
               <p>
-                You are presented with 5 garages, with different levels of cars The first profit you will receive in an
-                hour after participation in the race!
+                You are presented with 5 garages, with different levels of cars
+                The first profit you will receive in an hour after participation
+                in the race!
               </p>
+              {width < 576 && (
+            <div className={styles.imageContainer}>
+              <div className={styles.image}>
+                <img src={leftImage} alt="leftImage" />
+              </div>
+              <div className={styles.image}>
+                <img src={rightImage} alt="rightImage" />
+              </div>
+            </div>
+          )}
             </div>
           </div>
         </Grid>

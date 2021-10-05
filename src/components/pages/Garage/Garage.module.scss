@@ -5,6 +5,15 @@
   position: fixed;
   overflow: auto;
   background-size: cover;
+  @media screen and (max-width: 576px) {
+    background: url('../../../images/racingMobBackground.png');
+  }
+
+  .garageTimer {
+    @media screen and (max-width: 576px) {
+      margin: 40px auto;
+    }
+  }
 
   .garageBtn {
     margin-top: -60px;
@@ -36,6 +45,9 @@
       margin-left: 0px;
       margin-right: 0px;
     }
+    @media screen and (max-width: 576px) {
+      margin-top: 40px;
+    }
   }
 
   .garageLeftPanel {
@@ -54,10 +66,18 @@
     justify-content: space-between;
     margin-top: 160px;
     padding-bottom: 40px;
+    @media screen and (max-width: 576px) {
+      margin: 40px 0 110px;
+      padding-bottom: 0;
+    }
 
     .garageText {
       max-width: 560px;
       margin: -60px auto 0;
+      @media screen and (max-width: 576px) {
+        margin: 0 auto;
+        position: relative;
+      }
       h2 {
         color: var(--yellow);
         font-family: 'Russo One';
@@ -68,6 +88,9 @@
         line-height: normal;
         text-align: center;
         text-transform: uppercase;
+        @media screen and (max-width: 576px) {
+          font-size: 20px;
+        }
       }
 
       p {
@@ -80,6 +103,26 @@
         line-height: normal;
         text-align: center;
         text-transform: uppercase;
+        @media screen and (max-width: 576px) {
+          margin: 0 32px
+        }
+      }
+    }
+  }
+  .imageContainer {
+    position: absolute;
+    width: 100%;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    display: flex;
+    justify-content: space-between;
+    .image {
+      width: 28px;
+      height: 99px;
+      img {
+        width: 100%;
+        height: 100%;
       }
     }
   }
