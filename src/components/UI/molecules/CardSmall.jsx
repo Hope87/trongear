@@ -6,6 +6,10 @@ const useStyles = makeStyles({
     width: '95px',
     height: '105px',
     position: 'relative',
+    '@media screen and (max-width: 576px)': {
+      width: '163px',
+      height: '178px',
+    },
 
     '& div': {
       '& img': {
