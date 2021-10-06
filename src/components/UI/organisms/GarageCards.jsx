@@ -13,10 +13,19 @@ const useStyles = makeStyles({
     flexDirection: 'column',
     alignItems: 'center',
     marginTop: '30px',
+     '@media screen and (max-width: 576px)': {
+      marginTop: '0',
+     },
   },
   garageCards: {
     display: 'flex',
     margin: '0 auto',
+    '@media screen and (max-width: 576px)': {
+      width: '332px',
+      height: '314px',
+      flexWrap: 'wrap',
+      justifyContent: 'space-between',
+    },
   },
 });
 

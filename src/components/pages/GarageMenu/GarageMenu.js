@@ -8,13 +8,23 @@ import GarageMenuLeft from '../../UI/organisms/GarageMenuLeft';
 import Timer from '../../UI/atoms/Timer';
 import Modal from '../../UI/atoms/Modal';
 import ButtonsBox from '../../UI/molecules/ButtonsBox';
+import HeaderForMobile from '../../UI/molecules/HeaderForMobile';
 
 const GarageMenu = ({ modal, setModal, garageNumber }) => {
+  const width = window.innerWidth;
   return (
     <div className={styles.garageMenu}>
       <Grid container>
         <Grid item xs={12}>
-          <Header headerLogo={logo} headerModal={modal} setHeaderModal={setModal} />
+        {width > 576 ? (
+            <Header
+              headerLogo={logo}
+              headerModal={modal}
+              setHeaderModal={setModal}
+            />
+          ) : (
+            <HeaderForMobile headerModal={modal} setHeaderModal={setModal} />
+          )}
 
           {modal && <Modal />}
         </Grid>
@@ -32,7 +42,7 @@ const GarageMenu = ({ modal, setModal, garageNumber }) => {
         </Grid>
 
         <Grid item xs={12}>
-          <div className={styles.garageMenuBtn} style={{ marginTop: '-60px' }}>
+          <div className={styles.garageMenuBtn} style={width > 576 ? {marginTop: '-60px'} :{marginTop: '0'}}>
             <ButtonsBox />
           </div>
         </Grid>

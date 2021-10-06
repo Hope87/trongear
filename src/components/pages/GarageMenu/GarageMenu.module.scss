@@ -6,6 +6,12 @@
   overflow: auto;
   background-size: cover;
 
+  .garageMenuTimer {
+    @media screen and (max-width: 576px) {
+      margin: 40px auto;
+    }
+  }
+
   .garageMenuLeftPanel {
     position: absolute;
     left: 0;

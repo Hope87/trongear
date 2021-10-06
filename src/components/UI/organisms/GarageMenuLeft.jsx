@@ -7,6 +7,9 @@ const useStyles = makeStyles({
   garageLeft: {
     marginLeft: '110px',
     position: 'relative',
+    '@media screen and (max-width: 576px)': {
+      margin: '0 12px',
+    },
   },
   garageLeftHeader: {
     maxWidth: '1020px',
@@ -29,6 +32,9 @@ const useStyles = makeStyles({
       lineHeight: 'normal',
       textAlign: 'left',
       textTransform: 'uppercase',
+      '@media screen and (max-width: 576px)': {
+        fontSize: '20px',
+      },
     },
   },
   garageLeftHeaderItems: {

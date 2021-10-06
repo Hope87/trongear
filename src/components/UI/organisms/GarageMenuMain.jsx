@@ -17,15 +17,24 @@ const useStyles = makeStyles({
     background: `url('${wrapper}') no-repeat`,
     backgroundSize: 'cover',
     backgroundPositionY: '-50px',
+
   },
   garageMenuMainCars: {
     height: '440px',
     position: 'relative',
-
+  
     '& img': {
       width: '100%',
       height: '100%',
       objectFit: 'cover',
+    },
+  },
+  garageMenuMainSlider: {
+    '@media screen and (max-width: 576px)': {
+      paddingTop: '110px',
+    },
+    '@media screen and (max-width: 425px)': {
+      paddingTop: '150px',
     },
   },
   garageMenuMainText: {
