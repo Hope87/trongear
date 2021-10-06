@@ -36,7 +36,8 @@ const useStyles = makeStyles({
         fontSize: '20px',
       },
       '@media screen and (max-width: 375px)': {
-        fontSize: '18px',
+        fontSize: '16px',
+        marginLeft: '20px',
       },
     },
   },
