@@ -51,7 +51,7 @@ const Racing = ({ modal, setModal }) => {
               <Timer />
             </div>
           ) : (
-            <div style={{ opacity: 0 }} className={styles.racingTimer}>
+            <div style={{ opacity: 0, margin: width < 576 && '40px auto' }} className={styles.racingTimer}>
               <Timer />
             </div>
           )}

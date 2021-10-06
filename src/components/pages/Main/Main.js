@@ -16,8 +16,9 @@ const Main = ({ modal, setModal }) => {
       <Grid container>
         <Grid item xs={12}>
           <Header headerModal={modal} setHeaderModal={setModal} />
-
-          {modal && <Modal />}
+          <div className={styles.modal}>
+            {modal && <Modal />}
+          </div>
         </Grid>
 
         <Grid item xs={12}>

@@ -34,6 +34,9 @@ const Modal = () => {
       animationName: '$modal',
       animationFillMode: 'forwards',
       zIndex: '12',
+      '@media screen and (max-width: 576px)': {
+        top: '40%',
+      },
 
       '& img': {
         opacity: '0.7',

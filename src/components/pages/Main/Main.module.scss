@@ -14,7 +14,7 @@
   }
   
   .mainTimer{
-    @media screen and (max-width: 480px) {
+    @media screen and (max-width: 576px) {
       margin: 39px 0;
     }
   }
@@ -54,6 +54,11 @@
     }
     @media screen and (max-width: 576px) {
       display: block;
+    }
+  }
+  .modal {
+    @media screen and (max-width: 576px) {
+      margin-top: 70px;
     }
   }
 }
