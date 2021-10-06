@@ -62,6 +62,7 @@ const useStyles = makeStyles({
     textTransform: 'uppercase',
     textShadow: '0px 3px 7px rgba(18,18,18,0.07)',
     color: '#63666a',
+    textAlign: 'center',
   },
 });
 

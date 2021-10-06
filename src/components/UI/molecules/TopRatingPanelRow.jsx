@@ -45,10 +45,13 @@ const useStyles = makeStyles({
     alignItems: 'center',
     justifyContent: 'space-between',
     '@media screen and (max-width: 576px)': {
-      minWidth: '209px',
+      //minWidth: '209px',
       height: '62px',
       marginLeft: '-30px',
       clipPath: 'polygon(35px 0, 100% 0, 100% 100%, 0 100%)',
+    },
+    '@media screen and (max-width: 375px)': {
+     flexDirection: 'column',
     },
     '& span': {
       marginLeft: '40px',

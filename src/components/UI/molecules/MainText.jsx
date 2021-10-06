@@ -55,7 +55,7 @@ const useStyles = makeStyles({
     display: 'none',
     '@media screen and (max-width: 576px)': {
       display: 'block',
-      width: '325px',
+      //width: '325px',
       height: '43px',
     },
   },

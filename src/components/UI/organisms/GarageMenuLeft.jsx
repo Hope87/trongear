@@ -35,6 +35,9 @@ const useStyles = makeStyles({
       '@media screen and (max-width: 576px)': {
         fontSize: '20px',
       },
+      '@media screen and (max-width: 375px)': {
+        fontSize: '18px',
+      },
     },
   },
   garageLeftHeaderItems: {

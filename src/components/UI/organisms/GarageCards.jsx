@@ -21,10 +21,11 @@ const useStyles = makeStyles({
     display: 'flex',
     margin: '0 auto',
     '@media screen and (max-width: 576px)': {
-      width: '332px',
+      //width: '332px',
       height: '314px',
       flexWrap: 'wrap',
       justifyContent: 'space-between',
+      padding: '0 7px',
     },
   },
 });
