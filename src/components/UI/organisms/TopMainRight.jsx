@@ -8,7 +8,7 @@ import TopMainRightInfoMob from '../molecules/TopMainRightInfoMob';
 
 const useStyles = makeStyles({
   topMainRight: {
-    margin: '40px 13px 48px 13px',
+    margin: '40px 13px 48px 30px',
   },
 
   topRatingPanelTitle: {
@@ -29,9 +29,8 @@ const useStyles = makeStyles({
       lineHeight: 'normal',
       textAlign: 'left',
       textTransform: 'uppercase',
-      marginLeft: '150px',
+      marginLeft: '15px',
       '@media screen and (max-width: 576px)': {
-        marginLeft: '15px',
         fontSize: '20px',
       }
     },
@@ -65,13 +64,12 @@ const TopMainRight = () => {
       </div>
       <TopRatingPanelRow point="#0" name="name" total="000, 000, 000" />
       <div className={classes.topMainRightBox}>
-        {(width > 576) ?
+        {/* {(width > 576) ?
           (<div>
             <TopMainRightIcons />
             <TopMainRightInfo />
           </div>)
-          :(<TopMainRightInfoMob points={0} winnings={'0'} hour1={'0,00 trx'} hour2={'0,00 trx'} top={'0,00 trx'}/>)
-        }
+          :*/}<TopMainRightInfoMob points={0} winnings={'0'} hour1={'0,00 trx'} hour2={'0,00 trx'} top={'0,00 trx'}/>
       </div>
     </div>
   );

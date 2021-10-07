@@ -9,12 +9,12 @@ const useStyles = makeStyles({
   topRatingPanelPoint: {
     width: '140px',
     height: '50px',
-    clipPath: 'polygon(0% 0%, 0% 0%, 100% 0%, 75% 100%, 100% 100%, 0% 100%)',
+    //clipPath: 'polygon(0% 0%, 0% 0%, 100% 0%, 75% 100%, 100% 100%, 0% 100%)',
+    clipPath: 'polygon(0 0, 100% 0, 75% 100%, 0 100%)',
     backgroundColor: 'var(--dark)',
     '@media screen and (max-width: 576px)': {
       minWidth: '137px',
       height: '62px',
-      clipPath: 'polygon(0 0, 100% 0, 75% 100%, 0 100%)',
       flex: '1 1 25%',
     },
 
@@ -38,17 +38,16 @@ const useStyles = makeStyles({
     width: '78%',
     height: '50px',
     background: 'linear-gradient(to right, var(--secondary) 60%,  rgba(0,0,0,0.2) 95%)',
-    clipPath: 'polygon(5.4% 0%, 0% 0%, 100% 0%, 100% 100%, 100% 100%, 0% 100%)',
+    //clipPath: 'polygon(5.4% 0%, 0% 0%, 100% 0%, 100% 100%, 100% 100%, 0% 100%)',
+    clipPath: 'polygon(35px 0, 100% 0, 100% 100%, 0 100%)',
     marginLeft: '-30px',
     marginBottom: '10px',
     display: 'flex',
     alignItems: 'center',
     justifyContent: 'space-between',
     '@media screen and (max-width: 576px)': {
-      //minWidth: '209px',
       height: '62px',
       marginLeft: '-30px',
-      clipPath: 'polygon(35px 0, 100% 0, 100% 100%, 0 100%)',
     },
     '@media screen and (max-width: 375px)': {
      flexDirection: 'column',

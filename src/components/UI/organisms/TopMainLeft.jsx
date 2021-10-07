@@ -8,9 +8,9 @@ const useStyles = makeStyles({
     marginTop: '40px',
   },
 
-  topRatingPanel: {
-    marginLeft: '110px',
-  },
+  // topRatingPanel: {
+  //   marginLeft: '110px',
+  // },
 
   topRatingPanelTitle: {
     display: 'flex',
@@ -28,7 +28,7 @@ const useStyles = makeStyles({
       textTransform: 'uppercase',
 
       '&:nth-child(1)': {
-        marginLeft: '120px',
+        marginLeft: '40px',
         '@media screen and (max-width: 576px)': {
           marginLeft: '20px',
         },
@@ -45,7 +45,7 @@ const useStyles = makeStyles({
     '& img': {
       width: '30px',
       height: '28px',
-      marginLeft: '330px',
+      marginLeft: '250px',
       '@media screen and (max-width: 576px)': {
         marginLeft: '33px',
       },
