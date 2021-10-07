@@ -14,9 +14,7 @@
   }
   
   .mainTimer{
-    //@media screen and (max-width: 576px) {
-      margin: 40px 0;
-    //}
+    margin: 40px 0;
   }
 
   .mainBtn {
@@ -61,7 +59,9 @@
   }
   .modal {
     @media screen and (max-width: 576px) {
-      margin-top: 70px;
+      position: absolute;
+    top: -65px;
+    left: 50%;
     }
   }
 }

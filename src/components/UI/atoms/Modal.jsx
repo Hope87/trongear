@@ -36,7 +36,7 @@ const Modal = () => {
       animationFillMode: 'forwards',
       zIndex: '12',
       '@media screen and (max-width: 576px)': {
-        top: '30px',
+        top: '100px',
       },
 
       '& img': {
