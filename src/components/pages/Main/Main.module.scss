@@ -14,16 +14,16 @@
   }
   
   .mainTimer{
-    @media screen and (max-width: 576px) {
-      margin: 39px 0;
-    }
+    //@media screen and (max-width: 576px) {
+      margin: 40px 0;
+    //}
   }
 
   .mainBtn {
-    margin-top: -60px;
+    margin-top: -100px;
 
     @media screen and (max-width: 1279.98px) {
-      margin-top: 50px;
+      margin-top: 30px;
     }
     @media screen and (max-width: 576px) {
       margin-top: 0;

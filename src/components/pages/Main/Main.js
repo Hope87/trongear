@@ -16,10 +16,10 @@ const Main = ({ modal, setModal }) => {
       <Grid container>
         <Grid item xs={12}>
           <Header headerModal={modal} setHeaderModal={setModal} />
-          <div className={styles.modal}>
-            {modal && <Modal />}
-          </div>
         </Grid>
+        <div className={styles.modal}>
+          {modal && <Modal />}
+        </div>
 
         <Grid item xs={12}>
           {!modal ? (
