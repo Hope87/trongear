@@ -23,6 +23,9 @@
     margin-top: -60px;
 
     @media screen and (max-width: 1279.98px) {
+      margin-top: 50px;
+    }
+    @media screen and (max-width: 576px) {
       margin-top: 0;
     }
   }
