@@ -5,7 +5,7 @@ import GarageMenuMain from './GarageMenuMain';
 
 const useStyles = makeStyles({
   garageLeft: {
-    marginLeft: '110px',
+    margin: '0 15px 0 110px',
     position: 'relative',
     '@media screen and (max-width: 576px)': {
       margin: '0 12px',
