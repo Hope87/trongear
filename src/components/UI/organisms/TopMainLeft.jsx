@@ -5,7 +5,10 @@ import elements_white from '../../../images/garage_elements-white-05.svg';
 
 const useStyles = makeStyles({
   topMainLeft: {
-    marginTop: '40px',
+    margin: '40px 15px 0 15px',
+    '@media screen and (max-width: 576px)': {
+      margin: '40px 0 0 0',
+    },
   },
 
   // topRatingPanel: {

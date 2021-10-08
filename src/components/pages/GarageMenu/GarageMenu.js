@@ -43,7 +43,6 @@ const GarageMenu = ({ modal, setModal, garageNumber }) => {
 
         <Grid item xs={12}>
           <div className={styles.garageMenuBtn}>
-          {/* style={width > 576 ? {marginTop: '-60px'} :{marginTop: '0'}} */}
             <ButtonsBox />
           </div>
         </Grid>
