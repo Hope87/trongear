@@ -47,7 +47,6 @@ const useStyles = makeStyles({
     justifyContent: 'space-between',
     '@media screen and (max-width: 576px)': {
       height: '62px',
-      marginLeft: '-30px',
     },
     '@media screen and (max-width: 375px)': {
      flexDirection: 'column',

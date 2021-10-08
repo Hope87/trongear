@@ -8,7 +8,7 @@ import TopMainRightInfoMob from '../molecules/TopMainRightInfoMob';
 
 const useStyles = makeStyles({
   topMainRight: {
-    margin: '40px 13px 48px 30px',
+    margin: '40px 0 48px 30px',
     '@media screen and (max-width: 576px)': {
       margin: '40px 13px 48px',
     },
