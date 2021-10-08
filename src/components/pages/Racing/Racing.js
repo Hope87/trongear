@@ -88,7 +88,7 @@ const Racing = ({ modal, setModal }) => {
           </Grid>
         )}
 
-        <Grid item xs={width > 576 ? 6 : 12}>
+        <Grid item xs={width > 820 ? 6 : 12}>
           <div className={styles.statisticElementTitle}>
             <h3>owerall Statistics</h3>
             <h3>personal Statistics</h3>
@@ -97,7 +97,7 @@ const Racing = ({ modal, setModal }) => {
           <StatisticElementContainer />
         </Grid>
 
-        <Grid item xs={width > 576 ? 6 : 12}>
+        <Grid item xs={width > 820 ? 6 : 12}>
           <div className={styles.transfer}>
             <h3 className={styles.transferTitle}>transfer</h3>
 
