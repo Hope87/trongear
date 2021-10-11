@@ -8,7 +8,7 @@ const useStyles = makeStyles({
     maxWidth: '310px',
     height: '420px',
     position: 'relative',
-    marginTop: '10px',
+    marginTop: '40px',
 
     '& img': {
       width: '100%',
@@ -35,7 +35,7 @@ const useStyles = makeStyles({
     '& div': {
       width: '240px',
       position: 'absolute',
-      top: '60%',
+      top: '68%',
       left: '14%',
 
       '& h5': {
@@ -69,7 +69,7 @@ const useStyles = makeStyles({
         fontStyle: 'italic',
         letterSpacing: 'normal',
         fontFamily: 'Calibri - Italic',
-        marginTop: '10px',
+        marginTop: '5px',
       },
     },
   },
