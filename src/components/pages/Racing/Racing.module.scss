@@ -60,7 +60,10 @@
     flex-wrap: wrap;
     margin-left: 50px;
     margin-right: 60px;
-    margin-top: 130px;
+    margin-top: 90px;
+    @media screen and (max-width: 956px) {
+      margin-top: 105px;
+    }
     @media screen and (max-width: 576px) {
       margin: 25px 13px 13px 15px;
     }
