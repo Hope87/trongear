@@ -40,7 +40,7 @@ const useStyles = makeStyles({
 
       '& h5': {
         color: 'var(--white)',
-        fontSize: '12px',
+        fontSize: '18px',
         lineHeight: '14.88px',
         textAlign: 'left',
         textTransform: 'uppercase',
