@@ -126,10 +126,20 @@ const GarageCardOff = ({ imageOff, cardTitleOff, imageOn, cardTitleOn, onGarageM
             src={imageOn}
             alt={cardTitleOn}
           />
-          <h4>{cardTitleOn}</h4>
+          <h4
+          onMouseEnter={() => {
+            onHover(cardTitleOn);
+            onGarageMenuInformation(cardTitleOn);
+          }}
+          onMouseLeave={() => onLeaveContainer(cardTitleOn)}>{cardTitleOn}</h4>
         </>
       )}
-      <div>
+      <div 
+      onMouseEnter={() => {
+        onHover(cardTitleOn);
+        onGarageMenuInformation(cardTitleOn);
+      }}
+      onMouseLeave={() => onLeaveContainer(cardTitleOn)}>
         <h5>Price:</h5>
         <p>The game requires a browser plugin TronLink or TronWallet</p>
       </div>

@@ -88,7 +88,7 @@ const Garage = ({ modal, setModal, onGarageMenuInformation }) => {
       ),
     },
   ];
- 
+
   const width = window.innerWidth;
   return (
     <div className={styles.garage}>
