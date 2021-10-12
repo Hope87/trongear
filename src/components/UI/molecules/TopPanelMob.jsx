@@ -15,9 +15,9 @@ const useStyles = makeStyles({
   fontWeight: '400',
   fontStyle: 'italic',
   textTransform: 'uppercase',
+  cursor: 'pointer',
 
-  '& a': {
-    textDecoration: 'none',
+  '& p': {
     color: '#53565a',
 
     '&:hover': {
@@ -33,24 +33,16 @@ const TopPanelMob = () => {
   return (
     <div className={classes.topPanel}>
       <div>
-        <a href="#">
-          p/hour
-        </a>
+         <p>p/hour</p>
       </div>
       <div>
-        <a href="#">
-          p/day
-        </a>
+        <p>p/day</p>
       </div>
       <div>
-        <a href="#">7
-          total
-        </a>
+        <p>7total</p>
       </div>
       <div>
-        <a href="#">  
-          1x1
-      </a>
+        <p> 1x1</p>
       </div>
     </div>
   );
