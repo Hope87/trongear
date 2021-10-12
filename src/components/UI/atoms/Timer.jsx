@@ -79,14 +79,14 @@ const useStyles = makeStyles({
   },
 });
 
-const Timer = ({ color = '' }) => {
+const Timer = ({ color = '', text = 'race of the day'}) => {
   const classes = useStyles();
 
   const numberColor = color;
 
   return (
     <div className={classes.timer}>
-      <p>race of the day</p>
+      <p>{text}</p>
       <div>
         <div className={classes.flip}>
           <div className={classes.flipBox}>

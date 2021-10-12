@@ -64,7 +64,7 @@ const Racing = ({ modal, setModal }) => {
                 className={styles.racingTimer}
                 style={{ marginLeft: "20px" }}
               >
-                <Timer color="#ff1437" />
+                <Timer color="#ff1437" text = 'race of the hour'/>
               </div>
             ) : (
               <div style={{ opacity: 0 }} className={styles.racingTimer}>
