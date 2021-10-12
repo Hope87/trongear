@@ -131,7 +131,7 @@ const GarageMenuTuning = () => {
         ))}
       </div>
       <div className={classes.garageTuningScale}>
-        <GarageMenuTuningScale scaleImage={tuningRunk} scaleText="runk" />
+        <GarageMenuTuningScale scaleImage={tuningRunk} scaleText="rank" />
         <div style={{ marginTop: '20px' }}>
           <GarageMenuTuningScale scaleImage={tuningRunk} scaleText="level" />
         </div>
