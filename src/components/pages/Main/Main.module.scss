@@ -29,39 +29,51 @@
   }
   
   .mainFooter {
-    display: none;
-    margin: 46px auto 0 auto;
     position: relative;
-    width: 359px;
-    height: 61px;
+    display: flex;
+    justify-content: flex-end;
+    @media screen and (max-width: 900px) {
+      margin-top: 40px;
+    }
     .bigImage {
+      position: relative;
+      width: 411px;
+      @media screen and (max-width: 576px) {
+        width: 359px;
+        height: 61px;
+      }
       img {
         width: 100%;
+        height: 100%;
+        object-fit: contain;
       }
-    }
-    .smallImage {
-      position: absolute;
-      bottom: 0;
-      left: 0;
-      width: 62px;
-      height: 37px;
-      z-index: -1;
+      .smallImage {
+        position: absolute;
+        bottom: 3px;
+        left: 0;
+        width: 62px;
+        height: 37px;
+        z-index: -1;
+        
+        img {
+          width: 100%;
+          height: 100%;
+          object-fit: cover;
+        }
+      }
     }
     .footerLinks {
      position: absolute;
-     top: 45%;
+     top: 50%;
      left: 50%;
      transform: translate(-25%, -50%);
-    }
-    @media screen and (max-width: 576px) {
-      display: block;
     }
   }
   .modal {
     @media screen and (max-width: 576px) {
       position: absolute;
-    top: -65px;
-    left: 50%;
+      top: -65px;
+      left: 50%;
     }
   }
 }

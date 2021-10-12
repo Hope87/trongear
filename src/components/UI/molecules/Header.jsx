@@ -56,19 +56,6 @@ const useStyles = makeStyles({
       transform: 'translate(0, 0)',
     },
   },
-  mainLinks: {
-    position: 'absolute',
-    top: '0',
-    right: '15%',
-    zIndex: '1',
-
-    '@media screen and (max-width: 679.98px)': {
-      left: '0',
-    },
-    '@media screen and (max-width: 576px)': {
-      display: 'none',
-    },
-  },
   headerLogo: {
     position: 'absolute',
     maxWidth: '282px',
@@ -104,9 +91,6 @@ const Header = ({ headerModal, setHeaderModal, headerLogo }) => {
         src={burger}
         alt="burger"
       />
-      <div className={classes.mainLinks}>
-        <Links />
-      </div>
       <h5>eng</h5>
       {headerLogo && (
         <div className={classes.headerLogo}>

@@ -17,9 +17,7 @@ const Main = ({ modal, setModal }) => {
         <Grid item xs={12}>
           <Header headerModal={modal} setHeaderModal={setModal} />
         </Grid>
-        <div className={styles.modal}>
-          {modal && <Modal />}
-        </div>
+        <div className={styles.modal}>{modal && <Modal />}</div>
 
         <Grid item xs={12}>
           {!modal ? (
@@ -47,12 +45,12 @@ const Main = ({ modal, setModal }) => {
           <div className={styles.mainFooter}>
             <div className={styles.bigImage}>
               <img src={footerLogoForMobile} alt="footer"></img>
-            </div>
-            <div className={styles.smallImage}>
-              <img src={footerLogoForMobileSmall} alt="footer"></img>
-            </div>
-            <div className={styles.footerLinks}>
-              <Links/>
+              <div className={styles.smallImage}>
+                <img src={footerLogoForMobileSmall} alt="footer"></img>
+              </div>
+              <div className={styles.footerLinks}>
+                <Links />
+              </div>
             </div>
           </div>
         </Grid>
