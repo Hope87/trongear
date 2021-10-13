@@ -13,6 +13,7 @@ import ButtonsBox from '../../UI/molecules/ButtonsBox';
 import HeaderForMobile from '../../UI/molecules/HeaderForMobile';
 import leftImage from '../../../images/topFooterLeftImage.png';
 import rightImage from '../../../images/topFooterRightImage.png';
+import Footer from '../../UI/molecules/Footer';
 
 const Top = ({ modal, setModal }) => {
   const width = window.innerWidth;
@@ -67,7 +68,7 @@ const Top = ({ modal, setModal }) => {
             <div>
               <h4 className={styles.topFooterTitle}>EARN BY PROMOTING</h4>
             </div>
-            {width < 576 && 
+            {width < 576 ?
             (<div className={styles.imageContainer}>
               <div className={styles.image}>
                 <img src={leftImage} alt="leftImage"/>
@@ -76,6 +77,7 @@ const Top = ({ modal, setModal }) => {
                 <img src={rightImage} alt="rightImage"/>
               </div>
             </div>)
+            :(<div className={styles.footer}><Footer /></div>)
             }
           </div>
         </Grid>

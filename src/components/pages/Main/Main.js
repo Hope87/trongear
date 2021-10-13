@@ -48,9 +48,9 @@ const Main = ({ modal, setModal }) => {
               <div className={styles.smallImage}>
                 <img src={footerLogoForMobileSmall} alt="footer"></img>
               </div>
-              {/* <div className={styles.footerLinks}>
+              <div className={styles.footerLinks}>
                 <Links />
-              </div> */}
+              </div>
             </div>
           </div>
         </Grid>
