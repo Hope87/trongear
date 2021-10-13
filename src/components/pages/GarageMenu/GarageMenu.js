@@ -9,6 +9,7 @@ import Timer from '../../UI/atoms/Timer';
 import Modal from '../../UI/atoms/Modal';
 import ButtonsBox from '../../UI/molecules/ButtonsBox';
 import HeaderForMobile from '../../UI/molecules/HeaderForMobile';
+import Footer from '../../UI/molecules/Footer';
 
 const GarageMenu = ({ modal, setModal, garageNumber }) => {
   const width = window.innerWidth;
@@ -56,6 +57,11 @@ const GarageMenu = ({ modal, setModal, garageNumber }) => {
             <GarageCards />
           </Grid>
         </Grid>
+        {width > 576 && 
+          (<div className={styles.footer}>
+            <Footer />
+          </div>)
+        }
       </Grid>
     </div>
   );
