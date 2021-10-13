@@ -22,6 +22,7 @@ import HeaderForMobile from '../../UI/molecules/HeaderForMobile';
 import TopPanelMob from '../../UI/molecules/TopPanelMob';
 import leftImage from '../../../images/topFooterLeftImage.png';
 import rightImage from '../../../images/topFooterRightImage.png';
+import Footer from '../../UI/molecules/Footer';
 
 
 
@@ -151,16 +152,17 @@ const Garage = ({ modal, setModal, onGarageMenuInformation }) => {
                 The first profit you will receive in an hour after participation
                 in the race!
               </p>
-              {width < 576 && (
-            <div className={styles.imageContainer}>
-              <div className={styles.image}>
-                <img src={leftImage} alt="leftImage" />
+              {width < 576 ? (
+              <div className={styles.imageContainer}>
+                <div className={styles.image}>
+                  <img src={leftImage} alt="leftImage" />
+                </div>
+                <div className={styles.image}>
+                  <img src={rightImage} alt="rightImage" />
+                </div>
               </div>
-              <div className={styles.image}>
-                <img src={rightImage} alt="rightImage" />
-              </div>
-            </div>
-          )}
+            ) : (<div className={styles.footer}><Footer /></div>
+            )}
             </div>
           </div>
         </Grid>
