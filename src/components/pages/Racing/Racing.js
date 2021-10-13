@@ -15,6 +15,8 @@ import HeaderForMobile from '../../UI/molecules/HeaderForMobile';
 import TopPanelMob from '../../UI/molecules/TopPanelMob';
 import leftImage from '../../../images/topFooterLeftImage.png';
 import rightImage from '../../../images/topFooterRightImage.png';
+import Footer from '../../UI/molecules/Footer';
+import footerLine from '../../../images/footer_line.png';
 
 const Racing = ({ modal, setModal }) => {
   const width = window.innerWidth;
@@ -51,7 +53,10 @@ const Racing = ({ modal, setModal }) => {
               <Timer />
             </div>
           ) : (
-            <div style={{ opacity: 0, margin: width < 576 && '40px auto' }} className={styles.racingTimer}>
+            <div
+              style={{ opacity: 0, margin: width < 576 && "40px auto" }}
+              className={styles.racingTimer}
+            >
               <Timer />
             </div>
           )}
@@ -64,7 +69,7 @@ const Racing = ({ modal, setModal }) => {
                 className={styles.racingTimer}
                 style={{ marginLeft: "20px" }}
               >
-                <Timer color="#ff1437" text = 'race of the hour'/>
+                <Timer color="#ff1437" text="race of the hour" />
               </div>
             ) : (
               <div style={{ opacity: 0 }} className={styles.racingTimer}>
@@ -135,18 +140,26 @@ const Racing = ({ modal, setModal }) => {
         <Grid item xs={12}>
           <div className={styles.racingFooter}>
             <h4 className={styles.racingFooterTitle}>EARN BY PROMOTING</h4>
-            {width < 576 && (
-            <div className={styles.imageContainer}>
-              <div className={styles.image}>
-                <img src={leftImage} alt="leftImage" />
+            {width < 576 ? (
+              <div className={styles.imageContainer}>
+                <div className={styles.image}>
+                  <img src={leftImage} alt="leftImage" />
+                </div>
+                <div className={styles.image}>
+                  <img src={rightImage} alt="rightImage" />
+                </div>
               </div>
-              <div className={styles.image}>
-                <img src={rightImage} alt="rightImage" />
+            ) : (
+              <div>
+                <div className={styles.footer}>
+                  <Footer />
+                </div>
+                <div className={styles.line}>
+                  <img src={footerLine} alt='line'/>
+                </div>
               </div>
-            </div>
-          )}
+            )}
           </div>
-          
         </Grid>
       </Grid>
     </div>
