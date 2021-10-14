@@ -40,7 +40,7 @@ function App() {
             <TopPage modal={modal} setModal={setModal} />
           </Route>
           <Route path="/about">
-            <AboutPage />
+            <AboutPage modal={modal} setModal={setModal}/>
           </Route>
         </Switch>
       </Suspense>
