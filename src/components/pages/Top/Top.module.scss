@@ -7,7 +7,7 @@
   background-size: cover;
   min-width: 320px;
   @media screen and (max-width: 576px) {
-    background: url('../../../images/backgroundTopPageMob.png');
+    background: url('../../../images/backgroundPageMob.png');
   }
 
   .topTimer {
@@ -65,8 +65,8 @@
       display: flex;
       justify-content: space-between;
       .image {
-        width: 28px;
-        height: 99px;
+        width: 32px;
+        height: 102px;
         img {
           width: 100%;
           height: 100%;

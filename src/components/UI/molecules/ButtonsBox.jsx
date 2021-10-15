@@ -11,11 +11,11 @@ const useStyles = makeStyles({
     marginRight: '100px',
     flexWrap: 'wrap',
 
-    '@media screen and (max-width: 991.98px)': {
-      marginLeft: '0px',
-      marginRight: '0px',
+    '& Button': {
+      marginBottom: '15px',
     },
-    '@media screen and (max-width: 819.98px)': {
+
+    '@media screen and (max-width: 1020px)': {
       justifyContent: 'center',
     },
    
@@ -24,9 +24,8 @@ const useStyles = makeStyles({
       display: 'flex',
       flexWrap: 'wrap',
 
-      '@media screen and (max-width: 589.98px)': {
+      '@media screen and (max-width: 620px)': {
         justifyContent: 'center',
-        //marginTop: '5px',
       },
     },
   },
@@ -34,7 +33,7 @@ const useStyles = makeStyles({
     '& div': {
       marginLeft: '20px',
 
-      '@media screen and (max-width: 589.98px)': {
+      '@media screen and (max-width: 620px)': {
         marginLeft: '0',
       },
       

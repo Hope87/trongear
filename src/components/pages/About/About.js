@@ -9,8 +9,13 @@ import garage from '../../../images/About_page_garage.png';
 import buttonUpImage from '../../../images/About_button_up.png';
 import buttonDownImage from '../../../images/About_button_down.png';
 import innerImage from '../../../images/About_button_up_innerImage.png';
+import Footer from '../../UI/molecules/Footer';
+import mersedes from '../../../images/cars/G_5_cars/on/4_amg.png';
+import HeaderForMobile from '../../UI/molecules/HeaderForMobile';
+import leftImage from '../../../images/topFooterLeftImage.png';
+import rightImage from '../../../images/topFooterRightImage.png';
 
-const Button = () => {
+const Button = ({text}) => {
   return (
     <div className={styles.button}>
       <a href='#'>
@@ -23,22 +28,37 @@ const Button = () => {
         <div className={styles.buttonDown}>
         <img src={buttonDownImage} alt='buttonDown'/>
         <div className={styles.buttonText}>
-          about 1
+          {text}
         </div>
         </div>
       </a>
     </div>
 )};
 
+const AboutButtonBox = () => {
+  return (
+    <div className={styles.buttons}>
+      <Button text="about 1" />
+      <Button text="about 1" />
+      <Button text="about 1" />
+      <Button text="about 1" />
+    </div>
+  )};
+
 const About = ({ modal, setModal }) => {
+  const width = window.innerWidth;
   return (
     <div className={styles.about}>
       <div className={styles.header}>
-        <Header
-          headerLogo={logo}
-          headerModal={modal}
-          setHeaderModal={setModal}
-        />
+        {width > 576 ? (
+          <Header
+            headerLogo={logo}
+            headerModal={modal}
+            setHeaderModal={setModal}
+          />
+        ) : (
+          <HeaderForMobile headerModal={modal} setHeaderModal={setModal} />
+        )}
         {modal && <Modal />}
       </div>
       <div className={styles.content}>
@@ -48,25 +68,34 @@ const About = ({ modal, setModal }) => {
         <div className={styles.buttonsBox}>
           <ButtonsBox />
         </div>
-        <div className={styles.middleBlock}>
+        <div
+          className={styles.middleBlock}
+          style={modal && width > 1280 ? { marginTop: "90px" } : null}
+        >
           <div className={styles.left}>
             <div className={styles.leftBlock}>
               <div className={styles.text}>
                 Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-                eiusmod tempor incididunt ut labore et dolore magna aliqua.<br/><br/>Ut
-                enim ad minim veniam, quis nostrud exercitation ullamco laboris
-                nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor
-                in reprehenderit in voluptate velit esse cillum dolore eu fugiat
-                nulla pariatur.
+                eiusmod tempor incididunt ut labore et dolore magna aliqua.
+                <br />
+                <br />
+                Ut enim ad minim veniam, quis nostrud exercitation ullamco
+                laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure
+                dolor in reprehenderit in voluptate velit esse cillum dolore eu
+                fugiat nulla pariatur.
               </div>
-              <div className={styles.buttons}>
-                <Button />
-              </div>
+              {width > 576 && (<AboutButtonBox />)}
             </div>
           </div>
           <div className={styles.right}>
-            <div className={styles.image}>
-              <img src={garage} alt="About_page_garage" />
+            <div className={styles.rightBlock}>
+              <div className={styles.image}>
+                <img src={garage} alt="About_page_garage" />
+                <div className={styles.car}>
+                  <img src={mersedes} alt="car" />
+                </div>
+              </div>
+              {width <= 576 && (<AboutButtonBox />)}
               <div className={styles.text}>
                 Excepteur sint occaecat cupidatat non proident, sunt in culpa
                 qui officia deserunt mollit anim id est laborum.
@@ -74,6 +103,20 @@ const About = ({ modal, setModal }) => {
             </div>
           </div>
         </div>
+      </div>
+      <div className={styles.footer}>
+        {width > 576 ? (<Footer />)
+        :(<div className={styles.mobileFooter}>
+           <h4 className={styles.topFooterTitle}>earn by promoting</h4>
+           <div className={styles.imageContainer}>
+              <div className={styles.image}>
+                <img src={leftImage} alt="leftImage"/>
+              </div>
+              <div className={styles.image}>
+                <img src={rightImage} alt="rightImage"/>
+              </div>
+            </div>
+        </div>)}
       </div>
     </div>
   );
