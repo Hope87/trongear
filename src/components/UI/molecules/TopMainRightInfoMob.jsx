@@ -20,7 +20,6 @@ const useStyles = makeStyles({
     lineHeight: '1.2',
     fontWeight: '400',
     fontStyle: 'italic',
-    textTransform: 'uppercase',
     textShadow: '0px 3px 7px rgba(18,18,18,0.07)',
     color: '#ffffff',
     '@media screen and (max-width: 576px)': {

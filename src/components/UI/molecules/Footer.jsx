@@ -1,4 +1,4 @@
-import React, { useRef } from 'react';
+import React from 'react';
 import { makeStyles } from '@material-ui/core/styles';
 import Links from '../../UI/atoms/Links';
 import leftImage from '../../../images/footer_left_image.png';

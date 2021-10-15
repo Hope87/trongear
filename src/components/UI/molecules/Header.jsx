@@ -2,7 +2,6 @@ import React, { useRef } from 'react';
 import { Link } from 'react-router-dom';
 import { makeStyles } from '@material-ui/core/styles';
 import burger from '../../../images/burger.svg';
-import Links from '../../UI/atoms/Links';
 import useOutsideModal from '../../helpers/useOutsideModal';
 
 const useStyles = makeStyles({
