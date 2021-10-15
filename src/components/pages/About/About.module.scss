@@ -5,6 +5,9 @@
     position: fixed;
     background-size: cover;
     overflow: auto;
+    @media screen and (max-width: 576px) {
+        background: url('../../../images/backgroundPageMob.png');
+    }
 
     .content {
         padding: 0 15px;
