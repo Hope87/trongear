@@ -106,8 +106,8 @@ const GarageCardOff = ({ imageOff, cardTitleOff, imageOn, cardTitleOn, onGarageM
           <LazyLoadImage
             onMouseEnter={() => {
               onHover(cardTitleOn);
-              onGarageMenuInformation(cardTitleOn);
             }}
+            onClick={() => onGarageMenuInformation(cardTitleOn)}
             onMouseLeave={() => onLeaveContainer(cardTitleOn)}
             src={imageOff}
             alt={cardTitleOn}
@@ -115,8 +115,8 @@ const GarageCardOff = ({ imageOff, cardTitleOff, imageOn, cardTitleOn, onGarageM
           <h4
             onMouseEnter={() => {
               onHover(cardTitleOn);
-              onGarageMenuInformation(cardTitleOn);
             }}
+            onClick={() => onGarageMenuInformation(cardTitleOn)}
             onMouseLeave={() => onLeaveContainer(cardTitleOn)}
           >
             {cardTitleOff}
@@ -128,8 +128,8 @@ const GarageCardOff = ({ imageOff, cardTitleOff, imageOn, cardTitleOn, onGarageM
             style={inlineStyles}
             onMouseEnter={() => {
               onHover(cardTitleOn);
-              onGarageMenuInformation(cardTitleOn);
             }}
+            onClick={() => onGarageMenuInformation(cardTitleOn)}
             onMouseLeave={() => onLeaveContainer(cardTitleOn)}
             src={imageOn}
             alt={cardTitleOn}
@@ -137,8 +137,8 @@ const GarageCardOff = ({ imageOff, cardTitleOff, imageOn, cardTitleOn, onGarageM
           <h4
             onMouseEnter={() => {
               onHover(cardTitleOn);
-              onGarageMenuInformation(cardTitleOn);
             }}
+            onClick={() => onGarageMenuInformation(cardTitleOn)}
             onMouseLeave={() => onLeaveContainer(cardTitleOn)}
           >
             {cardTitleOn}

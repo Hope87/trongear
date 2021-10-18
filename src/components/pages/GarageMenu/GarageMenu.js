@@ -11,7 +11,7 @@ import ButtonsBox from '../../UI/molecules/ButtonsBox';
 import HeaderForMobile from '../../UI/molecules/HeaderForMobile';
 import Footer from '../../UI/molecules/Footer';
 
-const GarageMenu = ({ modal, setModal, garageNumber }) => {
+const GarageMenu = ({ modal, setModal, garageNumber}) => {
   const width = window.innerWidth;
   return (
     <div className={styles.garageMenu}>

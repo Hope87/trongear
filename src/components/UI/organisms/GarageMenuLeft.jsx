@@ -67,7 +67,6 @@ const useStyles = makeStyles({
 
 const GarageMenuLeft = ({ garageNumber }) => {
   const classes = useStyles();
-
   return (
     <div className={classes.garageLeft}>
       <div className={classes.garageLeftHeader}>
