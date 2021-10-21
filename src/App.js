@@ -19,7 +19,6 @@ function App() {
   const garageMenuInformation = (title) => {
     setGarageMenuInfo({ title: title });
   };
-
   return (
     <Router>
       <Suspense fallback={<div>Loading...</div>}>
