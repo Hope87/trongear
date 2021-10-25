@@ -5,11 +5,14 @@
     position: fixed;
     background-size: cover;
     overflow: auto;
+    display: flex;
+    flex-direction: column;
     @media screen and (max-width: 576px) {
         background-position: center;
     }
 
     .content {
+        flex: 1 1 auto;
         padding: 0 15px;
         @media screen and (max-width: 576px) {
             padding: 0 5px;
