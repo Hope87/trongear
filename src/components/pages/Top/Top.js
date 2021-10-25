@@ -21,66 +21,81 @@ const Top = ({ modal, setModal }) => {
   return (
     <div className={styles.top}>
       <Grid container>
-        <Grid item xs={12}>
-         {(width > 576) ?
-            (<Header headerLogo={logo} headerModal={modal} setHeaderModal={setModal}/>)
-            :(<HeaderForMobile headerModal={modal} setHeaderModal={setModal}/>)
-          }
-         
-          {modal && <Modal />}
-        </Grid>
+        <div className={styles.wrapper}>
+          <div className={styles.header}>
+            <Grid item xs={12}>
+              {width > 576 ? (
+                <Header
+                  headerLogo={logo}
+                  headerModal={modal}
+                  setHeaderModal={setModal}
+                />
+              ) : (
+                <HeaderForMobile
+                  headerModal={modal}
+                  setHeaderModal={setModal}
+                />
+              )}
 
-        <Grid item xs={12}>
-          {!modal ? (
-            <div className={styles.topTimer}>
-              <Timer />
-            </div>
-          ) : (
-            <div style={{ opacity: 0 }} className={styles.topTimer}>
-              <Timer />
-            </div>
-          )}
-        </Grid>
-
-        <Grid item xs={12}>
-          <div className={styles.topBtn}>
-            <ButtonsBox />
+              {modal && <Modal />}
+            </Grid>
           </div>
-        </Grid>
+          <div className={styles.content}>
+            <Grid item xs={12}>
+              {!modal ? (
+                <div className={styles.topTimer}>
+                  <Timer />
+                </div>
+              ) : (
+                <div style={{ opacity: 0 }} className={styles.topTimer}>
+                  <Timer />
+                </div>
+              )}
+            </Grid>
 
-        <Grid item xs={12}>
-          {(width > 576) ?
-            (<TopPanel />)
-            :(<TopPanelMob/>)
-          }
-        </Grid>
+            <Grid item xs={12}>
+              <div className={styles.topBtn}>
+                <ButtonsBox />
+              </div>
+            </Grid>
 
-        <Grid item xs={12} lg={6}>
-          <TopMainLeft />
-        </Grid>
+            <Grid item xs={12}>
+              {width > 576 ? <TopPanel /> : <TopPanelMob />}
+            </Grid>
+            <div className={styles.items}>
+              <Grid item xs={12} lg={6}>
+                <TopMainLeft />
+              </Grid>
 
-        <Grid item xs={12} lg={6}>
-          <TopMainRight />
-        </Grid>
-
-        <Grid item xs={12}>
-          <div className={styles.topFooter}>
-            <div>
-              <h4 className={styles.topFooterTitle}>EARN BY PROMOTING</h4>
+              <Grid item xs={12} lg={6}>
+                <TopMainRight />
+              </Grid>
             </div>
-            {width < 576 ?
-            (<div className={styles.imageContainer}>
-              <div className={styles.image}>
-                <img src={leftImage} alt="leftImage"/>
-              </div>
-              <div className={styles.image}>
-                <img src={rightImage} alt="rightImage"/>
-              </div>
-            </div>)
-            :(<div className={styles.footer}><Footer /></div>)
-            }
           </div>
-        </Grid>
+          <div className={styles.footerBox}>
+            <Grid item xs={12}>
+              <div className={styles.topFooter}>
+                <div>
+                  <h4 className={styles.topFooterTitle}>EARN BY PROMOTING</h4>
+                </div>
+                {width < 576 ? (
+                  <div className={styles.imageContainer}>
+                    <div className={styles.image}>
+                      <img src={leftImage} alt="leftImage" />
+                    </div>
+                    <div className={styles.image}>
+                      <img src={rightImage} alt="rightImage" />
+                    </div>
+                  </div>
+                ) : (
+                  <div className={styles.footer}>
+                    <Footer />
+                  </div>
+                )}
+              </div>
+            </Grid>
+          </div>
+        </div>
       </Grid>
     </div>
   );

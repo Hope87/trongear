@@ -14,33 +14,35 @@ const Main = ({ modal, setModal }) => {
   return (
     <div className={styles.main}>
       <Grid container>
-        <Grid item xs={12}>
-          <Header headerModal={modal} setHeaderModal={setModal} />
-        </Grid>
-        <div className={styles.modal}>{modal && <Modal />}</div>
-
-        <Grid item xs={12}>
-          {!modal ? (
-            <div className={styles.mainTimer}>
-              <Timer />
+        <div className={styles.wrapper}>
+        <div className={styles.header}>
+          <Grid item xs={12}>
+            <Header headerModal={modal} setHeaderModal={setModal} />
+          </Grid>
+          <div className={styles.modal}>{modal && <Modal />}</div>
+        </div>
+        <div className={styles.content}>
+          <Grid item xs={12}>
+            {!modal ? (
+              <div className={styles.mainTimer}>
+                <Timer />
+              </div>
+            ) : (
+              <div style={{ opacity: 0 }} className={styles.mainTimer}>
+                <Timer />
+              </div>
+            )}
+          </Grid>
+          <Grid item xs={12}>
+            <div className={styles.mainBtn}>
+              <ButtonsBox />
             </div>
-          ) : (
-            <div style={{ opacity: 0 }} className={styles.mainTimer}>
-              <Timer />
-            </div>
-          )}
-        </Grid>
-
-        <Grid item xs={12}>
-          <div className={styles.mainBtn}>
-            <ButtonsBox />
-          </div>
-        </Grid>
-
-        <Grid item xs={12}>
-          <MainDescription />
-        </Grid>
-
+          </Grid>
+          <Grid item xs={12}>
+            <MainDescription />
+          </Grid>
+        </div>
+        <div className={styles.footer}>
         <Grid item xs={12}>
           <div className={styles.mainFooter}>
             <div className={styles.bigImage}>
@@ -54,6 +56,8 @@ const Main = ({ modal, setModal }) => {
             </div>
           </div>
         </Grid>
+        </div>
+        </div>
       </Grid>
     </div>
   );
