@@ -22,7 +22,8 @@ const Racing = ({ modal, setModal }) => {
   const width = window.innerWidth;
   return (
     <div className={styles.racing}>
-      <Grid container>
+      <div className={styles.content}>
+      <Grid container> 
         <Grid item xs={12}>
           {width > 576 ? (
             <Header
@@ -136,9 +137,9 @@ const Racing = ({ modal, setModal }) => {
             </div>
           </div>
         </Grid>
-
-        <Grid item xs={12}>
-          <div className={styles.racingFooter}>
+      </Grid>
+      </div>
+      <div className={styles.racingFooter}>
             <h4 className={styles.racingFooterTitle}>EARN BY PROMOTING</h4>
             {width < 576 ? (
               <div className={styles.imageContainer}>
@@ -160,8 +161,6 @@ const Racing = ({ modal, setModal }) => {
               </div>
             )}
           </div>
-        </Grid>
-      </Grid>
     </div>
   );
 };
