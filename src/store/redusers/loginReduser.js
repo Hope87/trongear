@@ -1,12 +1,15 @@
+import { RightToken } from '../../fetches/fetches';
+import LoginAC from '../actionCreators/LoginAC';
 import LOGIN_ACTION from '../actions/LoginAction';
+import store from '../store';
 
 const initialState = {
     loginPage: {
-        isLogin: false
+        isLogin: localStorage.hasOwnProperty('access_token')
     }
 }
 
-const isLoginReduser = (state = initialState, action) => {
+export const isLoginReduser = (state = initialState, action) => {
     switch(action.type){
         case LOGIN_ACTION:
             return {...state, loginPage: {isLogin: action.isLogin}};
@@ -14,4 +17,3 @@ const isLoginReduser = (state = initialState, action) => {
         default: return state;
     }
 }
-export default isLoginReduser;

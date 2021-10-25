@@ -2,9 +2,11 @@ import LoginAC from "./actionCreators/LoginAC"
 
 const mapDispatchToPropsGenerator = (component) => {
     switch(component){
-        case 'Header':
+        
+        case 'App':
+        case 'Login':
             return (dispatch) => ({
-                setIncrementValue: (isLogin) => dispatch(LoginAC(isLogin))
+                setIsLogin: (isLogin) => dispatch(LoginAC(isLogin))
             });
 
         default: return undefined;

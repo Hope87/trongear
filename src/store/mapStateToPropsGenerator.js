@@ -1,6 +1,6 @@
 const mapStateToPropsGenerator = (component) => {
     switch(component){
-        case 'Header':
+        case 'App':
             return (state) => ({
                 isLogin: state.loginPage.isLogin
             });
