@@ -1,4 +1,4 @@
-import React, { useRef } from 'react';
+import React, { useRef, useState } from 'react';
 import { Link } from 'react-router-dom';
 import { makeStyles } from '@material-ui/core/styles';
 import burger from '../../../images/burger.svg';
@@ -80,6 +80,15 @@ const Header = ({ headerModal, setHeaderModal, headerLogo }) => {
 
   const modalRef = useRef(null);
 
+  const [state, setState] = useState('eng');
+  const chehgeLanguage = () => {
+    if(state === 'eng'){
+      setState('рус');
+    }
+    else {
+      setState('eng');
+    }
+  }
   useOutsideModal(modalRef, setHeaderModal);
 
   return (
@@ -90,7 +99,7 @@ const Header = ({ headerModal, setHeaderModal, headerLogo }) => {
         src={burger}
         alt="burger"
       />
-      <h5>eng</h5>
+      <h5 onClick={chehgeLanguage}>{state}</h5>
       {headerLogo && (
         <div className={classes.headerLogo}>
           <Link to="/">

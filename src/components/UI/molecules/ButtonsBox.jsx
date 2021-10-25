@@ -41,28 +41,28 @@ const useStyles = makeStyles({
   },
 });
 
-const ButtonsBox = () => {
+const ButtonsBox = ({page}) => {
   const classes = useStyles();
 
   return (
     <div className={classes.buttonsBox}>
       <div className={classes.buttonsBoxBtn}>
         <Link to="/about">
-          <Button title="about" />
+          <Button title="about" isActive ={page === 'about'}/>
         </Link>
         <div>
           <Link to="/garage">
-            <Button title="garage" />
+            <Button title="garage"  isActive ={page === 'garage'}/>
           </Link>
         </div>
       </div>
       <div className={classes.buttonsBoxBtn}>
         <Link to="/racing">
-          <Button title="racing" />
+          <Button title="racing"  isActive ={page === 'racing'}/>
         </Link>
         <div>
           <Link to="/top">
-            <Button title="top" />
+            <Button title="top" isActive ={page === 'top'}/>
           </Link>
         </div>
       </div>

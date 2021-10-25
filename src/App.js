@@ -30,7 +30,7 @@ function App({isLogin, setIsLogin}) {
   return (
     <Router>
       <Suspense fallback={<div>Loading...</div>}>
-      {isLogin ? (
+      {!isLogin ? (
         <Switch>
               <Route path="/" exact>
                 <MainPage modal={modal} setModal={setModal} />

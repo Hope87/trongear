@@ -66,7 +66,7 @@ const About = ({ modal, setModal }) => {
           <Timer />
         </div>
         <div className={styles.buttonsBox}>
-          <ButtonsBox />
+          <ButtonsBox page="about"/>
         </div>
         <div
           className={styles.middleBlock}

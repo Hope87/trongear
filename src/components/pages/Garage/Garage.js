@@ -125,7 +125,7 @@ const Garage = ({ modal, setModal, onGarageMenuInformation }) => {
 
             <Grid item xs={12}>
               <div className={styles.garageBtn}>
-                <ButtonsBox />
+                <ButtonsBox page="garage"/>
               </div>
             </Grid>
 

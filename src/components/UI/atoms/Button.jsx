@@ -49,10 +49,10 @@ const useStyles = makeStyles({
   },
 });
 
-const Button = ({ title }) => {
+const Button = ({ title, isActive }) => {
   const classes = useStyles();
-
-  const [options, setOptions] = useState({ image: buttonOff, color: 'var(--red)' });
+  const state = isActive ? { image: buttonOn, color: 'var(--dark)' } : {image: buttonOff, color: 'var(--red)' };
+  const [options, setOptions] = useState(state);
 
   const { image, color } = options;
 
@@ -63,7 +63,7 @@ const Button = ({ title }) => {
           src={image}
           alt={title}
           onMouseEnter={() => setOptions({ image: buttonOn, color: 'var(--dark)' })}
-          onMouseOut={() => setOptions({ image: buttonOff, color: 'var(--red)' })}
+          onMouseOut={() => !isActive && setOptions({ image: buttonOff, color: 'var(--red)' })}
         />
         <h4
           style={{ color: color }}
