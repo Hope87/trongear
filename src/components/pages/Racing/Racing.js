@@ -23,144 +23,148 @@ const Racing = ({ modal, setModal }) => {
   return (
     <div className={styles.racing}>
       <div className={styles.content}>
-      <Grid container> 
-        <Grid item xs={12}>
-          {width > 576 ? (
-            <Header
-              headerLogo={logo}
-              headerModal={modal}
-              setHeaderModal={setModal}
-            />
-          ) : (
-            <HeaderForMobile headerModal={modal} setHeaderModal={setModal} />
-          )}
+        <Grid container>
+          <Grid item xs={12}>
+            {width > 576 ? (
+              <Header
+                headerLogo={logo}
+                headerModal={modal}
+                setHeaderModal={setModal}
+              />
+            ) : (
+              <HeaderForMobile headerModal={modal} setHeaderModal={setModal} />
+            )}
 
-          {modal && <Modal />}
-        </Grid>
+            {modal && <Modal />}
+          </Grid>
 
-        <Grid
-          container
-          item
-          xs={width > 576 ? 6 : 12}
-          justifyContent="flex-end"
-        >
-          {!modal ? (
-            <div
-              className={styles.racingTimer}
-              style={
-                width > 576 ? { marginRight: "20px" } : { margin: "40px auto" }
-              }
-            >
-              <Timer />
-            </div>
-          ) : (
-            <div
-              style={{ opacity: 0, margin: width < 576 && "40px auto" }}
-              className={styles.racingTimer}
-            >
-              <Timer />
-            </div>
-          )}
-        </Grid>
-
-        {width > 576 && (
-          <Grid container item xs={6}>
+          <Grid
+            container
+            item
+            xs={width > 576 ? 6 : 12}
+            justifyContent="flex-end"
+          >
             {!modal ? (
               <div
                 className={styles.racingTimer}
-                style={{ marginLeft: "20px" }}
+                style={
+                  width > 576
+                    ? { marginRight: "20px" }
+                    : { margin: "40px auto" }
+                }
               >
-                <Timer color="#ff1437" text="race of the hour" />
+                <Timer />
               </div>
             ) : (
-              <div style={{ opacity: 0 }} className={styles.racingTimer}>
+              <div
+                style={{ opacity: 0, margin: width < 576 && "40px auto" }}
+                className={styles.racingTimer}
+              >
                 <Timer />
               </div>
             )}
           </Grid>
-        )}
 
-        <Grid item xs={12}>
-          <div className={styles.racingBtn}>
-            <ButtonsBox page="racing"/>
-          </div>
-        </Grid>
+          {width > 576 && (
+            <Grid container item xs={6}>
+              {!modal ? (
+                <div
+                  className={styles.racingTimer}
+                  style={{ marginLeft: "20px" }}
+                >
+                  <Timer color="#ff1437" text="race of the hour" />
+                </div>
+              ) : (
+                <div style={{ opacity: 0 }} className={styles.racingTimer}>
+                  <Timer />
+                </div>
+              )}
+            </Grid>
+          )}
 
-        {width < 576 && (
           <Grid item xs={12}>
-            <div className={styles.racingPanel}>
-              <TopPanelMob />
+            <div className={styles.racingBtn}>
+              <ButtonsBox page="racing" />
             </div>
           </Grid>
-        )}
 
-        <Grid item xs={width > 820 ? 6 : 12}>
-          <div className={styles.statisticElementTitle}>
-            <h3>owerall Statistics</h3>
-            <h3>personal Statistics</h3>
-          </div>
+          {width < 576 && (
+            <Grid item xs={12}>
+              <div className={styles.racingPanel}>
+                <TopPanelMob />
+              </div>
+            </Grid>
+          )}
 
-          <StatisticElementContainer />
-        </Grid>
-
-        <Grid item xs={width > 820 ? 6 : 12}>
-          <div className={styles.transfer}>
-            <h3 className={styles.transferTitle}>transfer</h3>
-
-            <div className={styles.transferCards}>
-              <TransactionsCard />
-              <TimeCard headerTitle="TIME" footerNone />
-              <TimeCard headerTitle="amount" opacity hidden />
+          <Grid item xs={width > 820 ? 6 : 12}>
+            <div className={styles.statisticElementTitle}>
+              <h3>owerall Statistics</h3>
+              <h3>personal Statistics</h3>
             </div>
 
-            <div className={styles.transferElements}>
-              <div className={styles.transferElementContainer}>
-                <StatisticElement
-                  flagText="all updated"
-                  elementText="view top rasers"
-                  hiddenText
-                  payout="0"
-                  elementImg={elements_13}
-                  hiddenImg
-                  color="var(--yellow)"
-                />
-                <StatisticElement
-                  flagText="all taken"
-                  elementText="view top rasers"
-                  hiddenText
-                  payout="0"
-                  elementImg={elements_13}
-                  hiddenImg
-                  color="var(--yellow)"
-                />
+            <StatisticElementContainer />
+          </Grid>
+
+          <Grid item xs={width > 820 ? 6 : 12}>
+            <div className={styles.transfer}>
+              <h3 className={styles.transferTitle}>transfer</h3>
+
+              <div className={styles.transferCards}>
+                <TransactionsCard />
+                <TimeCard headerTitle="TIME" footerNone />
+                <TimeCard headerTitle="amount" opacity hidden />
+              </div>
+
+              <div className={styles.transferElements}>
+                <div className={styles.transferElementContainer}>
+                  <StatisticElement
+                    flagText="all updated"
+                    elementText="view top rasers"
+                    hiddenText
+                    payout="0"
+                    elementImg={elements_13}
+                    hiddenImg
+                    color="var(--yellow)"
+                  />
+                  <StatisticElement
+                    flagText="all taken"
+                    elementText="view top rasers"
+                    hiddenText
+                    payout="0"
+                    elementImg={elements_13}
+                    hiddenImg
+                    color="var(--yellow)"
+                  />
+                </div>
               </div>
             </div>
-          </div>
+          </Grid>
         </Grid>
-      </Grid>
       </div>
       <div className={styles.racingFooter}>
-            <h4 className={styles.racingFooterTitle}>EARN BY PROMOTING</h4>
-            {width < 576 ? (
-              <div className={styles.imageContainer}>
-                <div className={styles.image}>
-                  <img src={leftImage} alt="leftImage" />
-                </div>
-                <div className={styles.image}>
-                  <img src={rightImage} alt="rightImage" />
-                </div>
-              </div>
-            ) : (
-              <div>
-                <div className={styles.footer}>
-                  <Footer />
-                </div>
-                <div className={styles.line}>
-                  <img src={footerLine} alt='line'/>
-                </div>
-              </div>
-            )}
+        <h4 className={styles.racingFooterTitle}>
+          EARN BY PROMOTING
+          {width > 576 && (
+            <div className={styles.line}>
+              <img src={footerLine} alt="line" />
+            </div>
+          )}
+        </h4>
+        {width < 576 ? (
+          <div className={styles.imageContainer}>
+            <div className={styles.image}>
+              <img src={leftImage} alt="leftImage" />
+            </div>
+            <div className={styles.image}>
+              <img src={rightImage} alt="rightImage" />
+            </div>
           </div>
+        ) : (
+          <div className={styles.footer}>
+            <Footer />
+          </div>
+        )}
+      </div>
     </div>
   );
 };
