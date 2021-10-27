@@ -5,7 +5,7 @@ import store from '../store';
 
 const initialState = {
     loginPage: {
-        isLogin: localStorage.hasOwnProperty('access_token')
+        isLogin: true
     }
 }
 

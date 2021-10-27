@@ -2,8 +2,6 @@ import React, { Suspense, lazy, useState, useEffect } from 'react';
 import { HashRouter as Router, Route, Switch } from 'react-router-dom';
 import './App.scss';
 import './fonts/stylesheet.css';
-import LoginContainer from './components/pages/Login/LoginContainer';
-import { RightToken } from './fetches/fetches';
 
 const MainPage = lazy(() => import('./components/pages/Main'));
 const GaragePage = lazy(() => import('./components/pages/Garage'));
@@ -14,9 +12,11 @@ const AboutPage = lazy(() => import('./components/pages/About'));
 
 function App({isLogin, setIsLogin}) {
 
-  // useEffect(() => {
-  //   RightToken(setIsLogin);
-  // });
+  useEffect(() => {
+    setTimeout(() => {
+      setIsLogin(window.tronWeb && window.tronWeb.defaultAddress.base58);
+    }, 5000);
+  })
 
   const [modal, setModal] = useState(false);
   const [garageMenuInfo, setGarageMenuInfo] = useState({
@@ -30,7 +30,7 @@ function App({isLogin, setIsLogin}) {
   return (
     <Router>
       <Suspense fallback={<div>Loading...</div>}>
-      {!isLogin ? (
+      {/* {isLogin ? ( */}
         <Switch>
               <Route path="/" exact>
                 <MainPage modal={modal} setModal={setModal} />
@@ -58,13 +58,12 @@ function App({isLogin, setIsLogin}) {
               <Route path="/about">
                 <AboutPage modal={modal} setModal={setModal} />
               </Route>
-        </Switch>)
+        </Switch>
+        {/* )
         : (
-          <Route path="/">
-            <LoginContainer />
-          </Route>
+          <h1>Вы не авторизованы на TronLink. Пожалуйста, установите соответствующее расширение и авторизуйтесь!</h1>
         )
-      }
+      } */}
       </Suspense>
     </Router>
   );
