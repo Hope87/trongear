@@ -84,7 +84,7 @@ const Racing = ({ modal, setModal }) => {
 
           <Grid item xs={12}>
             <div className={styles.racingBtn}>
-              <ButtonsBox page="racing" />
+              <ButtonsBox page={'racing'} />
             </div>
           </Grid>
 

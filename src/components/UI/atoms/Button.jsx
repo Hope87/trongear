@@ -68,7 +68,7 @@ const Button = ({ title, isActive }) => {
         <h4
           style={{ color: color }}
           onMouseEnter={() => setOptions({ image: buttonOn, color: 'var(--dark)' })}
-          onMouseOut={() => setOptions({ image: buttonOff, color: 'var(--red)' })}
+          onMouseOut={() => !isActive && setOptions({ image: buttonOff, color: 'var(--red)' })}
         >
           {title}
         </h4>

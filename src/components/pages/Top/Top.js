@@ -56,7 +56,7 @@ const Top = ({ modal, setModal }) => {
 
             <Grid item xs={12}>
               <div className={styles.topBtn}>
-                <ButtonsBox page="top" />
+                <ButtonsBox page={'top'} />
               </div>
             </Grid>
 

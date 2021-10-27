@@ -14,9 +14,9 @@ const AboutPage = lazy(() => import('./components/pages/About'));
 
 function App({isLogin, setIsLogin}) {
 
-  useEffect(() => {
-    RightToken(setIsLogin);
-  });
+  // useEffect(() => {
+  //   RightToken(setIsLogin);
+  // });
 
   const [modal, setModal] = useState(false);
   const [garageMenuInfo, setGarageMenuInfo] = useState({
