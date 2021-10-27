@@ -131,7 +131,7 @@ const GarageCardOff = ({ imageOff, cardTitleOff, imageOn, cardTitleOn, onGarageM
             }}
             onClick={() => onGarageMenuInformation(cardTitleOn)}
             onMouseLeave={() => onLeaveContainer(cardTitleOn)}
-            src={imageOn}
+            src={imageOff}
             alt={cardTitleOn}
           />
           <h4
@@ -141,7 +141,7 @@ const GarageCardOff = ({ imageOff, cardTitleOff, imageOn, cardTitleOn, onGarageM
             onClick={() => onGarageMenuInformation(cardTitleOn)}
             onMouseLeave={() => onLeaveContainer(cardTitleOn)}
           >
-            {cardTitleOn}
+            {cardTitleOff}
           </h4>
         </>
       )}
