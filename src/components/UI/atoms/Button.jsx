@@ -37,6 +37,7 @@ const useStyles = makeStyles({
       textAlign: 'center',
       textTransform: 'uppercase',
       position: 'absolute',
+      pointerEvents: 'none',
       top: '50%',
       left: '50%',
       transform: 'translate(-50%, -50%)',
@@ -58,17 +59,16 @@ const Button = ({ title, isActive }) => {
 
   return (
     <button className={classes.button}>
-      <div>
+      <div
+          onTouchStart ={() => setOptions({ image: buttonOn, color: 'var(--dark)' })}
+          onMouseEnter={() => setOptions({ image: buttonOn, color: 'var(--dark)' })}
+          onMouseOut={() => !isActive && setOptions({ image: buttonOff, color: 'var(--red)' })}>
         <img
           src={image}
           alt={title}
-          onMouseEnter={() => setOptions({ image: buttonOn, color: 'var(--dark)' })}
-          onMouseOut={() => !isActive && setOptions({ image: buttonOff, color: 'var(--red)' })}
         />
         <h4
           style={{ color: color }}
-          onMouseEnter={() => setOptions({ image: buttonOn, color: 'var(--dark)' })}
-          onMouseOut={() => !isActive && setOptions({ image: buttonOff, color: 'var(--red)' })}
         >
           {title}
         </h4>

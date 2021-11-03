@@ -50,19 +50,20 @@ const GarageMenu = ({ modal, setModal, garageNumber }) => {
 
             <Grid item xs={12}>
               <div className={styles.garageMenuBtn}>
-                <ButtonsBox page={'garage'}/>
+                <ButtonsBox page={"garage"} />
               </div>
             </Grid>
+            <div className = {styles.garageItems}>
+              <Grid item xs={12} container>
+                <Grid item xs={12} lg={7}>
+                  <GarageMenuLeft garageNumber={garageNumber} />
+                </Grid>
 
-            <Grid item xs={12} container>
-              <Grid item xs={12} lg={7}>
-                <GarageMenuLeft garageNumber={garageNumber} />
+                <Grid item xs={12} lg={5}>
+                  <GarageCards />
+                </Grid>
               </Grid>
-
-              <Grid item xs={12} lg={5}>
-                <GarageCards />
-              </Grid>
-            </Grid>
+            </div>
           </div>
           <div className={styles.footerBox}>
             {width > 576 && (

@@ -4,7 +4,6 @@ import TopRatingPanelRow from './TopRatingPanelRow';
 
 const useStyles = makeStyles({
   topRatingPanelContainer: {
-    //marginLeft: '30px',
     '@media screen and (max-width: 576px)': {
       margin: '0 13px',
       display: 'flex',

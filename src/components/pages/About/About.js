@@ -75,6 +75,7 @@ const About = ({ modal, setModal }) => {
           <div className={styles.left}>
             <div className={styles.leftBlock}>
               <div className={styles.text}>
+                <br/>
                 Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
                 eiusmod tempor incididunt ut labore et dolore magna aliqua.
                 <br />

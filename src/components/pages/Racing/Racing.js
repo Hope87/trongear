@@ -50,14 +50,14 @@ const Racing = ({ modal, setModal }) => {
                 style={
                   width > 576
                     ? { marginRight: "20px" }
-                    : { margin: "40px auto" }
+                    : { margin: "16px auto" }
                 }
               >
                 <Timer />
               </div>
             ) : (
               <div
-                style={{ opacity: 0, margin: width < 576 && "40px auto" }}
+                style={{ opacity: 0, margin: width < 576 && "16px auto" }}
                 className={styles.racingTimer}
               >
                 <Timer />

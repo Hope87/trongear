@@ -76,7 +76,7 @@ const TopMainRightInfoMob = ({points, winnings, hour1, hour2, top}) => {
       <div className={classes.infoRow} style={isColored && {color: '#eaff00'}}>
         <div className={classes.rowImage}>
           {imege && 
-            (<div>
+            (<div style = {imege == starIcon ? {width: '35px', height: '35px'} : null}>
               <img src={imege} alt="img" />
             </div>)
           }

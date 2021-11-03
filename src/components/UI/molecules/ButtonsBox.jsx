@@ -7,12 +7,16 @@ const useStyles = makeStyles({
   buttonsBox: {
     display: 'flex',
     justifyContent: 'space-between',
-    marginLeft: '90px',
     marginRight: '100px',
+    marginLeft: '100px',
     flexWrap: 'wrap',
+    '@media screen and (max-width: 576px)': {
+      marginRight: '15px',
+      marginLeft: '15px',
+    },
 
     '& Button': {
-      marginBottom: '15px',
+      margin: '5px auto',
     },
 
     '@media screen and (max-width: 1020px)': {

@@ -16,29 +16,20 @@
     width: 100%;
     .content{
       flex: 1 1 auto;
+      padding: 0 50px;
       .garageMenuTimer {
-        margin: 16px auto 40px;
+        margin: 16px auto;
       }
     
       .garageMenuBtn {
-        margin-top: -100px;
+        margin-top: -80px;
         @media screen and (max-width: 1279.98px) {
-          margin-top: 30px;
-        }
-        @media screen and (max-width: 576px) {
-          margin-top: 0;
+          margin-top: 60px;
         }
       }
-    
-      .garageMenuLeftPanel {
-        position: absolute;
-        left: 0;
-        bottom: 0;
-    
-        img {
-          width: 100%;
-          height: 100%;
-        }
+      .garageItems{
+        display: flex;
+        justify-content: space-between;
       }
     }
     .footerBox{

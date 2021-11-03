@@ -152,7 +152,7 @@ const Garage = ({ modal, setModal, onGarageMenuInformation }) => {
               <div className={styles.garageFooter}>
                 <div className={styles.garageText}>
                   <h2>enter the race</h2>
-                  <p>
+                  <p style = {width < 576 ? {display: 'block'} : null}>
                     You are presented with 5 garages, with different levels of
                     cars The first profit you will receive in an hour after
                     participation in the race!
