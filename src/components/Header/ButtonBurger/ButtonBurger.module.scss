@@ -1,0 +1,38 @@
+.buttonBurger {
+    width: 40px;
+    cursor: pointer;
+    span,
+    .wrapper::before,
+    .wrapper::after {
+        display: block;
+        height: 4px;
+        background-color: #8e9092;
+        transition: all 0.3s ease 0s;
+    }
+    .wrapper::before {
+        content: "";
+        margin-bottom: 5px;
+    }
+    .wrapper::after {
+        margin-top: 5px;
+        content: "";
+    }
+}
+
+.toggle {
+    .wrapper {
+        span {
+            transform: scale(0);
+        }
+    }
+    .wrapper::before {
+        position: relative;
+        top: 9px;
+        transform: rotate(45deg);
+    }
+    .wrapper::after {
+        position: relative;
+        bottom: 9px;
+        transform: rotate(-45deg);
+    }
+}

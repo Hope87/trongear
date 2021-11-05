@@ -1,0 +1,10 @@
+.buttonsBox {
+    display: flex;
+    justify-content: space-between;
+    .buttonsBoxBtn {
+        display: flex;
+       .leftButton {
+            margin-right: 25px;
+        }
+    }
+}

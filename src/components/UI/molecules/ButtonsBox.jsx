@@ -1,28 +1,22 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import Button from '../../UI/atoms/Button';
+//import Button from '../../UI/atoms/Button';
+import Button from '../atoms/Button';
 import { makeStyles } from '@material-ui/core/styles';
 
 const useStyles = makeStyles({
   buttonsBox: {
     display: 'flex',
     justifyContent: 'space-between',
-    marginRight: '100px',
-    marginLeft: '100px',
     flexWrap: 'wrap',
     '@media screen and (max-width: 576px)': {
       marginRight: '15px',
       marginLeft: '15px',
     },
 
-    '& Button': {
-      margin: '5px auto',
-    },
-
     '@media screen and (max-width: 1020px)': {
       justifyContent: 'center',
     },
-   
 
     '& div': {
       display: 'flex',
@@ -33,15 +27,8 @@ const useStyles = makeStyles({
       },
     },
   },
-  buttonsBoxBtn: {
-    '& div': {
-      marginLeft: '20px',
-
-      '@media screen and (max-width: 620px)': {
-        marginLeft: '0',
-      },
-      
-    },
+  'button:not(:last-child)': {
+    marginRight: '25px',
   },
 });
 
@@ -52,21 +39,19 @@ const ButtonsBox = ({page}) => {
     <div className={classes.buttonsBox}>
       <div className={classes.buttonsBoxBtn}>
         <Link to="/about">
-          <Button title="about" isActive ={page === 'about'}/>
+          <Button className={classes.button} title="about" isActive ={page === 'about'}/>
         </Link>
-        <div>
           <Link to="/garage">
-            <Button title="garage"  isActive ={page === 'garage'}/>
+            <Button className={classes.button} title="garage"  isActive ={page === 'garage'}/>
           </Link>
-        </div>
       </div>
       <div className={classes.buttonsBoxBtn}>
         <Link to="/racing">
-          <Button title="racing"  isActive ={page === 'racing'}/>
+          <Button className={classes.button} title="racing"  isActive ={page === 'racing'}/>
         </Link>
         <div>
           <Link to="/top">
-            <Button title="top" isActive ={page === 'top'}/>
+            <Button className={classes.button} title="top" isActive ={page === 'top'}/>
           </Link>
         </div>
       </div>

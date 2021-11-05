@@ -1,10 +1,12 @@
 import React from 'react';
 import styles from './About.module.scss';
-import Header from '../../UI/molecules/Header';
+//import Header from '../../UI/molecules/Header';
+import Header from '../../Header/Header';
 import logo from '../../../images/logo.png';
-import Modal from '../../UI/atoms/Modal';
+import ModalWindow from '../../ModalWindow/ModalWindow';
 import Timer from '../../UI/atoms/Timer';
-import ButtonsBox from '../../UI/molecules/ButtonsBox';
+//import ButtonsBox from '../../UI/molecules/ButtonsBox';
+import ButtonsBox from '../../ButtonBox/ButtonBox';
 import garage from '../../../images/About_page_garage.png';
 import buttonUpImage from '../../../images/About_button_up.png';
 import buttonDownImage from '../../../images/About_button_down.png';
@@ -46,20 +48,17 @@ const AboutButtonBox = () => {
   )};
 
 const About = ({ modal, setModal }) => {
-  const width = window.innerWidth;
   return (
     <div className={styles.about}>
       <div className={styles.header}>
-        {width > 576 ? (
           <Header
             headerLogo={logo}
-            headerModal={modal}
-            setHeaderModal={setModal}
+            modal={modal}
+            setModal={setModal}
           />
-        ) : (
-          <HeaderForMobile headerModal={modal} setHeaderModal={setModal} />
-        )}
-        {modal && <Modal />}
+          <div className = {styles.modal}>
+          {modal && <ModalWindow setModal = {setModal}/>}
+          </div>
       </div>
       <div className={styles.content}>
         <div className={styles.timer} style={modal ? { opacity: "0" } : null}>
@@ -70,7 +69,6 @@ const About = ({ modal, setModal }) => {
         </div>
         <div
           className={styles.middleBlock}
-          style={modal && width > 1280 ? { marginTop: "90px" } : null}
         >
           <div className={styles.left}>
             <div className={styles.leftBlock}>
@@ -85,7 +83,6 @@ const About = ({ modal, setModal }) => {
                 dolor in reprehenderit in voluptate velit esse cillum dolore eu
                 fugiat nulla pariatur.
               </div>
-              {width > 576 && (<AboutButtonBox />)}
             </div>
           </div>
           <div className={styles.right}>
@@ -96,7 +93,6 @@ const About = ({ modal, setModal }) => {
                   <img src={mersedes} alt="car" />
                 </div>
               </div>
-              {width <= 576 && (<AboutButtonBox />)}
               <div className={styles.text}>
                 Excepteur sint occaecat cupidatat non proident, sunt in culpa
                 qui officia deserunt mollit anim id est laborum.
@@ -106,18 +102,7 @@ const About = ({ modal, setModal }) => {
         </div>
       </div>
       <div className={styles.footer}>
-        {width > 576 ? (<Footer />)
-        :(<div className={styles.mobileFooter}>
-           <h4 className={styles.topFooterTitle}>earn by promoting</h4>
-           <div className={styles.imageContainer}>
-              <div className={styles.image}>
-                <img src={leftImage} alt="leftImage"/>
-              </div>
-              <div className={styles.image}>
-                <img src={rightImage} alt="rightImage"/>
-              </div>
-            </div>
-        </div>)}
+        <Footer />
       </div>
     </div>
   );

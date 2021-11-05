@@ -1,0 +1,20 @@
+.langauge {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 160px;
+    height: 100%;
+    background-color: #000000;
+    clip-path: polygon(37.5% 0, 100% 0, 62.5% 100%, 0 100%);
+    cursor: pointer;
+    //text
+    color: #ffffff;
+    font-family: "Russo One";
+    font-size: 18px;
+    font-weight: 400;
+    font-style: italic;
+    text-transform: uppercase;
+}
+.langauge:hover {
+    font-size: 20px;
+}

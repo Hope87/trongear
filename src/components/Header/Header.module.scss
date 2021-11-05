@@ -1,0 +1,23 @@
+.header {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 60px;
+    background-color: #161616;
+    clip-path: polygon(0 0, 100% 0, 96.875% 100%, 3.125% 100%);
+    .logo {
+        width: 272px;
+        height: 31px;
+    }
+    .buttonBurger {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);   
+    }
+    .langauge{
+        height: 100%;
+    }
+    
+}
