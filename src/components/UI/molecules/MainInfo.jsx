@@ -8,18 +8,8 @@ const useStyles = makeStyles({
   mainInfo: {
     maxWidth: '465px',
     height: '110px',
-    marginTop: '60px',
-    marginLeft: '100px',
     position: 'relative',
 
-    '@media screen and (max-width: 498.98px)': {
-      marginLeft: '0px',
-      marginTop: '46px',
-    },
-
-    '@media screen and (max-width: 359.98px)': {
-      marginLeft: '0px',
-    },
 
     '& >img': {
       paddingBottom: '40px',

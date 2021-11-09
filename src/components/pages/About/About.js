@@ -6,7 +6,7 @@ import logo from '../../../images/logo.png';
 import ModalWindow from '../../ModalWindow/ModalWindow';
 import Timer from '../../UI/atoms/Timer';
 //import ButtonsBox from '../../UI/molecules/ButtonsBox';
-import ButtonsBox from '../../ButtonBox/ButtonBox';
+import ButtonsBox from '../../TimerAndButtonBox/ButtonBox/ButtonBox';
 import garage from '../../../images/About_page_garage.png';
 import buttonUpImage from '../../../images/About_button_up.png';
 import buttonDownImage from '../../../images/About_button_down.png';
@@ -16,6 +16,7 @@ import mersedes from '../../../images/cars/G_5_cars/on/4_amg.png';
 import HeaderForMobile from '../../UI/molecules/HeaderForMobile';
 import leftImage from '../../../images/topFooterLeftImage.png';
 import rightImage from '../../../images/topFooterRightImage.png';
+import TimerAndButtonBox from '../../TimerAndButtonBox/TimerAndButtonBox';
 
 const Button = ({text}) => {
   return (
@@ -50,25 +51,16 @@ const AboutButtonBox = () => {
 const About = ({ modal, setModal }) => {
   return (
     <div className={styles.about}>
-      <div className={styles.header}>
           <Header
-            headerLogo={logo}
             modal={modal}
             setModal={setModal}
-          />
-          <div className = {styles.modal}>
+            isLogo={true}/>
           {modal && <ModalWindow setModal = {setModal}/>}
-          </div>
-      </div>
       <div className={styles.content}>
-        <div className={styles.timer} style={modal ? { opacity: "0" } : null}>
-          <Timer />
+        <div className = {styles.timerAndButtonBox}>
+          <TimerAndButtonBox />
         </div>
-        <div className={styles.buttonsBox}>
-          <ButtonsBox page={'about'}/>
-        </div>
-        <div
-          className={styles.middleBlock}
+        <div className={styles.middleBlock}
         >
           <div className={styles.left}>
             <div className={styles.leftBlock}>

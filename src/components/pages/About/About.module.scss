@@ -7,6 +7,7 @@
     overflow: auto;
     display: flex;
     flex-direction: column;
+    background-size: cover;
     @media screen and (max-width: 576px) {
         background-position: center;
     }
@@ -18,17 +19,10 @@
             padding: 0 5px;
         }
 
-        .timer {
-            margin: 16px 0;
+        .timerAndButtonBox {
+            margin-top: 16px;
         }
-
-        .buttonsBox {
-            margin-top: -80px;
-            @media screen and (max-width: 1345px) {
-                margin-top: 90px;
-            }
-        }
-
+        
         .middleBlock {
             margin-top: 25px;
             display: flex;

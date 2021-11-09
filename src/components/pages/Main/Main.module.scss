@@ -1,21 +1,14 @@
 .main {
   background: url('../../../images/back.png') no-repeat;
+  display: flex;
+  flex-direction: column;
   width: 100%;
   height: 100vh;
   background-size: cover;
   position: fixed;
   overflow: auto;
+
   
-  img {
-    width: 100%;
-    height: 100%;
-    object-fit: contain;
-  }
-  .wrapper{
-    width: 100%;
-    min-height: 100vh;
-    display: flex;
-    flex-direction: column;
     .header{
       .modal {
         @media screen and (max-width: 576px) {
@@ -27,20 +20,58 @@
     }
     .content{
       flex: 1 1 auto;
-  
-      .mainTimer{
-        margin: 40px 0;
+      padding: 0 108px;
+      @media screen and (max-width: 920px) {
+        padding: 0 15px;
+      }
+
+      .timerAndButtonBox {
+        margin-top: 16px;
       }
   
-      .mainBtn {
-        margin-top: -100px;
-  
-        @media screen and (max-width: 1279.98px) {
-          margin-top: 60px;
+      .logo {
+        margin-top: 100px;
+        width: 825px;
+        height: 97px;
+        @media screen and (max-width: 1080px) {
+          margin-top: 50px;
         }
-        @media screen and (max-width: 576px) {
-          margin-top: 0;
+      }
+      .letsRide {
+        width: 690px;
+        height: 65px;
+        margin-top: 110px;
+        background-image: url('./img/LetsRideBackground.png');
+        background-repeat: no-repeat;
+        text-shadow: 0 6px 13px rgba(18, 18, 18, 0.08);
+        color: #191919;
+        font-family: "Russo One";
+        font-size: 65px;
+        font-weight: 400;
+        font-style: italic;
+        text-align: center;
+        text-transform: uppercase;
+        @media screen and (max-width: 1080px) {
+          margin-top: 50px;
         }
+      }
+      .howItWorks {
+        margin-top: 62px;
+        width: 690px;
+        color: #f6343f;
+        font-family: Calibri;
+        font-size: 40px;
+        font-weight: 700;
+        font-style: italic;
+        line-height: 26.87px;
+        text-align: center;
+        text-transform: uppercase;
+      }
+      .mainInfo {
+        margin-top: 60px;
+        width: 690px;
+       
+
       }
     }
     .footer{
@@ -86,5 +117,4 @@
         }
       }
     }
-  }
 }

@@ -1,49 +1,43 @@
 import React from 'react';
 import styles from './Main.module.scss';
-import { Grid } from '@material-ui/core';
-import Header from '../../UI/molecules/Header';
-import Modal from '../../UI/atoms/Modal';
+import Header from '../../Header/Header';
+import ModalWindow from '../../ModalWindow/ModalWindow';
 import Timer from '../../UI/atoms/Timer';
-import ButtonsBox from '../../UI/molecules/ButtonsBox';
 import MainDescription from '../../UI/organisms/MainDescription';
 import Links from '../../UI/atoms/Links';
 import footerLogoForMobile from '../../../images/footerLogoForMobile.png';
 import footerLogoForMobileSmall from '../../../images/footerLogoForMobileSmall.png';
+import LogoTrongear from '../../LogoTrongear/LogoTrongear';
+import MainInfo from './MainInfo/MainInfo';
+import TimerAndButtonBox from '../../TimerAndButtonBox/TimerAndButtonBox';
 
 const Main = ({ modal, setModal }) => {
   return (
     <div className={styles.main}>
-      <Grid container>
-        <div className={styles.wrapper}>
         <div className={styles.header}>
-          <Grid item xs={12}>
-            <Header headerModal={modal} setHeaderModal={setModal} />
-          </Grid>
-          <div className={styles.modal}>{modal && <Modal />}</div>
+            <Header modal={modal} 
+                    setModal={setModal} 
+                    isLogo = {false}/>
+          {modal && <ModalWindow setModal = {setModal}/>}
         </div>
         <div className={styles.content}>
-          <Grid item xs={12}>
-            {!modal ? (
-              <div className={styles.mainTimer}>
-                <Timer />
-              </div>
-            ) : (
-              <div style={{ opacity: 0 }} className={styles.mainTimer}>
-                <Timer />
-              </div>
-            )}
-          </Grid>
-          <Grid item xs={12}>
-            <div className={styles.mainBtn}>
-              <ButtonsBox />
-            </div>
-          </Grid>
-          <Grid item xs={12}>
-            <MainDescription />
-          </Grid>
+       <div className = {styles.timerAndButtonBox}>
+         <TimerAndButtonBox />
+       </div>
+        <div className = {styles.logo}>
+          <LogoTrongear />
+        </div>
+        <div className = {styles.letsRide}>
+          let's ride
+        </div>
+        <div className = {styles.howItWorks}>
+          how it works
+        </div>
+        <div className = {styles.mainInfo}>
+          <MainInfo />
+        </div>
         </div>
         <div className={styles.footer}>
-        <Grid item xs={12}>
           <div className={styles.mainFooter}>
             <div className={styles.bigImage}>
               <img src={footerLogoForMobile} alt="footer"></img>
@@ -55,10 +49,7 @@ const Main = ({ modal, setModal }) => {
               </div>
             </div>
           </div>
-        </Grid>
         </div>
-        </div>
-      </Grid>
     </div>
   );
 };

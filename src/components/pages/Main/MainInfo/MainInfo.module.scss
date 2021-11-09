@@ -1,0 +1,34 @@
+.mainInfo {
+    position: relative;
+    width: 376px;
+    padding: 19px 0;
+    background-image: url('../MainInfo/img/mainInfoFrame.png');
+    background-repeat: no-repeat;
+    margin: 0 auto;
+    :not(:last-child) {
+        margin-bottom: 5px;
+    }
+    p {
+        color: #f6343f;
+        font-family: Calibri;
+        font-size: 16px;
+        font-style: italic;
+        text-align: center;
+        text-transform: uppercase;
+        font-family: "Calibri";
+        font-weight: 700;
+        font-style: italic;
+    }
+    :nth-child(2), span {
+        color: #ffffff;
+    }
+    img {
+        display: block;
+        width: 36px;
+        height: 31px;
+        position: absolute;
+        right: 0;
+        top: 50%;
+        transform: translate(46%, -50%);
+    }
+}

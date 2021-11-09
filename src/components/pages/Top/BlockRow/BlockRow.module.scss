@@ -1,0 +1,43 @@
+.blockRow {
+    display: flex;
+    text-shadow: 0 3px 7px rgba(18, 18, 18, 0.08);
+    color: #ffffff;
+    font-family: "Chakra Petch";
+    font-size: 23px;
+    font-style: italic;
+    text-transform: uppercase;
+    > * {
+        height: 55px;
+        box-sizing: border-box;
+        display: flex;
+        align-items: center;
+    }
+    .leftBlock {
+        min-width: 160px;
+        clip-path: polygon(0 0, 100% 0, calc(100% - 53px) 100%, 0 100%);
+        padding-left: 17px;
+    }
+    .rightBlock {
+        flex-grow: 1;
+        background-color: #272829;
+        clip-path: polygon(53px 0, 100% 0, 100% 100%, 0 100%);
+        margin-left: -45px;
+        padding: 0 105px 0 50px;
+        justify-content: space-between;
+    }
+    .leftBlock::before {
+            content: '#';
+        }
+}
+.blackColor {
+    background-color: #101010;
+}
+.redColor {
+    background-color: #b2212f;
+}
+.lightGreyColor {
+    background-color: #a0a0a0;
+}
+.greyColor {
+    background-color: #6f6f6f;
+}

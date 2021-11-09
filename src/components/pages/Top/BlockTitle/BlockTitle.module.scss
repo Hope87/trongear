@@ -1,0 +1,40 @@
+.blockTitle {
+    display: flex;
+    text-shadow: 0 3px 7px rgba(18, 18, 18, 0.08);
+    color: #ffffff;
+    font-family: "Russo One";
+    font-size: 23px;
+    font-weight: 400;
+    font-style: italic;
+    text-transform: uppercase;
+    > * {
+        box-sizing: border-box;
+    }
+    .leftBlock {
+        min-width: 160px;
+        text-align: center;
+    }
+    .rightBlock {
+        max-width: 740px;
+        flex-grow: 1;
+        padding: 0 228px 0 90px;
+        margin-left: -45px;
+        display: flex;
+        .spanImg {
+            display: block;
+            width: 32px;
+            height: 30px;
+            background-image: url('../img/spanImg.png');
+            background-size: cover;
+        }
+    }
+}
+.leftTitle {
+    justify-content: space-between;
+}
+.rightTitle {
+    justify-content: flex-end;
+    .spanImg {
+        margin-left: 68px;
+    }
+}

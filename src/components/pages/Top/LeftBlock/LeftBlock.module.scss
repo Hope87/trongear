@@ -1,0 +1,7 @@
+.leftBlock {
+    max-width: 860px;
+    flex-grow: 1;
+    > :not(:first-child) {
+        margin-top: 8px;
+    }
+}

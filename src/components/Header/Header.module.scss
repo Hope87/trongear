@@ -3,9 +3,9 @@
     display: flex;
     align-items: center;
     justify-content: space-between;
-    height: 60px;
+    min-height: 60px;
     background-color: #161616;
-    clip-path: polygon(0 0, 100% 0, 96.875% 100%, 3.125% 100%);
+    clip-path: polygon(0 0, 100% 0, calc(100% - 60px) 100%, 60px 100%);
     .logo {
         width: 272px;
         height: 31px;
@@ -19,5 +19,4 @@
     .langauge{
         height: 100%;
     }
-    
 }

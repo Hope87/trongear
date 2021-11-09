@@ -7,12 +7,12 @@
     cursor: pointer;
 
     :active {
-        transform: translate(1%, 1%);
+        transform: translate(2px, 2px);
     }
 
     & .innerButton {
         width: 191px;
-        padding: 12px 0;
+        padding: 10px 0;
         background-color: black;
         clip-path: polygon(0 33.33%, 10% 0, 100% 0, 100% 54%, 88% 100%, 0 100%);
         color: red;
