@@ -34,7 +34,7 @@ const Top = ({ modal, setModal }) => {
         <RightBlock />
         </div>
       </div>
-      <Footer />
+      <Footer page = 'top' />
     </div>
   );
 }

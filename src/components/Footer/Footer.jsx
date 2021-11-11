@@ -2,7 +2,7 @@ import React from 'react';
 import styles from './Footer.module.scss';
 import Links from './Links/Links';
 
-const Footer = ({page = 'top'}) => {
+const Footer = ({page}) => {
     let styleLeftDiv;
     let styleRightDiv = styles.rightDiv;
     if(page == 'main'){
