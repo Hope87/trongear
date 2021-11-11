@@ -13,13 +13,12 @@ import ButtonsBox from '../../UI/molecules/ButtonsBox';
 import HeaderForMobile from '../../UI/molecules/HeaderForMobile';
 import leftImage from '../../../images/topFooterLeftImage.png';
 import rightImage from '../../../images/topFooterRightImage.png';
-import Footer from '../../Footers/Footer/Footer';
+import Footer from '../../Footer/Footer';
 import footerLine from '../../../images/TopFooterLine.png';
 import TimerAndButtonBox from '../../TimerAndButtonBox/TimerAndButtonBox';
 
 import LeftBlock from './LeftBlock/LeftBlock';
 import RightBlock from './RightBlock/RightBlock';
-
 
 const Top = ({ modal, setModal }) => {
   return (
