@@ -18,6 +18,7 @@ import leftImage from '../../../images/topFooterLeftImage.png';
 import rightImage from '../../../images/topFooterRightImage.png';
 import Footer from '../../Footer/Footer';
 import footerLine from '../../../images/footer_line.png';
+import LeftBlockElement from './LeftBlockElement/LeftBlockElement';
 
 const Racing = ({ modal, setModal }) => {
   return (
@@ -28,6 +29,7 @@ const Racing = ({ modal, setModal }) => {
         <div className={styles.timerAndButtonBox}>
           <TimerAndButtonBox isSecondTimer = {true} page = 'racing'/>
         </div>
+        <LeftBlockElement />
       </div>
       <Footer page = 'racing' />
     </div>
