@@ -58,7 +58,7 @@ const About = ({ modal, setModal }) => {
           {modal && <ModalWindow setModal = {setModal}/>}
       <div className={styles.content}>
         <div className = {styles.timerAndButtonBox}>
-          <TimerAndButtonBox />
+          <TimerAndButtonBox page = 'about'/>
         </div>
         <div className={styles.middleBlock}
         >

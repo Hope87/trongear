@@ -18,6 +18,9 @@ const Footer = ({page}) => {
             {page == 'top' && <div className = {styles.topFooterLine}>
             earn by promoting
             </div>}
+            {page == 'racing' && <div className = {styles.racingFooterLine}>
+            earn by promoting
+            </div>}
         </div>
     );
 }

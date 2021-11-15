@@ -3,7 +3,7 @@ import styles from './TimerAndButtonBox.module.scss';
 import Timer from './Timer/Timer';
 import ButtonsBox from './ButtonBox/ButtonBox';
 
-const TimerAndButtonBox = ({ isSecondTimer }) => {
+const TimerAndButtonBox = ({ isSecondTimer, page }) => {
   return (
     <div className={styles.timerAndButtonBox}>
       <div className={styles.timer}>
@@ -11,7 +11,7 @@ const TimerAndButtonBox = ({ isSecondTimer }) => {
         {isSecondTimer && <Timer text = {'race of the hour'} isSecondTimer = {isSecondTimer}/>}
       </div>
       <div className={!isSecondTimer ? styles.buttonBoxOneTimer : styles.buttonBoxTwoTimers}>
-        <ButtonsBox />
+        <ButtonsBox page = {page}/>
       </div>
     </div>
   );
