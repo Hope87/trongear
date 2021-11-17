@@ -17,5 +17,19 @@
     .timerAndButtonBox {
       margin-top: 16px;
     }
+    .middleBlock {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      > :nth-child(1),
+      > :nth-child(3) {
+        flex-grow: 1;
+      }
+      .line {
+        flex-grow: 0;
+        margin-top: 60px;
+      }
+
+    }
   }
 }

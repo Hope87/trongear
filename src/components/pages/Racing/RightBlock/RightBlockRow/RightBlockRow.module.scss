@@ -1,0 +1,9 @@
+.rightBlockRow {
+    max-width: 785px;
+    display: flex;
+    justify-content: space-between;
+    
+    > * {
+        flex-grow: 1;
+    }
+}

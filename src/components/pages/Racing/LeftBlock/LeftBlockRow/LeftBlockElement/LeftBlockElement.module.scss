@@ -6,10 +6,11 @@
     display: flex;
     flex-direction: column;
     align-items: center;
+    padding: 3px;
+    box-sizing: border-box;
     .upBlock {
-        max-width: 364px;
         position: relative;
-        top: 3px;
+        max-width: 364px;
         width: 100%;
         height: 83px;
         background-color: #202020;
@@ -73,5 +74,16 @@
     }
     .downBlock::after {
         content: '($)';
+    }
+}
+.differentColor {
+    .upBlock{
+        .text {
+            color: #eaff00;;;
+        }
+        .label {
+            background: linear-gradient(45deg, transparent 17px, #f4f4f5 0, #ecff1a 70%);
+            color: #292929;;
+        }
     }
 }
