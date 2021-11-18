@@ -7,7 +7,7 @@ const Language = () => {
       setState(state === 'eng' ? 'рус' : 'eng');
     }
     return (
-        <div className = {styles.langauge} onClick = {clickHandler}>
+        <div className = {styles.language} onClick = {clickHandler}>
           {state}
         </div>
     );

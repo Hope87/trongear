@@ -4,8 +4,13 @@
     align-items: center;
     justify-content: space-between;
     min-height: 60px;
+    height: 100%;
     background-color: #161616;
     clip-path: polygon(0 0, 100% 0, calc(100% - 60px) 100%, 60px 100%);
+    @media screen and (max-width: 767px) {
+        clip-path: none;
+        min-height: 82px;
+    }
     .logo {
         width: 272px;
         height: 31px;
@@ -14,9 +19,27 @@
         position: absolute;
         top: 50%;
         left: 50%;
-        transform: translate(-50%, -50%);   
+        transform: translate(-50%, -50%);
+        @media screen and (max-width: 767px) {
+            left: 65px;
+        }
     }
-    .langauge{
+    .language{
         height: 100%;
+    }
+    .languageMobileNone {
+        height: 100%;
+        @media screen and (max-width: 767px) {
+            display: none;
+        }
+    }
+    .icons {
+        display: none;
+        @media screen and (max-width: 767px) {
+            display: block;
+        }
+    }
+    .iconsMobileNone {
+        display: none;
     }
 }
