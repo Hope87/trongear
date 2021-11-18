@@ -18,11 +18,11 @@
         padding: 62px 20px 40px 30px;
         box-sizing: border-box;
         color: #ffffff;
+        font-style: italic;
         .transactions {
             font-size: 12px;
             font-family: Calibri;
             text-transform: uppercase;
-            font-style: italic;
             .transactionsName {
                 margin-bottom: 50px;
             }
@@ -45,7 +45,7 @@
                     transform: translateY(-50%);
                     width: 24px;
                     height: 28px;
-                    background-image: url('../../../LeftBlock/LeftBlockRow/LeftBlockElement/img/piramide.svg');
+                    background-image: url('../../../LeftBlock/img/piramide.svg');
                     background-position: center;
                 }
             }
@@ -54,7 +54,18 @@
                 justify-content: space-between;
                 align-items: center;
                 span {
-
+                    font-family: "Chakra Petch";
+                    position: relative;
+                }
+                ::before {
+                    content: "";
+                    position: absolute;
+                    top: 50%; left: -25px;
+                    transform: translateY(-50%);
+                    width: 20px;
+                    height: 20px;
+                    background-image: url('../../../../Top/RightBlock/RowBlock/Row/img/square.png');
+                    background-size: cover;
                 }
             }
         }
@@ -62,10 +73,9 @@
             position: absolute;
             top: 0;
             right: 0;
-            max-width: 172px;
             width: 100%;
             height: 28px;
-            background: linear-gradient(45deg, transparent 20px, #ed263a 0, #8b0513 70%);
+            background: linear-gradient(45deg, transparent 62px, #ed263a 0, #8b0513 70%);
             display: flex;
             align-items: center;
             justify-content: flex-end;
@@ -75,8 +85,24 @@
             color: #ffffff;
             font-family: Calibri;
             font-size: 16px;
-            font-style: italic;
             text-transform: uppercase;
+        }
+        .time {
+            .hour, .day {
+                margin-bottom: 15px;
+                font-family: Calibri;
+                font-size: 12px;
+            }
+            span {
+                display: block;
+                font-family: "Chakra Petch";
+                font-size: 40px;
+            }
+        }
+        .amount {
+            font-family: "Chakra Petch";
+            font-size: 40px;
+            margin-top: 14px;
         }
     }
     .downBlock {
@@ -84,5 +110,34 @@
         width: 100%;
         height: 34px;
         background: linear-gradient(-45deg, transparent 24px, #121213 0);
+        padding-left: 30px;
+        box-sizing: border-box;
+        text-shadow: 4px 5px 13px rgba(18, 18, 18, 0.08);
+        color: #777777;
+        font-style: italic;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        .numberTrx {
+            font-family: "Chakra Petch";
+            font-size: 14px;
+        }
+        .numberTrx::before {
+            content: '+ ';
+        }
+        .numberTrx::after {
+            content: ' TRX';
+        }
+        .affiliatePayout {
+            font-family: Calibri;
+            font-size: 12px;
+        }
+        .dollars {
+            font-family: "Chakra Petch";
+            font-size: 14px;
+        }
+        .dollars::after {
+            content: ' ($)';
+        }
     }
 }

@@ -5,7 +5,9 @@ import RightBlockElement from './RightBlockElement/RightBlockElement';
 const RightBlockRow = () => {
     return (
         <div className={styles.rightBlockRow}>
-            <RightBlockElement />
+            <RightBlockElement textLabel={'transactions'}/>
+            <RightBlockElement textLabel={'time'}/>
+            <RightBlockElement textLabel={'amount'}/>
         </div>
     );
 }

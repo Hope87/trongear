@@ -20,7 +20,7 @@ import Footer from '../../Footer/Footer';
 import footerLine from '../../../images/footer_line.png';
 import LeftBlock from './LeftBlock/LeftBlock';
 import line from './img/line.svg';
-import RightBlockRow from './RightBlock/RightBlockRow/RightBlockRow';
+import RightBlock from './RightBlock/RightBlock';
 
 
 const Racing = ({ modal, setModal }) => {
@@ -37,7 +37,7 @@ const Racing = ({ modal, setModal }) => {
           <div className={styles.line}>
             <img src={line} alt="line" />
           </div>
-          <RightBlockRow />
+          <RightBlock />
         </div>
       </div>
       <Footer page = 'racing' />
