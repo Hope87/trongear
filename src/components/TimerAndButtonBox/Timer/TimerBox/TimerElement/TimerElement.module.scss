@@ -9,6 +9,9 @@
     line-height: 37.28px;
     text-align: center;
     text-transform: uppercase;
+    @media screen and (max-width: 374px) {
+        padding: 10px 11px;
+    }
 }
 .redColor {
     color: #ff1437;

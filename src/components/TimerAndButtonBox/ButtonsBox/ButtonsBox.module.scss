@@ -10,8 +10,14 @@
     }
     .buttonsBoxBtn {
         display: flex;
+        @media screen and (max-width: 374px) {
+            flex-direction: column;
+        }
        .leftButton {
             margin-right: 25px;
+            @media screen and (max-width: 374px) {
+                margin-bottom: 25px;
+            }
         }
     }
 }

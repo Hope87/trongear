@@ -1,7 +1,7 @@
 import React from 'react'
 import styles from './TimerAndButtonBox.module.scss';
 import Timer from './Timer/Timer';
-import ButtonsBox from './ButtonBox/ButtonBox';
+import ButtonsBox from './ButtonsBox/ButtonsBox';
 
 const TimerAndButtonBox = ({ isSecondTimer, page }) => {
   return (

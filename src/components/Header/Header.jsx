@@ -9,7 +9,7 @@ import bellLink from './img/bell.png';
 
 const Header = ({modal, setModal, isLogo}) => {
   return (
-    <div className = {styles.header}>
+    <div className = {styles.header + ' ' + (isLogo ? styles.headerHeight152 : '')}>
         <div className = {styles.logo}>
           {isLogo && 
           <Link to = "/"><LogoTrongear /></Link>

@@ -11,7 +11,7 @@
     }
 
     & .innerButton {
-        width: 191px;
+        width: 187px;
         padding: 10px 0;
         background-color: black;
         clip-path: polygon(0 33.33%, 10% 0, 100% 0, 100% 54%, 88% 100%, 0 100%);
@@ -22,10 +22,14 @@
         font-weight: 400;
         font-style: italic;
         letter-spacing: normal;
-        line-height: 37.22px;
+        line-height: 36px;
         text-transform: uppercase;
         transition: background-color 0.6s ease 0s;
-        
+        @media screen and (max-width: 767px) {
+            width: 147px;
+            font-size: 20px;
+            line-height: 21px;
+        }
     }
 }
 .button:hover {

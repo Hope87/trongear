@@ -1,7 +1,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import Button from './Button/Button';
-import styles from './ButtonBox.module.scss';
+import styles from './ButtonsBox.module.scss';
 
 const ButtonsBox = ({ page }) => {
   return (

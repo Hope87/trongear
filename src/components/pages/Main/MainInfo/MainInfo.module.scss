@@ -1,12 +1,24 @@
 .mainInfo {
     position: relative;
     width: 376px;
+    height: 110px;
     padding: 19px 0;
-    background-image: url('../MainInfo/img/mainInfoFrame.png');
-    background-repeat: no-repeat;
+    box-sizing: border-box;
+    border: 2px solid red;
+    background: 
+      linear-gradient(to top left, transparent 30px,red 10px) top left,
+      linear-gradient(to bottom right, transparent 40px,red 0px) bottom right,
+      transparent;
+      background-size: 40px 40px;
+      background-repeat: no-repeat;
+      background-origin:border-box;
+      clip-path: polygon(0 20px, 20px 0, 100% 0, 100% calc(100% - 20px), calc(100% - 20px) 100%, 0 100%);
     margin: 0 auto;
     :not(:last-child) {
         margin-bottom: 5px;
+    }
+    @media screen and (max-width: 767px) {
+       
     }
     p {
         color: #f6343f;
