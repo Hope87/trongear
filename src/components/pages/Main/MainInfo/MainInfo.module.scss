@@ -1,38 +1,42 @@
-.mainInfo {
+.mainInfoWrapper {
     position: relative;
-    width: 376px;
-    height: 110px;
-    padding: 19px 0;
-    box-sizing: border-box;
-    border: 2px solid red;
-    background: 
-      linear-gradient(to top left, transparent 30px,red 10px) top left,
-      linear-gradient(to bottom right, transparent 40px,red 0px) bottom right,
-      transparent;
-      background-size: 40px 40px;
-      background-repeat: no-repeat;
-      background-origin:border-box;
-      clip-path: polygon(0 20px, 20px 0, 100% 0, 100% calc(100% - 20px), calc(100% - 20px) 100%, 0 100%);
+    max-width: 376px;
     margin: 0 auto;
-    :not(:last-child) {
-        margin-bottom: 5px;
+    @media screen and (max-width: 430px) {
+        max-width: 290px;
     }
-    @media screen and (max-width: 767px) {
-       
-    }
-    p {
-        color: #f6343f;
-        font-family: Calibri;
-        font-size: 16px;
-        font-style: italic;
-        text-align: center;
-        text-transform: uppercase;
-        font-family: "Calibri";
-        font-weight: 700;
-        font-style: italic;
-    }
-    :nth-child(2), span {
-        color: #ffffff;
+    .mainInfo {
+        padding: 19px 0;
+        box-sizing: border-box;
+        border: 2px solid red;
+        background: 
+          linear-gradient(to top left, transparent 30px,red 10px) top left,
+          linear-gradient(to bottom right, transparent 40px,red 0px) bottom right,
+          transparent;
+          background-size: 40px 40px;
+          background-repeat: no-repeat;
+          background-origin:border-box;
+          clip-path: polygon(0 20px, 20px 0, 100% 0, 100% calc(100% - 20px), calc(100% - 20px) 100%, 0 100%);
+        :not(:last-child) {
+            margin-bottom: 5px;
+        }
+        p {
+            color: #f6343f;
+            font-family: Calibri;
+            font-size: 16px;
+            font-style: italic;
+            text-align: center;
+            text-transform: uppercase;
+            font-family: "Calibri";
+            font-weight: 700;
+            font-style: italic;
+            @media screen and (max-width: 430px) {
+                font-size: 14px;
+            }
+        }
+        :nth-child(2), span {
+            color: #ffffff;
+        }
     }
     img {
         display: block;

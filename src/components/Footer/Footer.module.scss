@@ -16,6 +16,11 @@
         max-width: 411px;
         height: 113px;
         background:linear-gradient(135deg, transparent 79px, #000000 0, #333800 65%);
+        @media screen and (max-width: 767px) {
+            height: 62px;
+            background: linear-gradient(150deg, transparent 55px, #000000 0, #333800 65%);
+            max-width: 363px;
+        }
     }
     > :nth-child(1) {
         clip-path: polygon(0 0, calc(100% - 90px) 0, 100% 100%, 0 100%);
@@ -25,6 +30,14 @@
         display: flex;
         justify-content: center;
         align-items: center;
+        @media screen and (max-width: 767px) {
+            justify-content: flex-end;
+            padding-right: 55px;
+            box-sizing: border-box;
+        }
+        @media screen and (max-width: 375px) {
+           padding-right: 20px;
+        }
     }
     > .rightDivMainPage::before {
         content: '';
@@ -34,6 +47,12 @@
         left: -15px; bottom: 0;
         z-index: -1;
         background:linear-gradient(135deg, transparent 45px, #eaff00 0);
+        @media screen and (max-width: 767px) {
+            width: 100px;
+            height: 35px;
+            background:linear-gradient(150deg, transparent 45px, #eaff00 0);
+            left: -35px;
+        }
     }
     .leftDiv {
         transform: scale(0);

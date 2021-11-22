@@ -5,7 +5,7 @@ import styles from './Top.module.scss';
 import logo from '../../../images/logo.png';
 import ModalWindow from '../../ModalWindow/ModalWindow';
 import Timer from '../../UI/atoms/Timer';
-import TopPanel from '../../UI/molecules/TopPanel';
+import TopPanel from './TopPanel/TopPanel';
 import TopPanelMob from '../../UI/molecules/TopPanelMob';
 import TopMainLeft from '../../UI/organisms/TopMainLeft';
 import TopMainRight from '../../UI/organisms/TopMainRight';
@@ -28,6 +28,9 @@ const Top = ({ modal, setModal }) => {
       <div className={styles.content}>
         <div className={styles.timerAndButtonBox}>
           <TimerAndButtonBox page = 'top'/>
+        </div>
+        <div className={styles.topPanel}>
+          <TopPanel />
         </div>
         <div className = {styles.blocks}>
         <LeftBlock />

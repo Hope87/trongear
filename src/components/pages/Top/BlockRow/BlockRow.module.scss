@@ -24,6 +24,12 @@
         margin-left: -45px;
         padding: 0 105px 0 50px;
         justify-content: space-between;
+        @media screen and (max-width: 1220px) {
+            padding-right: 20px;
+        }
+        @media screen and (max-width: 1130px) {
+            padding-right: 105px;
+        }
     }
     .leftBlock::before {
             content: '#';

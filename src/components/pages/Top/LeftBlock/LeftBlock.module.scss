@@ -1,6 +1,9 @@
 .leftBlock {
     max-width: 855px;
     flex-grow: 1;
+    @media screen and (max-width: 1130px) {
+        max-width: none;
+    }
     > :not(:first-child) {
         margin-top: 8px;
     }
