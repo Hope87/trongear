@@ -10,7 +10,7 @@
   @media screen and (max-width: 576px) {
     background-position: center;
   }
-  .content{
+  .content {
     flex: 1 1 auto;
     padding: 0 90px;
 
@@ -26,11 +26,8 @@
       .line {
         display: flex;
         justify-content: center;
-        margin-top: 60px;
         min-width: 50px;
-        height: 442px;
       }
-
     }
   }
 }

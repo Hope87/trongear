@@ -1,8 +1,13 @@
 .leftBlockRow {
-    max-width: 785px;
-    display: flex;
-    justify-content: space-between;
-    > * {
-        flex-grow: 1;
-    }
+  max-width: 785px;
+  display: flex;
+  justify-content: space-between;
+  @media screen and (max-width: 1740px) {
+    flex-direction: column;
+    align-items: center;
+  }
+  > * {
+    flex-grow: 1;
+    width: 100%;
+  }
 }

@@ -1,143 +1,159 @@
 .rightBlockElement {
-    max-width: 240px;
-    height: 267px;
-    background-color: #373838;
-    clip-path: polygon(0 35px, 35px 0, 100% 0, 100% calc(100% - 35px), calc(100% - 35px) 100%, 0 100%);
+  width: 240px;
+  height: 267px;
+  background-color: #373838;
+  clip-path: polygon(
+    0 35px,
+    35px 0,
+    100% 0,
+    100% calc(100% - 35px),
+    calc(100% - 35px) 100%,
+    0 100%
+  );
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 3px;
+  box-sizing: border-box;
+  margin: 0 5px 5px 0;
+  .upBlock {
+    position: relative;
+    max-width: 234px;
+    width: 100%;
+    height: 227px;
+    background-color: #202020;
+    clip-path: polygon(0 62px, 62px 0, 100% 0, 100% 100%, 0 100%);
+    padding: 62px 20px 40px 30px;
+    box-sizing: border-box;
+    color: #ffffff;
+    font-style: italic;
+    .transactions {
+      font-size: 12px;
+      font-family: Calibri;
+      text-transform: uppercase;
+      .transactionsName {
+        margin-bottom: 50px;
+      }
+      .purchased {
+        font-family: 'Russo One';
+        font-weight: 400;
+        margin-bottom: 30px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        span {
+          font-family: 'Chakra Petch';
+          font-size: 24px;
+          position: relative;
+        }
+        ::before {
+          content: '';
+          position: absolute;
+          top: 50%;
+          left: -30px;
+          transform: translateY(-50%);
+          width: 24px;
+          height: 28px;
+          background-image: url('../../../LeftBlock/img/piramide.svg');
+          background-position: center;
+        }
+      }
+      .ago {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        span {
+          font-family: 'Chakra Petch';
+          position: relative;
+        }
+        ::before {
+          content: '';
+          position: absolute;
+          top: 50%;
+          left: -25px;
+          transform: translateY(-50%);
+          width: 20px;
+          height: 20px;
+          background-image: url('../../../../Top/RightBlock/RowBlock/Row/img/square.png');
+          background-size: cover;
+        }
+      }
+    }
+    .label {
+      position: absolute;
+      top: 0;
+      right: 0;
+      width: 100%;
+      height: 28px;
+      background: linear-gradient(
+        45deg,
+        transparent 62px,
+        #ed263a 0,
+        #8b0513 70%
+      );
+      display: flex;
+      align-items: center;
+      justify-content: flex-end;
+      padding-right: 18px;
+      box-sizing: border-box;
+      text-shadow: 4px 5px 13px rgba(18, 18, 18, 0.08);
+      color: #ffffff;
+      font-family: Calibri;
+      font-size: 16px;
+      text-transform: uppercase;
+    }
+    .time {
+      .hour,
+      .day {
+        margin-bottom: 15px;
+        font-family: Calibri;
+        font-size: 12px;
+      }
+      span {
+        display: block;
+        font-family: 'Chakra Petch';
+        font-size: 40px;
+      }
+    }
+    .amount {
+      font-family: 'Chakra Petch';
+      font-size: 40px;
+      margin-top: 14px;
+    }
+  }
+  .downBlock {
+    max-width: 234px;
+    width: 100%;
+    height: 34px;
+    background: linear-gradient(-45deg, transparent 24px, #121213 0);
+    padding-left: 30px;
+    box-sizing: border-box;
+    text-shadow: 4px 5px 13px rgba(18, 18, 18, 0.08);
+    color: #777777;
+    font-style: italic;
     display: flex;
     flex-direction: column;
-    align-items: center;
-    padding: 3px;
-    box-sizing: border-box;
-    .upBlock {
-        position: relative;
-        max-width: 234px;
-        width: 100%;
-        height: 227px;
-        background-color: #202020;
-        clip-path: polygon(0 62px, 62px 0, 100% 0, 100% 100%, 0 100%);
-        padding: 62px 20px 40px 30px;
-        box-sizing: border-box;
-        color: #ffffff;
-        font-style: italic;
-        .transactions {
-            font-size: 12px;
-            font-family: Calibri;
-            text-transform: uppercase;
-            .transactionsName {
-                margin-bottom: 50px;
-            }
-            .purchased {
-                font-family: "Russo One";
-                font-weight: 400;
-                margin-bottom: 30px;
-                display: flex;
-                justify-content: space-between;
-                align-items: center;
-                span {
-                    font-family: "Chakra Petch";
-                    font-size: 24px;
-                    position: relative;
-                }
-                ::before {
-                    content: "";
-                    position: absolute;
-                    top: 50%; left: -30px;
-                    transform: translateY(-50%);
-                    width: 24px;
-                    height: 28px;
-                    background-image: url('../../../LeftBlock/img/piramide.svg');
-                    background-position: center;
-                }
-            }
-            .ago {
-                display: flex;
-                justify-content: space-between;
-                align-items: center;
-                span {
-                    font-family: "Chakra Petch";
-                    position: relative;
-                }
-                ::before {
-                    content: "";
-                    position: absolute;
-                    top: 50%; left: -25px;
-                    transform: translateY(-50%);
-                    width: 20px;
-                    height: 20px;
-                    background-image: url('../../../../Top/RightBlock/RowBlock/Row/img/square.png');
-                    background-size: cover;
-                }
-            }
-        }
-        .label {
-            position: absolute;
-            top: 0;
-            right: 0;
-            width: 100%;
-            height: 28px;
-            background: linear-gradient(45deg, transparent 62px, #ed263a 0, #8b0513 70%);
-            display: flex;
-            align-items: center;
-            justify-content: flex-end;
-            padding-right: 18px;
-            box-sizing: border-box;
-            text-shadow: 4px 5px 13px rgba(18, 18, 18, 0.08);
-            color: #ffffff;
-            font-family: Calibri;
-            font-size: 16px;
-            text-transform: uppercase;
-        }
-        .time {
-            .hour, .day {
-                margin-bottom: 15px;
-                font-family: Calibri;
-                font-size: 12px;
-            }
-            span {
-                display: block;
-                font-family: "Chakra Petch";
-                font-size: 40px;
-            }
-        }
-        .amount {
-            font-family: "Chakra Petch";
-            font-size: 40px;
-            margin-top: 14px;
-        }
+    justify-content: center;
+    .numberTrx {
+      font-family: 'Chakra Petch';
+      font-size: 14px;
     }
-    .downBlock {
-        max-width: 234px;
-        width: 100%;
-        height: 34px;
-        background: linear-gradient(-45deg, transparent 24px, #121213 0);
-        padding-left: 30px;
-        box-sizing: border-box;
-        text-shadow: 4px 5px 13px rgba(18, 18, 18, 0.08);
-        color: #777777;
-        font-style: italic;
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        .numberTrx {
-            font-family: "Chakra Petch";
-            font-size: 14px;
-        }
-        .numberTrx::before {
-            content: '+ ';
-        }
-        .numberTrx::after {
-            content: ' TRX';
-        }
-        .affiliatePayout {
-            font-family: Calibri;
-            font-size: 12px;
-        }
-        .dollars {
-            font-family: "Chakra Petch";
-            font-size: 14px;
-        }
-        .dollars::after {
-            content: ' ($)';
-        }
+    .numberTrx::before {
+      content: '+ ';
     }
+    .numberTrx::after {
+      content: ' TRX';
+    }
+    .affiliatePayout {
+      font-family: Calibri;
+      font-size: 12px;
+    }
+    .dollars {
+      font-family: 'Chakra Petch';
+      font-size: 14px;
+    }
+    .dollars::after {
+      content: ' ($)';
+    }
+  }
 }
