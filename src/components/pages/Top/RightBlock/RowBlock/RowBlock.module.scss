@@ -1,13 +1,20 @@
 .rowBlock {
-    max-width: 740px;
-    height: 315px;
-    background-color: #272829;
-    margin-left: 120px;
-    padding: 20px 163px 20px 49px;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    @media screen and (max-width: 1220px) {
-        padding-right: 80px;
-    }
+  height: 315px;
+  background-color: #272829;
+  margin-left: 120px;
+  padding: 20px 163px 20px 49px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  @media screen and (max-width: 1220px) {
+    padding-right: 80px;
+  }
+  @media screen and (max-width: 1130px) {
+    padding-right: 160px;
+  }
+  @media screen and (max-width: 620px) {
+    padding-right: 60px;
+    padding-left: 20px;
+    margin-left: 80px;
+  }
 }

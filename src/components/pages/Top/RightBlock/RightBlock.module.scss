@@ -1,11 +1,14 @@
 .rightBlock {
-    max-width: 855px;
-    flex-grow: 1;
-    > :not(:first-child) {
-        margin-top: 8px;
-        box-sizing: border-box;
-    }
-    >:last-child {
-        margin-top: 0;
-    }
+  max-width: 855px;
+  flex-grow: 1;
+  @media screen and (max-width: 1130px) {
+    max-width: none;
+  }
+  > :not(:first-child) {
+    margin-top: 8px;
+    box-sizing: border-box;
+  }
+  > :last-child {
+    margin-top: 0;
+  }
 }
