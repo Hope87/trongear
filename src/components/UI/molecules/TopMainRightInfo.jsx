@@ -9,6 +9,9 @@ const useStyles = makeStyles({
     marginLeft: '60px',
     opacity: '0.7',
     clipPath: 'polygon(0% 0%, 0% 0%, 100% 0%, 100% 85%, 90% 100%, 0% 100%)',
+    '@media screen and (max-width: 576px)': {
+      backgroundColor: 'inherit',
+    },
   },
 
   topMainRightInfoRow: {

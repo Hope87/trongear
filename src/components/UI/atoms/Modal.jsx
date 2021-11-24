@@ -28,12 +28,16 @@ const Modal = () => {
       boxShadow: '0 0 35px rgba(17, 17, 17, 0.25)',
       position: 'absolute',
       left: '50%',
-      top: '18%',
-      transform: 'translate(-50%, -50%)',
+      //top: '18%',
+      top: '20px',
+      transform: 'translate(-50%, 0)',
       animationDuration: '2s',
       animationName: '$modal',
       animationFillMode: 'forwards',
       zIndex: '12',
+      '@media screen and (max-width: 576px)': {
+        top: '100px',
+      },
 
       '& img': {
         opacity: '0.7',
@@ -46,6 +50,7 @@ const Modal = () => {
       zIndex: '345',
       top: '80px',
       left: '40px',
+
 
       '& p': {
         color: 'var(--white)',

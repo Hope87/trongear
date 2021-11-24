@@ -1,0 +1,75 @@
+.row {
+  text-shadow: 0 3px 7px rgba(18, 18, 18, 0.08);
+  font-family: Calibri;
+  font-size: 28px;
+  font-style: italic;
+  text-transform: uppercase;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  @media screen and (max-width: 620px) {
+    font-size: 20px;
+  }
+  @media screen and (max-width: 480px) {
+    font-size: 16px;
+  }
+  .number {
+    position: relative;
+    display: flex;
+    align-items: flex-end;
+    font-family: 'Chakra Petch';
+    font-size: 40px;
+    @media screen and (max-width: 620px) {
+      font-size: 20px;
+    }
+    @media screen and (max-width: 480px) {
+      font-size: 16px;
+    }
+  }
+  .trx::after {
+    position: absolute;
+    content: 'trx';
+    font-size: 24px;
+    left: 35px;
+    bottom: 5px;
+    @media screen and (max-width: 620px) {
+      bottom: 0px;
+      left: 20px;
+      font-size: 20px;
+    }
+    @media screen and (max-width: 480px) {
+      font-size: 16px;
+    }
+  }
+  .title {
+    position: relative;
+  }
+  .title::before {
+    content: '';
+    position: absolute;
+    width: 32px;
+    height: 30px;
+    background-size: cover;
+    left: -150px;
+    top: 50%;
+    transform: translateY(-50%);
+    @media screen and (max-width: 620px) {
+      left: -80px;
+    }
+  }
+  .squareImg::before {
+    background-image: url('./img/square.png');
+  }
+  .starImg::before {
+    background-image: url('./img/star.png');
+  }
+  .pyramidImg::before {
+    background-image: url('../../../img/spanImg.png');
+  }
+}
+.colorWhite {
+  color: #ffffff;
+}
+.colorYellow {
+  color: #eaff00;
+}

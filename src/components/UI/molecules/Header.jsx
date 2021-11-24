@@ -1,8 +1,7 @@
-import React, { useRef } from 'react';
+import React, { useRef, useState } from 'react';
 import { Link } from 'react-router-dom';
 import { makeStyles } from '@material-ui/core/styles';
 import burger from '../../../images/burger.svg';
-import Links from '../../UI/atoms/Links';
 import useOutsideModal from '../../helpers/useOutsideModal';
 
 const useStyles = makeStyles({
@@ -12,6 +11,15 @@ const useStyles = makeStyles({
     backgroundColor: 'var(--dark)',
     position: 'relative',
     clipPath: 'polygon(0% 0%, 0% 0%, 100% 0%, 97% 100%, 100% 100%, 3% 100%)',
+    '@media screen and (max-width: 576px)': {
+      boxShadow: '0px 9px 32px 0px rgba(5,5,5,0.57)',
+      backgroundColor: '#000000',
+      clipPath: 'none',
+      minHeight: '82px',
+      display: 'flex',
+      alignItems: 'center',
+      justifyContent: 'space-around',
+    },
 
     '& h5': {
       textShadow: '0 6px 13px rgba(18, 18, 18, 0.08)',
@@ -28,6 +36,9 @@ const useStyles = makeStyles({
       top: '30%',
       right: '5%',
       cursor: 'pointer',
+      '@media screen and (max-width: 576px)': {
+        position: 'static',
+      },
     },
   },
   mainHeaderBurger: {
@@ -39,15 +50,9 @@ const useStyles = makeStyles({
     transform: 'translate(-50%, -50%)',
     cursor: 'pointer',
     zIndex: '2',
-  },
-  mainLinks: {
-    position: 'absolute',
-    top: '0',
-    right: '15%',
-    zIndex: '1',
-
-    '@media screen and (max-width: 679.98px)': {
-      left: '0',
+    '@media screen and (max-width: 576px)': {
+      position: 'static',
+      transform: 'translate(0, 0)',
     },
   },
   headerLogo: {
@@ -75,6 +80,15 @@ const Header = ({ headerModal, setHeaderModal, headerLogo }) => {
 
   const modalRef = useRef(null);
 
+  const [state, setState] = useState('eng');
+  const chehgeLanguage = () => {
+    if(state === 'eng'){
+      setState('рус');
+    }
+    else {
+      setState('eng');
+    }
+  }
   useOutsideModal(modalRef, setHeaderModal);
 
   return (
@@ -85,10 +99,7 @@ const Header = ({ headerModal, setHeaderModal, headerLogo }) => {
         src={burger}
         alt="burger"
       />
-      <div className={classes.mainLinks}>
-        <Links />
-      </div>
-      <h5>eng</h5>
+      <h5 onClick={chehgeLanguage}>{state}</h5>
       {headerLogo && (
         <div className={classes.headerLogo}>
           <Link to="/">

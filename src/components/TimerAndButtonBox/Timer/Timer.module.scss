@@ -1,0 +1,29 @@
+.timer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 371px;
+    text-shadow: 1px 1px 3px rgba(18, 18, 18, 0.08);
+    color: #ffffff;
+    font-family: "Russo One";
+    font-size: 25px;
+    font-weight: 400;
+    font-style: italic;
+    line-height: 37.97px;
+    text-transform: uppercase;
+    @media screen and (max-width: 767px) {
+        font-size: 20px;
+    }
+    .timerBox{
+        display: flex;
+        > :not(:last-child) {
+            margin-right: 20px;
+            @media screen and (max-width: 374px) {
+                margin-right: 15px;
+            }
+        }
+        @media screen and (max-width: 767px) {
+            margin: 30px 0;
+        }
+    }
+}

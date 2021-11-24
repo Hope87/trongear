@@ -10,6 +10,9 @@ const useStyles = makeStyles({
     justifyContent: 'space-around',
     flexWrap: 'wrap',
     marginLeft: '60px',
+    "@media screen and (max-width: 576px)": {
+      marginLeft: '0',
+    },
   },
 });
 

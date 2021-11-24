@@ -1,65 +1,45 @@
-import React from 'react';
-import Grid from '@material-ui/core/Grid';
-import Header from '../../UI/molecules/Header';
-import styles from './Top.module.scss';
-import logo from '../../../images/logo.png';
-import Modal from '../../UI/atoms/Modal';
-import Timer from '../../UI/atoms/Timer';
-import TopPanel from '../../UI/molecules/TopPanel';
-import TopMainLeft from '../../UI/organisms/TopMainLeft';
-import TopMainRight from '../../UI/organisms/TopMainRight';
-import ButtonsBox from '../../UI/molecules/ButtonsBox';
+import React from 'react'
+import Grid from '@material-ui/core/Grid'
+import Header from '../../Header/Header'
+import styles from './Top.module.scss'
+import logo from '../../../images/logo.png'
+import ModalWindow from '../../ModalWindow/ModalWindow'
+import Timer from '../../UI/atoms/Timer'
+import TopPanel from '../../TopPanel/TopPanel'
+import TopPanelMob from '../../UI/molecules/TopPanelMob'
+import TopMainLeft from '../../UI/organisms/TopMainLeft'
+import TopMainRight from '../../UI/organisms/TopMainRight'
+import ButtonsBox from '../../UI/molecules/ButtonsBox'
+import HeaderForMobile from '../../UI/molecules/HeaderForMobile'
+import leftImage from '../../../images/topFooterLeftImage.png'
+import rightImage from '../../../images/topFooterRightImage.png'
+import Footer from '../../Footer/Footer'
+import footerLine from '../../../images/TopFooterLine.png'
+import TimerAndButtonBox from '../../TimerAndButtonBox/TimerAndButtonBox'
+
+import LeftBlock from './LeftBlock/LeftBlock'
+import RightBlock from './RightBlock/RightBlock'
 
 const Top = ({ modal, setModal }) => {
   return (
     <div className={styles.top}>
-      <Grid container>
-        <Grid item xs={12}>
-          <Header headerLogo={logo} headerModal={modal} setHeaderModal={setModal} />
-
-          {modal && <Modal />}
-        </Grid>
-
-        <Grid item xs={12}>
-          {!modal ? (
-            <div className={styles.topTimer}>
-              <Timer />
-            </div>
-          ) : (
-            <div style={{ opacity: 0 }} className={styles.topTimer}>
-              <Timer />
-            </div>
-          )}
-        </Grid>
-
-        <Grid item xs={12}>
-          <div className={styles.topBtn} style={{ marginTop: '-60px' }}>
-            <ButtonsBox />
-          </div>
-        </Grid>
-
-        <Grid item xs={12}>
+      <Header modal={modal} setModal={setModal} isLogo={true} />
+      {modal && <ModalWindow setModal={setModal} />}
+      <div className={styles.content}>
+        <div className={styles.timerAndButtonBox}>
+          <TimerAndButtonBox page='top' />
+        </div>
+        <div className={styles.topPanel}>
           <TopPanel />
-        </Grid>
-
-        <Grid item xs={12} lg={6}>
-          <TopMainLeft />
-        </Grid>
-
-        <Grid item xs={12} lg={6}>
-          <TopMainRight />
-        </Grid>
-
-        <Grid item xs={12}>
-          <div className={styles.topFooter}>
-            <div>
-              <h4 className={styles.topFooterTitle}>EARN BY PROMOTING</h4>
-            </div>
-          </div>
-        </Grid>
-      </Grid>
+        </div>
+        <div className={styles.blocks}>
+          <LeftBlock />
+          <RightBlock />
+        </div>
+      </div>
+      <Footer page='top' />
     </div>
-  );
-};
+  )
+}
 
-export default Top;
+export default Top

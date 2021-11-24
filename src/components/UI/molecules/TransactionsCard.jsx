@@ -8,6 +8,10 @@ const useStyles = makeStyles({
     height: '260px',
     background: 'var(--gray-dark)',
     clipPath: 'polygon(0% 14%, 14% 0%, 100% 0%, 100% 85%, 85% 100%, 0% 100%)',
+    marginBottom: '15px',
+    '@media screen and (max-width: 576px)': {
+      minWidth: '333px',
+    }
   },
 
   transactionsHeader: {
@@ -38,7 +42,7 @@ const useStyles = makeStyles({
     '& p': {
       color: 'var(--white)',
       fontFamily: 'Calibri',
-      fontSize: '12px',
+      fontSize: '16px',
       fontStyle: 'italic',
       letterSpacing: 'normal',
       lineHeight: 'normal',
@@ -51,12 +55,12 @@ const useStyles = makeStyles({
     display: 'flex',
     justifyContent: 'space-between',
     alignItems: 'center',
-    marginTop: '60px',
+    marginTop: '44px',
 
     '& p': {
       color: 'var(--white)',
-      fontFamily: 'Russo One',
-      fontSize: '12px',
+      fontFamily: 'Calibri',
+      fontSize: '16px',
       fontWeight: '400',
       fontStyle: 'italic',
       letterSpacing: 'normal',

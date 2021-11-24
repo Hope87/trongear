@@ -1,0 +1,133 @@
+.footer {
+  position: relative;
+  display: flex;
+  justify-content: space-between;
+  margin-top: 16px;
+  > :nth-child(1),
+  > :nth-child(2) {
+    max-width: 299px;
+    flex-grow: 1;
+    height: 90px;
+    background-color: #0e0e0e;
+    @media screen and (max-width: 767px) {
+      height: 62px;
+    }
+  }
+  > :nth-child(1) {
+    @media screen and (max-width: 767px) {
+      transform: scale(0);
+    }
+  }
+  .rightDiv {
+    background: linear-gradient(135deg, transparent 63px, #0e0e0e 0);
+    @media screen and (max-width: 767px) {
+      transform: scale(0);
+    }
+  }
+  .rightDivMainPage {
+    max-width: 411px;
+    height: 113px;
+    background: linear-gradient(
+      135deg,
+      transparent 79px,
+      #000000 0,
+      #333800 65%
+    );
+    @media screen and (max-width: 767px) {
+      height: 62px;
+      background: linear-gradient(
+        150deg,
+        transparent 55px,
+        #000000 0,
+        #333800 65%
+      );
+      max-width: 363px;
+    }
+  }
+  > :nth-child(1) {
+    clip-path: polygon(0 0, calc(100% - 90px) 0, 100% 100%, 0 100%);
+  }
+  > :nth-child(2) {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    @media screen and (max-width: 767px) {
+      justify-content: flex-end;
+      padding-right: 55px;
+      box-sizing: border-box;
+    }
+    @media screen and (max-width: 375px) {
+      padding-right: 20px;
+    }
+  }
+  > .rightDivMainPage::before {
+    content: '';
+    width: 80px;
+    height: 66px;
+    position: absolute;
+    left: -15px;
+    bottom: 0;
+    z-index: -1;
+    background: linear-gradient(135deg, transparent 45px, #eaff00 0);
+    @media screen and (max-width: 767px) {
+      width: 100px;
+      height: 35px;
+      background: linear-gradient(150deg, transparent 45px, #eaff00 0);
+      left: -35px;
+    }
+  }
+  .leftDiv {
+    transform: scale(0);
+  }
+  .topFooterLine,
+  .racingFooterLine {
+    width: 100%;
+    position: absolute;
+    top: 0;
+    left: 50%;
+    z-index: -1;
+    transform: translate(-50%, 0);
+    color: #ffffff;
+    font-family: 'Russo One';
+    font-weight: 400;
+    font-style: italic;
+    text-transform: uppercase;
+  }
+  .topFooterLine {
+    max-width: 1575px;
+    height: 65px;
+    background-image: url('./img/topFooterLine.png');
+    font-size: 23px;
+    text-align: center;
+    @media screen and (max-width: 767px) {
+      background: none;
+      font-size: 20px;
+    }
+  }
+  .racingFooterLine {
+    max-width: 905px;
+    height: 43px;
+    background-image: url('./img/racing_line.png');
+    font-size: 18px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    @media screen and (max-width: 767px) {
+      background: none;
+      font-size: 20px;
+    }
+  }
+  .footerMobileImg {
+    display: none;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    width: 100%;
+    justify-content: space-between;
+    @media screen and (max-width: 767px) {
+      display: flex;
+    }
+  }
+}
