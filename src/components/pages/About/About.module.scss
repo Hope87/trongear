@@ -1,250 +1,98 @@
 .about {
-    background: url('../../../images/bacground_1920x1080.png') no-repeat;
-    width: 100%;
-    height: 100vh;
-    position: fixed;
-    background-size: cover;
-    overflow: auto;
-    display: flex;
-    flex-direction: column;
-    background-size: cover;
-    @media screen and (max-width: 576px) {
-        background-position: center;
+  background: url('../../../images/bacground_1920x1080.png') no-repeat;
+  width: 100%;
+  height: 100vh;
+  position: fixed;
+  background-size: cover;
+  overflow: auto;
+  display: flex;
+  flex-direction: column;
+  background-size: cover;
+  @media screen and (max-width: 576px) {
+    background-position: center;
+  }
+  .content {
+    flex: 1 1 auto;
+    padding: 0 90px;
+
+    .timerAndButtonBox {
+      margin-top: 16px;
+      @media screen and (max-width: 767px) {
+        margin-top: 40px;
+      }
     }
-    
-    .content {
-        flex: 1 1 auto;
-        padding: 0 90px;
+
+    .middleBlock {
+      margin-top: 25px;
+      display: flex;
+      justify-content: space-between;
+      @media screen and (max-width: 767px) {
+        flex-direction: column;
+      }
+      .text {
+        clear: both;
+        color: #ffffff;
+        font-family: 'Russo One';
+        font-size: 24px;
+        font-weight: 400;
+        font-style: normal;
+        letter-spacing: normal;
+        line-height: normal;
+        padding-bottom: 42px;
         @media screen and (max-width: 576px) {
-            padding: 0 5px;
+          text-align: center;
+          font-size: 20px;
         }
+      }
 
-        .timerAndButtonBox {
-            margin-top: 16px;
-            @media screen and (max-width: 767px) {
-                margin-top: 40px;
-              }
+      .leftBlock {
+        max-width: 745px;
+        padding-right: 15px;
+        flex-basis: 45%;
+        display: flex;
+        flex-direction: column;
+        .buttons {
+          @media screen and (max-width: 1065px) {
+            margin-right: -300px;
+          }
         }
-        
-        .middleBlock {
-            margin-top: 25px;
-            display: flex;
-            flex-wrap: wrap;
+      }
 
-            .buttons {
-                @media screen and (max-width: 576px) {
-                    display: flex;
-                    flex-wrap: wrap;
-                    justify-content: space-around;
-                    > * {
-                        margin: 22px 15px;
-                    }
-                }
-                > :not(:last-child) {
-                    margin-right: 22px;
-                    // @media screen and (max-width: 576px) {
-                    //     margin-right: 0;
-                    // }
-                }
-                > * {
-                    margin-bottom: 22px;
-                }
-                @media screen and (max-width: 576px) {
-                    margin-bottom: 15px;
-                }
-                @media screen and (max-width: 370px) {
-                    margin-bottom: 15px;
-                }
+      .rightBlock {
+        max-width: 910px;
+        display: flex;
+        flex-basis: 55%;
+        flex-direction: column;
+        align-items: center;
 
-            }
-
-            .text {
-                clear: both;
-                color: #ffffff;
-                font-family: "Russo One";
-                font-size: 24px;
-                font-weight: 400;
-                font-style: normal;
-                letter-spacing: normal;
-                line-height: normal;
-                padding-bottom: 42px;
-                @media screen and (max-width: 576px)  {
-                    text-align: center;
-                    font-size: 20px;
-                }
-            }
-
-            .left {
-                display: flex;
-                flex: 1 0 45%;
-
-                .leftBlock {
-                    max-width: 739px;
-                    padding-right: 15px;
-                }
-            }
-
-            .right {
-                display: flex;
-                justify-content: flex-end;
-                flex: 1 0 55%;
-                min-width: 450px;
-                @media screen and (max-width: 478px) {
-                   min-width: 320px;
-                }
-                
-                .rightBlock {
-                    max-width: 907px;
-                    display: flex;
-                    flex-direction: column;
-                    align-items: center;
-
-                    img {
-                        width: 100%;
-                        height: 100%;
-                        object-fit: cover;
-                    }
-
-                    .image {
-                        margin-bottom: 20px;
-                        position: relative;
-                        @media screen and (max-width: 576px) {
-                            margin-top: 12px;
-                            margin-bottom: 45px;
-                        }
-
-                        .car {
-                            width: 571px;
-                            height: 310px;
-                            position: absolute;
-                            left: 50%;
-                            top: 50%;
-                            transform: translate(-50%, -50%) scaleX(-1);
-                            @media screen and (max-width: 478px) {
-                                width: 320px;
-                                height: 173px;
-                            }
-                        }
-                    }
-                }
-            }
-        }
-    }
-    .footer {
-        margin-top: 50px;
-
-        .mobileFooter {
-            position: relative;
-            margin-bottom: 100px;
-             
-            .topFooterTitle {
-                color: var(--white);
-                font-family: 'Russo One';
-                font-size: 18px;
-                font-weight: 400;
-                font-style: italic;
-                letter-spacing: normal;
-                line-height: 25.5px;
-                text-align: center;
-                text-transform: uppercase;
-            }
-            
-            .imageContainer {
-                position: absolute;
-                width: 100%;
-                left: 50%;
-                top: 50%;
-                transform: translate(-50%, -50%);
-                display: flex;
-                justify-content: space-between;
-                .image {
-                    width: 32px;
-                    height: 102px;
-                    .img {
-                        width: 100%;
-                        height: 100%;
-                    }
-                }
-            }
-        }
-
-    }
-}
-
-.button {
-    width: 96px;
-    float: left;
-    @media screen and (max-width: 576px) {
-        width: 159px;
-        float: none;
-    }
-    @media screen and (max-width: 400px) {
-        width: 125px;
-    }
- a {
-    .buttonUp {
-        position: relative;
-        height: 92px;
-        @media screen and (max-width: 576px) {
-            height: 153px;
-        }
-        @media screen and (max-width: 400px) {
-            height: 120px;
-        }
         img {
-            width: 100%;
-            height: 100%;
-            object-fit: cover;
+          width: 100%;
+          height: 100%;
+          object-fit: cover;
         }
-        .innerImage {
+
+        .image {
+          margin-bottom: 20px;
+          position: relative;
+          @media screen and (max-width: 576px) {
+            margin-top: 12px;
+            margin-bottom: 45px;
+          }
+
+          .car {
+            width: 571px;
+            height: 310px;
             position: absolute;
             left: 50%;
             top: 50%;
-            transform: translate(-50%, -50%);
+            transform: translate(-50%, -50%) scaleX(-1);
+            @media screen and (max-width: 1010px) {
+              width: 320px;
+              height: 173px;
+            }
+          }
         }
+      }
     }
-     .buttonDown {
-        position: relative;
-        width: 79px;
-        height: 21px;
-        @media screen and (max-width: 576px) {
-            width: 133px;
-            height: 36px;
-        }
-        @media screen and (max-width: 400px) {
-            width: 110px;
-            height: 30px;
-        }
-        img {
-            width: 100%;
-            height: 100%;
-            object-fit: cover;
-        }
-        .buttonText {
-            position: absolute;
-            left: 50%;
-            top: 50%;
-            transform: translate(-70%, -50%);   
-            text-shadow: 0 0 8px rgba(18, 18, 18, 0.26);
-            color: #ffffff;
-            font-family: "Chakra Petch";
-            font-size: 10px;
-            font-weight: 400;
-            font-style: italic;
-            letter-spacing: normal;
-            line-height: normal;
-            text-align: left;
-            text-transform: uppercase;
-            font-style: normal;
-            letter-spacing: normal;
-            line-height: normal;
-            @media screen and (max-width: 576px) {
-                font-size: 17px;
-            }
-            @media screen and (max-width: 400px) {
-                font-size: 14px;
-            }
-        }
-     }
- }
+  }
 }

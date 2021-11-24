@@ -17,11 +17,14 @@ const Footer = ({ page }) => {
       <div className={styleRightDiv}>
         <Links />
       </div>
-      {page == 'top' && (
+      {page === 'top' && (
         <div className={styles.topFooterLine}>earn by promoting</div>
       )}
-      {page == 'racing' && (
+      {page === 'racing' && (
         <div className={styles.racingFooterLine}>earn by promoting</div>
+      )}
+      {page === 'about' && (
+        <div className={styles.aboutFooterLine}>earn by promoting</div>
       )}
       {page !== 'main' && (
         <div className={styles.footerMobileImg}>
