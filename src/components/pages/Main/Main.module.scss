@@ -8,8 +8,8 @@
   position: fixed;
   overflow: auto;
 
-  .content{
-     flex: 1 1 auto;
+  .content {
+    flex: 1 1 auto;
     padding: 0 90px;
     @media screen and (max-width: 920px) {
       padding: 0 10px;
@@ -21,7 +21,7 @@
         margin-top: 40px;
       }
     }
-  
+
     .logo {
       margin-top: 100px;
       width: 825px;
@@ -50,7 +50,7 @@
       background: linear-gradient(to right, transparent 5px, #eaff00 70%);
       clip-path: polygon(0 0, 100% 0, calc(100% - 62px) 100%, 0 100%);
       color: #191919;
-      font-family: "Russo One";
+      font-family: 'Russo One';
       font-size: 65px;
       font-weight: 400;
       font-style: italic;
@@ -89,7 +89,7 @@
       max-width: 690px;
     }
   }
-  .footer{
+  .footer {
     .mainFooter {
       width: 100%;
       position: relative;

@@ -26,6 +26,14 @@ const Footer = ({ page }) => {
       {page === 'about' && (
         <div className={styles.aboutFooterLine}>earn by promoting</div>
       )}
+      {page === 'garage' && (
+        <div className={styles.garageFooterLine}>
+          <span>enter the race</span>
+          you are presented with 5 garages, with different levels of cars The
+          first profit you will receive in an hour after participation in the
+          race!
+        </div>
+      )}
       {page !== 'main' && (
         <div className={styles.footerMobileImg}>
           <img src={leftImg} alt='left' />
