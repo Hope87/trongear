@@ -1,16 +1,10 @@
 import React from 'react'
 import styles from './About.module.scss'
 import Header from '../../Header/Header'
-import logo from '../../../images/logo.png'
 import ModalWindow from '../../ModalWindow/ModalWindow'
-import Timer from '../../UI/atoms/Timer'
 import garage from '../../../images/About_page_garage.png'
-
 import Footer from '../../Footer/Footer'
 import mersedes from '../../../images/cars/G_5_cars/on/4_amg.png'
-import HeaderForMobile from '../../UI/molecules/HeaderForMobile'
-import leftImage from '../../../images/topFooterLeftImage.png'
-import rightImage from '../../../images/topFooterRightImage.png'
 import TimerAndButtonBox from '../../TimerAndButtonBox/TimerAndButtonBox'
 import AboutButtonBox from './AboutButtonBox/AboutButtonBox'
 

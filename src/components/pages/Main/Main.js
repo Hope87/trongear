@@ -2,11 +2,6 @@ import React from 'react'
 import styles from './Main.module.scss'
 import Header from '../../Header/Header'
 import ModalWindow from '../../ModalWindow/ModalWindow'
-import Timer from '../../UI/atoms/Timer'
-import MainDescription from '../../UI/organisms/MainDescription'
-import Links from '../../UI/atoms/Links'
-import footerLogoForMobile from '../../../images/footerLogoForMobile.png'
-import footerLogoForMobileSmall from '../../../images/footerLogoForMobileSmall.png'
 import LogoTrongear from '../../LogoTrongear/LogoTrongear'
 import MainInfo from './MainInfo/MainInfo'
 import TimerAndButtonBox from '../../TimerAndButtonBox/TimerAndButtonBox'
@@ -17,7 +12,7 @@ const Main = ({ modal, setModal }) => {
     <div className={styles.main}>
       <div className={styles.header}>
         <Header modal={modal} setModal={setModal} />
-        {modal && <ModalWindow setModal={setModal} />}
+        {modal && <ModalWindow setModal={setModal} isMainPage={true} />}
       </div>
       <div className={styles.content}>
         <div className={styles.timerAndButtonBox}>
