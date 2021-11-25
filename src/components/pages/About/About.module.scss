@@ -39,7 +39,7 @@
         letter-spacing: normal;
         line-height: normal;
         padding-bottom: 42px;
-        @media screen and (max-width: 576px) {
+        @media screen and (max-width: 767px) {
           text-align: center;
           font-size: 20px;
         }
@@ -54,6 +54,9 @@
         .buttons {
           @media screen and (max-width: 1065px) {
             margin-right: -300px;
+          }
+          @media screen and (max-width: 767px) {
+            margin-right: 0;
           }
         }
       }
