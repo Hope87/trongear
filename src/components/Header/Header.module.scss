@@ -4,7 +4,7 @@
   align-items: center;
   justify-content: space-between;
   min-height: 60px;
-  background-color: #161616;
+  background-color: #131212;
   clip-path: polygon(0 0, 100% 0, calc(100% - 60px) 100%, 60px 100%);
   @media screen and (max-width: 767px) {
     clip-path: none;

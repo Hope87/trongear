@@ -1,81 +1,35 @@
-import React from "react";
-import Grid from "@material-ui/core/Grid";
-import styles from "./GarageMenu.module.scss";
-import Header from "../../UI/molecules/Header";
-import logo from "../../../images/logo.png";
-import GarageCards from "../../UI/organisms/GarageCards";
-import GarageMenuLeft from "../../UI/organisms/GarageMenuLeft";
-import Timer from "../../UI/atoms/Timer";
-import Modal from "../../UI/atoms/Modal";
-import ButtonsBox from "../../UI/molecules/ButtonsBox";
-import HeaderForMobile from "../../UI/molecules/HeaderForMobile";
-import Footer from "../../UI/molecules/Footer";
+import React from 'react'
+import Grid from '@material-ui/core/Grid'
+import styles from './GarageMenu.module.scss'
+import Header from '../../Header/Header'
+import ModalWindow from '../../ModalWindow/ModalWindow'
+import TimerAndButtonBox from '../../TimerAndButtonBox/TimerAndButtonBox'
+import logo from '../../../images/logo.png'
+import GarageCards from '../../UI/organisms/GarageCards'
+import GarageMenuLeft from '../../UI/organisms/GarageMenuLeft'
+import Timer from '../../UI/atoms/Timer'
+import Modal from '../../UI/atoms/Modal'
+import ButtonsBox from '../../UI/molecules/ButtonsBox'
+import HeaderForMobile from '../../UI/molecules/HeaderForMobile'
+import Footer from '../../UI/molecules/Footer'
 
 const GarageMenu = ({ modal, setModal, garageNumber }) => {
-  const width = window.innerWidth;
   return (
     <div className={styles.garageMenu}>
-      <Grid container>
-        <div className={styles.wrapper}>
-          <div className={styles.header}>
-            <Grid item xs={12}>
-              {width > 576 ? (
-                <Header
-                  headerLogo={logo}
-                  headerModal={modal}
-                  setHeaderModal={setModal}
-                />
-              ) : (
-                <HeaderForMobile
-                  headerModal={modal}
-                  setHeaderModal={setModal}
-                />
-              )}
-
-              {modal && <Modal />}
-            </Grid>
-          </div>
-          <div className={styles.content}>
-            <Grid item xs={12}>
-              {!modal ? (
-                <div className={styles.garageMenuTimer}>
-                  <Timer />
-                </div>
-              ) : (
-                <div style={{ opacity: 0 }} className={styles.garageMenuTimer}>
-                  <Timer />
-                </div>
-              )}
-            </Grid>
-
-            <Grid item xs={12}>
-              <div className={styles.garageMenuBtn}>
-                <ButtonsBox page={"garage"} />
-              </div>
-            </Grid>
-            <div className = {styles.garageItems}>
-              <Grid item xs={12} container>
-                <Grid item xs={12} lg={7}>
-                  <GarageMenuLeft garageNumber={garageNumber} />
-                </Grid>
-
-                <Grid item xs={12} lg={5}>
-                  <GarageCards />
-                </Grid>
-              </Grid>
-            </div>
-          </div>
-          <div className={styles.footerBox}>
-            {width > 576 && (
-              <div className={styles.footer}>
-                <Footer />
-              </div>
-            )}
-          </div>
+      <Header modal={modal} setModal={setModal} isLogo={true} />
+      {modal && <ModalWindow setModal={setModal} />}
+      <div className={styles.content}>
+        <div className={styles.timerAndButtonBox}>
+          <TimerAndButtonBox page='garageMenu' />
         </div>
-      </Grid>
-    </div>
-  );
-};
+        <div className={styles.garageItems}>
+          <GarageMenuLeft garageNumber={garageNumber} />
 
-export default GarageMenu;
+          <GarageCards />
+        </div>
+      </div>
+    </div>
+  )
+}
+
+export default GarageMenu

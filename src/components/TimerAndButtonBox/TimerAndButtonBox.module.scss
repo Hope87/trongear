@@ -8,7 +8,7 @@
         margin-right: 0;
       }
     }
-    > :last-child {
+    .secondTimer {
       @media screen and (max-width: 767px) {
         display: none;
       }
