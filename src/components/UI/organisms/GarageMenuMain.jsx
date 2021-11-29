@@ -1,14 +1,14 @@
-import React, { useState } from 'react';
-import { makeStyles } from '@material-ui/core/styles';
-import GarageMenuScale from '../molecules/GarageMenuScale';
-import garageElements from '../../../images/garage_elements-white-05.svg';
-import pointsRunk from '../../../images/points_runk_lvl_garage.svg';
-import unlock_icon from '../../../images/unlock_icon.png';
-import lock_icon from '../../../images/lock_icon.png';
+import React, { useState } from 'react'
+import { makeStyles } from '@material-ui/core/styles'
+import GarageMenuScale from '../molecules/GarageMenuScale'
+import garageElements from '../../../images/garage_elements-white-05.svg'
+import pointsRunk from '../../../images/points_runk_lvl_garage.svg'
+import unlock_icon from '../../../images/unlock_icon.png'
+import lock_icon from '../../../images/lock_icon.png'
 
-import wrapper from '../../../images/G_5.png';
-import Slider from '../atoms/Slider';
-import garageCarsImg from '../../helpers/garageCarsImg';
+import wrapper from '../../../images/G_5.png'
+import Slider from '../atoms/Slider'
+import garageCarsImg from '../../helpers/garageCarsImg'
 
 const useStyles = makeStyles({
   garageMenuMain: {
@@ -16,26 +16,25 @@ const useStyles = makeStyles({
     minHeight: '582px',
     background: `url('${wrapper}') no-repeat`,
     backgroundSize: 'cover',
-    backgroundPositionY: '-50px',
-
+    backgroundPositionY: '-50px'
   },
   garageMenuMainCars: {
     height: '440px',
     position: 'relative',
-  
+
     '& img': {
       width: '100%',
       height: '100%',
-      objectFit: 'cover',
-    },
+      objectFit: 'cover'
+    }
   },
   garageMenuMainSlider: {
     '@media screen and (max-width: 576px)': {
-      paddingTop: '110px',
+      paddingTop: '110px'
     },
     '@media screen and (max-width: 425px)': {
-      paddingTop: '150px',
-    },
+      paddingTop: '150px'
+    }
   },
   garageMenuMainText: {
     position: 'absolute',
@@ -52,7 +51,7 @@ const useStyles = makeStyles({
       letterSpacing: 'normal',
       lineHeight: 'normal',
       textAlign: 'left',
-      textTransform: 'uppercase',
+      textTransform: 'uppercase'
     },
 
     '& p': {
@@ -66,8 +65,8 @@ const useStyles = makeStyles({
       lineHeight: 'normal',
       textAlign: 'left',
       textTransform: 'uppercase',
-      marginTop: '10px',
-    },
+      marginTop: '10px'
+    }
   },
 
   garageMenuMainFlag: {
@@ -77,7 +76,7 @@ const useStyles = makeStyles({
     width: '160px',
     height: '40px',
     backgroundColor: 'var(--red)',
-    clipPath: 'polygon(0% 0%, 0% 0%, 100% 0%, 100% 100%, 100% 100%, 20% 100%)',
+    clipPath: 'polygon(0% 0%, 0% 0%, 100% 0%, 100% 100%, 100% 100%, 20% 100%)'
   },
   garageMenuMainFlagItems: {
     position: 'absolute',
@@ -92,7 +91,7 @@ const useStyles = makeStyles({
 
     '& img': {
       width: '20px',
-      height: '20px',
+      height: '20px'
     },
     '& p': {
       color: 'var(--white)',
@@ -104,14 +103,14 @@ const useStyles = makeStyles({
       lineHeight: 'normal',
       textAlign: 'left',
       textTransform: 'uppercase',
-      zIndex: '3',
-    },
+      zIndex: '3'
+    }
   },
   garageMenuMainScale: {
     position: 'relative',
     marginLeft: '40px',
     marginTop: '-80px',
-    zIndex: '4',
+    zIndex: '4'
   },
   garageMenuMainBtn: {
     position: 'absolute',
@@ -140,8 +139,8 @@ const useStyles = makeStyles({
       lineHeight: 'normal',
       textAlign: 'center',
       textTransform: 'uppercase',
-      cursor: 'pointer',
-    },
+      cursor: 'pointer'
+    }
   },
   garageLeftMainBtnImg: {
     width: '30px',
@@ -151,8 +150,8 @@ const useStyles = makeStyles({
     '& img': {
       width: '100%',
       height: '100%',
-      objectFit: 'contain',
-    },
+      objectFit: 'contain'
+    }
   },
 
   garageMenuMainPanel: {
@@ -160,7 +159,8 @@ const useStyles = makeStyles({
     maxWidth: '860px',
     height: '44px',
     marginTop: '40px',
-    background: 'linear-gradient(to right, var(--dark) 40%, rgba(0, 0, 0, 0.5) 95%)',
+    background:
+      'linear-gradient(to right, var(--dark) 40%, rgba(0, 0, 0, 0.5) 95%)',
     clipPath: 'polygon(0% 0%, 0% 0%, 94% 0%, 100% 100%, 90% 100%, 0% 100%)',
     display: 'flex',
     alignItems: 'center',
@@ -176,7 +176,7 @@ const useStyles = makeStyles({
       lineHeight: 'normal',
       textAlign: 'left',
       textTransform: 'uppercase',
-      marginLeft: '40px',
+      marginLeft: '40px'
     },
 
     '& span': {
@@ -189,31 +189,33 @@ const useStyles = makeStyles({
       lineHeight: 'normal',
       textAlign: 'left',
       textTransform: 'uppercase',
-      marginLeft: '20px',
-    },
-  },
-});
+      marginLeft: '20px'
+    }
+  }
+})
 
 const GarageMenuMain = ({ garageNumber }) => {
-  const classes = useStyles();
+  const classes = useStyles()
 
-  const totalCars = garageCarsImg.length;
+  const totalCars = garageCarsImg.length
 
   const [buttonOperation, setButtonOperation] = useState({
     title: 'unlock',
     img: lock_icon,
     color: 'var(--red)',
-    activeSlider: false,
-  });
+    activeSlider: false
+  })
 
-  const [carsCount, setCarsCount] = useState('');
+  const [carsCount, setCarsCount] = useState('')
 
   return (
     <div className={classes.garageMenuMain}>
       <div className={classes.garageMenuMainCars}>
         <div className={classes.garageMenuMainSlider}>
           <Slider
-            filteredCars={garageCarsImg.find((el) => el.name === garageNumber.title)}
+            filteredCars={garageCarsImg.find(
+              (el) => el.name === garageNumber.title
+            )}
             onActive={buttonOperation.activeSlider}
             onSetCarsCount={setCarsCount}
           />
@@ -221,7 +223,7 @@ const GarageMenuMain = ({ garageNumber }) => {
 
         <div className={classes.garageMenuMainFlag}>
           <div className={classes.garageMenuMainFlagItems}>
-            <img src={garageElements} alt="" />
+            <img src={garageElements} alt='' />
             <p>
               <span>0</span> TRX
             </p>
@@ -230,12 +232,17 @@ const GarageMenuMain = ({ garageNumber }) => {
 
         <div className={classes.garageMenuMainBtn}>
           <div className={classes.garageMenuMainBtnImg}>
-            <img src={buttonOperation.img} alt="lock_icon" />
+            <img src={buttonOperation.img} alt='lock_icon' />
           </div>
           <button
             style={{ backgroundColor: buttonOperation.color }}
             onClick={() =>
-              setButtonOperation({ title: 'buy', img: unlock_icon, color: 'var(--yellow)', activeSlider: true })
+              setButtonOperation({
+                title: 'buy',
+                img: unlock_icon,
+                color: 'var(--yellow)',
+                activeSlider: true
+              })
             }
           >
             {buttonOperation.title}
@@ -260,7 +267,7 @@ const GarageMenuMain = ({ garageNumber }) => {
         </span>
       </div>
     </div>
-  );
-};
+  )
+}
 
-export default GarageMenuMain;
+export default GarageMenuMain

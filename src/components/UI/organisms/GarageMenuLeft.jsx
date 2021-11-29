@@ -1,14 +1,14 @@
-import React from 'react';
-import { makeStyles } from '@material-ui/core/styles';
-import garageElements from '../../../images/garage_elements-white-05.svg';
-import GarageMenuMain from './GarageMenuMain';
+import React from 'react'
+import { makeStyles } from '@material-ui/core/styles'
+import garageElements from '../../../images/garage_elements-white-05.svg'
+import GarageMenuMain from './GarageMenuMain'
 
 const useStyles = makeStyles({
   garageLeft: {
     position: 'relative',
     '@media screen and (max-width: 576px)': {
-      margin: '0 12px',
-    },
+      margin: '0 12px'
+    }
   },
   garageLeftHeader: {
     maxWidth: '1020px',
@@ -32,13 +32,13 @@ const useStyles = makeStyles({
       textAlign: 'left',
       textTransform: 'uppercase',
       '@media screen and (max-width: 576px)': {
-        fontSize: '20px',
+        fontSize: '20px'
       },
       '@media screen and (max-width: 375px)': {
         fontSize: '16px',
-        marginLeft: '20px',
-      },
-    },
+        marginLeft: '20px'
+      }
+    }
   },
   garageLeftHeaderItems: {
     width: '170px',
@@ -49,7 +49,7 @@ const useStyles = makeStyles({
 
     '& img': {
       width: '30px',
-      height: '30px',
+      height: '30px'
     },
 
     '& p': {
@@ -59,19 +59,19 @@ const useStyles = makeStyles({
       letterSpacing: 'normal',
       lineHeight: 'normal',
       textAlign: 'left',
-      textTransform: 'uppercase',
-    },
-  },
-});
+      textTransform: 'uppercase'
+    }
+  }
+})
 
 const GarageMenuLeft = ({ garageNumber }) => {
-  const classes = useStyles();
+  const classes = useStyles()
   return (
     <div className={classes.garageLeft}>
       <div className={classes.garageLeftHeader}>
         <h2>{garageNumber.title}</h2>
         <div className={classes.garageLeftHeaderItems}>
-          <img src={garageElements} alt="" />
+          <img src={garageElements} alt='' />
           <p>
             <span>0</span> TRX
           </p>
@@ -80,7 +80,7 @@ const GarageMenuLeft = ({ garageNumber }) => {
 
       <GarageMenuMain garageNumber={garageNumber} />
     </div>
-  );
-};
+  )
+}
 
-export default GarageMenuLeft;
+export default GarageMenuLeft

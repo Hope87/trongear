@@ -12,6 +12,9 @@ import Modal from '../../UI/atoms/Modal'
 import ButtonsBox from '../../UI/molecules/ButtonsBox'
 import HeaderForMobile from '../../UI/molecules/HeaderForMobile'
 import Footer from '../../UI/molecules/Footer'
+import MenuItems from './MenuItems/MenuItems'
+import Garage from './Garage/Garage'
+import TiresWheels from './TiresWheels /TiresWheels'
 
 const GarageMenu = ({ modal, setModal, garageNumber }) => {
   return (
@@ -22,12 +25,21 @@ const GarageMenu = ({ modal, setModal, garageNumber }) => {
         <div className={styles.timerAndButtonBox}>
           <TimerAndButtonBox page='garageMenu' />
         </div>
-        <div className={styles.garageItems}>
-          <GarageMenuLeft garageNumber={garageNumber} />
-
-          <GarageCards />
+        <div className={styles.middleBlock}>
+          <div className={styles.leftBlock}>
+            <Garage garageNumber={garageNumber} />
+          </div>
+          <div className={styles.rightBlock}>
+            <div className={styles.menuItems}>
+              <MenuItems />
+            </div>
+            <div className={styles.tiresWheels}>
+              <TiresWheels />
+            </div>
+          </div>
         </div>
       </div>
+      <Footer page='garageMenu' />
     </div>
   )
 }

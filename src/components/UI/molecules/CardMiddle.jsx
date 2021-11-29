@@ -1,17 +1,19 @@
-import React, { useState } from 'react';
-import { makeStyles } from '@material-ui/core/styles';
-import frameOn from '../../../images/frame_1_on.svg';
-import frameOff from '../../../images/frame_1_off.svg';
-import tuningPanel from '../../../images/tuning_panel_1.svg';
-import lockIcon from '../../../images/lock_icon.png';
-import { LazyLoadImage } from 'react-lazy-load-image-component';
+import React, { useState } from 'react'
+import { makeStyles } from '@material-ui/core/styles'
+import frameOn from '../../../images/frame_1_on.svg'
+import frameOff from '../../../images/frame_1_off.svg'
+import tuningPanel from '../../../images/tuning_panel_1.svg'
+import lockIcon from '../../../images/lock_icon.png'
+import { LazyLoadImage } from 'react-lazy-load-image-component'
 
 const useStyles = makeStyles({
   cardMiddle: {
     maxWidth: '150px',
     height: '140px',
     position: 'relative',
-
+    '& >:not(:last-child)': {
+      marginRight: '10px'
+    },
     '& img': {
       width: '100%',
       height: '100%',
@@ -22,7 +24,7 @@ const useStyles = makeStyles({
         height: '100%',
         objectFit: 'contain',
         zIndex: '2',
-        position: 'relative',
+        position: 'relative'
       },
 
       '&:nth-child(2)': {
@@ -32,7 +34,7 @@ const useStyles = makeStyles({
         position: 'absolute',
         top: '0',
         left: '0',
-        zIndex: '1',
+        zIndex: '1'
       },
 
       '&:nth-child(3)': {
@@ -43,7 +45,7 @@ const useStyles = makeStyles({
         top: '50%',
         left: '50%',
         transform: 'translate(-50%, -50%)',
-        zIndex: '3',
+        zIndex: '3'
       },
 
       '&:nth-child(4)': {
@@ -54,16 +56,16 @@ const useStyles = makeStyles({
         top: '50%',
         left: '50%',
         transform: 'translate(-50%, -50%)',
-        zIndex: '4',
-      },
-    },
-  },
-});
+        zIndex: '4'
+      }
+    }
+  }
+})
 
 const CardMiddle = ({ image }) => {
-  const [frame, setFrame] = useState(frameOff);
+  const [frame, setFrame] = useState(frameOff)
 
-  const classes = useStyles();
+  const classes = useStyles()
 
   return (
     <div className={classes.cardMiddle}>
@@ -71,22 +73,28 @@ const CardMiddle = ({ image }) => {
         onMouseEnter={() => setFrame(frameOn)}
         onMouseOut={() => setFrame(frameOff)}
         src={frame}
-        alt="frame"
+        alt='frame'
       />
-      <LazyLoadImage 
+      <LazyLoadImage
         onMouseEnter={() => setFrame(frameOn)}
         onMouseOut={() => setFrame(frameOff)}
-      src={tuningPanel} alt="tuningPanel" />
-      <LazyLoadImage 
+        src={tuningPanel}
+        alt='tuningPanel'
+      />
+      <LazyLoadImage
         onMouseEnter={() => setFrame(frameOn)}
         onMouseOut={() => setFrame(frameOff)}
-        src={image} alt={image} />
-      <LazyLoadImage 
+        src={image}
+        alt={image}
+      />
+      <LazyLoadImage
         onMouseEnter={() => setFrame(frameOn)}
         onMouseOut={() => setFrame(frameOff)}
-        src={lockIcon} alt="lockIcon" />
+        src={lockIcon}
+        alt='lockIcon'
+      />
     </div>
-  );
-};
+  )
+}
 
-export default CardMiddle;
+export default CardMiddle

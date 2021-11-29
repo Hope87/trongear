@@ -1,0 +1,42 @@
+.menuItem {
+  position: relative;
+  width: 150px;
+  height: 142px;
+  border: 3px solid #000000;
+  box-sizing: border-box;
+  background: linear-gradient(to top left, transparent 27px, #000000 0) top left,
+    linear-gradient(to bottom right, transparent 40px, #000000 0px) bottom right;
+  background-size: 40px 40px;
+  background-repeat: no-repeat;
+  background-origin: border-box;
+  clip-path: polygon(
+    0 18px,
+    18px 0,
+    100% 0,
+    100% calc(100% - 18px),
+    calc(100% - 18px) 100%,
+    0 100%
+  );
+  background-color: #242525;
+  opacity: 0.7;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.2s ease 0s;
+  cursor: pointer;
+  .lock {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+  }
+}
+.menuItem:hover {
+  border-color: #ebff0e;
+  background: linear-gradient(to top left, transparent 27px, #ebff0e 0) top left,
+    linear-gradient(to bottom right, transparent 40px, #ebff0e 0px) bottom right;
+  background-size: 40px 40px;
+  background-repeat: no-repeat;
+  background-origin: border-box;
+  background-color: #242525;
+}
