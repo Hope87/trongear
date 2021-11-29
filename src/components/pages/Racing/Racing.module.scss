@@ -5,82 +5,49 @@
   background-size: cover;
   position: fixed;
   overflow: auto;
-
-  .racingBtn {
-    margin-top: -60px;
+  display: flex;
+  flex-direction: column;
+  @media screen and (max-width: 767px) {
+    background-position: center;
   }
-
-  .statisticElementTitle {
-    display: flex;
-    justify-content: space-around;
-    margin-bottom: 30px;
-    margin-top: 120px;
-
-    h3 {
-      text-shadow: 4px 5px 13px rgba(18, 18, 18, 0.08);
-      color: var(--white);
-      font-family: 'Russo One';
-      font-size: 14px;
-      font-weight: 400;
-      font-style: italic;
-      letter-spacing: normal;
-      line-height: normal;
-      text-align: center;
-      text-transform: uppercase;
-      margin-left: 80px;
+  .content {
+    flex: 1 1 auto;
+    padding: 0 90px;
+    @media screen and (max-width: 920px) {
+      padding: 0 50px;
     }
-  }
-
-  .transferElementContainer {
-    display: flex;
-    justify-content: space-around;
-    flex-wrap: wrap;
-    margin-left: 50px;
-    margin-right: 60px;
-    margin-top: 130px;
-  }
-
-  .transfer {
-    .transferTitle {
-      text-shadow: 4px 5px 13px rgba(18, 18, 18, 0.08);
-      color: var(--white);
-      font-family: 'Russo One';
-      font-size: 14px;
-      font-weight: 400;
-      font-style: italic;
-      letter-spacing: normal;
-      line-height: normal;
-      text-align: center;
-      text-transform: uppercase;
-      margin-bottom: 30px;
-      margin-top: 120px;
+    @media screen and (max-width: 480px) {
+      padding: 0 10px;
     }
 
-    .transferCards {
+    .timerAndButtonBox {
+      margin-top: 16px;
+      @media screen and (max-width: 767px) {
+        margin-top: 40px;
+      }
+    }
+    .topPanel {
+      display: none;
+      margin: 40px 0 20px;
+      @media screen and (max-width: 767px) {
+        display: block;
+      }
+    }
+    .middleBlock {
       display: flex;
-      justify-content: space-around;
-      flex-wrap: wrap;
-      margin-right: 90px;
-      margin-left: 80px;
-    }
-  }
-
-  .racingFooter {
-    display: flex;
-    justify-content: center;
-    margin-top: 110px;
-    padding-bottom: 40px;
-
-    .racingFooterTitle {
-      color: var(--white);
-      font-family: 'Russo One';
-      font-size: 18px;
-      font-weight: 400;
-      font-style: italic;
-      letter-spacing: normal;
-      line-height: 25.5px;
-      text-align: center;
-      text-transform: uppercase;
+      justify-content: space-between;
+      @media screen and (max-width: 767px) {
+        flex-direction: column;
+      }
+      .line {
+        display: flex;
+        justify-content: center;
+        min-width: 40px;
+        margin-top: 60px;
+        @media screen and (max-width: 920px) {
+          display: none;
+        }
+      }
     }
   }
 }

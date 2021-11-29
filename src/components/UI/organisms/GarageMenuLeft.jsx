@@ -5,8 +5,10 @@ import GarageMenuMain from './GarageMenuMain';
 
 const useStyles = makeStyles({
   garageLeft: {
-    marginLeft: '110px',
     position: 'relative',
+    '@media screen and (max-width: 576px)': {
+      margin: '0 12px',
+    },
   },
   garageLeftHeader: {
     maxWidth: '1020px',
@@ -29,6 +31,13 @@ const useStyles = makeStyles({
       lineHeight: 'normal',
       textAlign: 'left',
       textTransform: 'uppercase',
+      '@media screen and (max-width: 576px)': {
+        fontSize: '20px',
+      },
+      '@media screen and (max-width: 375px)': {
+        fontSize: '16px',
+        marginLeft: '20px',
+      },
     },
   },
   garageLeftHeaderItems: {
@@ -57,7 +66,6 @@ const useStyles = makeStyles({
 
 const GarageMenuLeft = ({ garageNumber }) => {
   const classes = useStyles();
-
   return (
     <div className={classes.garageLeft}>
       <div className={classes.garageLeftHeader}>

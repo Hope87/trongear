@@ -6,22 +6,25 @@ import youtube from '../../../images/youtube.svg';
 
 const useStyles = makeStyles({
   links: {
-    position: 'relative',
-    maxWidth: '130px',
-    paddingLeft: '80px',
-    paddingTop: '15px',
-
-    '@media screen and (max-width: 479.98px)': {
-      paddingLeft: '5px',
+    display: 'flex',
+    
+    '& *:not(:last-child)': {
+      marginRight: '20px',
     },
-  },
 
-  linksBox: {
-    '& img': {
-      width: '30px !important',
-      height: '30px !important',
-      marginLeft: '10px',
-      cursor: 'pointer',
+    '& a': {
+      display: 'block',
+      width: '30px',
+      height: '30px',
+      '& :hover': {
+        transform: 'scale(1.25)',
+        transition: 'all 0.3s ease 0s',
+      },
+      "& img": {
+        width: '100%',
+        height: '100%',
+        objectFit: 'cover',
+      },
     },
   },
 });
@@ -31,17 +34,15 @@ const Links = () => {
 
   return (
     <div className={classes.links}>
-      <div className={classes.linksBox}>
-        <a href="https://www.facebook.com/">
-          <img src={facebook} alt="" />
-        </a>
-        <a href="https://twitter.com/">
-          <img src={twitter} alt="" />
-        </a>
-        <a href="https://www.youtube.com/">
-          <img src={youtube} alt="" />
-        </a>
-      </div>
+      <a href="https://www.facebook.com/">
+        <img src={facebook} alt="" />
+      </a>
+      <a href="https://twitter.com/">
+        <img src={twitter} alt="" />
+      </a>
+      <a href="https://www.youtube.com/">
+        <img src={youtube} alt="" />
+      </a>
     </div>
   );
 };

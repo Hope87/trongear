@@ -19,6 +19,9 @@ const useStyles = makeStyles({
       lineHeight: '37.97px',
       textAlign: 'center',
       textTransform: 'uppercase',
+      '@media screen and (max-width: 576px)': {
+        marginBottom: '11px',
+      },
     },
 
     '& div': {
@@ -38,6 +41,11 @@ const useStyles = makeStyles({
     height: '60px',
     position: 'relative',
     marginLeft: '2px',
+    '@media screen and (max-width: 576px)': {
+      width: '46px',
+      marginLeft: '3px',
+      height: '62px',
+    },
 
     '& img': {
       width: '100%',
@@ -65,17 +73,20 @@ const useStyles = makeStyles({
   center: {
     marginLeft: '10px',
     marginRight: '10px',
+    '@media screen and (max-width: 576px)': {
+      margin: '0 24px 0 24px',
+    },
   },
 });
 
-const Timer = ({ color = '' }) => {
+const Timer = ({ color = '', text = 'race of the day'}) => {
   const classes = useStyles();
 
   const numberColor = color;
 
   return (
     <div className={classes.timer}>
-      <p>race of the day</p>
+      <p>{text}</p>
       <div>
         <div className={classes.flip}>
           <div className={classes.flipBox}>

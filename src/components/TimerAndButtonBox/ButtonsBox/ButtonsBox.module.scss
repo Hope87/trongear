@@ -1,0 +1,24 @@
+.buttonsBox {
+    display: flex;
+    justify-content: space-between;
+    @media screen and (max-width: 1080px) {
+        flex-direction: column;
+        align-items: center;
+        > :not(:last-child) {
+            margin-bottom: 25px;
+        }
+    }
+    .buttonsBoxBtn {
+        display: flex;
+        @media screen and (max-width: 374px) {
+            flex-direction: column;
+        }
+       .leftButton {
+            margin-right: 25px;
+            @media screen and (max-width: 374px) {
+                margin-bottom: 25px;
+                margin-right: 0;
+            }
+        }
+    }
+}

@@ -8,7 +8,7 @@ const useStyles = makeStyles({
     maxWidth: '310px',
     height: '420px',
     position: 'relative',
-    marginTop: '10px',
+    marginTop: '40px',
 
     '& img': {
       width: '100%',
@@ -35,12 +35,12 @@ const useStyles = makeStyles({
     '& div': {
       width: '240px',
       position: 'absolute',
-      top: '60%',
+      top: '68%',
       left: '14%',
 
       '& h5': {
         color: 'var(--white)',
-        fontSize: '12px',
+        fontSize: '18px',
         lineHeight: '14.88px',
         textAlign: 'left',
         textTransform: 'uppercase',
@@ -69,7 +69,7 @@ const useStyles = makeStyles({
         fontStyle: 'italic',
         letterSpacing: 'normal',
         fontFamily: 'Calibri - Italic',
-        marginTop: '10px',
+        marginTop: '5px',
       },
     },
   },
@@ -106,13 +106,21 @@ const GarageCardOff = ({ imageOff, cardTitleOff, imageOn, cardTitleOn, onGarageM
           <LazyLoadImage
             onMouseEnter={() => {
               onHover(cardTitleOn);
-              onGarageMenuInformation(cardTitleOn);
             }}
+            onClick={() => onGarageMenuInformation(cardTitleOn)}
             onMouseLeave={() => onLeaveContainer(cardTitleOn)}
             src={imageOff}
             alt={cardTitleOn}
           />
-          <h4>{cardTitleOff}</h4>
+          <h4
+            onMouseEnter={() => {
+              onHover(cardTitleOn);
+            }}
+            onClick={() => onGarageMenuInformation(cardTitleOn)}
+            onMouseLeave={() => onLeaveContainer(cardTitleOn)}
+          >
+            {cardTitleOff}
+          </h4>
         </>
       ) : (
         <>
@@ -120,16 +128,30 @@ const GarageCardOff = ({ imageOff, cardTitleOff, imageOn, cardTitleOn, onGarageM
             style={inlineStyles}
             onMouseEnter={() => {
               onHover(cardTitleOn);
-              onGarageMenuInformation(cardTitleOn);
             }}
+            onClick={() => onGarageMenuInformation(cardTitleOn)}
             onMouseLeave={() => onLeaveContainer(cardTitleOn)}
-            src={imageOn}
+            src={imageOff}
             alt={cardTitleOn}
           />
-          <h4>{cardTitleOn}</h4>
+          <h4
+            onMouseEnter={() => {
+              onHover(cardTitleOn);
+            }}
+            onClick={() => onGarageMenuInformation(cardTitleOn)}
+            onMouseLeave={() => onLeaveContainer(cardTitleOn)}
+          >
+            {cardTitleOff}
+          </h4>
         </>
       )}
-      <div>
+      <div
+        onMouseEnter={() => {
+          onHover(cardTitleOn);
+          onGarageMenuInformation(cardTitleOn);
+        }}
+        onMouseLeave={() => onLeaveContainer(cardTitleOn)}
+      >
         <h5>Price:</h5>
         <p>The game requires a browser plugin TronLink or TronWallet</p>
       </div>

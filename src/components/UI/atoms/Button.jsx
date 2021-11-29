@@ -12,6 +12,11 @@ const useStyles = makeStyles({
     backgroundColor: 'transparent',
     border: 'none',
     outline: 'none',
+    '@media screen and (max-width: 480px)': {
+      width: '155px',
+      height: '49px',
+      opacity: '0.9',
+    },
 
     '& img': {
       width: '100%',
@@ -32,33 +37,38 @@ const useStyles = makeStyles({
       textAlign: 'center',
       textTransform: 'uppercase',
       position: 'absolute',
+      pointerEvents: 'none',
       top: '50%',
       left: '50%',
       transform: 'translate(-50%, -50%)',
+      '@media screen and (max-width: 480px)': {
+        fontSize: '20px',
+        lineHeight: '20px',
+        textShadow: '0px 1px 3px rgba(18,18,18,0.07)',
+      },
     },
   },
 });
 
-const Button = ({ title }) => {
+const Button = ({ title, isActive }) => {
   const classes = useStyles();
-
-  const [options, setOptions] = useState({ image: buttonOff, color: 'var(--red)' });
+  const state = isActive ? { image: buttonOn, color: 'var(--dark)' } : {image: buttonOff, color: 'var(--red)' };
+  const [options, setOptions] = useState(state);
 
   const { image, color } = options;
 
   return (
     <button className={classes.button}>
-      <div>
+      <div
+          onTouchStart ={() => setOptions({ image: buttonOn, color: 'var(--dark)' })}
+          onMouseEnter={() => setOptions({ image: buttonOn, color: 'var(--dark)' })}
+          onMouseOut={() => !isActive && setOptions({ image: buttonOff, color: 'var(--red)' })}>
         <img
           src={image}
           alt={title}
-          onMouseEnter={() => setOptions({ image: buttonOn, color: 'var(--dark)' })}
-          onMouseOut={() => setOptions({ image: buttonOff, color: 'var(--red)' })}
         />
         <h4
           style={{ color: color }}
-          onMouseEnter={() => setOptions({ image: buttonOn, color: 'var(--dark)' })}
-          onMouseOut={() => setOptions({ image: buttonOff, color: 'var(--red)' })}
         >
           {title}
         </h4>

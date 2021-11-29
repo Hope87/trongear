@@ -1,4 +1,4 @@
-import React, { Suspense, lazy, useState } from 'react';
+import React, { Suspense, lazy, useState, useEffect } from 'react';
 import { HashRouter as Router, Route, Switch } from 'react-router-dom';
 import './App.scss';
 import './fonts/stylesheet.css';
@@ -11,15 +11,16 @@ const TopPage = lazy(() => import('./components/pages/Top'));
 const AboutPage = lazy(() => import('./components/pages/About'));
 
 function App() {
+
   const [modal, setModal] = useState(false);
   const [garageMenuInfo, setGarageMenuInfo] = useState({
     title: '',
   });
-
+    
   const garageMenuInformation = (title) => {
     setGarageMenuInfo({ title: title });
   };
-
+   
   return (
     <Router>
       <Suspense fallback={<div>Loading...</div>}>
@@ -28,10 +29,18 @@ function App() {
             <MainPage modal={modal} setModal={setModal} />
           </Route>
           <Route path="/garage">
-            <GaragePage modal={modal} setModal={setModal} onGarageMenuInformation={garageMenuInformation} />
+            <GaragePage
+              modal={modal}
+              setModal={setModal}
+              onGarageMenuInformation={garageMenuInformation}
+            />
           </Route>
           <Route path="/garageMenu/:id">
-            <GarageMenuPage modal={modal} setModal={setModal} garageNumber={garageMenuInfo} />
+            <GarageMenuPage
+              modal={modal}
+              setModal={setModal}
+              garageNumber={garageMenuInfo}
+            />
           </Route>
           <Route path="/racing">
             <RacingPage modal={modal} setModal={setModal} />
@@ -40,7 +49,7 @@ function App() {
             <TopPage modal={modal} setModal={setModal} />
           </Route>
           <Route path="/about">
-            <AboutPage />
+            <AboutPage modal={modal} setModal={setModal} />
           </Route>
         </Switch>
       </Suspense>

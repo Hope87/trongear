@@ -38,6 +38,9 @@ const useStyles = makeStyles({
     lineHeight: 'normal',
     textAlign: 'left',
     textTransform: 'uppercase',
+    '@media screen and (max-width: 576px)': {
+      fontSize: '16px',
+    },
   },
 
   yellow: {

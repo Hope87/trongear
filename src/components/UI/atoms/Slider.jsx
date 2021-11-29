@@ -14,8 +14,10 @@ const Slider = ({ filteredCars, onActive, onSetCarsCount }) => {
     <Swiper
       slidesPerView={1}
       navigation
-      onSlideNextTransitionEnd={() => onSetCarsCount((prevCount) => prevCount + 1)}
-      onSlidePrevTransitionEnd={() => onSetCarsCount((prevCount) => prevCount - 1)}
+      onSlideNextTransitionEnd={(swiper) => onSetCarsCount(swiper.activeIndex + 1)}
+      //onSlideNextTransitionEnd={() => onSetCarsCount((prevCount) => prevCount + 1)}
+      onSlidePrevTransitionEnd={(swiper) => onSetCarsCount(swiper.activeIndex + 1)}
+      //onSlidePrevTransitionEnd={() => onSetCarsCount((prevCount) => prevCount - 1)}
       onSwiper={(swiper) => onSetCarsCount(swiper.activeIndex + 1)}
     >
       {filteredCars ? (

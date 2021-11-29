@@ -73,9 +73,18 @@ const CardMiddle = ({ image }) => {
         src={frame}
         alt="frame"
       />
-      <LazyLoadImage src={tuningPanel} alt="tuningPanel" />
-      <LazyLoadImage src={image} alt={image} />
-      <LazyLoadImage src={lockIcon} alt="lockIcon" />
+      <LazyLoadImage 
+        onMouseEnter={() => setFrame(frameOn)}
+        onMouseOut={() => setFrame(frameOff)}
+      src={tuningPanel} alt="tuningPanel" />
+      <LazyLoadImage 
+        onMouseEnter={() => setFrame(frameOn)}
+        onMouseOut={() => setFrame(frameOff)}
+        src={image} alt={image} />
+      <LazyLoadImage 
+        onMouseEnter={() => setFrame(frameOn)}
+        onMouseOut={() => setFrame(frameOff)}
+        src={lockIcon} alt="lockIcon" />
     </div>
   );
 };

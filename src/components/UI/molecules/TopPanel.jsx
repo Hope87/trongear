@@ -7,11 +7,12 @@ const useStyles = makeStyles({
     maxWidth: '1260px',
     margin: '40px auto 0',
     display: 'flex',
+    justifyContent: 'center',
 
     '& div': {
       backgroundColor: 'var(--dark)',
       clipPath: 'polygon(0% 0%, 0% 0%, 85% 0%, 100% 100%, 100% 100%, 15% 100%)',
-      width: '280px',
+      width: '315px',
       height: '50px',
       cursor: 'pointer',
 
@@ -22,18 +23,19 @@ const useStyles = makeStyles({
           color: 'var(--dark)',
         },
       },
-
+      '&:nth-child(1)': {
+        transform: 'translate(22.5%, 0)',
+      },
       '&:nth-child(2)': {
-        marginLeft: '-43px',
+        transform: 'translate(7.5%, 0)',
       },
       '&:nth-child(3)': {
-        marginLeft: '-43px',
+        transform: 'translate(-7.5%, 0)',
       },
       '&:nth-child(4)': {
-        width: '420px',
         height: '50px',
         clipPath: 'polygon(0% 0%, 0% 0%, 100% 0%, 85% 100%, 100% 100%, 15% 100%)',
-        marginLeft: '-65px',
+        transform: 'translate(-22.5%, 0)',
       },
 
       '& p': {
@@ -47,7 +49,6 @@ const useStyles = makeStyles({
         textAlign: 'center',
         textTransform: 'uppercase',
         marginTop: '12px',
-        marginLeft: '50px',
       },
     },
   },

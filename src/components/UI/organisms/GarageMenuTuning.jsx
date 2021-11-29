@@ -18,6 +18,11 @@ const useStyles = makeStyles({
     opacity: '0.8',
     border: '1px solid black',
     marginTop: '30px',
+    '@media screen and (max-width: 576px)': {
+     width: '95%',
+     height: 'auto',
+     marginBottom: '143px',
+    },
   },
   garageTuningPanel: {
     width: '75%',
@@ -27,6 +32,14 @@ const useStyles = makeStyles({
     display: 'flex',
     justifyContent: 'space-between',
     alignItems: 'center',
+    '@media screen and (max-width: 576px)': {
+      width: '100%',
+      clipPath: 'none',
+      opacity: '0.74',
+      backgroundImage: 'linear-gradient(69.0deg, #5e5f61 32%, #949598 80%, #949598 67%)',
+      padding: '0 12px',
+      boxSizing: 'border-box',
+    },
 
     '& p': {
       color: 'var(--black)',
@@ -41,6 +54,9 @@ const useStyles = makeStyles({
         fontFamily: 'Russo One',
         fontSize: '18px',
         marginLeft: '20px',
+        '@media screen and (max-width: 576px)': {
+          marginLeft: '0',
+        },
       },
 
       '&:nth-child(2)': {
@@ -48,6 +64,9 @@ const useStyles = makeStyles({
         fontFamily: 'Chakra Petch',
         fontSize: '24px',
         marginRight: '50px',
+        '@media screen and (max-width: 576px)': {
+          marginRight: '0',
+        },
       },
     },
   },
@@ -56,6 +75,9 @@ const useStyles = makeStyles({
     display: 'flex',
     justifyContent: 'space-around',
     marginTop: '40px',
+    '@media screen and (max-width: 576px)': {
+      flexWrap: 'wrap',
+    },
   },
 
   garageTuningScale: {
@@ -109,7 +131,7 @@ const GarageMenuTuning = () => {
         ))}
       </div>
       <div className={classes.garageTuningScale}>
-        <GarageMenuTuningScale scaleImage={tuningRunk} scaleText="runk" />
+        <GarageMenuTuningScale scaleImage={tuningRunk} scaleText="rank" />
         <div style={{ marginTop: '20px' }}>
           <GarageMenuTuningScale scaleImage={tuningRunk} scaleText="level" />
         </div>

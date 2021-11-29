@@ -9,8 +9,14 @@ const useStyles = makeStyles({
   topRatingPanelPoint: {
     width: '140px',
     height: '50px',
-    clipPath: 'polygon(0% 0%, 0% 0%, 100% 0%, 75% 100%, 100% 100%, 0% 100%)',
+    //clipPath: 'polygon(0% 0%, 0% 0%, 100% 0%, 75% 100%, 100% 100%, 0% 100%)',
+    clipPath: 'polygon(0 0, 100% 0, 75% 100%, 0 100%)',
     backgroundColor: 'var(--dark)',
+    '@media screen and (max-width: 576px)': {
+      minWidth: '137px',
+      height: '62px',
+      flex: '1 1 25%',
+    },
 
     '& span': {
       display: 'inline-block',
@@ -29,16 +35,21 @@ const useStyles = makeStyles({
   },
 
   topRatingPanelInfo: {
-    width: '78%',
+    width: '100%',
     height: '50px',
     background: 'linear-gradient(to right, var(--secondary) 60%,  rgba(0,0,0,0.2) 95%)',
-    clipPath: 'polygon(5.4% 0%, 0% 0%, 100% 0%, 100% 100%, 100% 100%, 0% 100%)',
+    clipPath: 'polygon(35px 0, 100% 0, 100% 100%, 0 100%)',
     marginLeft: '-30px',
-    marginBottom: '10px',
+    marginBottom: '12px',
     display: 'flex',
     alignItems: 'center',
     justifyContent: 'space-between',
-
+    '@media screen and (max-width: 576px)': {
+      height: '62px',
+    },
+    '@media screen and (max-width: 375px)': {
+     flexDirection: 'column',
+    },
     '& span': {
       marginLeft: '40px',
       color: 'var(--white)',
@@ -49,6 +60,10 @@ const useStyles = makeStyles({
       lineHeight: 'normal',
       textAlign: 'left',
       textTransform: 'uppercase',
+      '@media screen and (max-width: 576px)': {
+        marginLeft: '30px',
+        fontSize: '20px',
+      },
     },
 
     '& p': {
@@ -62,6 +77,10 @@ const useStyles = makeStyles({
       lineHeight: 'normal',
       textAlign: 'left',
       textTransform: 'uppercase',
+      '@media screen and (max-width: 576px)': {
+        fontSize: '20px',
+        marginRight: '5px',
+      },
     },
   },
 });

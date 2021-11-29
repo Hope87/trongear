@@ -5,81 +5,47 @@
   position: fixed;
   overflow: auto;
   background-size: cover;
-
-  .garageBtn {
-    margin-top: -60px;
-
-    @media screen and (max-width: 1279.98px) {
-      margin-top: 0;
-    }
+  display: flex;
+  flex-direction: column;
+  @media screen and (max-width: 767px) {
+    background-position: center;
   }
 
-  .garageCardsOff {
-    display: flex;
-    justify-content: space-between;
-    flex-wrap: wrap;
-    margin-left: 110px;
-    margin-right: 110px;
-    margin-top: 120px;
-
-    @media screen and (max-width: 879.98px) {
-      margin-left: 40px;
-      margin-right: 40px;
-      margin-top: 60px;
+  .content {
+    flex: 1 1 auto;
+    padding: 0 90px;
+    @media screen and (max-width: 920px) {
+      padding: 0 50px;
+    }
+    @media screen and (max-width: 480px) {
+      padding: 0 10px;
+    }
+    @media screen and (max-width: 375px) {
+      padding: 0 5px;
     }
 
-    @media screen and (max-width: 719.98px) {
-      justify-content: center;
-    }
-
-    @media screen and (max-width: 719.98px) {
-      margin-left: 0px;
-      margin-right: 0px;
-    }
-  }
-
-  .garageLeftPanel {
-    position: absolute;
-    left: 0;
-    bottom: 0;
-
-    img {
-      width: 100%;
-      height: 100%;
-    }
-  }
-
-  .garageFooter {
-    display: flex;
-    justify-content: space-between;
-    margin-top: 160px;
-    padding-bottom: 40px;
-
-    .garageText {
-      max-width: 560px;
-      margin: -60px auto 0;
-      h2 {
-        color: var(--yellow);
-        font-family: 'Russo One';
-        font-size: 37px;
-        font-weight: 400;
-        font-style: italic;
-        letter-spacing: normal;
-        line-height: normal;
-        text-align: center;
-        text-transform: uppercase;
+    .timerAndButtonBox {
+      margin-top: 16px;
+      @media screen and (max-width: 767px) {
+        margin-top: 40px;
       }
-
-      p {
-        text-shadow: 1px 1px 3px rgba(18, 18, 18, 0.08);
-        color: var(--white);
-        font-family: 'Calibri';
-        font-size: 16px;
-        font-style: italic;
-        letter-spacing: normal;
-        line-height: normal;
-        text-align: center;
-        text-transform: uppercase;
+    }
+    .topPanel {
+      display: none;
+      margin: 40px 0 20px;
+      @media screen and (max-width: 767px) {
+        display: block;
+      }
+    }
+    .garageCardsOff {
+      display: flex;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      @media screen and (max-width: 719.98px) {
+        justify-content: center;
+      }
+      > {
+        margin: 0 auto;
       }
     }
   }
