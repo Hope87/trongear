@@ -28,6 +28,7 @@
     .middleBlock {
       display: flex;
       justify-content: space-between;
+      margin-top: -40px;
       margin-bottom: 16px;
       @media screen and (max-width: 1450px) {
         margin-top: 20px;
@@ -38,11 +39,14 @@
       .leftBlock {
         flex-grow: 1;
         margin-right: 15px;
+        @media screen and (max-width: 1310px) {
+          margin-right: 0;
+        }
       }
       .rightBlock {
+        align-self: center;
         @media screen and (max-width: 1310px) {
           margin-top: 20px;
-          align-self: center;
         }
         .tiresWheels {
           margin-top: 29px;

@@ -30,16 +30,16 @@ const About = ({ modal, setModal }) => {
               reprehenderit in voluptate velit esse cillum dolore eu fugiat
               nulla pariatur.
             </div>
-            <div className={styles.buttons}>
-              <AboutButtonBox />
-            </div>
-          </div>
-          <div className={styles.rightBlock}>
             <div className={styles.image}>
               <img src={garage} alt='About_page_garage' />
               <div className={styles.car}>
                 <img src={mersedes} alt='car' />
               </div>
+            </div>
+          </div>
+          <div className={styles.rightBlock}>
+            <div className={styles.buttons}>
+              <AboutButtonBox />
             </div>
             <div className={styles.text}>
               Excepteur sint occaecat cupidatat non proident, sunt in culpa qui

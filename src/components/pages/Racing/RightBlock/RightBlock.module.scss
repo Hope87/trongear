@@ -1,19 +1,19 @@
 .rightBlock {
+  max-width: 785px;
+  width: 100%;
+  > *:not(:last-child) {
+    margin-bottom: 74px;
+  }
+  .titleRow {
     max-width: 785px;
-    width: 100%;
-    > * {
-        margin-bottom: 67px;
-    }
-    .titleRow {
-        max-width: 785px;
-        display: flex;
-        justify-content: space-around;
-        margin: 20px 0 30px;
-        font-family: "Russo One";
-        font-size: 14px !important;
-        font-weight: 400;
-        font-style: italic;
-        color: #fff;
-        text-transform: uppercase;
-    }
+    display: flex;
+    justify-content: space-around;
+    margin: 20px 0;
+    font-family: 'Russo One';
+    font-size: 14px !important;
+    font-weight: 400;
+    font-style: italic;
+    color: #fff;
+    text-transform: uppercase;
+  }
 }
