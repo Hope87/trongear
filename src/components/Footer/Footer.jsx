@@ -34,7 +34,7 @@ const Footer = ({ page }) => {
           race!
         </div>
       )}
-      {page !== 'main' && (
+      {page !== 'main' && page !== 'garageMenu' && (
         <div className={styles.footerMobileImg}>
           <img src={leftImg} alt='left' />
           <img src={rightImg} alt='right' />
