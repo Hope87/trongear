@@ -7,7 +7,7 @@ import 'swiper/components/navigation/navigation.scss'
 import { LazyLoadImage } from 'react-lazy-load-image-component'
 import 'react-lazy-load-image-component/src/effects/blur.css'
 
-//SwiperCore.use([Navigation, A11y]);
+SwiperCore.use([Navigation, A11y])
 
 const Slider = ({ filteredCars, onActive, onSetCarsCount }) => {
   return (
@@ -18,11 +18,9 @@ const Slider = ({ filteredCars, onActive, onSetCarsCount }) => {
         onSlideNextTransitionEnd={(swiper) =>
           onSetCarsCount(swiper.activeIndex + 1)
         }
-        //onSlideNextTransitionEnd={() => onSetCarsCount((prevCount) => prevCount + 1)}
         onSlidePrevTransitionEnd={(swiper) =>
           onSetCarsCount(swiper.activeIndex + 1)
         }
-        //onSlidePrevTransitionEnd={() => onSetCarsCount((prevCount) => prevCount - 1)}
         onSwiper={(swiper) => onSetCarsCount(swiper.activeIndex + 1)}
       >
         {filteredCars ? (
