@@ -10,9 +10,9 @@ const BlockRow = ({
   let style = styles.leftBlock + ' '
   if (!leftBlockColor) {
     style += styles.blackColor
-  } else if (leftBlockColor == 'red') {
+  } else if (leftBlockColor === 'red') {
     style += styles.redColor
-  } else if (leftBlockColor == 'light grey') {
+  } else if (leftBlockColor === 'light grey') {
     style += styles.lightGreyColor
   } else {
     style += styles.greyColor

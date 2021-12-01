@@ -7,7 +7,7 @@ import rightImg from './img/rightFooterMobileImg.svg'
 const Footer = ({ page }) => {
   let styleLeftDiv
   let styleRightDiv = styles.rightDiv
-  if (page == 'main') {
+  if (page === 'main') {
     styleLeftDiv = styles.leftDiv
     styleRightDiv = styles.rightDivMainPage
   }
