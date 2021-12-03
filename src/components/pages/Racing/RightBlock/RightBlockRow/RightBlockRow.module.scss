@@ -1,0 +1,14 @@
+.rightBlockRow {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  @media screen and (max-width: 1210px) {
+    justify-content: center;
+  }
+  > * {
+    margin-bottom: 5px;
+  }
+  :first-child {
+    margin-right: 5px;
+  }
+}

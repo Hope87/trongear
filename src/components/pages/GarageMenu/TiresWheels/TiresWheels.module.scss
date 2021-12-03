@@ -1,0 +1,69 @@
+.tiresWheels {
+  max-width: 615px;
+  min-height: 430px;
+  background-color: rgba($color: #242525, $alpha: 0.7);
+  .header {
+    max-width: 455px;
+    height: 37px;
+    background: linear-gradient(to left, #959799, #585a5d);
+    clip-path: polygon(0 0, 100% 0, calc(100% - 40px) 100%, 0 100%);
+    padding: 0 40px 0 30px;
+    box-sizing: border-box;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    font-style: italic;
+    color: #221e1f;
+    text-transform: uppercase;
+    p {
+      font-family: 'Russo One';
+      font-size: 18px;
+      font-weight: 400;
+    }
+    span {
+      display: flex;
+      font-family: 'Chakra Petch';
+      font-size: 24px;
+      font-weight: 400;
+    }
+    span::before {
+      content: '+';
+      display: block;
+      margin-right: 5px;
+    }
+  }
+  .content {
+    padding-left: 27px;
+    .tiresItems {
+      margin-top: 40px;
+    }
+    .tiresLayers {
+      margin-top: 45px;
+      .tilte {
+        max-width: 198px;
+        height: 16px;
+        background: linear-gradient(to right, #f7ff90, #e3f60c);
+        clip-path: polygon(0 0, calc(100% - 16px) 0, 100% 100%, 0 100%);
+        display: flex;
+        align-items: center;
+        padding-left: 14px;
+        box-sizing: border-box;
+        color: #221e1f;
+        font-family: 'Russo One';
+        font-size: 12px;
+        font-weight: 400;
+        font-style: italic;
+        text-transform: uppercase;
+      }
+      .layer {
+        max-width: 540px;
+        margin-right: 20px;
+        img {
+          width: 100%;
+          height: 100%;
+          object-fit: cover;
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,8 @@
+.menuItems {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  > :not(:last-child) {
+    margin: 0 5px 5px 0;
+  }
+}

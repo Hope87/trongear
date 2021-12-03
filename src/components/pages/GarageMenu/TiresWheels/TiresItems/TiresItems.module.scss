@@ -1,0 +1,7 @@
+.tiresItems {
+  display: flex;
+  flex-wrap: wrap;
+  > :not(:last-child) {
+    margin-right: 20px;
+  }
+}

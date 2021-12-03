@@ -1,0 +1,134 @@
+.leftBlockElement {
+  max-width: 370px;
+  min-width: 300px;
+  background-color: #373838;
+  clip-path: polygon(
+    0 20px,
+    20px 0,
+    100% 0,
+    100% calc(100% - 20px),
+    calc(100% - 20px) 100%,
+    0 100%
+  );
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 3px;
+  box-sizing: border-box;
+  @media screen and (max-width: 1740px) {
+    margin-bottom: 5px;
+  }
+  .upBlock {
+    position: relative;
+    max-width: 364px;
+    width: 100%;
+    height: 83px;
+    background-color: rgba(32, 32, 32, 0.7);
+    clip-path: polygon(0 37px, 37px 0, 100% 0, 100% 100%, 0 100%);
+    padding: 10px 0 0 34px;
+    box-sizing: border-box;
+    @media screen and (max-width: 767px) {
+      height: 100px;
+    }
+    .text {
+      opacity: 0.7;
+      text-shadow: 4px 5px 13px rgba(18, 18, 18, 0.08);
+      color: #ff1437;
+      font-family: Calibri;
+      font-size: 14px;
+      font-style: italic;
+      text-align: left;
+      text-transform: uppercase;
+    }
+    .number {
+      text-shadow: 4px 5px 13px rgba(18, 18, 18, 0.08);
+      color: #ffffff;
+      font-family: 'Chakra Petch';
+      font-size: 40px;
+      font-style: italic;
+      text-transform: uppercase;
+      position: relative;
+      @media screen and (max-width: 375px) {
+        font-size: 30px;
+      }
+    }
+    .number img {
+      position: absolute;
+      width: 30px;
+      width: 30px;
+      right: 20px;
+      top: 50%;
+      transform: translateY(-50%);
+    }
+    .label {
+      position: absolute;
+      top: 0;
+      right: 0;
+      background: linear-gradient(
+        45deg,
+        transparent 17px,
+        #ed263a 0,
+        #8b0513 70%
+      );
+      color: #ffffff;
+      font-family: Calibri;
+      font-size: 12px;
+      font-weight: 700;
+      font-style: italic;
+      text-transform: uppercase;
+      width: 155px;
+      height: 25px;
+      display: flex;
+      align-items: center;
+      justify-content: flex-end;
+      padding-right: 20px;
+      box-sizing: border-box;
+    }
+  }
+}
+.downBlock {
+  max-width: 364px;
+  width: 100%;
+  height: 21px;
+  background: linear-gradient(-45deg, transparent 13px, #121213 0);
+  text-shadow: 4px 5px 13px rgba(18, 18, 18, 0.08);
+  color: #777777;
+  font-family: 'Chakra Petch';
+  font-size: 14px;
+  font-style: italic;
+  line-height: normal;
+  text-transform: uppercase;
+  display: flex;
+  align-items: center;
+  padding-left: 34px;
+  box-sizing: border-box;
+  @media screen and (max-width: 767px) {
+    height: 31px;
+  }
+}
+.downBlock::after {
+  content: '($)';
+}
+.differentColor {
+  .upBlock {
+    .text {
+      color: #eaff00;
+    }
+    .label {
+      background: linear-gradient(
+        45deg,
+        transparent 17px,
+        #f4f4f5 0,
+        #ecff1a 70%
+      );
+      color: #292929;
+    }
+  }
+}
+.textColorNone {
+  .upBlock {
+    .text {
+      color: #555555;
+    }
+  }
+}

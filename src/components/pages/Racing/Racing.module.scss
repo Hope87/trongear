@@ -1,0 +1,53 @@
+.racing {
+  background: url('../../../images/bacground_1920x1080.png') no-repeat;
+  width: 100%;
+  height: 100vh;
+  background-size: cover;
+  position: fixed;
+  overflow: auto;
+  display: flex;
+  flex-direction: column;
+  @media screen and (max-width: 767px) {
+    background-position: center;
+  }
+  .content {
+    flex: 1 1 auto;
+    padding: 0 90px;
+    @media screen and (max-width: 920px) {
+      padding: 0 50px;
+    }
+    @media screen and (max-width: 480px) {
+      padding: 0 10px;
+    }
+
+    .timerAndButtonBox {
+      margin-top: 16px;
+      @media screen and (max-width: 767px) {
+        margin-top: 40px;
+      }
+    }
+    .topPanel {
+      display: none;
+      margin: 40px 0 20px;
+      @media screen and (max-width: 767px) {
+        display: block;
+      }
+    }
+    .middleBlock {
+      display: flex;
+      justify-content: space-between;
+      @media screen and (max-width: 767px) {
+        flex-direction: column;
+      }
+      .line {
+        display: flex;
+        justify-content: center;
+        min-width: 40px;
+        margin-top: 20px;
+        @media screen and (max-width: 920px) {
+          display: none;
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,27 @@
+.timerAndButtonBox {
+  .timer {
+    display: flex;
+    justify-content: center;
+    > :not(:last-child) {
+      margin-right: 50px;
+      @media screen and (max-width: 767px) {
+        margin-right: 0;
+      }
+    }
+    .secondTimer {
+      @media screen and (max-width: 767px) {
+        display: none;
+      }
+    }
+  }
+  .buttonBoxOneTimer {
+    transform: translate(0, -100%);
+    @media screen and (max-width: 1450px) {
+      transform: none;
+      margin-top: 20px;
+    }
+  }
+  .buttonBoxTwoTimers {
+    margin-top: 20px;
+  }
+}
