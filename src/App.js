@@ -25,7 +25,12 @@ function App() {
   const garageMenuInformation = (title) => {
     setGarageMenuInfo({ title: title })
   }
-  const [time, setTime] = useState({hours: 23, minutes: 59, seconds: 59});
+  const date = new Date();
+  const [time, setTime] = useState({
+    hours: 24 - date.getHours(), 
+    minutes: 60 - date.getMinutes(), 
+    seconds: 60 - date.getSeconds()
+  });
   useEffect(() => {
     const interval = setInterval(() => {
       setTime((prev) => {
