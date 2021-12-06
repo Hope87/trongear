@@ -7,10 +7,14 @@ const TimerAndButtonBox = ({ isSecondTimer, page, time }) => {
   return (
     <div className={styles.timerAndButtonBox}>
       <div className={styles.timer}>
-        <Timer time={time}/>
+        <Timer time={time} />
         {isSecondTimer && (
           <div className={styles.secondTimer}>
-            <Timer text={'race of the hour'} isSecondTimer={isSecondTimer} time={{seconds: 0, minutes: 0, hours: 0}}/>
+            <Timer
+              text={'race of the hour'}
+              isSecondTimer={isSecondTimer}
+              time={{ minutes: time.minutes, seconds: time.seconds }}
+            />
           </div>
         )}
       </div>
