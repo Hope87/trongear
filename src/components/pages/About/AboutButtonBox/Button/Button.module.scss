@@ -1,7 +1,7 @@
 .button {
   width: 96px;
   @media screen and (max-width: 767px) {
-    width: 140px;
+    width: 155px;
   }
   a {
     .buttonUp {
@@ -26,7 +26,7 @@
       );
       background-color: #474747;
       @media screen and (max-width: 767px) {
-        height: 135px;
+        height: 149px;
       }
       .innerImage {
         position: absolute;
@@ -42,8 +42,8 @@
       background: linear-gradient(to left, #f91436, #7f0f20);
       clip-path: polygon(0 0, 100% 0, calc(100% - 20px) 100%, 0 100%);
       @media screen and (max-width: 767px) {
-        width: 120px;
-        height: 26px;
+        width: 133px;
+        height: 36px;
       }
       .buttonText {
         position: absolute;

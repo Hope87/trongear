@@ -4,10 +4,12 @@
   flex-wrap: wrap;
   max-width: 445px;
   @media screen and (max-width: 767px) {
-    justify-content: space-around;
     max-width: none;
   }
-  > *:not(:last-child) {
-    margin: 0 5px 33px 0;
+  @media screen and (max-width: 340px) {
+    justify-content: center;
+  }
+  > * {
+    margin-bottom: 30px;
   }
 }

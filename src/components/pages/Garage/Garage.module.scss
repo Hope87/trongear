@@ -41,6 +41,7 @@
       display: flex;
       justify-content: space-between;
       flex-wrap: wrap;
+      -webkit-tap-highlight-color: transparent;
       @media screen and (max-width: 719.98px) {
         justify-content: center;
       }
