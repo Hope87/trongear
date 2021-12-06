@@ -88,7 +88,7 @@ const Garage = ({ modal, setModal, onGarageMenuInformation, time }) => {
       {modal && <ModalWindow setModal={setModal} />}
       <div className={styles.content}>
         <div className={styles.timerAndButtonBox}>
-          <TimerAndButtonBox page='garage' time={time}/>
+          <TimerAndButtonBox page='garage' time={time} />
         </div>
         <div className={styles.topPanel}>
           <TopPanel />

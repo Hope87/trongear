@@ -16,7 +16,7 @@ const Racing = ({ modal, setModal, time }) => {
       {modal && <ModalWindow setModal={setModal} />}
       <div className={styles.content}>
         <div className={styles.timerAndButtonBox}>
-          <TimerAndButtonBox isSecondTimer={true} page='racing' time={time}/>
+          <TimerAndButtonBox isSecondTimer={true} page='racing' time={time} />
         </div>
         <div className={styles.topPanel}>
           <TopPanel />

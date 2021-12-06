@@ -15,7 +15,7 @@ const Top = ({ modal, setModal, time }) => {
       {modal && <ModalWindow setModal={setModal} />}
       <div className={styles.content}>
         <div className={styles.timerAndButtonBox}>
-          <TimerAndButtonBox page='top' time={time}/>
+          <TimerAndButtonBox page='top' time={time} />
         </div>
         <div className={styles.topPanel}>
           <TopPanel />

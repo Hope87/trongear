@@ -16,7 +16,7 @@ const Main = ({ modal, setModal, time }) => {
       </div>
       <div className={styles.content}>
         <div className={styles.timerAndButtonBox}>
-          <TimerAndButtonBox time={time}/>
+          <TimerAndButtonBox time={time} />
         </div>
         <div className={styles.logo}>
           <LogoTrongear />

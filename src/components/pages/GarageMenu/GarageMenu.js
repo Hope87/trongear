@@ -15,7 +15,7 @@ const GarageMenu = ({ modal, setModal, garageNumber, time }) => {
       {modal && <ModalWindow setModal={setModal} />}
       <div className={styles.content}>
         <div className={styles.timerAndButtonBox}>
-          <TimerAndButtonBox page='garageMenu' time={time}/>
+          <TimerAndButtonBox page='garageMenu' time={time} />
         </div>
         <div className={styles.middleBlock}>
           <div className={styles.leftBlock}>
