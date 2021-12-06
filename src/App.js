@@ -25,43 +25,45 @@ function App() {
   const garageMenuInformation = (title) => {
     setGarageMenuInfo({ title: title })
   }
-  const date = new Date();
+  const date = new Date()
   const [time, setTime] = useState({
-    hours: 24 - date.getHours(), 
-    minutes: 60 - date.getMinutes(), 
+    hours: 24 - date.getHours(),
+    minutes: 60 - date.getMinutes(),
     seconds: 60 - date.getSeconds()
-  });
+  })
   useEffect(() => {
     const interval = setInterval(() => {
       setTime((prev) => {
-        if(prev.seconds > 0){
-          return {...prev, seconds: prev.seconds - 1};
-        }
-        else {
-          if(prev.minutes > 0){
-            return {...prev, seconds: 59, minutes: prev.minutes - 1};
-          }
-          else{
-            if(prev.hours > 0){
-              return {...prev, seconds: 59, minutes: 59, hours: prev.hours - 1};
-            }
-            else{
-              clearInterval(interval);
-              return {...prev, hours: 0, minutes: 0, seconds: 0};
+        if (prev.seconds > 0) {
+          return { ...prev, seconds: prev.seconds - 1 }
+        } else {
+          if (prev.minutes > 0) {
+            return { ...prev, seconds: 59, minutes: prev.minutes - 1 }
+          } else {
+            if (prev.hours > 0) {
+              return {
+                ...prev,
+                seconds: 59,
+                minutes: 59,
+                hours: prev.hours - 1
+              }
+            } else {
+              clearInterval(interval)
+              return { ...prev, hours: 0, minutes: 0, seconds: 0 }
             }
           }
         }
       })
-    }, 1000);
-    return () => clearInterval(interval);
+    }, 1000)
+    return () => clearInterval(interval)
   }, [])
-  
+
   return (
     <Router>
       {/* <Suspense fallback={<div>Loading...</div>}> */}
       <Switch>
         <Route path='/' exact>
-          <MainPage modal={modal} setModal={setModal} time={time}/>
+          <MainPage modal={modal} setModal={setModal} time={time} />
         </Route>
         <Route path='/garage'>
           <GaragePage
@@ -80,13 +82,13 @@ function App() {
           />
         </Route>
         <Route path='/racing'>
-          <RacingPage modal={modal} setModal={setModal} time={time}/>
+          <RacingPage modal={modal} setModal={setModal} time={time} />
         </Route>
         <Route path='/top'>
-          <TopPage modal={modal} setModal={setModal} time={time}/>
+          <TopPage modal={modal} setModal={setModal} time={time} />
         </Route>
         <Route path='/about'>
-          <AboutPage modal={modal} setModal={setModal} time={time}/>
+          <AboutPage modal={modal} setModal={setModal} time={time} />
         </Route>
       </Switch>
       {/* </Suspense> */}
