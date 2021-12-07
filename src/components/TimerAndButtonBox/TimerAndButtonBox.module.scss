@@ -22,6 +22,10 @@
     }
   }
   .buttonBoxTwoTimers {
-    margin-top: 20px;
+    transform: translate(0, -100%);
+    @media screen and (max-width: 1760px) {
+      transform: none;
+      margin-top: 20px;
+    }
   }
 }

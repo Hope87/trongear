@@ -14,11 +14,13 @@ const Garage = ({
   carModel = 'Car Model',
   modification = 'modification'
 }) => {
-  const [buttonOperation, setButtonOperation] = useState({
-    title: 'unlock',
-    img: lock_icon,
-    color: 'var(--red)',
-    activeSlider: false
+  const [slideOn, setSlideOn] = useState(0)
+  const [activeSlides, setActiveSlide] = useState({
+    0: false,
+    1: false,
+    2: false,
+    3: false,
+    4: false
   })
   const [carsCount, setCarsCount] = useState('')
   return (
@@ -42,26 +44,26 @@ const Garage = ({
       </div>
       <div className={styles.garageSlider}>
         <Slider
+          activeSlides={activeSlides}
+          setSlideOn={setSlideOn}
           filteredCars={garageCarsImg.find(
             (el) => el.name === garageNumber.title
           )}
-          onActive={buttonOperation.activeSlider}
+          slideOn={slideOn}
           onSetCarsCount={setCarsCount}
         />
         <div className={styles.garageBtn}>
-          <img src={buttonOperation.img} alt='lock_icon' />
+          <img
+            src={activeSlides[slideOn] ? unlock_icon : lock_icon}
+            alt='lock_icon'
+          />
           <button
-            style={{ backgroundColor: buttonOperation.color }}
-            onClick={() =>
-              setButtonOperation({
-                title: 'buy',
-                img: unlock_icon,
-                color: 'var(--yellow)',
-                activeSlider: true
-              })
-            }
+            style={{
+              backgroundColor: activeSlides[slideOn] ? 'yellow' : 'red'
+            }}
+            onClick={() => setActiveSlide({ ...activeSlides, [slideOn]: true })}
           >
-            {buttonOperation.title}
+            {activeSlides[slideOn] ? 'buy' : 'unlock'}
           </button>
         </div>
       </div>

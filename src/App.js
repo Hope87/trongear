@@ -27,9 +27,9 @@ function App() {
   }
   const date = new Date()
   const [time, setTime] = useState({
-    hours: 24 - date.getHours(),
-    minutes: 60 - date.getMinutes(),
-    seconds: 60 - date.getSeconds()
+    hours: 23 - date.getHours(),
+    minutes: 59 - date.getMinutes(),
+    seconds: 59 - date.getSeconds()
   })
   useEffect(() => {
     const interval = setInterval(() => {

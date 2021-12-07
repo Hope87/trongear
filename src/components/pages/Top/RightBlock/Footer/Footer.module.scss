@@ -7,15 +7,13 @@
   text-transform: uppercase;
   height: 55px;
   background-color: #1b1b1c;
-  margin-left: 120px;
-  padding-left: 49px;
+  //margin-left: 120px;
+  //padding-left: 49px;
   display: flex;
   align-items: center;
+  justify-content: center;
   clip-path: polygon(0 0, 100% 0, calc(100% - 60px) 100%, 0 100%);
   @media screen and (max-width: 620px) {
-    padding-left: 20px;
     font-size: 16px;
-    padding-right: 40px;
-    margin-left: 80px;
   }
 }
