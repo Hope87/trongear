@@ -34,6 +34,9 @@
   }
   .content {
     padding-left: 27px;
+    @media screen and (max-width: 410px) {
+      padding-left: 10px;
+    }
     .tiresItems {
       margin-top: 40px;
     }
