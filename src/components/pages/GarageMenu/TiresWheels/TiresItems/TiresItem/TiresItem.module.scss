@@ -24,6 +24,18 @@
     @media screen and (max-width: 767px) {
       width: 159px;
       height: 150px;
+      background: linear-gradient(to top left, transparent 10px, #000000 0) top
+          left,
+        linear-gradient(to bottom right, transparent 10px, #000000 0px) bottom
+          right;
+      clip-path: polygon(
+        0 20px,
+        19px 0,
+        100% 0,
+        100% calc(100% - 15px),
+        calc(100% - 15px) 100%,
+        0 100%
+      );
     }
     @media screen and (max-width: 365px) {
       width: 140px;
