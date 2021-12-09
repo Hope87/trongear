@@ -5,11 +5,11 @@
     height: 90px;
     border: 3px solid #000000;
     box-sizing: border-box;
-    background: linear-gradient(to top left, transparent 16px, #000000 0) top
+    background: linear-gradient(to top left, transparent 15px, #000000 0) top
         left,
-      linear-gradient(to bottom right, transparent 16px, #000000 0px) bottom
+      linear-gradient(to bottom right, transparent 15px, #000000 0px) bottom
         right;
-    background-size: 20px 20px;
+    background-size: 30px 30px;
     background-repeat: no-repeat;
     background-origin: border-box;
     transition: all 0.3s ease 0s;
@@ -24,16 +24,12 @@
     @media screen and (max-width: 767px) {
       width: 159px;
       height: 150px;
-      background: linear-gradient(to top left, transparent 10px, #000000 0) top
-          left,
-        linear-gradient(to bottom right, transparent 10px, #000000 0px) bottom
-          right;
       clip-path: polygon(
-        0 20px,
-        19px 0,
+        0 19px,
+        18px 0,
         100% 0,
-        100% calc(100% - 15px),
-        calc(100% - 15px) 100%,
+        100% calc(100% - 16px),
+        calc(100% - 16px) 100%,
         0 100%
       );
     }
@@ -73,11 +69,11 @@
 .tiresItem:hover {
   .upBlock {
     border-color: yellow;
-    background: linear-gradient(to top left, transparent 16px, yellow 0) top
+    background: linear-gradient(to top left, transparent 15px, yellow 0) top
         left,
-      linear-gradient(to bottom right, transparent 16px, yellow 0px) bottom
+      linear-gradient(to bottom right, transparent 15px, yellow 0px) bottom
         right;
-    background-size: 20px 20px;
+    background-size: 30px 30px;
     background-repeat: no-repeat;
     background-origin: border-box;
   }
